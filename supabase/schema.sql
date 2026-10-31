@@ -247,3 +247,8 @@ create policy "사진 파일 올리기" on storage.objects for insert
   with check (bucket_id = 'photos' and public.is_member());
 create policy "사진 파일 삭제" on storage.objects for delete
   using (bucket_id = 'photos' and public.is_member());
+
+-- ─────────────────────────────────────────────
+-- 실시간 반영: 한 폰에서 일정·근무를 바꾸면 다른 폰 캘린더도 바로 갱신
+-- ─────────────────────────────────────────────
+alter publication supabase_realtime add table public.events, public.shifts;

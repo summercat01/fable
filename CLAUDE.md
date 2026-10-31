@@ -54,6 +54,11 @@
 5. **19금 질문(나중에)**: `questions.adult`. 스위치 기본 꺼짐(`profiles.adult_enabled`), 켤 때 지문/PIN, 기록도 잠긴 칸에 따로
 6. **질문 갱신 알림**: 남은 질문 100개 이하면 **admin(재우)에게만** 배너
 
+## 개발 팁
+- `npm run dev` 후 `/demo/calendar`: Supabase 없이 가짜 데이터로 캘린더 확인 (개발 모드에서만 열림, `src/app/demo`)
+- 캘린더 데이터는 `CalendarStore`(`src/lib/calendar/types.ts`)로만 주고받음. 실제는 `supabaseStore`, 미리보기는 `memoryStore`
+- 앱 화면은 AppLock 때문에 폰에서만 그려짐 → 각 페이지에 `export const instant = false`
+
 ## 데이터
 - 스키마: `supabase/schema.sql` (RLS: `profiles`에 있는 두 계정만 접근)
 - 질문: `data/raw/*.txt` → `python3 scripts/build_questions.py` → `data/questions.json`, `supabase/seed_questions.sql`
@@ -64,7 +69,7 @@
 - [x] 프로젝트 뼈대, 하단 탭, D-day
 - [x] 아이디·비번 로그인 + 자동 로그인 + 앱 잠금(PIN/지문)
 - [x] DB 스키마 + 질문 1,000개
-- [ ] 캘린더 월간 화면 + 일정 추가 + 근무표
+- [x] 캘린더 월간 화면 + 날짜 시트 + 일정 추가·삭제 + 근무표 + 실시간 반영
 - [ ] 게임 화면
 - [ ] 추억 카드 + 네이버 지도 + 사진
 - [ ] Capacitor APK + 위젯
