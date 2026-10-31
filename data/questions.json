@@ -1,0 +1,7505 @@
+{
+ "count": 1000,
+ "items": [
+  {
+   "type": "whatif",
+   "text": "데이트 중 갑자기 비가 쏟아지면 플랜 B는?",
+   "adult": false,
+   "id": 1,
+   "sort_order": 1
+  },
+  {
+   "type": "balance",
+   "a": "상대 마음 읽기",
+   "b": "내 마음 절대 안 들키기",
+   "adult": false,
+   "id": 2,
+   "sort_order": 2
+  },
+  {
+   "type": "balance",
+   "a": "연인 앞에서 방귀",
+   "b": "연인 앞에서 트림",
+   "adult": false,
+   "id": 3,
+   "sort_order": 3
+  },
+  {
+   "type": "balance",
+   "a": "생일 케이크 직접 만들기",
+   "b": "유명한 집 케이크 사기",
+   "adult": false,
+   "id": 4,
+   "sort_order": 4
+  },
+  {
+   "type": "balance",
+   "a": "한강 자전거",
+   "b": "한강 라면",
+   "adult": false,
+   "id": 5,
+   "sort_order": 5
+  },
+  {
+   "type": "whatif",
+   "text": "한밤중에 갑자기 드라이브 가자고 하면 어디로 갈래?",
+   "adult": false,
+   "id": 6,
+   "sort_order": 6
+  },
+  {
+   "type": "balance",
+   "a": "음성 메시지",
+   "b": "긴 문자",
+   "adult": false,
+   "id": 7,
+   "sort_order": 7
+  },
+  {
+   "type": "balance",
+   "a": "모자",
+   "b": "선글라스",
+   "adult": false,
+   "id": 8,
+   "sort_order": 8
+  },
+  {
+   "type": "balance",
+   "a": "잠꼬대하는 연인",
+   "b": "코 고는 연인",
+   "adult": false,
+   "id": 9,
+   "sort_order": 9
+  },
+  {
+   "type": "balance",
+   "a": "바다 보이는 집",
+   "b": "산 보이는 집",
+   "adult": false,
+   "id": 10,
+   "sort_order": 10
+  },
+  {
+   "type": "balance",
+   "a": "100일 반지",
+   "b": "100일 여행",
+   "adult": false,
+   "id": 11,
+   "sort_order": 11
+  },
+  {
+   "type": "whatif",
+   "text": "퇴근길에 나한테 받고 싶은 메시지는?",
+   "adult": false,
+   "id": 12,
+   "sort_order": 12
+  },
+  {
+   "type": "whatif",
+   "text": "계절이 된다면 무슨 계절?",
+   "adult": false,
+   "id": 13,
+   "sort_order": 13
+  },
+  {
+   "type": "whatif",
+   "text": "내가 부르는 호칭 중에 제일 좋은 건?",
+   "adult": false,
+   "id": 14,
+   "sort_order": 14
+  },
+  {
+   "type": "balance",
+   "a": "웃음 많은 연인",
+   "b": "눈물 많은 연인",
+   "adult": false,
+   "id": 15,
+   "sort_order": 15
+  },
+  {
+   "type": "whatif",
+   "text": "한밤중에 갑자기 배고프면 뭐 시켜 먹을래?",
+   "adult": false,
+   "id": 16,
+   "sort_order": 16
+  },
+  {
+   "type": "balance",
+   "a": "도시 근교 마당 있는 집",
+   "b": "도시 한가운데 작은 집",
+   "adult": false,
+   "id": 17,
+   "sort_order": 17
+  },
+  {
+   "type": "whatif",
+   "text": "반려동물이 말을 할 수 있다면 첫마디는?",
+   "adult": false,
+   "id": 18,
+   "sort_order": 18
+  },
+  {
+   "type": "balance",
+   "a": "운전은 내가",
+   "b": "운전은 상대가",
+   "adult": false,
+   "id": 19,
+   "sort_order": 19
+  },
+  {
+   "type": "whatif",
+   "text": "우리 집에 작은 정원이 생기면 뭘 심을래?",
+   "adult": false,
+   "id": 20,
+   "sort_order": 20
+  },
+  {
+   "type": "balance",
+   "a": "매년 같은 날 사진 찍기",
+   "b": "매년 같은 날 편지 쓰기",
+   "adult": false,
+   "id": 21,
+   "sort_order": 21
+  },
+  {
+   "type": "whatif",
+   "text": "밤샘하고 난 다음 날 하고 싶은 건?",
+   "adult": false,
+   "id": 22,
+   "sort_order": 22
+  },
+  {
+   "type": "whatif",
+   "text": "내 어린 시절로 가서 꼬마인 나한테 한마디 한다면?",
+   "adult": false,
+   "id": 23,
+   "sort_order": 23
+  },
+  {
+   "type": "balance",
+   "a": "서운한 거 바로 말하기",
+   "b": "모아뒀다가 한 번에 말하기",
+   "adult": false,
+   "id": 24,
+   "sort_order": 24
+  },
+  {
+   "type": "whatif",
+   "text": "다음 생에도 만난다면 어떻게 만나고 싶어?",
+   "adult": false,
+   "id": 25,
+   "sort_order": 25
+  },
+  {
+   "type": "balance",
+   "a": "설레는 연애",
+   "b": "편안한 연애",
+   "adult": false,
+   "id": 26,
+   "sort_order": 26
+  },
+  {
+   "type": "balance",
+   "a": "여행 일정 내가 짜기",
+   "b": "여행 일정 맡기기",
+   "adult": false,
+   "id": 27,
+   "sort_order": 27
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘 중 누가 더 먹보일까?",
+   "adult": false,
+   "id": 28,
+   "sort_order": 28
+  },
+  {
+   "type": "whatif",
+   "text": "같이 자격증 하나 딴다면 뭐 할래?",
+   "adult": false,
+   "id": 29,
+   "sort_order": 29
+  },
+  {
+   "type": "whatif",
+   "text": "지친 날 나한테 받고 싶은 메시지 한 줄은?",
+   "adult": false,
+   "id": 30,
+   "sort_order": 30
+  },
+  {
+   "type": "whatif",
+   "text": "내가 제일 귀여워 보였던 순간은?",
+   "adult": false,
+   "id": 31,
+   "sort_order": 31
+  },
+  {
+   "type": "whatif",
+   "text": "같이 살면 제일 먼저 사고 싶은 가구는?",
+   "adult": false,
+   "id": 32,
+   "sort_order": 32
+  },
+  {
+   "type": "balance",
+   "a": "스트레스 받으면 먹기",
+   "b": "스트레스 받으면 자기",
+   "adult": false,
+   "id": 33,
+   "sort_order": 33
+  },
+  {
+   "type": "balance",
+   "a": "동물원",
+   "b": "아쿠아리움",
+   "adult": false,
+   "id": 34,
+   "sort_order": 34
+  },
+  {
+   "type": "balance",
+   "a": "기억력 좋아지기",
+   "b": "요리 실력 좋아지기",
+   "adult": false,
+   "id": 35,
+   "sort_order": 35
+  },
+  {
+   "type": "whatif",
+   "text": "내가 갑자기 1주일 동안 연락이 안 되면 어떻게 찾을 거야?",
+   "adult": false,
+   "id": 36,
+   "sort_order": 36
+  },
+  {
+   "type": "whatif",
+   "text": "우리 첫 다툼은 뭘로 할 것 같아?",
+   "adult": false,
+   "id": 37,
+   "sort_order": 37
+  },
+  {
+   "type": "balance",
+   "a": "기념일 챙기는 사람",
+   "b": "평범한 날 챙기는 사람",
+   "adult": false,
+   "id": 38,
+   "sort_order": 38
+  },
+  {
+   "type": "whatif",
+   "text": "내가 너한테 옷을 사준다면 어떤 스타일?",
+   "adult": false,
+   "id": 39,
+   "sort_order": 39
+  },
+  {
+   "type": "balance",
+   "a": "부먹",
+   "b": "찍먹",
+   "adult": false,
+   "id": 40,
+   "sort_order": 40
+  },
+  {
+   "type": "whatif",
+   "text": "같이 사는 집 현관 비밀번호를 정한다면 무슨 날짜로?",
+   "adult": false,
+   "id": 41,
+   "sort_order": 41
+  },
+  {
+   "type": "balance",
+   "a": "나이 들어 시골",
+   "b": "나이 들어 도시",
+   "adult": false,
+   "id": 42,
+   "sort_order": 42
+  },
+  {
+   "type": "whatif",
+   "text": "요즘 고민 하나를 털어놓는다면?",
+   "adult": false,
+   "id": 43,
+   "sort_order": 43
+  },
+  {
+   "type": "whatif",
+   "text": "내가 해준 말 중에 기억에 남는 거 있어?",
+   "adult": false,
+   "id": 44,
+   "sort_order": 44
+  },
+  {
+   "type": "whatif",
+   "text": "하루만 고등학생으로 돌아간다면 뭐 할래?",
+   "adult": false,
+   "id": 45,
+   "sort_order": 45
+  },
+  {
+   "type": "balance",
+   "a": "카페 사장",
+   "b": "서점 사장",
+   "adult": false,
+   "id": 46,
+   "sort_order": 46
+  },
+  {
+   "type": "whatif",
+   "text": "1시간 동안 마음껏 소리 질러도 된다면 뭐라고 외칠래?",
+   "adult": false,
+   "id": 47,
+   "sort_order": 47
+  },
+  {
+   "type": "balance",
+   "a": "햄버거",
+   "b": "샌드위치",
+   "adult": false,
+   "id": 48,
+   "sort_order": 48
+  },
+  {
+   "type": "balance",
+   "a": "내 생일 잊어버린 연인",
+   "b": "우리 기념일 잊어버린 연인",
+   "adult": false,
+   "id": 49,
+   "sort_order": 49
+  },
+  {
+   "type": "whatif",
+   "text": "지금 하는 일 말고 다른 일을 한다면?",
+   "adult": false,
+   "id": 50,
+   "sort_order": 50
+  },
+  {
+   "type": "balance",
+   "a": "생일은 둘이 조용히",
+   "b": "친구들이랑 시끌벅적",
+   "adult": false,
+   "id": 51,
+   "sort_order": 51
+  },
+  {
+   "type": "whatif",
+   "text": "우리 연애에 배경음악을 깐다면?",
+   "adult": false,
+   "id": 52,
+   "sort_order": 52
+  },
+  {
+   "type": "whatif",
+   "text": "요즘 해보고 싶은 거 하나?",
+   "adult": false,
+   "id": 53,
+   "sort_order": 53
+  },
+  {
+   "type": "whatif",
+   "text": "돈 걱정 없이 직업을 고를 수 있다면?",
+   "adult": false,
+   "id": 54,
+   "sort_order": 54
+  },
+  {
+   "type": "whatif",
+   "text": "1년 뒤 오늘 우리는 뭐 하고 있을까?",
+   "adult": false,
+   "id": 55,
+   "sort_order": 55
+  },
+  {
+   "type": "balance",
+   "a": "야경 명소",
+   "b": "일출 명소",
+   "adult": false,
+   "id": 56,
+   "sort_order": 56
+  },
+  {
+   "type": "whatif",
+   "text": "매일 같은 시간에 둘이 하는 작은 의식을 만든다면?",
+   "adult": false,
+   "id": 57,
+   "sort_order": 57
+  },
+  {
+   "type": "balance",
+   "a": "콘서트 스탠딩",
+   "b": "콘서트 좌석",
+   "adult": false,
+   "id": 58,
+   "sort_order": 58
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘 중 누가 요리를 맡게 될까?",
+   "adult": false,
+   "id": 59,
+   "sort_order": 59
+  },
+  {
+   "type": "balance",
+   "a": "계획형 연인",
+   "b": "즉흥형 연인",
+   "adult": false,
+   "id": 60,
+   "sort_order": 60
+  },
+  {
+   "type": "whatif",
+   "text": "기차 타고 끝까지 가본다면 어느 노선?",
+   "adult": false,
+   "id": 61,
+   "sort_order": 61
+  },
+  {
+   "type": "balance",
+   "a": "비싼 레스토랑 한 번",
+   "b": "분식집 열 번",
+   "adult": false,
+   "id": 62,
+   "sort_order": 62
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘이 식당을 차린다면 간판 이름은?",
+   "adult": false,
+   "id": 63,
+   "sort_order": 63
+  },
+  {
+   "type": "whatif",
+   "text": "다투고 나서 받고 싶은 행동은?",
+   "adult": false,
+   "id": 64,
+   "sort_order": 64
+  },
+  {
+   "type": "whatif",
+   "text": "나를 영화 장르로 표현하면?",
+   "adult": false,
+   "id": 65,
+   "sort_order": 65
+  },
+  {
+   "type": "whatif",
+   "text": "새벽 4시에 갑자기 깼는데 옆에 내가 있다면?",
+   "adult": false,
+   "id": 66,
+   "sort_order": 66
+  },
+  {
+   "type": "whatif",
+   "text": "나에 대해 아직 모르는 것 중 제일 궁금한 거?",
+   "adult": false,
+   "id": 67,
+   "sort_order": 67
+  },
+  {
+   "type": "balance",
+   "a": "사진 잔뜩 남기는 데이트",
+   "b": "사진 없이 즐기기만",
+   "adult": false,
+   "id": 68,
+   "sort_order": 68
+  },
+  {
+   "type": "balance",
+   "a": "점심시간 길게",
+   "b": "퇴근 한 시간 일찍",
+   "adult": false,
+   "id": 69,
+   "sort_order": 69
+  },
+  {
+   "type": "whatif",
+   "text": "영화 속 한 장면에 들어갈 수 있다면 어떤 장면?",
+   "adult": false,
+   "id": 70,
+   "sort_order": 70
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 꼭 해보라고 추천하고 싶은 경험은?",
+   "adult": false,
+   "id": 71,
+   "sort_order": 71
+  },
+  {
+   "type": "balance",
+   "a": "비행기 창가",
+   "b": "비행기 통로",
+   "adult": false,
+   "id": 72,
+   "sort_order": 72
+  },
+  {
+   "type": "balance",
+   "a": "기념일엔 레스토랑",
+   "b": "기념일엔 집에서 직접 요리",
+   "adult": false,
+   "id": 73,
+   "sort_order": 73
+  },
+  {
+   "type": "whatif",
+   "text": "우리 연애를 영화 포스터로 만든다면 한 줄 카피는?",
+   "adult": false,
+   "id": 74,
+   "sort_order": 74
+  },
+  {
+   "type": "balance",
+   "a": "눈사람 만들기",
+   "b": "눈싸움",
+   "adult": false,
+   "id": 75,
+   "sort_order": 75
+  },
+  {
+   "type": "whatif",
+   "text": "둘이 가게를 차린다면 뭐 팔래?",
+   "adult": false,
+   "id": 76,
+   "sort_order": 76
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 배우고 싶은 거 하나는?",
+   "adult": false,
+   "id": 77,
+   "sort_order": 77
+  },
+  {
+   "type": "balance",
+   "a": "결혼 전 동거",
+   "b": "결혼 후 같이 살기",
+   "adult": false,
+   "id": 78,
+   "sort_order": 78
+  },
+  {
+   "type": "whatif",
+   "text": "어릴 때 꿈은 뭐였어?",
+   "adult": false,
+   "id": 79,
+   "sort_order": 79
+  },
+  {
+   "type": "balance",
+   "a": "질투 귀엽게",
+   "b": "질투 쿨하게",
+   "adult": false,
+   "id": 80,
+   "sort_order": 80
+  },
+  {
+   "type": "whatif",
+   "text": "우리 대화 중에 제일 기억에 남는 순간은?",
+   "adult": false,
+   "id": 81,
+   "sort_order": 81
+  },
+  {
+   "type": "balance",
+   "a": "같이 있을 때 각자 할 일 하기",
+   "b": "같이 있을 때 계속 대화",
+   "adult": false,
+   "id": 82,
+   "sort_order": 82
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘 중 누가 더 애교가 많을까?",
+   "adult": false,
+   "id": 83,
+   "sort_order": 83
+  },
+  {
+   "type": "balance",
+   "a": "낮잠 같이",
+   "b": "산책 같이",
+   "adult": false,
+   "id": 84,
+   "sort_order": 84
+  },
+  {
+   "type": "whatif",
+   "text": "내가 갑자기 머리를 완전 짧게 자르고 나타나면 반응은?",
+   "adult": false,
+   "id": 85,
+   "sort_order": 85
+  },
+  {
+   "type": "balance",
+   "a": "노래 실력 만렙",
+   "b": "춤 실력 만렙",
+   "adult": false,
+   "id": 86,
+   "sort_order": 86
+  },
+  {
+   "type": "whatif",
+   "text": "예산 무제한 하루 데이트 코스를 짠다면?",
+   "adult": false,
+   "id": 87,
+   "sort_order": 87
+  },
+  {
+   "type": "whatif",
+   "text": "내가 너의 하루 비서라면 뭘 시킬래?",
+   "adult": false,
+   "id": 88,
+   "sort_order": 88
+  },
+  {
+   "type": "balance",
+   "a": "한 달 휴가 한 번",
+   "b": "주 4일 근무 평생",
+   "adult": false,
+   "id": 89,
+   "sort_order": 89
+  },
+  {
+   "type": "balance",
+   "a": "기분 안 좋을 때 말하기",
+   "b": "기분 안 좋을 때 혼자 있기",
+   "adult": false,
+   "id": 90,
+   "sort_order": 90
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘 중 누가 더 잘 삐질까?",
+   "adult": false,
+   "id": 91,
+   "sort_order": 91
+  },
+  {
+   "type": "balance",
+   "a": "평생 매운 거 못 먹기",
+   "b": "평생 단 거 못 먹기",
+   "adult": false,
+   "id": 92,
+   "sort_order": 92
+  },
+  {
+   "type": "balance",
+   "a": "일본 여행",
+   "b": "유럽 여행",
+   "adult": false,
+   "id": 93,
+   "sort_order": 93
+  },
+  {
+   "type": "balance",
+   "a": "조용한 카페",
+   "b": "북적이는 카페",
+   "adult": false,
+   "id": 94,
+   "sort_order": 94
+  },
+  {
+   "type": "balance",
+   "a": "아쿠아리움 데이트",
+   "b": "천문대 데이트",
+   "adult": false,
+   "id": 95,
+   "sort_order": 95
+  },
+  {
+   "type": "whatif",
+   "text": "나만 알았으면 하는 너의 귀여운 비밀 하나?",
+   "adult": false,
+   "id": 96,
+   "sort_order": 96
+  },
+  {
+   "type": "whatif",
+   "text": "세상에 딱 하나 새로 만들 수 있다면?",
+   "adult": false,
+   "id": 97,
+   "sort_order": 97
+  },
+  {
+   "type": "whatif",
+   "text": "집에 비밀 방이 있다면 뭐로 쓸래?",
+   "adult": false,
+   "id": 98,
+   "sort_order": 98
+  },
+  {
+   "type": "balance",
+   "a": "싸우면 그 자리에서 풀기",
+   "b": "하룻밤 자고 얘기하기",
+   "adult": false,
+   "id": 99,
+   "sort_order": 99
+  },
+  {
+   "type": "balance",
+   "a": "침대는 퀸",
+   "b": "침대는 킹",
+   "adult": false,
+   "id": 100,
+   "sort_order": 100
+  },
+  {
+   "type": "whatif",
+   "text": "순간이동이 된다면 퇴근 후에 어디 갈래?",
+   "adult": false,
+   "id": 101,
+   "sort_order": 101
+  },
+  {
+   "type": "balance",
+   "a": "죽 끓여주는 연인",
+   "b": "약 사다주는 연인",
+   "adult": false,
+   "id": 102,
+   "sort_order": 102
+  },
+  {
+   "type": "balance",
+   "a": "여행 짐 바리바리",
+   "b": "여행 짐 가볍게",
+   "adult": false,
+   "id": 103,
+   "sort_order": 103
+  },
+  {
+   "type": "balance",
+   "a": "마리오카트 이기기",
+   "b": "마리오카트 져주기",
+   "adult": false,
+   "id": 104,
+   "sort_order": 104
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 유튜버라면 첫 영상 제목은?",
+   "adult": false,
+   "id": 105,
+   "sort_order": 105
+  },
+  {
+   "type": "whatif",
+   "text": "우리 이야기 다음 화 예고편을 쓴다면?",
+   "adult": false,
+   "id": 106,
+   "sort_order": 106
+  },
+  {
+   "type": "balance",
+   "a": "매일 30분씩 만나기",
+   "b": "일주일에 한 번 하루 종일",
+   "adult": false,
+   "id": 107,
+   "sort_order": 107
+  },
+  {
+   "type": "balance",
+   "a": "편지는 짧고 자주",
+   "b": "편지는 길고 가끔",
+   "adult": false,
+   "id": 108,
+   "sort_order": 108
+  },
+  {
+   "type": "whatif",
+   "text": "드래곤을 키운다면 이름은?",
+   "adult": false,
+   "id": 109,
+   "sort_order": 109
+  },
+  {
+   "type": "whatif",
+   "text": "내가 슈퍼히어로라면 약점은 뭘까?",
+   "adult": false,
+   "id": 110,
+   "sort_order": 110
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 꼭 들려주고 싶은 노래는?",
+   "adult": false,
+   "id": 111,
+   "sort_order": 111
+  },
+  {
+   "type": "whatif",
+   "text": "길에서 우연히 만나면 어떤 표정 지을 것 같아?",
+   "adult": false,
+   "id": 112,
+   "sort_order": 112
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 일 얘기할 때 원하는 반응은?",
+   "adult": false,
+   "id": 113,
+   "sort_order": 113
+  },
+  {
+   "type": "balance",
+   "a": "같이 운동하기",
+   "b": "같이 게임하기",
+   "adult": false,
+   "id": 114,
+   "sort_order": 114
+  },
+  {
+   "type": "balance",
+   "a": "치킨",
+   "b": "피자",
+   "adult": false,
+   "id": 115,
+   "sort_order": 115
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 마법사라면 둘의 마법 조합은?",
+   "adult": false,
+   "id": 116,
+   "sort_order": 116
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 있을 때 제일 편한 순간은?",
+   "adult": false,
+   "id": 117,
+   "sort_order": 117
+  },
+  {
+   "type": "whatif",
+   "text": "'우리'를 세 단어로 표현하면?",
+   "adult": false,
+   "id": 118,
+   "sort_order": 118
+  },
+  {
+   "type": "whatif",
+   "text": "내가 하루 동안 네 매니저라면 스케줄 짜줄래?",
+   "adult": false,
+   "id": 119,
+   "sort_order": 119
+  },
+  {
+   "type": "whatif",
+   "text": "함께 가고 싶은 축제나 공연이 있다면?",
+   "adult": false,
+   "id": 120,
+   "sort_order": 120
+  },
+  {
+   "type": "balance",
+   "a": "애교 많은 연인",
+   "b": "애교 없는 연인",
+   "adult": false,
+   "id": 121,
+   "sort_order": 121
+  },
+  {
+   "type": "whatif",
+   "text": "네가 생각하는 완벽한 저녁 메뉴는?",
+   "adult": false,
+   "id": 122,
+   "sort_order": 122
+  },
+  {
+   "type": "whatif",
+   "text": "폭염인 날 데이트를 하나 정한다면?",
+   "adult": false,
+   "id": 123,
+   "sort_order": 123
+  },
+  {
+   "type": "balance",
+   "a": "전화 먼저 걸기",
+   "b": "문자 먼저 보내기",
+   "adult": false,
+   "id": 124,
+   "sort_order": 124
+  },
+  {
+   "type": "balance",
+   "a": "안경",
+   "b": "렌즈",
+   "adult": false,
+   "id": 125,
+   "sort_order": 125
+  },
+  {
+   "type": "balance",
+   "a": "밤새 수다",
+   "b": "일찍 자고 아침 데이트",
+   "adult": false,
+   "id": 126,
+   "sort_order": 126
+  },
+  {
+   "type": "balance",
+   "a": "사진 앨범 만들기",
+   "b": "영상 앨범 만들기",
+   "adult": false,
+   "id": 127,
+   "sort_order": 127
+  },
+  {
+   "type": "balance",
+   "a": "울고 싶을 때 슬픈 영화",
+   "b": "울고 싶을 때 웃긴 영상",
+   "adult": false,
+   "id": 128,
+   "sort_order": 128
+  },
+  {
+   "type": "whatif",
+   "text": "학교 다닐 때 제일 좋아했던 과목은?",
+   "adult": false,
+   "id": 129,
+   "sort_order": 129
+  },
+  {
+   "type": "whatif",
+   "text": "피곤한 날 내가 해줬으면 하는 거 하나?",
+   "adult": false,
+   "id": 130,
+   "sort_order": 130
+  },
+  {
+   "type": "whatif",
+   "text": "꿈의 집에 방 하나를 더 만든다면 무슨 방?",
+   "adult": false,
+   "id": 131,
+   "sort_order": 131
+  },
+  {
+   "type": "balance",
+   "a": "테니스",
+   "b": "배드민턴",
+   "adult": false,
+   "id": 132,
+   "sort_order": 132
+  },
+  {
+   "type": "balance",
+   "a": "노래방에서 발라드",
+   "b": "노래방에서 댄스곡",
+   "adult": false,
+   "id": 133,
+   "sort_order": 133
+  },
+  {
+   "type": "balance",
+   "a": "연인한테 매일 칭찬 하나",
+   "b": "연인한테 매주 편지 하나",
+   "adult": false,
+   "id": 134,
+   "sort_order": 134
+  },
+  {
+   "type": "balance",
+   "a": "머리 쓰다듬어 주기",
+   "b": "볼 꼬집기",
+   "adult": false,
+   "id": 135,
+   "sort_order": 135
+  },
+  {
+   "type": "balance",
+   "a": "영화 보고 바로 감상 토크",
+   "b": "각자 곱씹고 나중에 얘기",
+   "adult": false,
+   "id": 136,
+   "sort_order": 136
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 드라마 주인공이면 장르는?",
+   "adult": false,
+   "id": 137,
+   "sort_order": 137
+  },
+  {
+   "type": "balance",
+   "a": "가계부 꼼꼼히",
+   "b": "대충 감으로",
+   "adult": false,
+   "id": 138,
+   "sort_order": 138
+  },
+  {
+   "type": "whatif",
+   "text": "우리 집 현관에 붙일 문구를 정한다면?",
+   "adult": false,
+   "id": 139,
+   "sort_order": 139
+  },
+  {
+   "type": "balance",
+   "a": "연인이 내 옷 골라주기",
+   "b": "내가 연인 옷 골라주기",
+   "adult": false,
+   "id": 140,
+   "sort_order": 140
+  },
+  {
+   "type": "whatif",
+   "text": "내가 했던 말 중에 기억에 남는 한마디는?",
+   "adult": false,
+   "id": 141,
+   "sort_order": 141
+  },
+  {
+   "type": "whatif",
+   "text": "동물로 다시 태어난다면 뭐가 되고 싶어?",
+   "adult": false,
+   "id": 142,
+   "sort_order": 142
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 꼭 보여주고 싶은 영화는?",
+   "adult": false,
+   "id": 143,
+   "sort_order": 143
+  },
+  {
+   "type": "whatif",
+   "text": "우리 집 와이파이 이름을 정한다면?",
+   "adult": false,
+   "id": 144,
+   "sort_order": 144
+  },
+  {
+   "type": "balance",
+   "a": "바다 여행",
+   "b": "산 여행",
+   "adult": false,
+   "id": 145,
+   "sort_order": 145
+  },
+  {
+   "type": "whatif",
+   "text": "지금 당장 나한테 바라는 거 하나?",
+   "adult": false,
+   "id": 146,
+   "sort_order": 146
+  },
+  {
+   "type": "whatif",
+   "text": "할머니 할아버지가 된 우리가 하는 데이트는?",
+   "adult": false,
+   "id": 147,
+   "sort_order": 147
+  },
+  {
+   "type": "balance",
+   "a": "전화",
+   "b": "문자",
+   "adult": false,
+   "id": 148,
+   "sort_order": 148
+  },
+  {
+   "type": "balance",
+   "a": "꽃 선물",
+   "b": "간식 선물",
+   "adult": false,
+   "id": 149,
+   "sort_order": 149
+  },
+  {
+   "type": "whatif",
+   "text": "이 앱에 기능 하나 추가할 수 있다면?",
+   "adult": false,
+   "id": 150,
+   "sort_order": 150
+  },
+  {
+   "type": "whatif",
+   "text": "내가 너한테 향수를 사준다면 어떤 향?",
+   "adult": false,
+   "id": 151,
+   "sort_order": 151
+  },
+  {
+   "type": "whatif",
+   "text": "우리 커플 캐릭터 굿즈를 만든다면 뭐?",
+   "adult": false,
+   "id": 152,
+   "sort_order": 152
+  },
+  {
+   "type": "whatif",
+   "text": "내가 하루 동안 너만 기억 못 하면 어떻게 다시 꼬실래?",
+   "adult": false,
+   "id": 153,
+   "sort_order": 153
+  },
+  {
+   "type": "balance",
+   "a": "탄산 없이 1년",
+   "b": "커피 없이 1년",
+   "adult": false,
+   "id": 154,
+   "sort_order": 154
+  },
+  {
+   "type": "balance",
+   "a": "같이 게임할 때 협동",
+   "b": "같이 게임할 때 대결",
+   "adult": false,
+   "id": 155,
+   "sort_order": 155
+  },
+  {
+   "type": "balance",
+   "a": "길 잃으면 물어보기",
+   "b": "길 잃으면 지도 앱",
+   "adult": false,
+   "id": 156,
+   "sort_order": 156
+  },
+  {
+   "type": "whatif",
+   "text": "내가 기운 없어 보이면 어떻게 해줄 거야?",
+   "adult": false,
+   "id": 157,
+   "sort_order": 157
+  },
+  {
+   "type": "whatif",
+   "text": "내가 늦잠 자서 약속에 늦으면 벌칙은?",
+   "adult": false,
+   "id": 158,
+   "sort_order": 158
+  },
+  {
+   "type": "whatif",
+   "text": "우리 사이를 날씨로 표현하면?",
+   "adult": false,
+   "id": 159,
+   "sort_order": 159
+  },
+  {
+   "type": "whatif",
+   "text": "해외에서 길을 잃으면 누가 먼저 물어볼까?",
+   "adult": false,
+   "id": 160,
+   "sort_order": 160
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 같이 웃었던 제일 웃긴 순간은?",
+   "adult": false,
+   "id": 161,
+   "sort_order": 161
+  },
+  {
+   "type": "balance",
+   "a": "소나기 맞으며 뛰기",
+   "b": "편의점에서 우산 사기",
+   "adult": false,
+   "id": 162,
+   "sort_order": 162
+  },
+  {
+   "type": "balance",
+   "a": "쉬는 날 아무것도 안 하기",
+   "b": "쉬는 날 꽉 채워 놀기",
+   "adult": false,
+   "id": 163,
+   "sort_order": 163
+  },
+  {
+   "type": "balance",
+   "a": "첫인상이 좋은 사람",
+   "b": "볼수록 좋은 사람",
+   "adult": false,
+   "id": 164,
+   "sort_order": 164
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 같은 학교였다면 어떤 사이였을까?",
+   "adult": false,
+   "id": 165,
+   "sort_order": 165
+  },
+  {
+   "type": "balance",
+   "a": "아침 차려주기",
+   "b": "저녁 차려주기",
+   "adult": false,
+   "id": 166,
+   "sort_order": 166
+  },
+  {
+   "type": "balance",
+   "a": "헤어질 때 쿨하게 인사",
+   "b": "아쉬워서 10분 더",
+   "adult": false,
+   "id": 167,
+   "sort_order": 167
+  },
+  {
+   "type": "balance",
+   "a": "고마운 건 말로",
+   "b": "고마운 건 행동으로",
+   "adult": false,
+   "id": 168,
+   "sort_order": 168
+  },
+  {
+   "type": "balance",
+   "a": "샤워는 아침",
+   "b": "샤워는 저녁",
+   "adult": false,
+   "id": 169,
+   "sort_order": 169
+  },
+  {
+   "type": "balance",
+   "a": "드라마 몰아보기",
+   "b": "매주 기다렸다 보기",
+   "adult": false,
+   "id": 170,
+   "sort_order": 170
+  },
+  {
+   "type": "balance",
+   "a": "연인이 해주는 요리 맛없음",
+   "b": "연인이 해주는 요리 오래 걸림",
+   "adult": false,
+   "id": 171,
+   "sort_order": 171
+  },
+  {
+   "type": "whatif",
+   "text": "내 습관 하나를 바꿀 수 있다면 뭘 바꿀래?",
+   "adult": false,
+   "id": 172,
+   "sort_order": 172
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 우주비행사라면 누가 선장?",
+   "adult": false,
+   "id": 173,
+   "sort_order": 173
+  },
+  {
+   "type": "whatif",
+   "text": "가을에 꼭 같이 하고 싶은 거?",
+   "adult": false,
+   "id": 174,
+   "sort_order": 174
+  },
+  {
+   "type": "balance",
+   "a": "택배 오면 바로 뜯기",
+   "b": "모아뒀다 한 번에 뜯기",
+   "adult": false,
+   "id": 175,
+   "sort_order": 175
+  },
+  {
+   "type": "whatif",
+   "text": "일주일 동안 국내 어디든 살아본다면?",
+   "adult": false,
+   "id": 176,
+   "sort_order": 176
+  },
+  {
+   "type": "whatif",
+   "text": "너만 아는 맛집 하나 알려준다면?",
+   "adult": false,
+   "id": 177,
+   "sort_order": 177
+  },
+  {
+   "type": "balance",
+   "a": "운동 같이 등록하기",
+   "b": "운동 각자 하고 인증",
+   "adult": false,
+   "id": 178,
+   "sort_order": 178
+  },
+  {
+   "type": "balance",
+   "a": "도자기 만들기",
+   "b": "가죽 공예",
+   "adult": false,
+   "id": 179,
+   "sort_order": 179
+  },
+  {
+   "type": "balance",
+   "a": "맛집 줄 서서 수다",
+   "b": "맛집 포기하고 옆집",
+   "adult": false,
+   "id": 180,
+   "sort_order": 180
+  },
+  {
+   "type": "balance",
+   "a": "상대 가족 모임 자주",
+   "b": "명절에만",
+   "adult": false,
+   "id": 181,
+   "sort_order": 181
+  },
+  {
+   "type": "whatif",
+   "text": "배고플 때 나오는 네 습관은?",
+   "adult": false,
+   "id": 182,
+   "sort_order": 182
+  },
+  {
+   "type": "whatif",
+   "text": "같이 도전해보고 싶은 무서운 거 하나는?",
+   "adult": false,
+   "id": 183,
+   "sort_order": 183
+  },
+  {
+   "type": "whatif",
+   "text": "일하다가 나 생각나는 순간은?",
+   "adult": false,
+   "id": 184,
+   "sort_order": 184
+  },
+  {
+   "type": "balance",
+   "a": "전시회 천천히 다 보기",
+   "b": "전시회 마음에 드는 것만",
+   "adult": false,
+   "id": 185,
+   "sort_order": 185
+  },
+  {
+   "type": "whatif",
+   "text": "같이 살면 내가 맡을 집안일은?",
+   "adult": false,
+   "id": 186,
+   "sort_order": 186
+  },
+  {
+   "type": "whatif",
+   "text": "내가 너한테 꽃을 준다면 무슨 꽃이 좋아?",
+   "adult": false,
+   "id": 187,
+   "sort_order": 187
+  },
+  {
+   "type": "balance",
+   "a": "여행 기념품 꼭 사기",
+   "b": "여행 기념품 안 사기",
+   "adult": false,
+   "id": 188,
+   "sort_order": 188
+  },
+  {
+   "type": "balance",
+   "a": "기차 여행 도시락",
+   "b": "휴게소 간식",
+   "adult": false,
+   "id": 189,
+   "sort_order": 189
+  },
+  {
+   "type": "whatif",
+   "text": "내가 갑자기 요리를 엄청 잘하게 되면 제일 먼저 뭐 해달래?",
+   "adult": false,
+   "id": 190,
+   "sort_order": 190
+  },
+  {
+   "type": "whatif",
+   "text": "오늘 하루 소원권이 있다면 뭐 쓸래?",
+   "adult": false,
+   "id": 191,
+   "sort_order": 191
+  },
+  {
+   "type": "whatif",
+   "text": "요즘 제일 듣고 싶은 말은?",
+   "adult": false,
+   "id": 192,
+   "sort_order": 192
+  },
+  {
+   "type": "whatif",
+   "text": "우리 100일에 뭐 하고 싶어?",
+   "adult": false,
+   "id": 193,
+   "sort_order": 193
+  },
+  {
+   "type": "balance",
+   "a": "캠핑카 여행",
+   "b": "기차 여행",
+   "adult": false,
+   "id": 194,
+   "sort_order": 194
+  },
+  {
+   "type": "balance",
+   "a": "일본",
+   "b": "대만",
+   "adult": false,
+   "id": 195,
+   "sort_order": 195
+  },
+  {
+   "type": "balance",
+   "a": "프로필 사진 커플로",
+   "b": "프로필 사진 각자",
+   "adult": false,
+   "id": 196,
+   "sort_order": 196
+  },
+  {
+   "type": "balance",
+   "a": "과일은 딸기",
+   "b": "과일은 수박",
+   "adult": false,
+   "id": 197,
+   "sort_order": 197
+  },
+  {
+   "type": "balance",
+   "a": "찜질방 데이트",
+   "b": "만화카페 데이트",
+   "adult": false,
+   "id": 198,
+   "sort_order": 198
+  },
+  {
+   "type": "whatif",
+   "text": "지금 당장 산에 간다면 어느 산?",
+   "adult": false,
+   "id": 199,
+   "sort_order": 199
+  },
+  {
+   "type": "balance",
+   "a": "새벽 2시 라면",
+   "b": "아침 9시 브런치",
+   "adult": false,
+   "id": 200,
+   "sort_order": 200
+  },
+  {
+   "type": "balance",
+   "a": "노래방 1시간",
+   "b": "코인노래방 10곡",
+   "adult": false,
+   "id": 201,
+   "sort_order": 201
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 연애 예능에 나가면 제작진이 놀랄 포인트는?",
+   "adult": false,
+   "id": 202,
+   "sort_order": 202
+  },
+  {
+   "type": "balance",
+   "a": "순대는 소금",
+   "b": "순대는 쌈장",
+   "adult": false,
+   "id": 203,
+   "sort_order": 203
+  },
+  {
+   "type": "balance",
+   "a": "탕수육 소스 따로",
+   "b": "탕수육 소스 듬뿍",
+   "adult": false,
+   "id": 204,
+   "sort_order": 204
+  },
+  {
+   "type": "whatif",
+   "text": "내가 장난으로 숨는다면 어디서 찾을 것 같아?",
+   "adult": false,
+   "id": 205,
+   "sort_order": 205
+  },
+  {
+   "type": "whatif",
+   "text": "내가 요리 대회에 나간다면 대표 메뉴는?",
+   "adult": false,
+   "id": 206,
+   "sort_order": 206
+  },
+  {
+   "type": "balance",
+   "a": "내 친구들이랑 친한 연인",
+   "b": "우리 가족이랑 친한 연인",
+   "adult": false,
+   "id": 207,
+   "sort_order": 207
+  },
+  {
+   "type": "balance",
+   "a": "도시에서 살기",
+   "b": "한적한 동네에서 살기",
+   "adult": false,
+   "id": 208,
+   "sort_order": 208
+  },
+  {
+   "type": "whatif",
+   "text": "요즘 나한테 서운한 거 하나 솔직하게?",
+   "adult": false,
+   "id": 209,
+   "sort_order": 209
+  },
+  {
+   "type": "balance",
+   "a": "데이트 통장 만들기",
+   "b": "그때그때 각자 내기",
+   "adult": false,
+   "id": 210,
+   "sort_order": 210
+  },
+  {
+   "type": "balance",
+   "a": "늘 5분 늦는 연인",
+   "b": "늘 30분 일찍 오는 연인",
+   "adult": false,
+   "id": 211,
+   "sort_order": 211
+  },
+  {
+   "type": "whatif",
+   "text": "내가 갑자기 1년 동안 외국에 가야 한다면 어떻게 할래?",
+   "adult": false,
+   "id": 212,
+   "sort_order": 212
+  },
+  {
+   "type": "balance",
+   "a": "같이 사진 찍을 때 내가 찍기",
+   "b": "같이 사진 찍을 때 남한테 부탁",
+   "adult": false,
+   "id": 213,
+   "sort_order": 213
+  },
+  {
+   "type": "balance",
+   "a": "미래 계획 꼼꼼히",
+   "b": "미래는 그때그때",
+   "adult": false,
+   "id": 214,
+   "sort_order": 214
+  },
+  {
+   "type": "whatif",
+   "text": "요정이 소원 세 개를 들어준다면?",
+   "adult": false,
+   "id": 215,
+   "sort_order": 215
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘 중 누가 더 길치일까?",
+   "adult": false,
+   "id": 216,
+   "sort_order": 216
+  },
+  {
+   "type": "balance",
+   "a": "투명 망토",
+   "b": "하늘 나는 빗자루",
+   "adult": false,
+   "id": 217,
+   "sort_order": 217
+  },
+  {
+   "type": "whatif",
+   "text": "크리스마스이브를 둘이 보낸다면 계획은?",
+   "adult": false,
+   "id": 218,
+   "sort_order": 218
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘 중 누가 더 사진에 진심일까?",
+   "adult": false,
+   "id": 219,
+   "sort_order": 219
+  },
+  {
+   "type": "whatif",
+   "text": "네 인생 맛집 한 곳은?",
+   "adult": false,
+   "id": 220,
+   "sort_order": 220
+  },
+  {
+   "type": "balance",
+   "a": "투명인간",
+   "b": "순간이동",
+   "adult": false,
+   "id": 221,
+   "sort_order": 221
+  },
+  {
+   "type": "whatif",
+   "text": "오늘 저녁을 내가 차려준다면 메뉴는?",
+   "adult": false,
+   "id": 222,
+   "sort_order": 222
+  },
+  {
+   "type": "whatif",
+   "text": "아무도 없는 수영장을 빌린다면 뭐 할래?",
+   "adult": false,
+   "id": 223,
+   "sort_order": 223
+  },
+  {
+   "type": "whatif",
+   "text": "네 소울푸드는?",
+   "adult": false,
+   "id": 224,
+   "sort_order": 224
+  },
+  {
+   "type": "whatif",
+   "text": "같이 살면 주말 아침 루틴은?",
+   "adult": false,
+   "id": 225,
+   "sort_order": 225
+  },
+  {
+   "type": "balance",
+   "a": "가까운 곳 자주",
+   "b": "먼 곳 가끔",
+   "adult": false,
+   "id": 226,
+   "sort_order": 226
+  },
+  {
+   "type": "whatif",
+   "text": "네가 나로 하루 산다면 제일 먼저 뭐 할래?",
+   "adult": false,
+   "id": 227,
+   "sort_order": 227
+  },
+  {
+   "type": "balance",
+   "a": "이모티콘 많이",
+   "b": "ㅋㅋㅋ 많이",
+   "adult": false,
+   "id": 228,
+   "sort_order": 228
+  },
+  {
+   "type": "balance",
+   "a": "생일 선물 미리 물어보기",
+   "b": "생일 선물 몰래 준비",
+   "adult": false,
+   "id": 229,
+   "sort_order": 229
+  },
+  {
+   "type": "balance",
+   "a": "여름 휴가는 계곡",
+   "b": "여름 휴가는 바다",
+   "adult": false,
+   "id": 230,
+   "sort_order": 230
+  },
+  {
+   "type": "whatif",
+   "text": "오늘 저녁 메뉴를 내가 정한다면 뭘 고를 것 같아?",
+   "adult": false,
+   "id": 231,
+   "sort_order": 231
+  },
+  {
+   "type": "balance",
+   "a": "평생 같은 헤어스타일",
+   "b": "평생 같은 옷",
+   "adult": false,
+   "id": 232,
+   "sort_order": 232
+  },
+  {
+   "type": "whatif",
+   "text": "꿈에서라도 해보고 싶은 거 하나는?",
+   "adult": false,
+   "id": 233,
+   "sort_order": 233
+  },
+  {
+   "type": "balance",
+   "a": "미래 연봉 알기",
+   "b": "미래 사는 곳 알기",
+   "adult": false,
+   "id": 234,
+   "sort_order": 234
+  },
+  {
+   "type": "whatif",
+   "text": "어릴 때 제일 혼났던 일은?",
+   "adult": false,
+   "id": 235,
+   "sort_order": 235
+  },
+  {
+   "type": "balance",
+   "a": "매번 내가 먼저 연락",
+   "b": "매번 상대가 먼저 연락",
+   "adult": false,
+   "id": 236,
+   "sort_order": 236
+  },
+  {
+   "type": "balance",
+   "a": "비밀 없는 연애",
+   "b": "각자 작은 비밀 있는 연애",
+   "adult": false,
+   "id": 237,
+   "sort_order": 237
+  },
+  {
+   "type": "balance",
+   "a": "여름밤 산책",
+   "b": "겨울밤 붕어빵",
+   "adult": false,
+   "id": 238,
+   "sort_order": 238
+  },
+  {
+   "type": "balance",
+   "a": "아침에 모닝콜 해주기",
+   "b": "아침에 모닝콜 받기",
+   "adult": false,
+   "id": 239,
+   "sort_order": 239
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 처음 같이 장을 본다면 카트에 제일 먼저 담을 건?",
+   "adult": false,
+   "id": 240,
+   "sort_order": 240
+  },
+  {
+   "type": "balance",
+   "a": "비 오는 날 창가 카페",
+   "b": "비 오는 날 집에서 영화",
+   "adult": false,
+   "id": 241,
+   "sort_order": 241
+  },
+  {
+   "type": "whatif",
+   "text": "나를 색깔로 표현한다면?",
+   "adult": false,
+   "id": 242,
+   "sort_order": 242
+  },
+  {
+   "type": "balance",
+   "a": "상대 친구 모임 따라가기",
+   "b": "각자 친구 모임",
+   "adult": false,
+   "id": 243,
+   "sort_order": 243
+  },
+  {
+   "type": "whatif",
+   "text": "길에서 연예인을 만난다면 누구였으면 좋겠어?",
+   "adult": false,
+   "id": 244,
+   "sort_order": 244
+  },
+  {
+   "type": "balance",
+   "a": "데이트에 일찍 도착해서 기다리기",
+   "b": "딱 맞춰 도착하기",
+   "adult": false,
+   "id": 245,
+   "sort_order": 245
+  },
+  {
+   "type": "balance",
+   "a": "출근길 지하철 앉아 가기",
+   "b": "출근길 10분 더 자기",
+   "adult": false,
+   "id": 246,
+   "sort_order": 246
+  },
+  {
+   "type": "balance",
+   "a": "커피",
+   "b": "차",
+   "adult": false,
+   "id": 247,
+   "sort_order": 247
+  },
+  {
+   "type": "whatif",
+   "text": "1년 동안 매주 새로운 걸 하나씩 같이 해본다면 첫 주는?",
+   "adult": false,
+   "id": 248,
+   "sort_order": 248
+  },
+  {
+   "type": "balance",
+   "a": "하루 동안 똑같은 옷 입기",
+   "b": "하루 동안 서로 옷 바꿔 입기",
+   "adult": false,
+   "id": 249,
+   "sort_order": 249
+  },
+  {
+   "type": "balance",
+   "a": "노래방 데이트",
+   "b": "볼링 데이트",
+   "adult": false,
+   "id": 250,
+   "sort_order": 250
+  },
+  {
+   "type": "balance",
+   "a": "유명해지기",
+   "b": "부자 되기",
+   "adult": false,
+   "id": 251,
+   "sort_order": 251
+  },
+  {
+   "type": "whatif",
+   "text": "우리 데이트 테마곡을 정한다면?",
+   "adult": false,
+   "id": 252,
+   "sort_order": 252
+  },
+  {
+   "type": "whatif",
+   "text": "내가 갑자기 꽃다발 들고 나타나면 반응은?",
+   "adult": false,
+   "id": 253,
+   "sort_order": 253
+  },
+  {
+   "type": "balance",
+   "a": "같은 동네 살기",
+   "b": "30분 거리 살기",
+   "adult": false,
+   "id": 254,
+   "sort_order": 254
+  },
+  {
+   "type": "balance",
+   "a": "평생 내가 요리",
+   "b": "평생 상대가 요리",
+   "adult": false,
+   "id": 255,
+   "sort_order": 255
+  },
+  {
+   "type": "balance",
+   "a": "벚꽃 구경",
+   "b": "단풍 구경",
+   "adult": false,
+   "id": 256,
+   "sort_order": 256
+  },
+  {
+   "type": "balance",
+   "a": "집 근처 단골집",
+   "b": "멀어도 분위기 좋은 곳",
+   "adult": false,
+   "id": 257,
+   "sort_order": 257
+  },
+  {
+   "type": "balance",
+   "a": "커피는 산미 있는 거",
+   "b": "커피는 고소한 거",
+   "adult": false,
+   "id": 258,
+   "sort_order": 258
+  },
+  {
+   "type": "balance",
+   "a": "칭찬은 공개적으로",
+   "b": "칭찬은 둘만 있을 때",
+   "adult": false,
+   "id": 259,
+   "sort_order": 259
+  },
+  {
+   "type": "balance",
+   "a": "위로는 말로",
+   "b": "위로는 안아주기",
+   "adult": false,
+   "id": 260,
+   "sort_order": 260
+  },
+  {
+   "type": "balance",
+   "a": "갤럭시 위젯 잔뜩",
+   "b": "홈 화면 깔끔하게",
+   "adult": false,
+   "id": 261,
+   "sort_order": 261
+  },
+  {
+   "type": "whatif",
+   "text": "우리 데이트 중에 제일 엉뚱했던 순간은?",
+   "adult": false,
+   "id": 262,
+   "sort_order": 262
+  },
+  {
+   "type": "balance",
+   "a": "사진 찍을 때 브이",
+   "b": "사진 찍을 때 하트",
+   "adult": false,
+   "id": 263,
+   "sort_order": 263
+  },
+  {
+   "type": "balance",
+   "a": "하루 2시간만 자도 멀쩡",
+   "b": "하루 10시간 자도 시간 그대로",
+   "adult": false,
+   "id": 264,
+   "sort_order": 264
+  },
+  {
+   "type": "balance",
+   "a": "평생 무료 치킨",
+   "b": "평생 무료 커피",
+   "adult": false,
+   "id": 265,
+   "sort_order": 265
+  },
+  {
+   "type": "whatif",
+   "text": "한 번쯤 해보고 싶은 엉뚱한 데이트는?",
+   "adult": false,
+   "id": 266,
+   "sort_order": 266
+  },
+  {
+   "type": "balance",
+   "a": "영화는 결말 먼저 알고 보기",
+   "b": "영화는 스포 절대 금지",
+   "adult": false,
+   "id": 267,
+   "sort_order": 267
+  },
+  {
+   "type": "balance",
+   "a": "첫눈 오면 연락하기",
+   "b": "첫눈 오면 만나러 가기",
+   "adult": false,
+   "id": 268,
+   "sort_order": 268
+  },
+  {
+   "type": "balance",
+   "a": "도시락 싸주기",
+   "b": "도시락 받기",
+   "adult": false,
+   "id": 269,
+   "sort_order": 269
+  },
+  {
+   "type": "balance",
+   "a": "매운 거",
+   "b": "단 거",
+   "adult": false,
+   "id": 270,
+   "sort_order": 270
+  },
+  {
+   "type": "whatif",
+   "text": "과자가 된다면 무슨 과자?",
+   "adult": false,
+   "id": 271,
+   "sort_order": 271
+  },
+  {
+   "type": "whatif",
+   "text": "지금 당장 순간이동할 수 있으면 어디로?",
+   "adult": false,
+   "id": 272,
+   "sort_order": 272
+  },
+  {
+   "type": "balance",
+   "a": "염색",
+   "b": "자연 머리색",
+   "adult": false,
+   "id": 273,
+   "sort_order": 273
+  },
+  {
+   "type": "balance",
+   "a": "이어폰 한쪽씩 나눠 듣기",
+   "b": "각자 이어폰",
+   "adult": false,
+   "id": 274,
+   "sort_order": 274
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 방탈출에 갇히면 누가 먼저 풀까?",
+   "adult": false,
+   "id": 275,
+   "sort_order": 275
+  },
+  {
+   "type": "whatif",
+   "text": "여행 가서 지갑을 잃어버리면 어떻게 할래?",
+   "adult": false,
+   "id": 276,
+   "sort_order": 276
+  },
+  {
+   "type": "whatif",
+   "text": "내가 몰래 했으면 하는 깜짝 이벤트는?",
+   "adult": false,
+   "id": 277,
+   "sort_order": 277
+  },
+  {
+   "type": "whatif",
+   "text": "내가 작아져서 주머니에 들어가면 어디 데려갈래?",
+   "adult": false,
+   "id": 278,
+   "sort_order": 278
+  },
+  {
+   "type": "balance",
+   "a": "쿠킹 클래스",
+   "b": "베이킹 클래스",
+   "adult": false,
+   "id": 279,
+   "sort_order": 279
+  },
+  {
+   "type": "balance",
+   "a": "매일 1시간 운동",
+   "b": "매일 1시간 독서",
+   "adult": false,
+   "id": 280,
+   "sort_order": 280
+  },
+  {
+   "type": "balance",
+   "a": "야근한 날 데리러 가기",
+   "b": "야근한 날 집에 밥 차려두기",
+   "adult": false,
+   "id": 281,
+   "sort_order": 281
+  },
+  {
+   "type": "balance",
+   "a": "첫 데이트 장소 계속 다시 가기",
+   "b": "매번 새로운 곳",
+   "adult": false,
+   "id": 282,
+   "sort_order": 282
+  },
+  {
+   "type": "balance",
+   "a": "편하게 입고 데이트",
+   "b": "꾸미고 데이트",
+   "adult": false,
+   "id": 283,
+   "sort_order": 283
+  },
+  {
+   "type": "balance",
+   "a": "커플 사진 보정 많이",
+   "b": "커플 사진 보정 없이",
+   "adult": false,
+   "id": 284,
+   "sort_order": 284
+  },
+  {
+   "type": "balance",
+   "a": "깜짝 꽃다발",
+   "b": "깜짝 손편지",
+   "adult": false,
+   "id": 285,
+   "sort_order": 285
+  },
+  {
+   "type": "balance",
+   "a": "처음 가보는 맛집",
+   "b": "늘 가던 단골집",
+   "adult": false,
+   "id": 286,
+   "sort_order": 286
+  },
+  {
+   "type": "balance",
+   "a": "중요한 얘기는 말로",
+   "b": "중요한 얘기는 글로",
+   "adult": false,
+   "id": 287,
+   "sort_order": 287
+  },
+  {
+   "type": "balance",
+   "a": "칭찬 듣기",
+   "b": "위로 듣기",
+   "adult": false,
+   "id": 288,
+   "sort_order": 288
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 받고 싶은 손편지 첫 줄은?",
+   "adult": false,
+   "id": 289,
+   "sort_order": 289
+  },
+  {
+   "type": "balance",
+   "a": "월요일 아침이 없어지기",
+   "b": "일요일 밤이 길어지기",
+   "adult": false,
+   "id": 290,
+   "sort_order": 290
+  },
+  {
+   "type": "whatif",
+   "text": "책을 한 권 쓴다면 제목은?",
+   "adult": false,
+   "id": 291,
+   "sort_order": 291
+  },
+  {
+   "type": "whatif",
+   "text": "지난주 중 제일 좋았던 순간은?",
+   "adult": false,
+   "id": 292,
+   "sort_order": 292
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 꼭 가르쳐주고 싶은 거 하나는?",
+   "adult": false,
+   "id": 293,
+   "sort_order": 293
+  },
+  {
+   "type": "balance",
+   "a": "좋아하는 일 적게 벌기",
+   "b": "싫은 일 많이 벌기",
+   "adult": false,
+   "id": 294,
+   "sort_order": 294
+  },
+  {
+   "type": "balance",
+   "a": "짜장면",
+   "b": "짬뽕",
+   "adult": false,
+   "id": 295,
+   "sort_order": 295
+  },
+  {
+   "type": "whatif",
+   "text": "일주일 동안 연락을 못 하게 되면 마지막으로 보낼 메시지는?",
+   "adult": false,
+   "id": 296,
+   "sort_order": 296
+  },
+  {
+   "type": "balance",
+   "a": "아플 때 계속 연락",
+   "b": "푹 자게 연락 안 하기",
+   "adult": false,
+   "id": 297,
+   "sort_order": 297
+  },
+  {
+   "type": "balance",
+   "a": "게스트하우스",
+   "b": "호텔",
+   "adult": false,
+   "id": 298,
+   "sort_order": 298
+  },
+  {
+   "type": "balance",
+   "a": "무뚝뚝한데 다정한 연인",
+   "b": "말은 다정한데 덜렁대는 연인",
+   "adult": false,
+   "id": 299,
+   "sort_order": 299
+  },
+  {
+   "type": "balance",
+   "a": "중고 거래 판매자",
+   "b": "중고 거래 구매자",
+   "adult": false,
+   "id": 300,
+   "sort_order": 300
+  },
+  {
+   "type": "whatif",
+   "text": "처음 산 앨범이나 처음 좋아한 가수는?",
+   "adult": false,
+   "id": 301,
+   "sort_order": 301
+  },
+  {
+   "type": "balance",
+   "a": "1주년에 첫 데이트 장소",
+   "b": "1주년에 처음 가보는 곳",
+   "adult": false,
+   "id": 302,
+   "sort_order": 302
+  },
+  {
+   "type": "balance",
+   "a": "방탈출",
+   "b": "보드게임 카페",
+   "adult": false,
+   "id": 303,
+   "sort_order": 303
+  },
+  {
+   "type": "balance",
+   "a": "방귀 트기",
+   "b": "평생 안 트기",
+   "adult": false,
+   "id": 304,
+   "sort_order": 304
+  },
+  {
+   "type": "balance",
+   "a": "아이돌 콘서트 맨 앞줄",
+   "b": "좋아하는 가수 단독 공연",
+   "adult": false,
+   "id": 305,
+   "sort_order": 305
+  },
+  {
+   "type": "balance",
+   "a": "병원 같이 가주기",
+   "b": "병원 끝나고 맛있는 거 사주기",
+   "adult": false,
+   "id": 306,
+   "sort_order": 306
+  },
+  {
+   "type": "balance",
+   "a": "베개는 높게",
+   "b": "베개는 낮게",
+   "adult": false,
+   "id": 307,
+   "sort_order": 307
+  },
+  {
+   "type": "whatif",
+   "text": "아무도 없는 영화관을 빌린다면 무슨 영화?",
+   "adult": false,
+   "id": 308,
+   "sort_order": 308
+  },
+  {
+   "type": "whatif",
+   "text": "우리만의 이모티콘을 만든다면 첫 번째 표정은?",
+   "adult": false,
+   "id": 309,
+   "sort_order": 309
+  },
+  {
+   "type": "whatif",
+   "text": "둘이 같이 봉사활동 한다면 뭘 해보고 싶어?",
+   "adult": false,
+   "id": 310,
+   "sort_order": 310
+  },
+  {
+   "type": "whatif",
+   "text": "10년 뒤 우리한테 편지 쓴다면 첫 문장은?",
+   "adult": false,
+   "id": 311,
+   "sort_order": 311
+  },
+  {
+   "type": "whatif",
+   "text": "둘이 세계 일주를 한다면 첫 나라는?",
+   "adult": false,
+   "id": 312,
+   "sort_order": 312
+  },
+  {
+   "type": "balance",
+   "a": "많이 버는데 바쁜 연인",
+   "b": "덜 버는데 시간 많은 연인",
+   "adult": false,
+   "id": 313,
+   "sort_order": 313
+  },
+  {
+   "type": "balance",
+   "a": "마법 학교 입학",
+   "b": "우주 정거장 1년",
+   "adult": false,
+   "id": 314,
+   "sort_order": 314
+  },
+  {
+   "type": "balance",
+   "a": "말 많은 연인",
+   "b": "잘 들어주는 연인",
+   "adult": false,
+   "id": 315,
+   "sort_order": 315
+  },
+  {
+   "type": "whatif",
+   "text": "너에게 '완벽한 하루'는 어떤 날이야?",
+   "adult": false,
+   "id": 316,
+   "sort_order": 316
+  },
+  {
+   "type": "balance",
+   "a": "옷 골라주기",
+   "b": "옷 골라받기",
+   "adult": false,
+   "id": 317,
+   "sort_order": 317
+  },
+  {
+   "type": "balance",
+   "a": "마라톤 같이 나가기",
+   "b": "응원하러 가주기",
+   "adult": false,
+   "id": 318,
+   "sort_order": 318
+  },
+  {
+   "type": "whatif",
+   "text": "피곤할 때 나오는 네 습관은?",
+   "adult": false,
+   "id": 319,
+   "sort_order": 319
+  },
+  {
+   "type": "balance",
+   "a": "SNS 팔로워 100만",
+   "b": "진짜 친구 10명 평생",
+   "adult": false,
+   "id": 320,
+   "sort_order": 320
+  },
+  {
+   "type": "whatif",
+   "text": "드라이브 코스를 하나 고른다면?",
+   "adult": false,
+   "id": 321,
+   "sort_order": 321
+  },
+  {
+   "type": "whatif",
+   "text": "시간을 10분 되돌릴 수 있다면 언제 쓸래?",
+   "adult": false,
+   "id": 322,
+   "sort_order": 322
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 2100년에 태어났다면 데이트는 어디서?",
+   "adult": false,
+   "id": 323,
+   "sort_order": 323
+  },
+  {
+   "type": "whatif",
+   "text": "반려동물을 키운다면 이름은?",
+   "adult": false,
+   "id": 324,
+   "sort_order": 324
+  },
+  {
+   "type": "balance",
+   "a": "나를 위해 노래 불러주기",
+   "b": "나를 위해 춤춰주기",
+   "adult": false,
+   "id": 325,
+   "sort_order": 325
+  },
+  {
+   "type": "whatif",
+   "text": "내가 너한테 노래를 불러준다면 무슨 노래였으면 좋겠어?",
+   "adult": false,
+   "id": 326,
+   "sort_order": 326
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 영화 속 커플이라면 어떤 장면을 찍고 싶어?",
+   "adult": false,
+   "id": 327,
+   "sort_order": 327
+  },
+  {
+   "type": "balance",
+   "a": "타임캡슐 묻기",
+   "b": "매년 편지 쓰기",
+   "adult": false,
+   "id": 328,
+   "sort_order": 328
+  },
+  {
+   "type": "balance",
+   "a": "상대가 쓴 시 받기",
+   "b": "상대가 그린 그림 받기",
+   "adult": false,
+   "id": 329,
+   "sort_order": 329
+  },
+  {
+   "type": "whatif",
+   "text": "우리 반려동물이 생긴다면 누가 더 예뻐할까?",
+   "adult": false,
+   "id": 330,
+   "sort_order": 330
+  },
+  {
+   "type": "whatif",
+   "text": "내가 몰래 이벤트를 준비한다면 뭐였으면 좋겠어?",
+   "adult": false,
+   "id": 331,
+   "sort_order": 331
+  },
+  {
+   "type": "balance",
+   "a": "새벽 감성",
+   "b": "아침 햇살",
+   "adult": false,
+   "id": 332,
+   "sort_order": 332
+  },
+  {
+   "type": "balance",
+   "a": "여행 마지막 날 쇼핑",
+   "b": "여행 마지막 날 한 곳 더 구경",
+   "adult": false,
+   "id": 333,
+   "sort_order": 333
+  },
+  {
+   "type": "balance",
+   "a": "등산 데이트",
+   "b": "수영 데이트",
+   "adult": false,
+   "id": 334,
+   "sort_order": 334
+  },
+  {
+   "type": "whatif",
+   "text": "내가 아이돌로 데뷔하면 응원 문구는?",
+   "adult": false,
+   "id": 335,
+   "sort_order": 335
+  },
+  {
+   "type": "balance",
+   "a": "드라이브 스루 커피",
+   "b": "카페 창가 자리",
+   "adult": false,
+   "id": 336,
+   "sort_order": 336
+  },
+  {
+   "type": "balance",
+   "a": "순간 기억력 천재",
+   "b": "순간 계산 천재",
+   "adult": false,
+   "id": 337,
+   "sort_order": 337
+  },
+  {
+   "type": "balance",
+   "a": "일 얘기 다 듣기",
+   "b": "일 얘기는 집에 안 가져오기",
+   "adult": false,
+   "id": 338,
+   "sort_order": 338
+  },
+  {
+   "type": "balance",
+   "a": "아플 때 죽 사다주기",
+   "b": "아플 때 옆에 있어주기",
+   "adult": false,
+   "id": 339,
+   "sort_order": 339
+  },
+  {
+   "type": "balance",
+   "a": "새해 첫날 일출",
+   "b": "새해 첫날 늦잠",
+   "adult": false,
+   "id": 340,
+   "sort_order": 340
+  },
+  {
+   "type": "whatif",
+   "text": "너 자신에게 상을 준다면 무슨 상?",
+   "adult": false,
+   "id": 341,
+   "sort_order": 341
+  },
+  {
+   "type": "balance",
+   "a": "하루 끝에 통화 10분",
+   "b": "하루 끝에 영상통화 3분",
+   "adult": false,
+   "id": 342,
+   "sort_order": 342
+  },
+  {
+   "type": "whatif",
+   "text": "지금 당장 같이 먹고 싶은 거?",
+   "adult": false,
+   "id": 343,
+   "sort_order": 343
+  },
+  {
+   "type": "balance",
+   "a": "아침형 인간 되기",
+   "b": "저녁형 인간 되기",
+   "adult": false,
+   "id": 344,
+   "sort_order": 344
+  },
+  {
+   "type": "whatif",
+   "text": "지금까지 먹어본 것 중 제일 이상한 음식은?",
+   "adult": false,
+   "id": 345,
+   "sort_order": 345
+  },
+  {
+   "type": "balance",
+   "a": "떡국 떡만 많이",
+   "b": "떡국 국물만 많이",
+   "adult": false,
+   "id": 346,
+   "sort_order": 346
+  },
+  {
+   "type": "balance",
+   "a": "연인의 핸드폰 비밀번호 알기",
+   "b": "서로 몰라도 괜찮기",
+   "adult": false,
+   "id": 347,
+   "sort_order": 347
+  },
+  {
+   "type": "balance",
+   "a": "고양이로 하루",
+   "b": "새로 하루",
+   "adult": false,
+   "id": 348,
+   "sort_order": 348
+  },
+  {
+   "type": "whatif",
+   "text": "게임에서 진 사람이 하는 벌칙을 정한다면?",
+   "adult": false,
+   "id": 349,
+   "sort_order": 349
+  },
+  {
+   "type": "balance",
+   "a": "별 보러 가기",
+   "b": "야경 보러 가기",
+   "adult": false,
+   "id": 350,
+   "sort_order": 350
+  },
+  {
+   "type": "whatif",
+   "text": "하루만 고양이로 산다면 뭐 할래?",
+   "adult": false,
+   "id": 351,
+   "sort_order": 351
+  },
+  {
+   "type": "balance",
+   "a": "백허그",
+   "b": "정면 포옹",
+   "adult": false,
+   "id": 352,
+   "sort_order": 352
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 상을 준다면 무슨 상?",
+   "adult": false,
+   "id": 353,
+   "sort_order": 353
+  },
+  {
+   "type": "whatif",
+   "text": "내가 생일상을 차려준다면 꼭 있어야 할 메뉴는?",
+   "adult": false,
+   "id": 354,
+   "sort_order": 354
+  },
+  {
+   "type": "whatif",
+   "text": "내가 너를 위한 플레이리스트를 만든다면 첫 곡은?",
+   "adult": false,
+   "id": 355,
+   "sort_order": 355
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 살 동네를 하나 고를 수 있다면?",
+   "adult": false,
+   "id": 356,
+   "sort_order": 356
+  },
+  {
+   "type": "balance",
+   "a": "연인 친구들 모임에 같이",
+   "b": "연인 친구들 모임은 따로",
+   "adult": false,
+   "id": 357,
+   "sort_order": 357
+  },
+  {
+   "type": "whatif",
+   "text": "우리 연애를 책으로 낸다면 1장 제목은?",
+   "adult": false,
+   "id": 358,
+   "sort_order": 358
+  },
+  {
+   "type": "whatif",
+   "text": "처음 만난 날로 돌아가면 뭘 다르게 할래?",
+   "adult": false,
+   "id": 359,
+   "sort_order": 359
+  },
+  {
+   "type": "whatif",
+   "text": "색깔이 된다면 무슨 색?",
+   "adult": false,
+   "id": 360,
+   "sort_order": 360
+  },
+  {
+   "type": "balance",
+   "a": "아이스 아메리카노",
+   "b": "따뜻한 라떼",
+   "adult": false,
+   "id": 361,
+   "sort_order": 361
+  },
+  {
+   "type": "balance",
+   "a": "답장 빠른데 짧게",
+   "b": "답장 느린데 길게",
+   "adult": false,
+   "id": 362,
+   "sort_order": 362
+  },
+  {
+   "type": "balance",
+   "a": "국물 떡볶이",
+   "b": "즉석 떡볶이",
+   "adult": false,
+   "id": 363,
+   "sort_order": 363
+  },
+  {
+   "type": "balance",
+   "a": "같은 직장",
+   "b": "다른 직장",
+   "adult": false,
+   "id": 364,
+   "sort_order": 364
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 받고 싶은 생일 선물 하나는?",
+   "adult": false,
+   "id": 365,
+   "sort_order": 365
+  },
+  {
+   "type": "whatif",
+   "text": "우리 연애가 노래라면 첫 소절은?",
+   "adult": false,
+   "id": 366,
+   "sort_order": 366
+  },
+  {
+   "type": "balance",
+   "a": "웹툰",
+   "b": "웹소설",
+   "adult": false,
+   "id": 367,
+   "sort_order": 367
+  },
+  {
+   "type": "whatif",
+   "text": "같이 늙어가는 모습을 상상하면 떠오르는 장면은?",
+   "adult": false,
+   "id": 368,
+   "sort_order": 368
+  },
+  {
+   "type": "balance",
+   "a": "회",
+   "b": "고기",
+   "adult": false,
+   "id": 369,
+   "sort_order": 369
+  },
+  {
+   "type": "whatif",
+   "text": "같이 만드는 첫 요리를 고른다면?",
+   "adult": false,
+   "id": 370,
+   "sort_order": 370
+  },
+  {
+   "type": "balance",
+   "a": "퇴근하고 바로 씻기",
+   "b": "퇴근하고 일단 눕기",
+   "adult": false,
+   "id": 371,
+   "sort_order": 371
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 1박 2일 무계획 여행 가면 어디부터 갈래?",
+   "adult": false,
+   "id": 372,
+   "sort_order": 372
+  },
+  {
+   "type": "balance",
+   "a": "연인이 내 친구랑 너무 친함",
+   "b": "연인이 내 친구랑 어색함",
+   "adult": false,
+   "id": 373,
+   "sort_order": 373
+  },
+  {
+   "type": "whatif",
+   "text": "갑자기 일주일 휴가가 생기면 어디 갈래?",
+   "adult": false,
+   "id": 374,
+   "sort_order": 374
+  },
+  {
+   "type": "whatif",
+   "text": "우리 1주년에 뭐 하고 싶어?",
+   "adult": false,
+   "id": 375,
+   "sort_order": 375
+  },
+  {
+   "type": "balance",
+   "a": "네컷사진 매번 찍기",
+   "b": "특별한 날만 찍기",
+   "adult": false,
+   "id": 376,
+   "sort_order": 376
+  },
+  {
+   "type": "balance",
+   "a": "배터리 20% 되면 불안",
+   "b": "배터리 5%까지 괜찮",
+   "adult": false,
+   "id": 377,
+   "sort_order": 377
+  },
+  {
+   "type": "balance",
+   "a": "커플 잠옷 입고 사진",
+   "b": "커플 티 입고 외출",
+   "adult": false,
+   "id": 378,
+   "sort_order": 378
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘 중 누가 노래방에서 더 신날까?",
+   "adult": false,
+   "id": 379,
+   "sort_order": 379
+  },
+  {
+   "type": "whatif",
+   "text": "네 핸드폰에서 제일 오래 쓰는 앱은?",
+   "adult": false,
+   "id": 380,
+   "sort_order": 380
+  },
+  {
+   "type": "balance",
+   "a": "컵라면 국물까지 다",
+   "b": "컵라면 면만",
+   "adult": false,
+   "id": 381,
+   "sort_order": 381
+  },
+  {
+   "type": "balance",
+   "a": "영상통화 자주",
+   "b": "목소리 통화만",
+   "adult": false,
+   "id": 382,
+   "sort_order": 382
+  },
+  {
+   "type": "whatif",
+   "text": "퇴근하고 집에 왔는데 내가 있다면 바라는 거?",
+   "adult": false,
+   "id": 383,
+   "sort_order": 383
+  },
+  {
+   "type": "whatif",
+   "text": "우리 커플에게 상을 준다면 무슨 상?",
+   "adult": false,
+   "id": 384,
+   "sort_order": 384
+  },
+  {
+   "type": "balance",
+   "a": "우리 이야기 책으로 남기기",
+   "b": "우리 이야기 영상으로 남기기",
+   "adult": false,
+   "id": 385,
+   "sort_order": 385
+  },
+  {
+   "type": "balance",
+   "a": "다이어리 같이 쓰기",
+   "b": "각자 쓰고 1년 뒤 교환",
+   "adult": false,
+   "id": 386,
+   "sort_order": 386
+  },
+  {
+   "type": "balance",
+   "a": "일출 보기",
+   "b": "일몰 보기",
+   "adult": false,
+   "id": 387,
+   "sort_order": 387
+  },
+  {
+   "type": "whatif",
+   "text": "우울한 날 꺼내 보고 싶은 우리 사진은?",
+   "adult": false,
+   "id": 388,
+   "sort_order": 388
+  },
+  {
+   "type": "balance",
+   "a": "삼겹살",
+   "b": "소고기",
+   "adult": false,
+   "id": 389,
+   "sort_order": 389
+  },
+  {
+   "type": "whatif",
+   "text": "다음 1년 동안 같이 하고 싶은 거 세 가지?",
+   "adult": false,
+   "id": 390,
+   "sort_order": 390
+  },
+  {
+   "type": "balance",
+   "a": "복권 1등 한 번",
+   "b": "매달 300만 원 평생",
+   "adult": false,
+   "id": 391,
+   "sort_order": 391
+  },
+  {
+   "type": "whatif",
+   "text": "우리만의 인사법을 만든다면?",
+   "adult": false,
+   "id": 392,
+   "sort_order": 392
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 해적이라면 배 이름은?",
+   "adult": false,
+   "id": 393,
+   "sort_order": 393
+  },
+  {
+   "type": "balance",
+   "a": "매일 굿모닝 메시지",
+   "b": "매일 굿나잇 메시지",
+   "adult": false,
+   "id": 394,
+   "sort_order": 394
+  },
+  {
+   "type": "whatif",
+   "text": "내가 갑자기 고양이로 변하면 어떻게 할래?",
+   "adult": false,
+   "id": 395,
+   "sort_order": 395
+  },
+  {
+   "type": "balance",
+   "a": "김치찌개",
+   "b": "된장찌개",
+   "adult": false,
+   "id": 396,
+   "sort_order": 396
+  },
+  {
+   "type": "balance",
+   "a": "민트초코 좋아하는 연인",
+   "b": "민트초코 싫어하는 연인",
+   "adult": false,
+   "id": 397,
+   "sort_order": 397
+  },
+  {
+   "type": "whatif",
+   "text": "학교 다닐 때 별명은?",
+   "adult": false,
+   "id": 398,
+   "sort_order": 398
+  },
+  {
+   "type": "balance",
+   "a": "하루 종일 자주 연락",
+   "b": "저녁에 한 번 길게 통화",
+   "adult": false,
+   "id": 399,
+   "sort_order": 399
+  },
+  {
+   "type": "whatif",
+   "text": "내일 하루 아무 일정이 없다면 뭐 하고 싶어?",
+   "adult": false,
+   "id": 400,
+   "sort_order": 400
+  },
+  {
+   "type": "balance",
+   "a": "명절에 같이 고향",
+   "b": "명절에 각자 고향",
+   "adult": false,
+   "id": 401,
+   "sort_order": 401
+  },
+  {
+   "type": "whatif",
+   "text": "겨울에 꼭 같이 하고 싶은 거?",
+   "adult": false,
+   "id": 402,
+   "sort_order": 402
+  },
+  {
+   "type": "balance",
+   "a": "공포 게임",
+   "b": "퍼즐 게임",
+   "adult": false,
+   "id": 403,
+   "sort_order": 403
+  },
+  {
+   "type": "whatif",
+   "text": "둘이 같이 배우고 싶은 언어가 있다면?",
+   "adult": false,
+   "id": 404,
+   "sort_order": 404
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 서운한 게 생기면 어떻게 말해줬으면 좋겠어?",
+   "adult": false,
+   "id": 405,
+   "sort_order": 405
+  },
+  {
+   "type": "whatif",
+   "text": "우리 1주년 여행지를 지금 정한다면?",
+   "adult": false,
+   "id": 406,
+   "sort_order": 406
+  },
+  {
+   "type": "whatif",
+   "text": "서로 '오늘 하루 소원권'을 쓴다면 뭐 쓸래?",
+   "adult": false,
+   "id": 407,
+   "sort_order": 407
+  },
+  {
+   "type": "balance",
+   "a": "상대가 골라준 향수 쓰기",
+   "b": "내가 고른 향수 선물하기",
+   "adult": false,
+   "id": 408,
+   "sort_order": 408
+  },
+  {
+   "type": "balance",
+   "a": "동네 산책",
+   "b": "동네 카페",
+   "adult": false,
+   "id": 409,
+   "sort_order": 409
+  },
+  {
+   "type": "balance",
+   "a": "드라이브 선곡은 내가",
+   "b": "드라이브 선곡은 상대가",
+   "adult": false,
+   "id": 410,
+   "sort_order": 410
+  },
+  {
+   "type": "whatif",
+   "text": "한 달 동안 아무 나라에서 살 수 있다면 어디?",
+   "adult": false,
+   "id": 411,
+   "sort_order": 411
+  },
+  {
+   "type": "whatif",
+   "text": "지금 다시 꿈을 고른다면?",
+   "adult": false,
+   "id": 412,
+   "sort_order": 412
+  },
+  {
+   "type": "balance",
+   "a": "우리 사진 SNS에 자주",
+   "b": "우리 사진 가끔",
+   "adult": false,
+   "id": 413,
+   "sort_order": 413
+  },
+  {
+   "type": "balance",
+   "a": "공방 데이트 반지 만들기",
+   "b": "공방 데이트 향수 만들기",
+   "adult": false,
+   "id": 414,
+   "sort_order": 414
+  },
+  {
+   "type": "balance",
+   "a": "여행 가서 맛집 위주",
+   "b": "여행 가서 관광지 위주",
+   "adult": false,
+   "id": 415,
+   "sort_order": 415
+  },
+  {
+   "type": "whatif",
+   "text": "오늘 하루 얘기를 다 들어준다면 무슨 얘기부터 할래?",
+   "adult": false,
+   "id": 416,
+   "sort_order": 416
+  },
+  {
+   "type": "balance",
+   "a": "웃긴 사람",
+   "b": "다정한 사람",
+   "adult": false,
+   "id": 417,
+   "sort_order": 417
+  },
+  {
+   "type": "balance",
+   "a": "닮은 점 많은 커플",
+   "b": "다른 점 많은 커플",
+   "adult": false,
+   "id": 418,
+   "sort_order": 418
+  },
+  {
+   "type": "whatif",
+   "text": "싸워도 이것만은 하지 말자 하는 거 하나는?",
+   "adult": false,
+   "id": 419,
+   "sort_order": 419
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘 중 누가 더 감성적일까?",
+   "adult": false,
+   "id": 420,
+   "sort_order": 420
+  },
+  {
+   "type": "balance",
+   "a": "여행 가서 일찍 일어나기",
+   "b": "여행 가서 늦잠",
+   "adult": false,
+   "id": 421,
+   "sort_order": 421
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 받고 싶은 크리스마스 선물은?",
+   "adult": false,
+   "id": 422,
+   "sort_order": 422
+  },
+  {
+   "type": "balance",
+   "a": "1년 동안 말 안 하기",
+   "b": "1년 동안 핸드폰 안 쓰기",
+   "adult": false,
+   "id": 423,
+   "sort_order": 423
+  },
+  {
+   "type": "whatif",
+   "text": "우리 사이에 생긴 유행어 하나만 고르면?",
+   "adult": false,
+   "id": 424,
+   "sort_order": 424
+  },
+  {
+   "type": "balance",
+   "a": "여행은 계획 빡빡하게",
+   "b": "완전 즉흥",
+   "adult": false,
+   "id": 425,
+   "sort_order": 425
+  },
+  {
+   "type": "whatif",
+   "text": "평생 한 가지 음식만 먹어야 한다면?",
+   "adult": false,
+   "id": 426,
+   "sort_order": 426
+  },
+  {
+   "type": "balance",
+   "a": "불꽃놀이 축제",
+   "b": "벚꽃 축제",
+   "adult": false,
+   "id": 427,
+   "sort_order": 427
+  },
+  {
+   "type": "balance",
+   "a": "데이트 끝나고 집까지 바래다주기",
+   "b": "데이트 끝나고 중간 지점에서 헤어지기",
+   "adult": false,
+   "id": 428,
+   "sort_order": 428
+  },
+  {
+   "type": "balance",
+   "a": "아이스크림은 콘",
+   "b": "아이스크림은 컵",
+   "adult": false,
+   "id": 429,
+   "sort_order": 429
+  },
+  {
+   "type": "balance",
+   "a": "깜짝 방문",
+   "b": "약속 잡고 만나기",
+   "adult": false,
+   "id": 430,
+   "sort_order": 430
+  },
+  {
+   "type": "balance",
+   "a": "1년 뒤 오늘 같이 있기 약속",
+   "b": "10년 뒤 오늘 같이 있기 약속",
+   "adult": false,
+   "id": 431,
+   "sort_order": 431
+  },
+  {
+   "type": "balance",
+   "a": "아파트",
+   "b": "단독주택",
+   "adult": false,
+   "id": 432,
+   "sort_order": 432
+  },
+  {
+   "type": "balance",
+   "a": "알람 한 번에 일어나기",
+   "b": "알람 열 번 끄기",
+   "adult": false,
+   "id": 433,
+   "sort_order": 433
+  },
+  {
+   "type": "whatif",
+   "text": "우리 연애 일기 오늘 날짜 첫 줄은?",
+   "adult": false,
+   "id": 434,
+   "sort_order": 434
+  },
+  {
+   "type": "whatif",
+   "text": "1억이 생겼는데 하루 안에 다 써야 한다면?",
+   "adult": false,
+   "id": 435,
+   "sort_order": 435
+  },
+  {
+   "type": "balance",
+   "a": "도시 여행",
+   "b": "시골 여행",
+   "adult": false,
+   "id": 436,
+   "sort_order": 436
+  },
+  {
+   "type": "balance",
+   "a": "평생 라면 금지",
+   "b": "평생 치킨 금지",
+   "adult": false,
+   "id": 437,
+   "sort_order": 437
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘 중 누가 더 계획형일까?",
+   "adult": false,
+   "id": 438,
+   "sort_order": 438
+  },
+  {
+   "type": "balance",
+   "a": "세계 일주 1년",
+   "b": "원하는 집 한 채",
+   "adult": false,
+   "id": 439,
+   "sort_order": 439
+  },
+  {
+   "type": "balance",
+   "a": "평생 무료 택시",
+   "b": "평생 무료 비행기",
+   "adult": false,
+   "id": 440,
+   "sort_order": 440
+  },
+  {
+   "type": "whatif",
+   "text": "오늘 하루 서로 직업을 바꾼다면 제일 힘들 일은?",
+   "adult": false,
+   "id": 441,
+   "sort_order": 441
+  },
+  {
+   "type": "balance",
+   "a": "손편지 받기",
+   "b": "영상편지 받기",
+   "adult": false,
+   "id": 442,
+   "sort_order": 442
+  },
+  {
+   "type": "whatif",
+   "text": "지금까지 해본 알바 중 제일 기억에 남는 건?",
+   "adult": false,
+   "id": 443,
+   "sort_order": 443
+  },
+  {
+   "type": "balance",
+   "a": "팥붕어빵",
+   "b": "슈크림붕어빵",
+   "adult": false,
+   "id": 444,
+   "sort_order": 444
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 초능력 하나 줄 수 있다면 뭘 줄래?",
+   "adult": false,
+   "id": 445,
+   "sort_order": 445
+  },
+  {
+   "type": "balance",
+   "a": "내 단골집 데려가기",
+   "b": "상대 단골집 가보기",
+   "adult": false,
+   "id": 446,
+   "sort_order": 446
+  },
+  {
+   "type": "whatif",
+   "text": "평행세계의 우리는 어떤 커플일까?",
+   "adult": false,
+   "id": 447,
+   "sort_order": 447
+  },
+  {
+   "type": "balance",
+   "a": "워터파크",
+   "b": "스파",
+   "adult": false,
+   "id": 448,
+   "sort_order": 448
+  },
+  {
+   "type": "balance",
+   "a": "쇼핑 같이",
+   "b": "쇼핑 따로",
+   "adult": false,
+   "id": 449,
+   "sort_order": 449
+  },
+  {
+   "type": "whatif",
+   "text": "요즘 갖고 싶은 거 하나?",
+   "adult": false,
+   "id": 450,
+   "sort_order": 450
+  },
+  {
+   "type": "balance",
+   "a": "창가 자리",
+   "b": "통로 자리",
+   "adult": false,
+   "id": 451,
+   "sort_order": 451
+  },
+  {
+   "type": "balance",
+   "a": "손잡고 걷기",
+   "b": "어깨동무하고 걷기",
+   "adult": false,
+   "id": 452,
+   "sort_order": 452
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘이 같은 회사에 다닌다면 어떤 사이일까?",
+   "adult": false,
+   "id": 453,
+   "sort_order": 453
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘 중 누가 더 늦잠을 잘까?",
+   "adult": false,
+   "id": 454,
+   "sort_order": 454
+  },
+  {
+   "type": "balance",
+   "a": "기억 하나 지우기",
+   "b": "기억 하나 선명하게",
+   "adult": false,
+   "id": 455,
+   "sort_order": 455
+  },
+  {
+   "type": "whatif",
+   "text": "우리 이야기가 영화라면 제목은?",
+   "adult": false,
+   "id": 456,
+   "sort_order": 456
+  },
+  {
+   "type": "whatif",
+   "text": "네가 생각하는 완벽한 데이트 코스는?",
+   "adult": false,
+   "id": 457,
+   "sort_order": 457
+  },
+  {
+   "type": "whatif",
+   "text": "우리 버킷리스트 1번을 정한다면?",
+   "adult": false,
+   "id": 458,
+   "sort_order": 458
+  },
+  {
+   "type": "balance",
+   "a": "야식은 치킨",
+   "b": "야식은 족발",
+   "adult": false,
+   "id": 459,
+   "sort_order": 459
+  },
+  {
+   "type": "whatif",
+   "text": "내가 갑자기 집 앞에 나타나면 반응은?",
+   "adult": false,
+   "id": 460,
+   "sort_order": 460
+  },
+  {
+   "type": "balance",
+   "a": "비 오는 날 집콕",
+   "b": "우산 쓰고 산책",
+   "adult": false,
+   "id": 461,
+   "sort_order": 461
+  },
+  {
+   "type": "balance",
+   "a": "벚꽃 엔딩 들으며 산책",
+   "b": "캐롤 들으며 산책",
+   "adult": false,
+   "id": 462,
+   "sort_order": 462
+  },
+  {
+   "type": "whatif",
+   "text": "지금 당장 바다에 간다면 어느 바다?",
+   "adult": false,
+   "id": 463,
+   "sort_order": 463
+  },
+  {
+   "type": "whatif",
+   "text": "같이 키울 화분 이름을 정한다면?",
+   "adult": false,
+   "id": 464,
+   "sort_order": 464
+  },
+  {
+   "type": "whatif",
+   "text": "우리 사이를 영화 장르로 표현하면?",
+   "adult": false,
+   "id": 465,
+   "sort_order": 465
+  },
+  {
+   "type": "whatif",
+   "text": "나를 음식으로 표현한다면?",
+   "adult": false,
+   "id": 466,
+   "sort_order": 466
+  },
+  {
+   "type": "whatif",
+   "text": "우리 사진 중에 제일 좋아하는 한 장은?",
+   "adult": false,
+   "id": 467,
+   "sort_order": 467
+  },
+  {
+   "type": "balance",
+   "a": "연락 안 되면 걱정부터",
+   "b": "바쁘겠거니 하고 기다리기",
+   "adult": false,
+   "id": 468,
+   "sort_order": 468
+  },
+  {
+   "type": "balance",
+   "a": "집 인테리어 화이트",
+   "b": "집 인테리어 우드",
+   "adult": false,
+   "id": 469,
+   "sort_order": 469
+  },
+  {
+   "type": "whatif",
+   "text": "나이 들어서 같이 배우고 싶은 건?",
+   "adult": false,
+   "id": 470,
+   "sort_order": 470
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘이 같이 배울 악기를 고른다면?",
+   "adult": false,
+   "id": 471,
+   "sort_order": 471
+  },
+  {
+   "type": "balance",
+   "a": "1박 2일 여행",
+   "b": "당일치기 여러 번",
+   "adult": false,
+   "id": 472,
+   "sort_order": 472
+  },
+  {
+   "type": "balance",
+   "a": "시장 구경",
+   "b": "백화점 구경",
+   "adult": false,
+   "id": 473,
+   "sort_order": 473
+  },
+  {
+   "type": "whatif",
+   "text": "지금까지 가본 곳 중 제일 먼 곳은?",
+   "adult": false,
+   "id": 474,
+   "sort_order": 474
+  },
+  {
+   "type": "balance",
+   "a": "주말엔 늦잠",
+   "b": "주말엔 일찍 일어나 놀기",
+   "adult": false,
+   "id": 475,
+   "sort_order": 475
+  },
+  {
+   "type": "whatif",
+   "text": "내가 너의 동료라면 어떤 동료일까?",
+   "adult": false,
+   "id": 476,
+   "sort_order": 476
+  },
+  {
+   "type": "balance",
+   "a": "야구장 응원",
+   "b": "축구장 응원",
+   "adult": false,
+   "id": 477,
+   "sort_order": 477
+  },
+  {
+   "type": "whatif",
+   "text": "하루만 내 친구가 된다면 나를 어디 데려갈래?",
+   "adult": false,
+   "id": 478,
+   "sort_order": 478
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 똑같은 사람이 한 명 더 있다면 둘 중 누구랑 놀래?",
+   "adult": false,
+   "id": 479,
+   "sort_order": 479
+  },
+  {
+   "type": "whatif",
+   "text": "5년 뒤 우리 주말은 어떤 모습일까?",
+   "adult": false,
+   "id": 480,
+   "sort_order": 480
+  },
+  {
+   "type": "balance",
+   "a": "라면은 꼬들꼬들",
+   "b": "라면은 푹 퍼지게",
+   "adult": false,
+   "id": 481,
+   "sort_order": 481
+  },
+  {
+   "type": "balance",
+   "a": "여행 사진 찍어주는 쪽",
+   "b": "찍히는 쪽",
+   "adult": false,
+   "id": 482,
+   "sort_order": 482
+  },
+  {
+   "type": "whatif",
+   "text": "같이 쓰는 다이어리를 만든다면 첫 페이지에 뭐 쓸래?",
+   "adult": false,
+   "id": 483,
+   "sort_order": 483
+  },
+  {
+   "type": "balance",
+   "a": "데이트 비용 반반",
+   "b": "번갈아 내기",
+   "adult": false,
+   "id": 484,
+   "sort_order": 484
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 가장 닮은 캐릭터는?",
+   "adult": false,
+   "id": 485,
+   "sort_order": 485
+  },
+  {
+   "type": "balance",
+   "a": "비 오는 날 짬뽕",
+   "b": "비 오는 날 칼국수",
+   "adult": false,
+   "id": 486,
+   "sort_order": 486
+  },
+  {
+   "type": "balance",
+   "a": "헬스장",
+   "b": "필라테스",
+   "adult": false,
+   "id": 487,
+   "sort_order": 487
+  },
+  {
+   "type": "whatif",
+   "text": "네가 생각하는 좋은 연인의 조건 하나는?",
+   "adult": false,
+   "id": 488,
+   "sort_order": 488
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘만 챙기는 기념일을 하나 만든다면?",
+   "adult": false,
+   "id": 489,
+   "sort_order": 489
+  },
+  {
+   "type": "balance",
+   "a": "사진첩 정리하는 사람",
+   "b": "사진첩 수만 장",
+   "adult": false,
+   "id": 490,
+   "sort_order": 490
+  },
+  {
+   "type": "whatif",
+   "text": "1주년에 서로에게 상장을 준다면 상 이름은?",
+   "adult": false,
+   "id": 491,
+   "sort_order": 491
+  },
+  {
+   "type": "balance",
+   "a": "쉬는 날 맞추기",
+   "b": "쉬는 날 각자 충전",
+   "adult": false,
+   "id": 492,
+   "sort_order": 492
+  },
+  {
+   "type": "whatif",
+   "text": "정전돼서 하룻밤 불 없이 보내면 뭐 할래?",
+   "adult": false,
+   "id": 493,
+   "sort_order": 493
+  },
+  {
+   "type": "balance",
+   "a": "결혼식 야외",
+   "b": "결혼식 실내",
+   "adult": false,
+   "id": 494,
+   "sort_order": 494
+  },
+  {
+   "type": "whatif",
+   "text": "새로운 아이스크림 맛을 만든다면?",
+   "adult": false,
+   "id": 495,
+   "sort_order": 495
+  },
+  {
+   "type": "whatif",
+   "text": "친구들한테 나를 한 문장으로 소개한다면?",
+   "adult": false,
+   "id": 496,
+   "sort_order": 496
+  },
+  {
+   "type": "balance",
+   "a": "배달 음식 고르는 데 30분",
+   "b": "아무거나 바로 시키기",
+   "adult": false,
+   "id": 497,
+   "sort_order": 497
+  },
+  {
+   "type": "whatif",
+   "text": "우리 사이에 생긴 유행어가 있다면?",
+   "adult": false,
+   "id": 498,
+   "sort_order": 498
+  },
+  {
+   "type": "balance",
+   "a": "야구장",
+   "b": "콘서트",
+   "adult": false,
+   "id": 499,
+   "sort_order": 499
+  },
+  {
+   "type": "whatif",
+   "text": "내가 하루 동안 말을 못 하면 어떻게 대화할래?",
+   "adult": false,
+   "id": 500,
+   "sort_order": 500
+  },
+  {
+   "type": "balance",
+   "a": "같이 요리할 때 셰프",
+   "b": "같이 요리할 때 보조",
+   "adult": false,
+   "id": 501,
+   "sort_order": 501
+  },
+  {
+   "type": "whatif",
+   "text": "나를 동물로 표현하면?",
+   "adult": false,
+   "id": 502,
+   "sort_order": 502
+  },
+  {
+   "type": "whatif",
+   "text": "기차를 놓쳐서 낯선 동네에 하룻밤 있게 되면?",
+   "adult": false,
+   "id": 503,
+   "sort_order": 503
+  },
+  {
+   "type": "balance",
+   "a": "셀카 앵글 위에서",
+   "b": "셀카 앵글 정면",
+   "adult": false,
+   "id": 504,
+   "sort_order": 504
+  },
+  {
+   "type": "balance",
+   "a": "아이 둘",
+   "b": "강아지 둘",
+   "adult": false,
+   "id": 505,
+   "sort_order": 505
+  },
+  {
+   "type": "balance",
+   "a": "데이트 비용 계획 세우기",
+   "b": "그날그날 쓰기",
+   "adult": false,
+   "id": 506,
+   "sort_order": 506
+  },
+  {
+   "type": "balance",
+   "a": "알림 다 켜두기",
+   "b": "알림 다 꺼두기",
+   "adult": false,
+   "id": 507,
+   "sort_order": 507
+  },
+  {
+   "type": "whatif",
+   "text": "어릴 때 제일 좋아했던 장난감은?",
+   "adult": false,
+   "id": 508,
+   "sort_order": 508
+  },
+  {
+   "type": "whatif",
+   "text": "내가 커플 퀴즈를 낸다면 첫 문제는?",
+   "adult": false,
+   "id": 509,
+   "sort_order": 509
+  },
+  {
+   "type": "whatif",
+   "text": "우리 커플 캐릭터를 만든다면 어떤 모습?",
+   "adult": false,
+   "id": 510,
+   "sort_order": 510
+  },
+  {
+   "type": "balance",
+   "a": "서운한 거 말해주는 연인",
+   "b": "서운해도 혼자 푸는 연인",
+   "adult": false,
+   "id": 511,
+   "sort_order": 511
+  },
+  {
+   "type": "balance",
+   "a": "퍼스널컬러 진단 같이",
+   "b": "사주 같이 보기",
+   "adult": false,
+   "id": 512,
+   "sort_order": 512
+  },
+  {
+   "type": "whatif",
+   "text": "같이 버킷리스트 3개를 적는다면?",
+   "adult": false,
+   "id": 513,
+   "sort_order": 513
+  },
+  {
+   "type": "balance",
+   "a": "삼각김밥",
+   "b": "컵밥",
+   "adult": false,
+   "id": 514,
+   "sort_order": 514
+  },
+  {
+   "type": "balance",
+   "a": "애니메이션",
+   "b": "다큐멘터리",
+   "adult": false,
+   "id": 515,
+   "sort_order": 515
+  },
+  {
+   "type": "balance",
+   "a": "집에 손님 자주 초대",
+   "b": "집은 우리 둘만의 공간",
+   "adult": false,
+   "id": 516,
+   "sort_order": 516
+  },
+  {
+   "type": "whatif",
+   "text": "같이 여행 가서 꼭 해보고 싶은 거 하나는?",
+   "adult": false,
+   "id": 517,
+   "sort_order": 517
+  },
+  {
+   "type": "whatif",
+   "text": "우리 이야기로 노래를 만든다면 후렴 한 줄은?",
+   "adult": false,
+   "id": 518,
+   "sort_order": 518
+  },
+  {
+   "type": "whatif",
+   "text": "우리 집 냉장고에 항상 있어야 하는 건?",
+   "adult": false,
+   "id": 519,
+   "sort_order": 519
+  },
+  {
+   "type": "balance",
+   "a": "메시지에 이모티콘 많이",
+   "b": "텍스트만",
+   "adult": false,
+   "id": 520,
+   "sort_order": 520
+  },
+  {
+   "type": "balance",
+   "a": "캠핑장에서 별 보기",
+   "b": "루프탑에서 야경 보기",
+   "adult": false,
+   "id": 521,
+   "sort_order": 521
+  },
+  {
+   "type": "whatif",
+   "text": "어떤 시대에 태어나 보고 싶어?",
+   "adult": false,
+   "id": 522,
+   "sort_order": 522
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 듣고 싶은 별명은?",
+   "adult": false,
+   "id": 523,
+   "sort_order": 523
+  },
+  {
+   "type": "balance",
+   "a": "연애 초반 설렘 다시 느끼기",
+   "b": "지금의 편안함 그대로",
+   "adult": false,
+   "id": 524,
+   "sort_order": 524
+  },
+  {
+   "type": "whatif",
+   "text": "벚꽃 피면 꼭 같이 가고 싶은 곳은?",
+   "adult": false,
+   "id": 525,
+   "sort_order": 525
+  },
+  {
+   "type": "whatif",
+   "text": "내가 바쁠 때 어떻게 해주면 좋겠어?",
+   "adult": false,
+   "id": 526,
+   "sort_order": 526
+  },
+  {
+   "type": "balance",
+   "a": "타임캡슐 10년 뒤 열기",
+   "b": "타임캡슐 30년 뒤 열기",
+   "adult": false,
+   "id": 527,
+   "sort_order": 527
+  },
+  {
+   "type": "whatif",
+   "text": "선물 대신 하루 소원권을 준다면 뭐 할래?",
+   "adult": false,
+   "id": 528,
+   "sort_order": 528
+  },
+  {
+   "type": "balance",
+   "a": "에어컨 26도",
+   "b": "에어컨 22도",
+   "adult": false,
+   "id": 529,
+   "sort_order": 529
+  },
+  {
+   "type": "whatif",
+   "text": "같이 새 취미를 시작한다면 뭐 할래?",
+   "adult": false,
+   "id": 530,
+   "sort_order": 530
+  },
+  {
+   "type": "whatif",
+   "text": "동물이랑 대화할 수 있다면 어떤 동물이랑 얘기하고 싶어?",
+   "adult": false,
+   "id": 531,
+   "sort_order": 531
+  },
+  {
+   "type": "balance",
+   "a": "떡볶이는 밀떡",
+   "b": "떡볶이는 쌀떡",
+   "adult": false,
+   "id": 532,
+   "sort_order": 532
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 받고 싶은 깜짝 선물은?",
+   "adult": false,
+   "id": 533,
+   "sort_order": 533
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘이 예능에 나간다면 어떤 프로그램일까?",
+   "adult": false,
+   "id": 534,
+   "sort_order": 534
+  },
+  {
+   "type": "whatif",
+   "text": "하루가 30시간이라면 남는 6시간에 뭐 할래?",
+   "adult": false,
+   "id": 535,
+   "sort_order": 535
+  },
+  {
+   "type": "whatif",
+   "text": "둘이 만화 주인공이면 합체 필살기 이름은?",
+   "adult": false,
+   "id": 536,
+   "sort_order": 536
+  },
+  {
+   "type": "whatif",
+   "text": "내가 너한테 시를 써준다면 첫 줄은?",
+   "adult": false,
+   "id": 537,
+   "sort_order": 537
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 아이돌 듀오라면 데뷔곡 제목은?",
+   "adult": false,
+   "id": 538,
+   "sort_order": 538
+  },
+  {
+   "type": "whatif",
+   "text": "우리 첫 데이트에서 제일 기억나는 장면은?",
+   "adult": false,
+   "id": 539,
+   "sort_order": 539
+  },
+  {
+   "type": "balance",
+   "a": "티 나는 커플템",
+   "b": "아는 사람만 아는 커플템",
+   "adult": false,
+   "id": 540,
+   "sort_order": 540
+  },
+  {
+   "type": "whatif",
+   "text": "하루를 통째로 내 맘대로 짠다면 몇 시에 일어나서 뭐 할래?",
+   "adult": false,
+   "id": 541,
+   "sort_order": 541
+  },
+  {
+   "type": "balance",
+   "a": "문자로 길게 싸우기",
+   "b": "만나서 짧게 싸우기",
+   "adult": false,
+   "id": 542,
+   "sort_order": 542
+  },
+  {
+   "type": "balance",
+   "a": "매일 같은 루틴",
+   "b": "매일 새로운 하루",
+   "adult": false,
+   "id": 543,
+   "sort_order": 543
+  },
+  {
+   "type": "balance",
+   "a": "데이트 끝나고 바로 연락",
+   "b": "데이트 끝나고 집 가서 연락",
+   "adult": false,
+   "id": 544,
+   "sort_order": 544
+  },
+  {
+   "type": "whatif",
+   "text": "우리 연애를 맛으로 표현하면?",
+   "adult": false,
+   "id": 545,
+   "sort_order": 545
+  },
+  {
+   "type": "whatif",
+   "text": "우리 첫 데이트를 다시 한다면 어디로?",
+   "adult": false,
+   "id": 546,
+   "sort_order": 546
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 무인도에 갇히면 누가 먼저 살 방법 찾을까?",
+   "adult": false,
+   "id": 547,
+   "sort_order": 547
+  },
+  {
+   "type": "whatif",
+   "text": "이번 주에 제일 잘한 일은?",
+   "adult": false,
+   "id": 548,
+   "sort_order": 548
+  },
+  {
+   "type": "balance",
+   "a": "야간 버스 타고 새벽 도착",
+   "b": "첫 기차 타고 아침 도착",
+   "adult": false,
+   "id": 549,
+   "sort_order": 549
+  },
+  {
+   "type": "balance",
+   "a": "새 옷",
+   "b": "새 신발",
+   "adult": false,
+   "id": 550,
+   "sort_order": 550
+  },
+  {
+   "type": "whatif",
+   "text": "엘리베이터에 둘이 1시간 갇히면 뭐 할래?",
+   "adult": false,
+   "id": 551,
+   "sort_order": 551
+  },
+  {
+   "type": "balance",
+   "a": "선물은 실용적인 거",
+   "b": "선물은 감성적인 거",
+   "adult": false,
+   "id": 552,
+   "sort_order": 552
+  },
+  {
+   "type": "balance",
+   "a": "우리만의 노래 정하기",
+   "b": "우리만의 장소 정하기",
+   "adult": false,
+   "id": 553,
+   "sort_order": 553
+  },
+  {
+   "type": "whatif",
+   "text": "둘이 같이 만든 요리에 이름을 붙인다면?",
+   "adult": false,
+   "id": 554,
+   "sort_order": 554
+  },
+  {
+   "type": "whatif",
+   "text": "올해가 끝나기 전에 꼭 같이 하고 싶은 거?",
+   "adult": false,
+   "id": 555,
+   "sort_order": 555
+  },
+  {
+   "type": "balance",
+   "a": "편의점 데이트",
+   "b": "백화점 데이트",
+   "adult": false,
+   "id": 556,
+   "sort_order": 556
+  },
+  {
+   "type": "balance",
+   "a": "캐주얼",
+   "b": "단정한 옷",
+   "adult": false,
+   "id": 557,
+   "sort_order": 557
+  },
+  {
+   "type": "balance",
+   "a": "상대가 요리를 잘함",
+   "b": "상대가 운전을 잘함",
+   "adult": false,
+   "id": 558,
+   "sort_order": 558
+  },
+  {
+   "type": "balance",
+   "a": "작은 집 바다 앞",
+   "b": "큰 집 도시 한가운데",
+   "adult": false,
+   "id": 559,
+   "sort_order": 559
+  },
+  {
+   "type": "balance",
+   "a": "클라이밍",
+   "b": "수영",
+   "adult": false,
+   "id": 560,
+   "sort_order": 560
+  },
+  {
+   "type": "whatif",
+   "text": "우리 커플 팬클럽이 있다면 이름은?",
+   "adult": false,
+   "id": 561,
+   "sort_order": 561
+  },
+  {
+   "type": "balance",
+   "a": "마라탕",
+   "b": "떡볶이",
+   "adult": false,
+   "id": 562,
+   "sort_order": 562
+  },
+  {
+   "type": "whatif",
+   "text": "판타지 세계에 산다면 종족은?",
+   "adult": false,
+   "id": 563,
+   "sort_order": 563
+  },
+  {
+   "type": "whatif",
+   "text": "다음 데이트에서 나한테 시키고 싶은 거 하나?",
+   "adult": false,
+   "id": 564,
+   "sort_order": 564
+  },
+  {
+   "type": "whatif",
+   "text": "다음 달 우리 데이트 테마를 정한다면?",
+   "adult": false,
+   "id": 565,
+   "sort_order": 565
+  },
+  {
+   "type": "balance",
+   "a": "사진 매년 앨범으로 뽑기",
+   "b": "폰에만 저장",
+   "adult": false,
+   "id": 566,
+   "sort_order": 566
+  },
+  {
+   "type": "balance",
+   "a": "무서운 놀이기구",
+   "b": "회전목마",
+   "adult": false,
+   "id": 567,
+   "sort_order": 567
+  },
+  {
+   "type": "balance",
+   "a": "크리스마스는 집에서",
+   "b": "크리스마스는 밖에서",
+   "adult": false,
+   "id": 568,
+   "sort_order": 568
+  },
+  {
+   "type": "balance",
+   "a": "뷔페에서 한 접시씩 천천히",
+   "b": "뷔페에서 처음부터 산더미",
+   "adult": false,
+   "id": 569,
+   "sort_order": 569
+  },
+  {
+   "type": "balance",
+   "a": "액션 영화",
+   "b": "코미디 영화",
+   "adult": false,
+   "id": 570,
+   "sort_order": 570
+  },
+  {
+   "type": "whatif",
+   "text": "나를 계절로 표현한다면?",
+   "adult": false,
+   "id": 571,
+   "sort_order": 571
+  },
+  {
+   "type": "whatif",
+   "text": "우리 집 고양이 이름을 지금 정한다면?",
+   "adult": false,
+   "id": 572,
+   "sort_order": 572
+  },
+  {
+   "type": "balance",
+   "a": "내 인생 영화로 만들기",
+   "b": "내 인생 웹툰으로 만들기",
+   "adult": false,
+   "id": 573,
+   "sort_order": 573
+  },
+  {
+   "type": "balance",
+   "a": "발라드",
+   "b": "힙합",
+   "adult": false,
+   "id": 574,
+   "sort_order": 574
+  },
+  {
+   "type": "balance",
+   "a": "평생 무료 영화",
+   "b": "평생 무료 콘서트",
+   "adult": false,
+   "id": 575,
+   "sort_order": 575
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘의 공통점 하나를 꼽는다면?",
+   "adult": false,
+   "id": 576,
+   "sort_order": 576
+  },
+  {
+   "type": "balance",
+   "a": "더위 많이 타기",
+   "b": "추위 많이 타기",
+   "adult": false,
+   "id": 577,
+   "sort_order": 577
+  },
+  {
+   "type": "whatif",
+   "text": "1년에 한 번 꼭 가는 우리만의 장소를 정한다면?",
+   "adult": false,
+   "id": 578,
+   "sort_order": 578
+  },
+  {
+   "type": "balance",
+   "a": "눈 오는 날",
+   "b": "비 오는 날",
+   "adult": false,
+   "id": 579,
+   "sort_order": 579
+  },
+  {
+   "type": "balance",
+   "a": "상대 어릴 적 사진 다 보기",
+   "b": "10년 뒤 모습 한 장 보기",
+   "adult": false,
+   "id": 580,
+   "sort_order": 580
+  },
+  {
+   "type": "balance",
+   "a": "사과는 바로",
+   "b": "사과는 정리하고",
+   "adult": false,
+   "id": 581,
+   "sort_order": 581
+  },
+  {
+   "type": "balance",
+   "a": "셀카",
+   "b": "서로 찍어주기",
+   "adult": false,
+   "id": 582,
+   "sort_order": 582
+  },
+  {
+   "type": "whatif",
+   "text": "한 달 동안 서로 매일 미션을 준다면 첫 미션은?",
+   "adult": false,
+   "id": 583,
+   "sort_order": 583
+  },
+  {
+   "type": "whatif",
+   "text": "비 오는 날 생각나는 음식은?",
+   "adult": false,
+   "id": 584,
+   "sort_order": 584
+  },
+  {
+   "type": "whatif",
+   "text": "나를 처음 좋다고 느낀 순간은?",
+   "adult": false,
+   "id": 585,
+   "sort_order": 585
+  },
+  {
+   "type": "whatif",
+   "text": "일하면서 생긴 웃긴 에피소드 하나는?",
+   "adult": false,
+   "id": 586,
+   "sort_order": 586
+  },
+  {
+   "type": "whatif",
+   "text": "지금 기분을 음식으로 표현하면?",
+   "adult": false,
+   "id": 587,
+   "sort_order": 587
+  },
+  {
+   "type": "balance",
+   "a": "크리스마스 마켓",
+   "b": "연말 카운트다운",
+   "adult": false,
+   "id": 588,
+   "sort_order": 588
+  },
+  {
+   "type": "whatif",
+   "text": "연애하면서 꼭 지키고 싶은 우리만의 규칙 하나는?",
+   "adult": false,
+   "id": 589,
+   "sort_order": 589
+  },
+  {
+   "type": "balance",
+   "a": "머리 길게",
+   "b": "머리 짧게",
+   "adult": false,
+   "id": 590,
+   "sort_order": 590
+  },
+  {
+   "type": "balance",
+   "a": "10년 후 우리 집에 강아지",
+   "b": "10년 후 우리 집에 고양이",
+   "adult": false,
+   "id": 591,
+   "sort_order": 591
+  },
+  {
+   "type": "balance",
+   "a": "렌터카 여행",
+   "b": "대중교통 여행",
+   "adult": false,
+   "id": 592,
+   "sort_order": 592
+  },
+  {
+   "type": "balance",
+   "a": "무인도에 라면 100개",
+   "b": "무인도에 칼 한 자루",
+   "adult": false,
+   "id": 593,
+   "sort_order": 593
+  },
+  {
+   "type": "balance",
+   "a": "새 폰 매년",
+   "b": "폰 고장 날 때까지",
+   "adult": false,
+   "id": 594,
+   "sort_order": 594
+  },
+  {
+   "type": "balance",
+   "a": "커플 잠옷",
+   "b": "커플 반지",
+   "adult": false,
+   "id": 595,
+   "sort_order": 595
+  },
+  {
+   "type": "balance",
+   "a": "휴게소 들르기",
+   "b": "휴게소 안 들르고 직진",
+   "adult": false,
+   "id": 596,
+   "sort_order": 596
+  },
+  {
+   "type": "whatif",
+   "text": "너를 웃게 만드는 사소한 것 하나는?",
+   "adult": false,
+   "id": 597,
+   "sort_order": 597
+  },
+  {
+   "type": "balance",
+   "a": "러닝",
+   "b": "자전거",
+   "adult": false,
+   "id": 598,
+   "sort_order": 598
+  },
+  {
+   "type": "whatif",
+   "text": "처음 보는 친구한테 나를 소개한다면 뭐라고 할래?",
+   "adult": false,
+   "id": 599,
+   "sort_order": 599
+  },
+  {
+   "type": "whatif",
+   "text": "하루 동안 서로의 친구가 된다면 뭐 하고 놀까?",
+   "adult": false,
+   "id": 600,
+   "sort_order": 600
+  },
+  {
+   "type": "whatif",
+   "text": "10년 후 우리를 하루 볼 수 있다면 뭐가 제일 궁금해?",
+   "adult": false,
+   "id": 601,
+   "sort_order": 601
+  },
+  {
+   "type": "balance",
+   "a": "빵",
+   "b": "떡",
+   "adult": false,
+   "id": 602,
+   "sort_order": 602
+  },
+  {
+   "type": "balance",
+   "a": "타임머신 한 번",
+   "b": "순간이동 열 번",
+   "adult": false,
+   "id": 603,
+   "sort_order": 603
+  },
+  {
+   "type": "balance",
+   "a": "놀이공원",
+   "b": "전시회",
+   "adult": false,
+   "id": 604,
+   "sort_order": 604
+  },
+  {
+   "type": "balance",
+   "a": "데이트 전날 설레서 잠 못 자기",
+   "b": "데이트 전날 푹 자기",
+   "adult": false,
+   "id": 605,
+   "sort_order": 605
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 아직 말 못 한 칭찬 하나는?",
+   "adult": false,
+   "id": 606,
+   "sort_order": 606
+  },
+  {
+   "type": "balance",
+   "a": "연말은 둘이서",
+   "b": "연말은 친구들이랑 같이",
+   "adult": false,
+   "id": 607,
+   "sort_order": 607
+  },
+  {
+   "type": "balance",
+   "a": "맛집 1시간 웨이팅",
+   "b": "바로 들어가는 무난한 집",
+   "adult": false,
+   "id": 608,
+   "sort_order": 608
+  },
+  {
+   "type": "whatif",
+   "text": "내가 너를 그림으로 그린다면 어떤 모습이었으면 좋겠어?",
+   "adult": false,
+   "id": 609,
+   "sort_order": 609
+  },
+  {
+   "type": "balance",
+   "a": "대청소 같이 하기",
+   "b": "각자 구역 나눠서 하기",
+   "adult": false,
+   "id": 610,
+   "sort_order": 610
+  },
+  {
+   "type": "whatif",
+   "text": "내가 갑자기 외국으로 1년 일하러 가면?",
+   "adult": false,
+   "id": 611,
+   "sort_order": 611
+  },
+  {
+   "type": "whatif",
+   "text": "내가 깜짝 도시락을 싸준다면 꼭 들어가야 할 반찬은?",
+   "adult": false,
+   "id": 612,
+   "sort_order": 612
+  },
+  {
+   "type": "balance",
+   "a": "질투 조금 하는 연인",
+   "b": "질투 전혀 안 하는 연인",
+   "adult": false,
+   "id": 613,
+   "sort_order": 613
+  },
+  {
+   "type": "balance",
+   "a": "아침형 연인",
+   "b": "올빼미형 연인",
+   "adult": false,
+   "id": 614,
+   "sort_order": 614
+  },
+  {
+   "type": "balance",
+   "a": "집에 식물 많이",
+   "b": "집에 소품 많이",
+   "adult": false,
+   "id": 615,
+   "sort_order": 615
+  },
+  {
+   "type": "balance",
+   "a": "손잡기",
+   "b": "팔짱 끼기",
+   "adult": false,
+   "id": 616,
+   "sort_order": 616
+  },
+  {
+   "type": "balance",
+   "a": "좀비 사태 때 도시 탈출",
+   "b": "좀비 사태 때 마트 농성",
+   "adult": false,
+   "id": 617,
+   "sort_order": 617
+  },
+  {
+   "type": "balance",
+   "a": "10년 전으로 하루 돌아가기",
+   "b": "10년 후로 하루 가보기",
+   "adult": false,
+   "id": 618,
+   "sort_order": 618
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 슈퍼히어로라면 팀 이름은?",
+   "adult": false,
+   "id": 619,
+   "sort_order": 619
+  },
+  {
+   "type": "whatif",
+   "text": "다투고 나서 듣고 싶은 말은?",
+   "adult": false,
+   "id": 620,
+   "sort_order": 620
+  },
+  {
+   "type": "balance",
+   "a": "정리 안 된 방에서 편하게",
+   "b": "정리된 방에서 깔끔하게",
+   "adult": false,
+   "id": 621,
+   "sort_order": 621
+  },
+  {
+   "type": "whatif",
+   "text": "지금 우리 연애는 몇 화쯤일까?",
+   "adult": false,
+   "id": 622,
+   "sort_order": 622
+  },
+  {
+   "type": "whatif",
+   "text": "쉬는 날 아침에 눈 떴을 때 제일 먼저 하는 건?",
+   "adult": false,
+   "id": 623,
+   "sort_order": 623
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘의 공식 데이트 음식을 정한다면?",
+   "adult": false,
+   "id": 624,
+   "sort_order": 624
+  },
+  {
+   "type": "balance",
+   "a": "돈까스",
+   "b": "제육볶음",
+   "adult": false,
+   "id": 625,
+   "sort_order": 625
+  },
+  {
+   "type": "balance",
+   "a": "요가 같이",
+   "b": "홈트 같이",
+   "adult": false,
+   "id": 626,
+   "sort_order": 626
+  },
+  {
+   "type": "balance",
+   "a": "같은 취미",
+   "b": "각자 다른 취미",
+   "adult": false,
+   "id": 627,
+   "sort_order": 627
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 처음 반한 포인트는?",
+   "adult": false,
+   "id": 628,
+   "sort_order": 628
+  },
+  {
+   "type": "balance",
+   "a": "1년에 한 번 큰 여행",
+   "b": "매달 작은 여행",
+   "adult": false,
+   "id": 629,
+   "sort_order": 629
+  },
+  {
+   "type": "balance",
+   "a": "화나면 바로 말하기",
+   "b": "화나면 식히고 말하기",
+   "adult": false,
+   "id": 630,
+   "sort_order": 630
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 조선시대에 태어났다면 어떻게 만났을까?",
+   "adult": false,
+   "id": 631,
+   "sort_order": 631
+  },
+  {
+   "type": "balance",
+   "a": "방은 시원하게",
+   "b": "방은 따뜻하게",
+   "adult": false,
+   "id": 632,
+   "sort_order": 632
+  },
+  {
+   "type": "balance",
+   "a": "길치 연인",
+   "b": "입맛 까다로운 연인",
+   "adult": false,
+   "id": 633,
+   "sort_order": 633
+  },
+  {
+   "type": "balance",
+   "a": "수족관",
+   "b": "천문대",
+   "adult": false,
+   "id": 634,
+   "sort_order": 634
+  },
+  {
+   "type": "whatif",
+   "text": "비 오는 날 우리가 하면 좋을 거?",
+   "adult": false,
+   "id": 635,
+   "sort_order": 635
+  },
+  {
+   "type": "whatif",
+   "text": "우리 커플 모토를 한 줄로 정한다면?",
+   "adult": false,
+   "id": 636,
+   "sort_order": 636
+  },
+  {
+   "type": "whatif",
+   "text": "내가 어떤 말을 하면 제일 힘이 나?",
+   "adult": false,
+   "id": 637,
+   "sort_order": 637
+  },
+  {
+   "type": "whatif",
+   "text": "이번 주말 데이트를 하나만 정한다면?",
+   "adult": false,
+   "id": 638,
+   "sort_order": 638
+  },
+  {
+   "type": "whatif",
+   "text": "내가 너 대신 하루 출근하면 동료들이 어디서 눈치챌까?",
+   "adult": false,
+   "id": 639,
+   "sort_order": 639
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘이 카페를 차린다면 대표 메뉴 이름은?",
+   "adult": false,
+   "id": 640,
+   "sort_order": 640
+  },
+  {
+   "type": "whatif",
+   "text": "둘이 함께 이루고 싶은 목표 하나?",
+   "adult": false,
+   "id": 641,
+   "sort_order": 641
+  },
+  {
+   "type": "whatif",
+   "text": "비 오는 날 우산이 하나뿐이면 누가 들까?",
+   "adult": false,
+   "id": 642,
+   "sort_order": 642
+  },
+  {
+   "type": "balance",
+   "a": "1년 내내 봄",
+   "b": "1년 내내 가을",
+   "adult": false,
+   "id": 643,
+   "sort_order": 643
+  },
+  {
+   "type": "whatif",
+   "text": "식물로 태어난다면 무슨 식물?",
+   "adult": false,
+   "id": 644,
+   "sort_order": 644
+  },
+  {
+   "type": "balance",
+   "a": "100일 단위 다 챙기기",
+   "b": "1년 단위만 챙기기",
+   "adult": false,
+   "id": 645,
+   "sort_order": 645
+  },
+  {
+   "type": "balance",
+   "a": "섬 여행",
+   "b": "도시 여행",
+   "adult": false,
+   "id": 646,
+   "sort_order": 646
+  },
+  {
+   "type": "whatif",
+   "text": "내가 기분 안 좋을 때 풀어주는 필살기는?",
+   "adult": false,
+   "id": 647,
+   "sort_order": 647
+  },
+  {
+   "type": "whatif",
+   "text": "같이 1박 2일 핸드폰 없이 지낸다면 어디서?",
+   "adult": false,
+   "id": 648,
+   "sort_order": 648
+  },
+  {
+   "type": "whatif",
+   "text": "평생 딱 한 번만 여행 갈 수 있다면 어디?",
+   "adult": false,
+   "id": 649,
+   "sort_order": 649
+  },
+  {
+   "type": "whatif",
+   "text": "여름에 꼭 같이 하고 싶은 거?",
+   "adult": false,
+   "id": 650,
+   "sort_order": 650
+  },
+  {
+   "type": "balance",
+   "a": "운전석",
+   "b": "조수석",
+   "adult": false,
+   "id": 651,
+   "sort_order": 651
+  },
+  {
+   "type": "balance",
+   "a": "등산 정상까지",
+   "b": "등산 중간 카페까지",
+   "adult": false,
+   "id": 652,
+   "sort_order": 652
+  },
+  {
+   "type": "balance",
+   "a": "둘만 아는 암호 만들기",
+   "b": "둘만 아는 장소 만들기",
+   "adult": false,
+   "id": 653,
+   "sort_order": 653
+  },
+  {
+   "type": "balance",
+   "a": "팥빙수",
+   "b": "망고빙수",
+   "adult": false,
+   "id": 654,
+   "sort_order": 654
+  },
+  {
+   "type": "whatif",
+   "text": "네 인생 여행지 한 곳은?",
+   "adult": false,
+   "id": 655,
+   "sort_order": 655
+  },
+  {
+   "type": "balance",
+   "a": "카톡 답장 바로",
+   "b": "카톡 읽고 나중에",
+   "adult": false,
+   "id": 656,
+   "sort_order": 656
+  },
+  {
+   "type": "balance",
+   "a": "유명인과 밥 한 끼",
+   "b": "어린 시절 나와 대화 한 번",
+   "adult": false,
+   "id": 657,
+   "sort_order": 657
+  },
+  {
+   "type": "balance",
+   "a": "장거리 운전 교대",
+   "b": "장거리 운전 한 명이 쭉",
+   "adult": false,
+   "id": 658,
+   "sort_order": 658
+  },
+  {
+   "type": "balance",
+   "a": "평생 여름만",
+   "b": "평생 겨울만",
+   "adult": false,
+   "id": 659,
+   "sort_order": 659
+  },
+  {
+   "type": "whatif",
+   "text": "지금까지 받은 선물 중 제일 웃겼던 건?",
+   "adult": false,
+   "id": 660,
+   "sort_order": 660
+  },
+  {
+   "type": "balance",
+   "a": "연락 자주 하는데 짧게",
+   "b": "연락 가끔 하는데 길게",
+   "adult": false,
+   "id": 661,
+   "sort_order": 661
+  },
+  {
+   "type": "balance",
+   "a": "여행 사진은 풍경",
+   "b": "여행 사진은 우리 얼굴",
+   "adult": false,
+   "id": 662,
+   "sort_order": 662
+  },
+  {
+   "type": "balance",
+   "a": "평생 한식만",
+   "b": "평생 양식만",
+   "adult": false,
+   "id": 663,
+   "sort_order": 663
+  },
+  {
+   "type": "balance",
+   "a": "잠옷은 반팔",
+   "b": "잠옷은 긴팔",
+   "adult": false,
+   "id": 664,
+   "sort_order": 664
+  },
+  {
+   "type": "whatif",
+   "text": "네가 생각하는 완벽한 휴일은?",
+   "adult": false,
+   "id": 665,
+   "sort_order": 665
+  },
+  {
+   "type": "whatif",
+   "text": "로또 1등 되면 제일 먼저 누구한테 말할래?",
+   "adult": false,
+   "id": 666,
+   "sort_order": 666
+  },
+  {
+   "type": "balance",
+   "a": "반지 매일 끼기",
+   "b": "특별한 날만 끼기",
+   "adult": false,
+   "id": 667,
+   "sort_order": 667
+  },
+  {
+   "type": "balance",
+   "a": "연애 이야기 친구한테 다 말하기",
+   "b": "연애 이야기 비밀로",
+   "adult": false,
+   "id": 668,
+   "sort_order": 668
+  },
+  {
+   "type": "whatif",
+   "text": "네가 커플 퀴즈를 낸다면 나 틀릴 것 같은 문제는?",
+   "adult": false,
+   "id": 669,
+   "sort_order": 669
+  },
+  {
+   "type": "whatif",
+   "text": "내 첫인상을 한 단어로 말한다면?",
+   "adult": false,
+   "id": 670,
+   "sort_order": 670
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 처음 가본 곳 중에 다시 가고 싶은 곳은?",
+   "adult": false,
+   "id": 671,
+   "sort_order": 671
+  },
+  {
+   "type": "balance",
+   "a": "강아지 산책 데이트",
+   "b": "고양이 카페 데이트",
+   "adult": false,
+   "id": 672,
+   "sort_order": 672
+  },
+  {
+   "type": "balance",
+   "a": "늙어서도 손잡고 산책",
+   "b": "늙어서도 같이 게임",
+   "adult": false,
+   "id": 673,
+   "sort_order": 673
+  },
+  {
+   "type": "whatif",
+   "text": "내가 너한테 책을 선물한다면 어떤 장르?",
+   "adult": false,
+   "id": 674,
+   "sort_order": 674
+  },
+  {
+   "type": "balance",
+   "a": "노래 가사 중요",
+   "b": "노래 멜로디 중요",
+   "adult": false,
+   "id": 675,
+   "sort_order": 675
+  },
+  {
+   "type": "whatif",
+   "text": "여행 가서 꼭 먹는 우리만의 메뉴를 정한다면?",
+   "adult": false,
+   "id": 676,
+   "sort_order": 676
+  },
+  {
+   "type": "balance",
+   "a": "올해 목표 크게",
+   "b": "올해 목표 작게 여러 개",
+   "adult": false,
+   "id": 677,
+   "sort_order": 677
+  },
+  {
+   "type": "balance",
+   "a": "이불은 하나로 같이",
+   "b": "이불은 각자 하나씩",
+   "adult": false,
+   "id": 678,
+   "sort_order": 678
+  },
+  {
+   "type": "balance",
+   "a": "길 잃으면 지도 앱",
+   "b": "길 잃으면 감으로",
+   "adult": false,
+   "id": 679,
+   "sort_order": 679
+  },
+  {
+   "type": "balance",
+   "a": "뮤지컬",
+   "b": "연극",
+   "adult": false,
+   "id": 680,
+   "sort_order": 680
+  },
+  {
+   "type": "balance",
+   "a": "마라탕 매운맛 1단계",
+   "b": "마라탕 매운맛 3단계",
+   "adult": false,
+   "id": 681,
+   "sort_order": 681
+  },
+  {
+   "type": "balance",
+   "a": "영어 원어민처럼",
+   "b": "피아노 프로처럼",
+   "adult": false,
+   "id": 682,
+   "sort_order": 682
+  },
+  {
+   "type": "balance",
+   "a": "연말 결산 같이 하기",
+   "b": "새해 목표 같이 세우기",
+   "adult": false,
+   "id": 683,
+   "sort_order": 683
+  },
+  {
+   "type": "balance",
+   "a": "한강 피크닉",
+   "b": "카페 투어",
+   "adult": false,
+   "id": 684,
+   "sort_order": 684
+  },
+  {
+   "type": "balance",
+   "a": "플레이리스트 같이 만들기",
+   "b": "서로 노래 추천해주기",
+   "adult": false,
+   "id": 685,
+   "sort_order": 685
+  },
+  {
+   "type": "whatif",
+   "text": "둘이 유튜브 채널을 만든다면 콘텐츠는?",
+   "adult": false,
+   "id": 686,
+   "sort_order": 686
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 웹툰 주인공이라면 제목은?",
+   "adult": false,
+   "id": 687,
+   "sort_order": 687
+  },
+  {
+   "type": "balance",
+   "a": "양치하면서 돌아다니기",
+   "b": "양치는 세면대 앞에서",
+   "adult": false,
+   "id": 688,
+   "sort_order": 688
+  },
+  {
+   "type": "whatif",
+   "text": "내가 갑자기 복권에 당첨되면 뭐 사달래?",
+   "adult": false,
+   "id": 689,
+   "sort_order": 689
+  },
+  {
+   "type": "balance",
+   "a": "초밥",
+   "b": "라멘",
+   "adult": false,
+   "id": 690,
+   "sort_order": 690
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 딱 하나만 물어볼 수 있다면 뭘 물어볼래?",
+   "adult": false,
+   "id": 691,
+   "sort_order": 691
+  },
+  {
+   "type": "balance",
+   "a": "첫눈 오는 날 만나기",
+   "b": "크리스마스에 만나기",
+   "adult": false,
+   "id": 692,
+   "sort_order": 692
+  },
+  {
+   "type": "balance",
+   "a": "아이돌 덕질하는 연인",
+   "b": "게임 덕질하는 연인",
+   "adult": false,
+   "id": 693,
+   "sort_order": 693
+  },
+  {
+   "type": "whatif",
+   "text": "내가 웹툰 캐릭터라면 어떤 장르 주인공일까?",
+   "adult": false,
+   "id": 694,
+   "sort_order": 694
+  },
+  {
+   "type": "balance",
+   "a": "제주도 한 달 살기",
+   "b": "유럽 2주 여행",
+   "adult": false,
+   "id": 695,
+   "sort_order": 695
+  },
+  {
+   "type": "whatif",
+   "text": "좀비 사태가 터지면 우리 생존 전략은?",
+   "adult": false,
+   "id": 696,
+   "sort_order": 696
+  },
+  {
+   "type": "whatif",
+   "text": "내가 제일 멋있어 보였던 순간은?",
+   "adult": false,
+   "id": 697,
+   "sort_order": 697
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘 중 누가 더 질투쟁이일까?",
+   "adult": false,
+   "id": 698,
+   "sort_order": 698
+  },
+  {
+   "type": "balance",
+   "a": "해외여행 1번",
+   "b": "국내여행 5번",
+   "adult": false,
+   "id": 699,
+   "sort_order": 699
+  },
+  {
+   "type": "whatif",
+   "text": "지금 당장 같이 가고 싶은 곳?",
+   "adult": false,
+   "id": 700,
+   "sort_order": 700
+  },
+  {
+   "type": "balance",
+   "a": "처음 만난 장소 다시 가기",
+   "b": "처음 데이트 메뉴 다시 먹기",
+   "adult": false,
+   "id": 701,
+   "sort_order": 701
+  },
+  {
+   "type": "balance",
+   "a": "아침은 밥",
+   "b": "아침은 빵",
+   "adult": false,
+   "id": 702,
+   "sort_order": 702
+  },
+  {
+   "type": "whatif",
+   "text": "둘이 같은 꿈을 꾼다면 어떤 꿈이었으면 좋겠어?",
+   "adult": false,
+   "id": 703,
+   "sort_order": 703
+  },
+  {
+   "type": "whatif",
+   "text": "마법을 하나 배운다면?",
+   "adult": false,
+   "id": 704,
+   "sort_order": 704
+  },
+  {
+   "type": "balance",
+   "a": "내 흑역사 하나 공개하기",
+   "b": "상대 흑역사 하나 듣기",
+   "adult": false,
+   "id": 705,
+   "sort_order": 705
+  },
+  {
+   "type": "whatif",
+   "text": "나를 노래 한 곡으로 표현한다면?",
+   "adult": false,
+   "id": 706,
+   "sort_order": 706
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘이 밴드를 한다면 각자 포지션은?",
+   "adult": false,
+   "id": 707,
+   "sort_order": 707
+  },
+  {
+   "type": "balance",
+   "a": "공포 영화",
+   "b": "로맨스 영화",
+   "adult": false,
+   "id": 708,
+   "sort_order": 708
+  },
+  {
+   "type": "balance",
+   "a": "출근 전 아침 같이",
+   "b": "퇴근 후 저녁 같이",
+   "adult": false,
+   "id": 709,
+   "sort_order": 709
+  },
+  {
+   "type": "whatif",
+   "text": "지금 기분을 날씨로 표현하면?",
+   "adult": false,
+   "id": 710,
+   "sort_order": 710
+  },
+  {
+   "type": "balance",
+   "a": "치킨은 양념",
+   "b": "치킨은 후라이드",
+   "adult": false,
+   "id": 711,
+   "sort_order": 711
+  },
+  {
+   "type": "whatif",
+   "text": "동네 하나를 통째로 디자인한다면 꼭 넣을 건?",
+   "adult": false,
+   "id": 712,
+   "sort_order": 712
+  },
+  {
+   "type": "whatif",
+   "text": "일하다가 제일 행복한 순간은?",
+   "adult": false,
+   "id": 713,
+   "sort_order": 713
+  },
+  {
+   "type": "whatif",
+   "text": "둘이 한 달 동안 매일 하나씩 할 미션을 정한다면?",
+   "adult": false,
+   "id": 714,
+   "sort_order": 714
+  },
+  {
+   "type": "balance",
+   "a": "집이 좋은 연인",
+   "b": "밖이 좋은 연인",
+   "adult": false,
+   "id": 715,
+   "sort_order": 715
+  },
+  {
+   "type": "whatif",
+   "text": "우리 커플을 음식 조합으로 표현하면?",
+   "adult": false,
+   "id": 716,
+   "sort_order": 716
+  },
+  {
+   "type": "balance",
+   "a": "잘 때 통화 켜두기",
+   "b": "잘 자 인사하고 끊기",
+   "adult": false,
+   "id": 717,
+   "sort_order": 717
+  },
+  {
+   "type": "whatif",
+   "text": "네가 제일 자주 하는 말버릇은 뭐인 것 같아?",
+   "adult": false,
+   "id": 718,
+   "sort_order": 718
+  },
+  {
+   "type": "whatif",
+   "text": "우리 100일을 다시 기획한다면?",
+   "adult": false,
+   "id": 719,
+   "sort_order": 719
+  },
+  {
+   "type": "balance",
+   "a": "보드게임 지면 설거지",
+   "b": "보드게임 지면 안마",
+   "adult": false,
+   "id": 720,
+   "sort_order": 720
+  },
+  {
+   "type": "whatif",
+   "text": "세상에서 딱 하나 없앨 수 있다면?",
+   "adult": false,
+   "id": 721,
+   "sort_order": 721
+  },
+  {
+   "type": "whatif",
+   "text": "놀이공원을 하나 만든다면 대표 놀이기구는?",
+   "adult": false,
+   "id": 722,
+   "sort_order": 722
+  },
+  {
+   "type": "balance",
+   "a": "카페에서 디저트 두 개",
+   "b": "카페에서 음료 두 잔",
+   "adult": false,
+   "id": 723,
+   "sort_order": 723
+  },
+  {
+   "type": "whatif",
+   "text": "내가 갑자기 머리를 노랗게 염색하면?",
+   "adult": false,
+   "id": 724,
+   "sort_order": 724
+  },
+  {
+   "type": "whatif",
+   "text": "너의 인생 음식 TOP3는?",
+   "adult": false,
+   "id": 725,
+   "sort_order": 725
+  },
+  {
+   "type": "balance",
+   "a": "메뉴 고르기 담당",
+   "b": "영화 고르기 담당",
+   "adult": false,
+   "id": 726,
+   "sort_order": 726
+  },
+  {
+   "type": "balance",
+   "a": "커플 사진 촬영",
+   "b": "커플 캐리커처",
+   "adult": false,
+   "id": 727,
+   "sort_order": 727
+  },
+  {
+   "type": "whatif",
+   "text": "우리 집에 손님을 초대하면 대접할 요리는?",
+   "adult": false,
+   "id": 728,
+   "sort_order": 728
+  },
+  {
+   "type": "whatif",
+   "text": "하루 종일 폰 없이 데이트한다면 뭐 할래?",
+   "adult": false,
+   "id": 729,
+   "sort_order": 729
+  },
+  {
+   "type": "whatif",
+   "text": "눈 오는 날 하고 싶은 데이트는?",
+   "adult": false,
+   "id": 730,
+   "sort_order": 730
+  },
+  {
+   "type": "whatif",
+   "text": "공휴일을 하나 새로 만든다면?",
+   "adult": false,
+   "id": 731,
+   "sort_order": 731
+  },
+  {
+   "type": "whatif",
+   "text": "잠 안 오는 밤에 우리가 하면 좋을 거?",
+   "adult": false,
+   "id": 732,
+   "sort_order": 732
+  },
+  {
+   "type": "balance",
+   "a": "매일 새로운 동네 탐방",
+   "b": "매일 같은 동네 산책",
+   "adult": false,
+   "id": 733,
+   "sort_order": 733
+  },
+  {
+   "type": "whatif",
+   "text": "데이트 비용 없이 하루를 보낸다면 뭐 할래?",
+   "adult": false,
+   "id": 734,
+   "sort_order": 734
+  },
+  {
+   "type": "balance",
+   "a": "로봇 청소기 평생 공짜",
+   "b": "식기세척기 평생 공짜",
+   "adult": false,
+   "id": 735,
+   "sort_order": 735
+  },
+  {
+   "type": "whatif",
+   "text": "우리만의 기념일을 하나 만든다면 무슨 날?",
+   "adult": false,
+   "id": 736,
+   "sort_order": 736
+  },
+  {
+   "type": "balance",
+   "a": "게임 속 캐릭터로 하루",
+   "b": "드라마 속 주인공으로 하루",
+   "adult": false,
+   "id": 737,
+   "sort_order": 737
+  },
+  {
+   "type": "balance",
+   "a": "깜짝 회사 앞 방문",
+   "b": "미리 말하고 방문",
+   "adult": false,
+   "id": 738,
+   "sort_order": 738
+  },
+  {
+   "type": "whatif",
+   "text": "우리 기억 중 하나만 영원히 간직할 수 있다면?",
+   "adult": false,
+   "id": 739,
+   "sort_order": 739
+  },
+  {
+   "type": "whatif",
+   "text": "가족한테 나를 소개한다면 뭐라고 할래?",
+   "adult": false,
+   "id": 740,
+   "sort_order": 740
+  },
+  {
+   "type": "balance",
+   "a": "캠핑",
+   "b": "호캉스",
+   "adult": false,
+   "id": 741,
+   "sort_order": 741
+  },
+  {
+   "type": "balance",
+   "a": "볼링",
+   "b": "당구",
+   "adult": false,
+   "id": 742,
+   "sort_order": 742
+  },
+  {
+   "type": "whatif",
+   "text": "오늘 나한테 고마웠던 거 하나?",
+   "adult": false,
+   "id": 743,
+   "sort_order": 743
+  },
+  {
+   "type": "balance",
+   "a": "책 같은 거 읽고 얘기하기",
+   "b": "각자 읽고 추천해주기",
+   "adult": false,
+   "id": 744,
+   "sort_order": 744
+  },
+  {
+   "type": "balance",
+   "a": "기차 여행",
+   "b": "자동차 여행",
+   "adult": false,
+   "id": 745,
+   "sort_order": 745
+  },
+  {
+   "type": "balance",
+   "a": "SNS에 커플 사진 올리기",
+   "b": "둘만 간직하기",
+   "adult": false,
+   "id": 746,
+   "sort_order": 746
+  },
+  {
+   "type": "balance",
+   "a": "즉흥 데이트 신청",
+   "b": "일주일 전 데이트 신청",
+   "adult": false,
+   "id": 747,
+   "sort_order": 747
+  },
+  {
+   "type": "balance",
+   "a": "데이트 끝나면 바로 집",
+   "b": "꼭 집 앞까지 데려다주기",
+   "adult": false,
+   "id": 748,
+   "sort_order": 748
+  },
+  {
+   "type": "whatif",
+   "text": "지니가 소원 하나만 들어준다면?",
+   "adult": false,
+   "id": 749,
+   "sort_order": 749
+  },
+  {
+   "type": "whatif",
+   "text": "나를 꽃으로 표현하면?",
+   "adult": false,
+   "id": 750,
+   "sort_order": 750
+  },
+  {
+   "type": "balance",
+   "a": "피자 끝 부분 먹기",
+   "b": "피자 끝 부분 남기기",
+   "adult": false,
+   "id": 751,
+   "sort_order": 751
+  },
+  {
+   "type": "whatif",
+   "text": "오늘 하루를 다시 산다면 뭘 바꿀래?",
+   "adult": false,
+   "id": 752,
+   "sort_order": 752
+  },
+  {
+   "type": "balance",
+   "a": "마지막 한 입 양보하기",
+   "b": "마지막 한 입 받기",
+   "adult": false,
+   "id": 753,
+   "sort_order": 753
+  },
+  {
+   "type": "balance",
+   "a": "계획대로 안 되면 플랜B",
+   "b": "계획대로 안 되면 그냥 즐기기",
+   "adult": false,
+   "id": 754,
+   "sort_order": 754
+  },
+  {
+   "type": "whatif",
+   "text": "미래의 나한테 질문 하나 할 수 있다면?",
+   "adult": false,
+   "id": 755,
+   "sort_order": 755
+  },
+  {
+   "type": "whatif",
+   "text": "하루 동안 서로 직업을 바꿔서 출근하면 뭐가 제일 힘들 것 같아?",
+   "adult": false,
+   "id": 756,
+   "sort_order": 756
+  },
+  {
+   "type": "balance",
+   "a": "요리 실력 만렙",
+   "b": "운전 실력 만렙",
+   "adult": false,
+   "id": 757,
+   "sort_order": 757
+  },
+  {
+   "type": "whatif",
+   "text": "하루 동안 우리 둘만 아는 언어를 쓴다면 '보고 싶어'는 뭐라고 할까?",
+   "adult": false,
+   "id": 758,
+   "sort_order": 758
+  },
+  {
+   "type": "whatif",
+   "text": "네 최애 간식 TOP3는?",
+   "adult": false,
+   "id": 759,
+   "sort_order": 759
+  },
+  {
+   "type": "balance",
+   "a": "비 오는 날 파전",
+   "b": "더운 날 냉면",
+   "adult": false,
+   "id": 760,
+   "sort_order": 760
+  },
+  {
+   "type": "whatif",
+   "text": "새해 첫 데이트는 어디로?",
+   "adult": false,
+   "id": 761,
+   "sort_order": 761
+  },
+  {
+   "type": "balance",
+   "a": "라디오",
+   "b": "팟캐스트",
+   "adult": false,
+   "id": 762,
+   "sort_order": 762
+  },
+  {
+   "type": "balance",
+   "a": "숙소가 좋은 곳",
+   "b": "위치가 좋은 곳",
+   "adult": false,
+   "id": 763,
+   "sort_order": 763
+  },
+  {
+   "type": "whatif",
+   "text": "나만의 축제를 연다면 이름은?",
+   "adult": false,
+   "id": 764,
+   "sort_order": 764
+  },
+  {
+   "type": "whatif",
+   "text": "둘 중 한 명이 유명해진다면 누가, 뭘로?",
+   "adult": false,
+   "id": 765,
+   "sort_order": 765
+  },
+  {
+   "type": "whatif",
+   "text": "나만의 향수를 만든다면 무슨 향?",
+   "adult": false,
+   "id": 766,
+   "sort_order": 766
+  },
+  {
+   "type": "whatif",
+   "text": "서로 손편지를 쓴다면 첫 줄은?",
+   "adult": false,
+   "id": 767,
+   "sort_order": 767
+  },
+  {
+   "type": "balance",
+   "a": "여름엔 바다 수영",
+   "b": "겨울엔 스키",
+   "adult": false,
+   "id": 768,
+   "sort_order": 768
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘의 제일 큰 차이점은?",
+   "adult": false,
+   "id": 769,
+   "sort_order": 769
+  },
+  {
+   "type": "balance",
+   "a": "퇴근길 마중",
+   "b": "퇴근길 통화",
+   "adult": false,
+   "id": 770,
+   "sort_order": 770
+  },
+  {
+   "type": "whatif",
+   "text": "우리 커플 캐리커처를 그린다면 배경은 어디?",
+   "adult": false,
+   "id": 771,
+   "sort_order": 771
+  },
+  {
+   "type": "whatif",
+   "text": "요즘 제일 맛있게 먹은 건?",
+   "adult": false,
+   "id": 772,
+   "sort_order": 772
+  },
+  {
+   "type": "balance",
+   "a": "데이트 중 폰 금지",
+   "b": "폰 자유",
+   "adult": false,
+   "id": 773,
+   "sort_order": 773
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 꼭 소개해주고 싶은 사람은?",
+   "adult": false,
+   "id": 774,
+   "sort_order": 774
+  },
+  {
+   "type": "whatif",
+   "text": "같이 운동 목표 하나 정한다면?",
+   "adult": false,
+   "id": 775,
+   "sort_order": 775
+  },
+  {
+   "type": "whatif",
+   "text": "내가 동물이라면 무슨 동물일 것 같아?",
+   "adult": false,
+   "id": 776,
+   "sort_order": 776
+  },
+  {
+   "type": "whatif",
+   "text": "집에 둘만의 공간을 꾸민다면 어떤 분위기?",
+   "adult": false,
+   "id": 777,
+   "sort_order": 777
+  },
+  {
+   "type": "whatif",
+   "text": "둘이 노래방 가면 마지막 곡은?",
+   "adult": false,
+   "id": 778,
+   "sort_order": 778
+  },
+  {
+   "type": "whatif",
+   "text": "내년의 우리에게 바라는 거 하나?",
+   "adult": false,
+   "id": 779,
+   "sort_order": 779
+  },
+  {
+   "type": "balance",
+   "a": "공룡 시대 하루",
+   "b": "미래 도시 하루",
+   "adult": false,
+   "id": 780,
+   "sort_order": 780
+  },
+  {
+   "type": "balance",
+   "a": "영화관 데이트",
+   "b": "집에서 넷플릭스",
+   "adult": false,
+   "id": 781,
+   "sort_order": 781
+  },
+  {
+   "type": "balance",
+   "a": "\"아무거나\" 하는 연인",
+   "b": "메뉴 확실한 연인",
+   "adult": false,
+   "id": 782,
+   "sort_order": 782
+  },
+  {
+   "type": "whatif",
+   "text": "나를 이모티콘 하나로 표현하면?",
+   "adult": false,
+   "id": 783,
+   "sort_order": 783
+  },
+  {
+   "type": "whatif",
+   "text": "봄에 꼭 같이 하고 싶은 거?",
+   "adult": false,
+   "id": 784,
+   "sort_order": 784
+  },
+  {
+   "type": "whatif",
+   "text": "어릴 때 장래희망은?",
+   "adult": false,
+   "id": 785,
+   "sort_order": 785
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 고등학교 동창이었다면 누가 먼저 말 걸었을까?",
+   "adult": false,
+   "id": 786,
+   "sort_order": 786
+  },
+  {
+   "type": "balance",
+   "a": "거실에 TV",
+   "b": "거실에 큰 책상",
+   "adult": false,
+   "id": 787,
+   "sort_order": 787
+  },
+  {
+   "type": "whatif",
+   "text": "게임 캐릭터라면 직업은?",
+   "adult": false,
+   "id": 788,
+   "sort_order": 788
+  },
+  {
+   "type": "whatif",
+   "text": "같이 영화 마라톤을 한다면 첫 번째 영화는?",
+   "adult": false,
+   "id": 789,
+   "sort_order": 789
+  },
+  {
+   "type": "balance",
+   "a": "새벽 드라이브",
+   "b": "한낮 자전거",
+   "adult": false,
+   "id": 790,
+   "sort_order": 790
+  },
+  {
+   "type": "whatif",
+   "text": "너에게 '완벽한 휴일'은?",
+   "adult": false,
+   "id": 791,
+   "sort_order": 791
+  },
+  {
+   "type": "balance",
+   "a": "직접 만든 선물",
+   "b": "사서 주는 선물",
+   "adult": false,
+   "id": 792,
+   "sort_order": 792
+  },
+  {
+   "type": "balance",
+   "a": "연인 사진 배경화면",
+   "b": "우리 둘 사진 배경화면",
+   "adult": false,
+   "id": 793,
+   "sort_order": 793
+  },
+  {
+   "type": "balance",
+   "a": "한식 뷔페",
+   "b": "디저트 뷔페",
+   "adult": false,
+   "id": 794,
+   "sort_order": 794
+  },
+  {
+   "type": "whatif",
+   "text": "내가 너한테 '고마워'라고 해야 할 일 하나 꼽아줘",
+   "adult": false,
+   "id": 795,
+   "sort_order": 795
+  },
+  {
+   "type": "balance",
+   "a": "비행기 타고 멀리 한 곳",
+   "b": "차로 가까운 곳 여러 군데",
+   "adult": false,
+   "id": 796,
+   "sort_order": 796
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 인생 영화 한 편을 추천한다면?",
+   "adult": false,
+   "id": 797,
+   "sort_order": 797
+  },
+  {
+   "type": "whatif",
+   "text": "다투고 나서 화해 신호를 정한다면?",
+   "adult": false,
+   "id": 798,
+   "sort_order": 798
+  },
+  {
+   "type": "balance",
+   "a": "차는 SUV",
+   "b": "차는 세단",
+   "adult": false,
+   "id": 799,
+   "sort_order": 799
+  },
+  {
+   "type": "balance",
+   "a": "데이트 코스 내가 다 짜기",
+   "b": "상대가 다 짜기",
+   "adult": false,
+   "id": 800,
+   "sort_order": 800
+  },
+  {
+   "type": "balance",
+   "a": "동물이랑 대화하기",
+   "b": "모든 언어 다 하기",
+   "adult": false,
+   "id": 801,
+   "sort_order": 801
+  },
+  {
+   "type": "balance",
+   "a": "아침 데이트",
+   "b": "밤 데이트",
+   "adult": false,
+   "id": 802,
+   "sort_order": 802
+  },
+  {
+   "type": "whatif",
+   "text": "한여름 밤에 하고 싶은 데이트는?",
+   "adult": false,
+   "id": 803,
+   "sort_order": 803
+  },
+  {
+   "type": "balance",
+   "a": "일찍 은퇴하기",
+   "b": "평생 좋아하는 일 하기",
+   "adult": false,
+   "id": 804,
+   "sort_order": 804
+  },
+  {
+   "type": "balance",
+   "a": "프로필 사진 자주 바꾸기",
+   "b": "프로필 사진 몇 년째 그대로",
+   "adult": false,
+   "id": 805,
+   "sort_order": 805
+  },
+  {
+   "type": "whatif",
+   "text": "내가 너의 하루를 몰래 따라다닌다면 제일 웃긴 순간은?",
+   "adult": false,
+   "id": 806,
+   "sort_order": 806
+  },
+  {
+   "type": "balance",
+   "a": "붕어빵 머리부터",
+   "b": "붕어빵 꼬리부터",
+   "adult": false,
+   "id": 807,
+   "sort_order": 807
+  },
+  {
+   "type": "balance",
+   "a": "평생 스마트폰 없이",
+   "b": "평생 유튜브 없이",
+   "adult": false,
+   "id": 808,
+   "sort_order": 808
+  },
+  {
+   "type": "balance",
+   "a": "플리마켓",
+   "b": "팝업스토어",
+   "adult": false,
+   "id": 809,
+   "sort_order": 809
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘이 같이 출연하는 광고를 찍는다면 무슨 광고?",
+   "adult": false,
+   "id": 810,
+   "sort_order": 810
+  },
+  {
+   "type": "balance",
+   "a": "조명은 밝게",
+   "b": "조명은 무드등",
+   "adult": false,
+   "id": 811,
+   "sort_order": 811
+  },
+  {
+   "type": "whatif",
+   "text": "둘이 탐정이라면 누가 셜록이고 누가 왓슨?",
+   "adult": false,
+   "id": 812,
+   "sort_order": 812
+  },
+  {
+   "type": "balance",
+   "a": "말로 표현하는 사랑",
+   "b": "행동으로 보여주는 사랑",
+   "adult": false,
+   "id": 813,
+   "sort_order": 813
+  },
+  {
+   "type": "whatif",
+   "text": "지금 당장 같이 보고 싶은 거?",
+   "adult": false,
+   "id": 814,
+   "sort_order": 814
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 있을 때 제일 웃겼던 순간은?",
+   "adult": false,
+   "id": 815,
+   "sort_order": 815
+  },
+  {
+   "type": "whatif",
+   "text": "기분 좋을 때 나오는 네 습관은?",
+   "adult": false,
+   "id": 816,
+   "sort_order": 816
+  },
+  {
+   "type": "balance",
+   "a": "라면에 계란 풀기",
+   "b": "라면에 계란 그대로",
+   "adult": false,
+   "id": 817,
+   "sort_order": 817
+  },
+  {
+   "type": "balance",
+   "a": "차 색은 흰색",
+   "b": "차 색은 검은색",
+   "adult": false,
+   "id": 818,
+   "sort_order": 818
+  },
+  {
+   "type": "balance",
+   "a": "빨래 개기",
+   "b": "빨래 널기",
+   "adult": false,
+   "id": 819,
+   "sort_order": 819
+  },
+  {
+   "type": "whatif",
+   "text": "하루 투명인간이 되면 나 몰래 뭐 할래?",
+   "adult": false,
+   "id": 820,
+   "sort_order": 820
+  },
+  {
+   "type": "whatif",
+   "text": "과거의 나한테 문자 한 통 보낼 수 있다면?",
+   "adult": false,
+   "id": 821,
+   "sort_order": 821
+  },
+  {
+   "type": "whatif",
+   "text": "우리 집에 식물을 하나 들인다면?",
+   "adult": false,
+   "id": 822,
+   "sort_order": 822
+  },
+  {
+   "type": "whatif",
+   "text": "같이 1년 동안 저금해서 하나 산다면?",
+   "adult": false,
+   "id": 823,
+   "sort_order": 823
+  },
+  {
+   "type": "balance",
+   "a": "잘못했을 때 편지",
+   "b": "잘못했을 때 직접 말로",
+   "adult": false,
+   "id": 824,
+   "sort_order": 824
+  },
+  {
+   "type": "whatif",
+   "text": "단풍 들면 가고 싶은 곳은?",
+   "adult": false,
+   "id": 825,
+   "sort_order": 825
+  },
+  {
+   "type": "whatif",
+   "text": "내가 너한테 신발을 사준다면 어떤 거?",
+   "adult": false,
+   "id": 826,
+   "sort_order": 826
+  },
+  {
+   "type": "balance",
+   "a": "외계인 만나기",
+   "b": "귀신 만나기",
+   "adult": false,
+   "id": 827,
+   "sort_order": 827
+  },
+  {
+   "type": "balance",
+   "a": "하늘을 나는 능력",
+   "b": "물속에서 숨 쉬는 능력",
+   "adult": false,
+   "id": 828,
+   "sort_order": 828
+  },
+  {
+   "type": "balance",
+   "a": "고양이",
+   "b": "강아지",
+   "adult": false,
+   "id": 829,
+   "sort_order": 829
+  },
+  {
+   "type": "whatif",
+   "text": "1년 동안 우리한테 생긴 일 중 제일 좋았던 거?",
+   "adult": false,
+   "id": 830,
+   "sort_order": 830
+  },
+  {
+   "type": "whatif",
+   "text": "'이 사람 진짜 좋다' 느낀 순간이 있다면?",
+   "adult": false,
+   "id": 831,
+   "sort_order": 831
+  },
+  {
+   "type": "balance",
+   "a": "힘들 때 같이 맛있는 거",
+   "b": "힘들 때 같이 산책",
+   "adult": false,
+   "id": 832,
+   "sort_order": 832
+  },
+  {
+   "type": "whatif",
+   "text": "다큐멘터리를 찍는다면 주제는?",
+   "adult": false,
+   "id": 833,
+   "sort_order": 833
+  },
+  {
+   "type": "whatif",
+   "text": "내가 하루 종일 연락이 안 되면 무슨 생각 할 것 같아?",
+   "adult": false,
+   "id": 834,
+   "sort_order": 834
+  },
+  {
+   "type": "whatif",
+   "text": "하늘을 날 수 있다면 제일 먼저 어디 갈래?",
+   "adult": false,
+   "id": 835,
+   "sort_order": 835
+  },
+  {
+   "type": "whatif",
+   "text": "우리 첫 여행을 간다면 어디로?",
+   "adult": false,
+   "id": 836,
+   "sort_order": 836
+  },
+  {
+   "type": "balance",
+   "a": "나이 먹어도 커플 잠옷",
+   "b": "나이 먹어도 존댓말 장난",
+   "adult": false,
+   "id": 837,
+   "sort_order": 837
+  },
+  {
+   "type": "balance",
+   "a": "매일 보는 연애",
+   "b": "가끔 봐서 애틋한 연애",
+   "adult": false,
+   "id": 838,
+   "sort_order": 838
+  },
+  {
+   "type": "whatif",
+   "text": "같이 살면 꼭 정해둘 규칙 하나는?",
+   "adult": false,
+   "id": 839,
+   "sort_order": 839
+  },
+  {
+   "type": "balance",
+   "a": "청소기 돌리기",
+   "b": "걸레질하기",
+   "adult": false,
+   "id": 840,
+   "sort_order": 840
+  },
+  {
+   "type": "balance",
+   "a": "고기 굽는 담당",
+   "b": "고기 먹는 담당",
+   "adult": false,
+   "id": 841,
+   "sort_order": 841
+  },
+  {
+   "type": "balance",
+   "a": "타로",
+   "b": "MBTI 다시 검사",
+   "adult": false,
+   "id": 842,
+   "sort_order": 842
+  },
+  {
+   "type": "whatif",
+   "text": "하루 동안 몸이 바뀌면 제일 먼저 뭐 할래?",
+   "adult": false,
+   "id": 843,
+   "sort_order": 843
+  },
+  {
+   "type": "whatif",
+   "text": "네가 생각하는 우리 연애의 장점은?",
+   "adult": false,
+   "id": 844,
+   "sort_order": 844
+  },
+  {
+   "type": "whatif",
+   "text": "1년 동안 일 안 해도 된다면 뭐 할래?",
+   "adult": false,
+   "id": 845,
+   "sort_order": 845
+  },
+  {
+   "type": "balance",
+   "a": "주차는 가까운 데 비싸게",
+   "b": "주차는 먼 데 싸게",
+   "adult": false,
+   "id": 846,
+   "sort_order": 846
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘을 동물 콤비로 표현하면?",
+   "adult": false,
+   "id": 847,
+   "sort_order": 847
+  },
+  {
+   "type": "whatif",
+   "text": "내 폰 사진 중 딱 한 장만 볼 수 있다면 어떤 거?",
+   "adult": false,
+   "id": 848,
+   "sort_order": 848
+  },
+  {
+   "type": "balance",
+   "a": "상대 폰 배경화면이 내 사진",
+   "b": "내 폰 배경화면이 상대 사진",
+   "adult": false,
+   "id": 849,
+   "sort_order": 849
+  },
+  {
+   "type": "balance",
+   "a": "여름",
+   "b": "겨울",
+   "adult": false,
+   "id": 850,
+   "sort_order": 850
+  },
+  {
+   "type": "balance",
+   "a": "애칭으로 부르기",
+   "b": "이름으로 부르기",
+   "adult": false,
+   "id": 851,
+   "sort_order": 851
+  },
+  {
+   "type": "balance",
+   "a": "주말 아침 브런치 만들기",
+   "b": "주말 아침 늦잠",
+   "adult": false,
+   "id": 852,
+   "sort_order": 852
+  },
+  {
+   "type": "whatif",
+   "text": "나이 들어서 꼭 같이 가고 싶은 곳은?",
+   "adult": false,
+   "id": 853,
+   "sort_order": 853
+  },
+  {
+   "type": "balance",
+   "a": "남의 생각 듣기",
+   "b": "내 생각 전송하기",
+   "adult": false,
+   "id": 854,
+   "sort_order": 854
+  },
+  {
+   "type": "balance",
+   "a": "오마카세 한 번",
+   "b": "무한리필 다섯 번",
+   "adult": false,
+   "id": 855,
+   "sort_order": 855
+  },
+  {
+   "type": "balance",
+   "a": "고민 상담은 해결책",
+   "b": "고민 상담은 공감",
+   "adult": false,
+   "id": 856,
+   "sort_order": 856
+  },
+  {
+   "type": "whatif",
+   "text": "요즘 나한테 고마운 거 하나?",
+   "adult": false,
+   "id": 857,
+   "sort_order": 857
+  },
+  {
+   "type": "whatif",
+   "text": "네가 생각하는 행복한 순간 하나는?",
+   "adult": false,
+   "id": 858,
+   "sort_order": 858
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘 중 누가 돈 관리를 맡게 될까?",
+   "adult": false,
+   "id": 859,
+   "sort_order": 859
+  },
+  {
+   "type": "whatif",
+   "text": "우리 집 거실 벽에 걸 그림이나 사진은?",
+   "adult": false,
+   "id": 860,
+   "sort_order": 860
+  },
+  {
+   "type": "whatif",
+   "text": "우리 커플 노래를 정한다면?",
+   "adult": false,
+   "id": 861,
+   "sort_order": 861
+  },
+  {
+   "type": "whatif",
+   "text": "아무도 없는 놀이공원을 하루 빌린다면 제일 먼저 탈 거?",
+   "adult": false,
+   "id": 862,
+   "sort_order": 862
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 퀴즈쇼에 나가면 상금으로 뭐 할래?",
+   "adult": false,
+   "id": 863,
+   "sort_order": 863
+  },
+  {
+   "type": "whatif",
+   "text": "시간을 멈출 수 있다면 언제 멈추고 싶어?",
+   "adult": false,
+   "id": 864,
+   "sort_order": 864
+  },
+  {
+   "type": "balance",
+   "a": "그림 잘 그리기",
+   "b": "글 잘 쓰기",
+   "adult": false,
+   "id": 865,
+   "sort_order": 865
+  },
+  {
+   "type": "whatif",
+   "text": "나를 처음 본 날로 돌아가면 첫마디를 뭐라고 할래?",
+   "adult": false,
+   "id": 866,
+   "sort_order": 866
+  },
+  {
+   "type": "balance",
+   "a": "적금",
+   "b": "여행 통장",
+   "adult": false,
+   "id": 867,
+   "sort_order": 867
+  },
+  {
+   "type": "whatif",
+   "text": "둘이 똑같은 그림을 몸에 새긴다면 뭘로 할래?",
+   "adult": false,
+   "id": 868,
+   "sort_order": 868
+  },
+  {
+   "type": "whatif",
+   "text": "우리 사이를 계절로 표현하면?",
+   "adult": false,
+   "id": 869,
+   "sort_order": 869
+  },
+  {
+   "type": "whatif",
+   "text": "할머니 할아버지가 된 우리는 뭐 하면서 지내고 있을까?",
+   "adult": false,
+   "id": 870,
+   "sort_order": 870
+  },
+  {
+   "type": "whatif",
+   "text": "여행 사진 중 딱 한 장만 남긴다면 어떤 장면?",
+   "adult": false,
+   "id": 871,
+   "sort_order": 871
+  },
+  {
+   "type": "balance",
+   "a": "아플 때 옆에 있기",
+   "b": "아플 때 푹 자게 두기",
+   "adult": false,
+   "id": 872,
+   "sort_order": 872
+  },
+  {
+   "type": "whatif",
+   "text": "내가 너로 하루 산다면 제일 조심해야 할 건?",
+   "adult": false,
+   "id": 873,
+   "sort_order": 873
+  },
+  {
+   "type": "balance",
+   "a": "차에서 노래 크게",
+   "b": "차에서 대화",
+   "adult": false,
+   "id": 874,
+   "sort_order": 874
+  },
+  {
+   "type": "whatif",
+   "text": "여행 가서 비가 계속 오면 뭐 할래?",
+   "adult": false,
+   "id": 875,
+   "sort_order": 875
+  },
+  {
+   "type": "whatif",
+   "text": "우주여행 티켓이 생기면 가서 뭐 할래?",
+   "adult": false,
+   "id": 876,
+   "sort_order": 876
+  },
+  {
+   "type": "balance",
+   "a": "반려동물 같이 키우기",
+   "b": "화분 같이 키우기",
+   "adult": false,
+   "id": 877,
+   "sort_order": 877
+  },
+  {
+   "type": "whatif",
+   "text": "요즘 자주 듣는 노래는?",
+   "adult": false,
+   "id": 878,
+   "sort_order": 878
+  },
+  {
+   "type": "balance",
+   "a": "싸운 뒤 먼저 연락하기",
+   "b": "싸운 뒤 먼저 연락 받기",
+   "adult": false,
+   "id": 879,
+   "sort_order": 879
+  },
+  {
+   "type": "balance",
+   "a": "결혼기념일은 둘이",
+   "b": "결혼기념일은 가족이랑",
+   "adult": false,
+   "id": 880,
+   "sort_order": 880
+  },
+  {
+   "type": "balance",
+   "a": "신혼여행은 휴양지",
+   "b": "신혼여행은 도시",
+   "adult": false,
+   "id": 881,
+   "sort_order": 881
+  },
+  {
+   "type": "balance",
+   "a": "간호해주기",
+   "b": "간호받기",
+   "adult": false,
+   "id": 882,
+   "sort_order": 882
+  },
+  {
+   "type": "balance",
+   "a": "피곤하면 커피",
+   "b": "피곤하면 낮잠",
+   "adult": false,
+   "id": 883,
+   "sort_order": 883
+  },
+  {
+   "type": "whatif",
+   "text": "내가 해줬으면 하는 작은 습관 하나는?",
+   "adult": false,
+   "id": 884,
+   "sort_order": 884
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 꼭 먹여보고 싶은 음식은?",
+   "adult": false,
+   "id": 885,
+   "sort_order": 885
+  },
+  {
+   "type": "whatif",
+   "text": "너랑 가장 닮은 캐릭터는?",
+   "adult": false,
+   "id": 886,
+   "sort_order": 886
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 만나지 않았다면 지금 뭐 하고 있었을 것 같아?",
+   "adult": false,
+   "id": 887,
+   "sort_order": 887
+  },
+  {
+   "type": "whatif",
+   "text": "우리 집 가훈을 정한다면?",
+   "adult": false,
+   "id": 888,
+   "sort_order": 888
+  },
+  {
+   "type": "whatif",
+   "text": "캠핑 갔는데 텐트를 안 가져왔으면?",
+   "adult": false,
+   "id": 889,
+   "sort_order": 889
+  },
+  {
+   "type": "balance",
+   "a": "집에서 요리해 먹기",
+   "b": "배달 시켜 먹기",
+   "adult": false,
+   "id": 890,
+   "sort_order": 890
+  },
+  {
+   "type": "whatif",
+   "text": "새로운 과자를 만든다면 이름이랑 맛은?",
+   "adult": false,
+   "id": 891,
+   "sort_order": 891
+  },
+  {
+   "type": "balance",
+   "a": "콜라",
+   "b": "사이다",
+   "adult": false,
+   "id": 892,
+   "sort_order": 892
+  },
+  {
+   "type": "whatif",
+   "text": "초능력 하나를 하루만 쓸 수 있다면?",
+   "adult": false,
+   "id": 893,
+   "sort_order": 893
+  },
+  {
+   "type": "balance",
+   "a": "놀이공원 오픈런",
+   "b": "놀이공원 야간 개장",
+   "adult": false,
+   "id": 894,
+   "sort_order": 894
+  },
+  {
+   "type": "whatif",
+   "text": "내가 작가라면 어떤 책을 썼을 것 같아?",
+   "adult": false,
+   "id": 895,
+   "sort_order": 895
+  },
+  {
+   "type": "whatif",
+   "text": "동물 한 마리를 하루 빌린다면 무슨 동물?",
+   "adult": false,
+   "id": 896,
+   "sort_order": 896
+  },
+  {
+   "type": "whatif",
+   "text": "나를 장소로 표현하면?",
+   "adult": false,
+   "id": 897,
+   "sort_order": 897
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘이 아이돌 그룹이면 그룹 이름은?",
+   "adult": false,
+   "id": 898,
+   "sort_order": 898
+  },
+  {
+   "type": "whatif",
+   "text": "나를 디저트로 표현하면?",
+   "adult": false,
+   "id": 899,
+   "sort_order": 899
+  },
+  {
+   "type": "balance",
+   "a": "커피 사다주기",
+   "b": "간식 사다주기",
+   "adult": false,
+   "id": 900,
+   "sort_order": 900
+  },
+  {
+   "type": "whatif",
+   "text": "지친 날 나한테 받고 싶은 위로는?",
+   "adult": false,
+   "id": 901,
+   "sort_order": 901
+  },
+  {
+   "type": "whatif",
+   "text": "1만 원으로 데이트를 한다면 코스는?",
+   "adult": false,
+   "id": 902,
+   "sort_order": 902
+  },
+  {
+   "type": "whatif",
+   "text": "요즘 제일 빠져 있는 건?",
+   "adult": false,
+   "id": 903,
+   "sort_order": 903
+  },
+  {
+   "type": "balance",
+   "a": "설거지 담당",
+   "b": "요리 담당",
+   "adult": false,
+   "id": 904,
+   "sort_order": 904
+  },
+  {
+   "type": "whatif",
+   "text": "하루 동안 말 대신 몸짓으로만 대화해야 하면 제일 먼저 뭘 표현할래?",
+   "adult": false,
+   "id": 905,
+   "sort_order": 905
+  },
+  {
+   "type": "balance",
+   "a": "쇼핑은 온라인",
+   "b": "쇼핑은 직접 가서",
+   "adult": false,
+   "id": 906,
+   "sort_order": 906
+  },
+  {
+   "type": "whatif",
+   "text": "첫눈이 오는 날 우리는 뭐 하고 있을까?",
+   "adult": false,
+   "id": 907,
+   "sort_order": 907
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘 중 누가 먼저 사과할까?",
+   "adult": false,
+   "id": 908,
+   "sort_order": 908
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 같이 해본 것 중에 또 하고 싶은 거?",
+   "adult": false,
+   "id": 909,
+   "sort_order": 909
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘이 완전 다른 점 하나는?",
+   "adult": false,
+   "id": 910,
+   "sort_order": 910
+  },
+  {
+   "type": "whatif",
+   "text": "네 인생 노래 한 곡은?",
+   "adult": false,
+   "id": 911,
+   "sort_order": 911
+  },
+  {
+   "type": "whatif",
+   "text": "100만 원이 생겼는데 오늘 안에 써야 한다면?",
+   "adult": false,
+   "id": 912,
+   "sort_order": 912
+  },
+  {
+   "type": "whatif",
+   "text": "같이 살 집에 꼭 있어야 하는 것 하나는?",
+   "adult": false,
+   "id": 913,
+   "sort_order": 913
+  },
+  {
+   "type": "balance",
+   "a": "운동화",
+   "b": "구두",
+   "adult": false,
+   "id": 914,
+   "sort_order": 914
+  },
+  {
+   "type": "balance",
+   "a": "연애 예능 같이 보기",
+   "b": "버라이어티 예능 같이 보기",
+   "adult": false,
+   "id": 915,
+   "sort_order": 915
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘 중 누가 더 먼저 잠들까?",
+   "adult": false,
+   "id": 916,
+   "sort_order": 916
+  },
+  {
+   "type": "whatif",
+   "text": "다른 나라에서 태어났다면 어디서 만났을 것 같아?",
+   "adult": false,
+   "id": 917,
+   "sort_order": 917
+  },
+  {
+   "type": "whatif",
+   "text": "둘만의 비밀 장소를 만든다면 어디?",
+   "adult": false,
+   "id": 918,
+   "sort_order": 918
+  },
+  {
+   "type": "whatif",
+   "text": "지금 장바구니에 담아둔 거 하나 고백한다면?",
+   "adult": false,
+   "id": 919,
+   "sort_order": 919
+  },
+  {
+   "type": "whatif",
+   "text": "연말 마지막 날 자정에 뭐 하고 있을까?",
+   "adult": false,
+   "id": 920,
+   "sort_order": 920
+  },
+  {
+   "type": "balance",
+   "a": "장바구니 담아두기",
+   "b": "보이면 바로 결제",
+   "adult": false,
+   "id": 921,
+   "sort_order": 921
+  },
+  {
+   "type": "balance",
+   "a": "과거로 가기",
+   "b": "미래로 가기",
+   "adult": false,
+   "id": 922,
+   "sort_order": 922
+  },
+  {
+   "type": "balance",
+   "a": "향수 하나 오래",
+   "b": "향수 여러 개 번갈아",
+   "adult": false,
+   "id": 923,
+   "sort_order": 923
+  },
+  {
+   "type": "balance",
+   "a": "은퇴 후 세계여행",
+   "b": "은퇴 후 작은 가게",
+   "adult": false,
+   "id": 924,
+   "sort_order": 924
+  },
+  {
+   "type": "balance",
+   "a": "동물카페",
+   "b": "식물카페",
+   "adult": false,
+   "id": 925,
+   "sort_order": 925
+  },
+  {
+   "type": "balance",
+   "a": "인생네컷",
+   "b": "사진관 커플 촬영",
+   "adult": false,
+   "id": 926,
+   "sort_order": 926
+  },
+  {
+   "type": "whatif",
+   "text": "1박 2일 무계획 여행에서 첫 번째 목적지는?",
+   "adult": false,
+   "id": 927,
+   "sort_order": 927
+  },
+  {
+   "type": "whatif",
+   "text": "요즘 제일 웃겼던 일은?",
+   "adult": false,
+   "id": 928,
+   "sort_order": 928
+  },
+  {
+   "type": "balance",
+   "a": "길거리 음식 투어",
+   "b": "코스요리 한 번",
+   "adult": false,
+   "id": 929,
+   "sort_order": 929
+  },
+  {
+   "type": "balance",
+   "a": "절대 안 지치는 체력",
+   "b": "절대 안 아픈 몸",
+   "adult": false,
+   "id": 930,
+   "sort_order": 930
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘이 퀴즈 프로에 나가면 누가 더 잘 맞힐까?",
+   "adult": false,
+   "id": 931,
+   "sort_order": 931
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 꼭 보여주고 싶은 풍경은?",
+   "adult": false,
+   "id": 932,
+   "sort_order": 932
+  },
+  {
+   "type": "whatif",
+   "text": "비행기가 연착돼서 공항에서 8시간 기다려야 하면?",
+   "adult": false,
+   "id": 933,
+   "sort_order": 933
+  },
+  {
+   "type": "whatif",
+   "text": "다음 주에 제일 기대되는 거?",
+   "adult": false,
+   "id": 934,
+   "sort_order": 934
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘 중 누가 더 운전을 잘할까?",
+   "adult": false,
+   "id": 935,
+   "sort_order": 935
+  },
+  {
+   "type": "balance",
+   "a": "결혼식은 크게",
+   "b": "결혼식은 작게",
+   "adult": false,
+   "id": 936,
+   "sort_order": 936
+  },
+  {
+   "type": "balance",
+   "a": "새벽 출발",
+   "b": "느지막이 출발",
+   "adult": false,
+   "id": 937,
+   "sort_order": 937
+  },
+  {
+   "type": "whatif",
+   "text": "장마철 데이트를 하나 정한다면?",
+   "adult": false,
+   "id": 938,
+   "sort_order": 938
+  },
+  {
+   "type": "balance",
+   "a": "모든 동물이랑 대화",
+   "b": "모든 식물 키우기 성공",
+   "adult": false,
+   "id": 939,
+   "sort_order": 939
+  },
+  {
+   "type": "whatif",
+   "text": "둘이 별에 이름을 붙인다면?",
+   "adult": false,
+   "id": 940,
+   "sort_order": 940
+  },
+  {
+   "type": "whatif",
+   "text": "앞으로 나한테 받고 싶은 선물은?",
+   "adult": false,
+   "id": 941,
+   "sort_order": 941
+  },
+  {
+   "type": "balance",
+   "a": "하루 3시간 더 생기기",
+   "b": "매달 100만 원 더 생기기",
+   "adult": false,
+   "id": 942,
+   "sort_order": 942
+  },
+  {
+   "type": "balance",
+   "a": "드라마 1화씩 아껴 보기",
+   "b": "드라마 정주행",
+   "adult": false,
+   "id": 943,
+   "sort_order": 943
+  },
+  {
+   "type": "whatif",
+   "text": "내가 너한테 해준 것 중에 제일 좋았던 건?",
+   "adult": false,
+   "id": 944,
+   "sort_order": 944
+  },
+  {
+   "type": "balance",
+   "a": "매년 같은 날 같은 곳 가기",
+   "b": "매년 새로운 곳 가기",
+   "adult": false,
+   "id": 945,
+   "sort_order": 945
+  },
+  {
+   "type": "whatif",
+   "text": "일 끝나고 제일 먼저 하고 싶은 거?",
+   "adult": false,
+   "id": 946,
+   "sort_order": 946
+  },
+  {
+   "type": "whatif",
+   "text": "내가 요리해준다면 뭐 먹고 싶어?",
+   "adult": false,
+   "id": 947,
+   "sort_order": 947
+  },
+  {
+   "type": "whatif",
+   "text": "내가 하루 동안 네 비서라면 제일 먼저 시킬 일은?",
+   "adult": false,
+   "id": 948,
+   "sort_order": 948
+  },
+  {
+   "type": "balance",
+   "a": "벼룩시장에서 커플템 찾기",
+   "b": "커플템 직접 만들기",
+   "adult": false,
+   "id": 949,
+   "sort_order": 949
+  },
+  {
+   "type": "whatif",
+   "text": "지금 바로 새로운 기술 하나를 배울 수 있다면?",
+   "adult": false,
+   "id": 950,
+   "sort_order": 950
+  },
+  {
+   "type": "balance",
+   "a": "아침 운동",
+   "b": "저녁 운동",
+   "adult": false,
+   "id": 951,
+   "sort_order": 951
+  },
+  {
+   "type": "whatif",
+   "text": "우리 사이를 한 단어로 표현하면?",
+   "adult": false,
+   "id": 952,
+   "sort_order": 952
+  },
+  {
+   "type": "balance",
+   "a": "유튜브 같이 보기",
+   "b": "넷플릭스 같이 보기",
+   "adult": false,
+   "id": 953,
+   "sort_order": 953
+  },
+  {
+   "type": "balance",
+   "a": "같은 날 같은 옷 입고 만나기",
+   "b": "일부러 다른 스타일",
+   "adult": false,
+   "id": 954,
+   "sort_order": 954
+  },
+  {
+   "type": "balance",
+   "a": "월급날 맛있는 거",
+   "b": "월급날 저금 먼저",
+   "adult": false,
+   "id": 955,
+   "sort_order": 955
+  },
+  {
+   "type": "balance",
+   "a": "겨울 여행은 온천",
+   "b": "겨울 여행은 스키장",
+   "adult": false,
+   "id": 956,
+   "sort_order": 956
+  },
+  {
+   "type": "balance",
+   "a": "드래곤 키우기",
+   "b": "유니콘 키우기",
+   "adult": false,
+   "id": 957,
+   "sort_order": 957
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘이 밴드를 만든다면 밴드 이름은?",
+   "adult": false,
+   "id": 958,
+   "sort_order": 958
+  },
+  {
+   "type": "whatif",
+   "text": "우리 연애에 규칙 대신 '약속 쿠폰'을 만든다면 첫 쿠폰은?",
+   "adult": false,
+   "id": 959,
+   "sort_order": 959
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘의 공식 데이트 요일을 정한다면?",
+   "adult": false,
+   "id": 960,
+   "sort_order": 960
+  },
+  {
+   "type": "whatif",
+   "text": "서운할 때 내가 알아챘으면 하는 신호는?",
+   "adult": false,
+   "id": 961,
+   "sort_order": 961
+  },
+  {
+   "type": "whatif",
+   "text": "세상에 하나뿐인 음식을 만든다면?",
+   "adult": false,
+   "id": 962,
+   "sort_order": 962
+  },
+  {
+   "type": "balance",
+   "a": "깜짝 이벤트 받기",
+   "b": "미리 알고 같이 준비하기",
+   "adult": false,
+   "id": 963,
+   "sort_order": 963
+  },
+  {
+   "type": "balance",
+   "a": "아파트 높은 층",
+   "b": "아파트 낮은 층",
+   "adult": false,
+   "id": 964,
+   "sort_order": 964
+  },
+  {
+   "type": "balance",
+   "a": "1년 동안 매일 짧은 데이트",
+   "b": "1년 뒤 한 달 여행",
+   "adult": false,
+   "id": 965,
+   "sort_order": 965
+  },
+  {
+   "type": "whatif",
+   "text": "새로운 라면 이름을 짓는다면?",
+   "adult": false,
+   "id": 966,
+   "sort_order": 966
+  },
+  {
+   "type": "balance",
+   "a": "노을 보며 드라이브",
+   "b": "별 보며 드라이브",
+   "adult": false,
+   "id": 967,
+   "sort_order": 967
+  },
+  {
+   "type": "balance",
+   "a": "받고 싶은 선물 미리 말하기",
+   "b": "서프라이즈로 받기",
+   "adult": false,
+   "id": 968,
+   "sort_order": 968
+  },
+  {
+   "type": "balance",
+   "a": "맛집 탐방",
+   "b": "직접 요리 도전",
+   "adult": false,
+   "id": 969,
+   "sort_order": 969
+  },
+  {
+   "type": "whatif",
+   "text": "지금 기분을 한 문장으로 표현하면?",
+   "adult": false,
+   "id": 970,
+   "sort_order": 970
+  },
+  {
+   "type": "balance",
+   "a": "기념일에 큰 선물 하나",
+   "b": "매달 작은 선물",
+   "adult": false,
+   "id": 971,
+   "sort_order": 971
+  },
+  {
+   "type": "balance",
+   "a": "선물 포장 정성껏",
+   "b": "선물 포장 대충 내용물 승부",
+   "adult": false,
+   "id": 972,
+   "sort_order": 972
+  },
+  {
+   "type": "balance",
+   "a": "사랑한다는 말 매일",
+   "b": "사랑한다는 말 특별한 날",
+   "adult": false,
+   "id": 973,
+   "sort_order": 973
+  },
+  {
+   "type": "whatif",
+   "text": "내가 요즘 제일 많이 하는 말은 뭐인 것 같아?",
+   "adult": false,
+   "id": 974,
+   "sort_order": 974
+  },
+  {
+   "type": "whatif",
+   "text": "날씨가 된다면 어떤 날씨?",
+   "adult": false,
+   "id": 975,
+   "sort_order": 975
+  },
+  {
+   "type": "whatif",
+   "text": "네 인생 영화 한 편은?",
+   "adult": false,
+   "id": 976,
+   "sort_order": 976
+  },
+  {
+   "type": "whatif",
+   "text": "1억이 생기면 우리 둘을 위해 어디에 쓸래?",
+   "adult": false,
+   "id": 977,
+   "sort_order": 977
+  },
+  {
+   "type": "whatif",
+   "text": "마음을 읽을 수 있다면 내 마음 언제 읽을래?",
+   "adult": false,
+   "id": 978,
+   "sort_order": 978
+  },
+  {
+   "type": "whatif",
+   "text": "노래가 된다면 무슨 장르?",
+   "adult": false,
+   "id": 979,
+   "sort_order": 979
+  },
+  {
+   "type": "whatif",
+   "text": "지금 내 인상을 세 단어로 말하면?",
+   "adult": false,
+   "id": 980,
+   "sort_order": 980
+  },
+  {
+   "type": "whatif",
+   "text": "오늘 하루에 제목을 붙인다면?",
+   "adult": false,
+   "id": 981,
+   "sort_order": 981
+  },
+  {
+   "type": "whatif",
+   "text": "하루 동안 아무 직업이나 체험할 수 있다면?",
+   "adult": false,
+   "id": 982,
+   "sort_order": 982
+  },
+  {
+   "type": "whatif",
+   "text": "우리 이야기에 우화 제목을 붙인다면?",
+   "adult": false,
+   "id": 983,
+   "sort_order": 983
+  },
+  {
+   "type": "whatif",
+   "text": "타임머신이 생기면 언제로 갈래?",
+   "adult": false,
+   "id": 984,
+   "sort_order": 984
+  },
+  {
+   "type": "balance",
+   "a": "비싼 거 하나",
+   "b": "싼 거 여러 개",
+   "adult": false,
+   "id": 985,
+   "sort_order": 985
+  },
+  {
+   "type": "whatif",
+   "text": "지금까지 받은 선물 중 최고는?",
+   "adult": false,
+   "id": 986,
+   "sort_order": 986
+  },
+  {
+   "type": "whatif",
+   "text": "스트레스 받을 때 나만의 해소법은?",
+   "adult": false,
+   "id": 987,
+   "sort_order": 987
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 아직 안 해본 것 중에 제일 해보고 싶은 거?",
+   "adult": false,
+   "id": 988,
+   "sort_order": 988
+  },
+  {
+   "type": "whatif",
+   "text": "혼자 있고 싶을 때 내가 어떻게 해주면 좋겠어?",
+   "adult": false,
+   "id": 989,
+   "sort_order": 989
+  },
+  {
+   "type": "balance",
+   "a": "글램핑",
+   "b": "차박",
+   "adult": false,
+   "id": 990,
+   "sort_order": 990
+  },
+  {
+   "type": "whatif",
+   "text": "네가 생각하는 완벽한 아침은?",
+   "adult": false,
+   "id": 991,
+   "sort_order": 991
+  },
+  {
+   "type": "balance",
+   "a": "정리 잘하는 연인",
+   "b": "요리 잘하는 연인",
+   "adult": false,
+   "id": 992,
+   "sort_order": 992
+  },
+  {
+   "type": "whatif",
+   "text": "같이 사진 100장을 찍는 날을 정한다면 어디서?",
+   "adult": false,
+   "id": 993,
+   "sort_order": 993
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 아직 말 안 한 사소한 비밀 하나는?",
+   "adult": false,
+   "id": 994,
+   "sort_order": 994
+  },
+  {
+   "type": "whatif",
+   "text": "칭찬 릴레이를 한다면 첫 칭찬은?",
+   "adult": false,
+   "id": 995,
+   "sort_order": 995
+  },
+  {
+   "type": "whatif",
+   "text": "서로 새 별명을 지어준다면?",
+   "adult": false,
+   "id": 996,
+   "sort_order": 996
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 상을 하나 만들어 준다면 상 이름이랑 수상 이유는?",
+   "adult": false,
+   "id": 997,
+   "sort_order": 997
+  },
+  {
+   "type": "whatif",
+   "text": "무인도에 둘이 각자 하나씩만 챙겨간다면?",
+   "adult": false,
+   "id": 998,
+   "sort_order": 998
+  },
+  {
+   "type": "balance",
+   "a": "내 목소리로 내비게이션",
+   "b": "내 얼굴로 이모티콘",
+   "adult": false,
+   "id": 999,
+   "sort_order": 999
+  },
+  {
+   "type": "balance",
+   "a": "커플 운동복",
+   "b": "커플 신발",
+   "adult": false,
+   "id": 1000,
+   "sort_order": 1000
+  }
+ ]
+}
