@@ -41,8 +41,19 @@
 .chips {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 2px 8px 6px;
+  gap: 0;
+  padding: 0 8px 4px 2px;
+}
+
+.heartBtn {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .chip {

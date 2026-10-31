@@ -136,12 +136,20 @@ export default function CalendarView() {
         {chips.map((c) => (
           <button
             key={c.key}
-            className={filter[c.key] ? `${styles.chip} ${styles.chipOn}` : styles.chip}
+            className={styles.heartBtn}
             aria-pressed={filter[c.key]}
+            aria-label={`${c.label} 일정 ${filter[c.key] ? "숨기기" : "보이기"}`}
             onClick={() => setFilter((f) => ({ ...f, [c.key]: !f[c.key] }))}
           >
-            <span className={styles.swatch} style={{ background: filter[c.key] ? c.color : "#d9c2c9" }} />
-            {c.label}
+            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                d="M12 21C5 15.5 2 12 2 8.2 2 5.3 4.3 3 7.1 3c2 0 3.8 1.1 4.9 2.8C13.1 4.1 14.9 3 16.9 3 19.7 3 22 5.3 22 8.2 22 12 19 15.5 12 21z"
+                fill={filter[c.key] ? c.color : "none"}
+                stroke={filter[c.key] ? c.color : "#cdb3bb"}
+                strokeWidth="2"
+                strokeLinejoin="round"
+              />
+            </svg>
           </button>
         ))}
         <Link href={`${base}/shifts`} className={styles.shiftLink}>
