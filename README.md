@@ -12,25 +12,21 @@
    cp .env.example .env.local
    ```
 
-### 2. 카카오 로그인
-1. developers.kakao.com > 내 애플리케이션 > 앱 추가
-2. 플랫폼 > Web에 `http://localhost:3000` (나중에 Vercel 주소도) 등록
-3. 카카오 로그인 활성화, Redirect URI에 `https://<프로젝트>.supabase.co/auth/v1/callback`
-4. 동의항목: 닉네임만 (이메일은 비즈 앱이 필요해서 안 받음)
-5. 보안 > Client Secret 발급
-6. Supabase > Authentication > Providers > Kakao 켜고 REST API 키, Client Secret 입력
-7. Supabase > Authentication > URL Configuration > Redirect URLs에 `http://localhost:3000/auth/callback` 추가
-
-### 3. 우리 둘 계정 등록
-둘 다 앱에서 카카오로 한 번씩 로그인한 뒤, SQL Editor에서:
+### 2. 우리 둘 계정 만들기
+1. Supabase > Authentication > Users > **Add user > Create new user**
+2. 이메일 칸에 `<아이디>@fable.test` (예: 아이디가 fablew면 `fablew@fable.test`), 비밀번호 입력, **Auto Confirm User 체크**
+3. 두 명 다 만든 뒤 SQL Editor에서:
 ```sql
-select id, created_at from auth.users order by created_at;  -- 두 사람 id 확인
+select id, email from auth.users;  -- 두 사람 id 확인
 
 insert into public.profiles (id, role, display_name) values
   ('<재우 id>', 'admin', '재우'),
   ('<여친 id>', 'member', '<여친 이름>');
 ```
-그다음 Authentication > Sign In / Providers에서 **새 가입 막기**. 이제 다른 사람은 로그인해도 아무것도 못 봄.
+4. Authentication > Sign In / Providers에서 **Allow new users to sign up 끄기**
+
+앱에선 아이디만 입력하면 돼 (`@fable.test`는 앱이 알아서 붙임). 한 번 로그인하면 그 폰에선 계속 로그인 유지되고, 앱 열 때는 4자리 비밀번호나 지문으로 열어.
+비밀번호는 코드나 레포에 절대 적지 말 것.
 
 ## 개발
 ```

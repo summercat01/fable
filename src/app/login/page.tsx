@@ -1,20 +1,41 @@
 "use client";
 
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
+import { idToEmail } from "@/lib/accounts";
+import { clearLock } from "@/lib/lock";
 import styles from "./login.module.css";
 
 export default function LoginPage() {
-  async function signIn() {
-    const supabase = createClient();
-    await supabase.auth.signInWithOAuth({
-      provider: "kakao",
-      options: { redirectTo: `${window.location.origin}/auth/callback` },
+  const router = useRouter();
+  const [id, setId] = useState("");
+  const [pw, setPw] = useState("");
+  const [error, setError] = useState("");
+  const [busy, setBusy] = useState(false);
+
+  async function signIn(e: React.FormEvent) {
+    e.preventDefault();
+    if (!id.trim() || !pw) return;
+    setBusy(true);
+    setError("");
+    const { error } = await createClient().auth.signInWithPassword({
+      email: idToEmail(id),
+      password: pw,
     });
+    setBusy(false);
+    if (error) {
+      setError("아이디나 비밀번호가 달라");
+      return;
+    }
+    clearLock(); // 새로 로그인하면 이 기기 잠금 번호도 새로 정함
+    router.replace("/calendar");
+    router.refresh();
   }
 
   return (
     <div className={`app-shell ${styles.wrap}`}>
-      <svg role="img" aria-label="Fable 로고" width="140" height="140" viewBox="0 0 100 100">
+      <svg role="img" aria-label="Fable 로고" width="120" height="120" viewBox="0 0 100 100">
         <defs>
           <clipPath id="lg">
             <circle cx="40" cy="50" r="24" />
@@ -29,9 +50,38 @@ export default function LoginPage() {
         />
       </svg>
       <h1 className={`hand ${styles.title}`}>Fable</h1>
-      <button className={styles.kakao} onClick={signIn}>
-        카카오로 시작하기
-      </button>
+
+      <form className={styles.form} onSubmit={signIn}>
+        <label className={styles.label} htmlFor="login-id">
+          아이디
+        </label>
+        <input
+          id="login-id"
+          className={styles.input}
+          autoComplete="username"
+          autoCapitalize="none"
+          value={id}
+          onChange={(e) => setId(e.target.value)}
+        />
+        <label className={styles.label} htmlFor="login-pw">
+          비밀번호
+        </label>
+        <input
+          id="login-pw"
+          className={styles.input}
+          type="password"
+          autoComplete="current-password"
+          value={pw}
+          onChange={(e) => setPw(e.target.value)}
+        />
+        <p className={styles.error} role="alert">
+          {error}
+        </p>
+        <button className={styles.submit} disabled={busy || !id.trim() || !pw}>
+          {busy ? "들어가는 중…" : "로그인"}
+        </button>
+      </form>
+      <p className={styles.note}>한 번 로그인하면 이 폰에선 계속 로그인돼 있어</p>
     </div>
   );
 }
