@@ -45,6 +45,7 @@ export default function CalendarView() {
   const [selected, setSelected] = useState<string | null>(null);
   const [sheet, setSheet] = useState<"closed" | "half" | "full">("closed");
   const [adding, setAdding] = useState<string | null>(null);
+  const [editing, setEditing] = useState<CalEvent | null>(null);
 
   const grid = useMemo(() => monthGrid(y, m), [y, m]);
   const from = grid[0].date;
@@ -338,6 +339,7 @@ export default function CalendarView() {
           free={isFree(selected)}
           meId={data.people?.me.id ?? ""}
           onAdd={() => setAdding(selected)}
+          onEdit={setEditing}
           onDelete={async (id) => {
             data.setEvents((list) => list.filter((e) => e.id !== id));
             try {
@@ -361,6 +363,24 @@ export default function CalendarView() {
             if (t.y !== y || t.m !== m) setYM({ y: t.y, m: t.m });
             setSelected(e.date);
             setSheet((s) => (s === "closed" ? "half" : s));
+            data.reload();
+          }}
+        />
+      )}
+
+      {editing && (
+        <AddSheet
+          date={editing.date}
+          editing={editing}
+          canChangeScope={editing.created_by === data.people?.me.id}
+          onClose={() => setEditing(null)}
+          onSave={async (e) => {
+            const saved = await store.updateEvent(editing.id, e);
+            data.setEvents((list) => list.map((x) => (x.id === saved.id ? saved : x)));
+            setEditing(null);
+            const t = fromIso(e.date);
+            if (t.y !== y || t.m !== m) setYM({ y: t.y, m: t.m });
+            setSelected(e.date);
             data.reload();
           }}
         />

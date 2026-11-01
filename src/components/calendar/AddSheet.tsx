@@ -2,26 +2,34 @@
 
 import { useState } from "react";
 import { addDays, daysBetween, prettyDate, prettyRange } from "@/lib/calendar/dates";
-import type { Scope } from "@/lib/calendar/types";
+import type { CalEvent, Scope } from "@/lib/calendar/types";
 import styles from "./Calendar.module.css";
 
 export default function AddSheet({
   date: initial,
+  editing,
+  canChangeScope = true,
   onClose,
   onSave,
 }: {
   date: string;
+  /** 있으면 이 일정을 고치는 화면 */
+  editing?: CalEvent;
+  /** 상대가 만든 같이 하는 일정은 내 일정으로 못 바꿈 */
+  canChangeScope?: boolean;
   onClose: () => void;
   onSave: (e: { date: string; end_date: string; title: string; scope: Scope }) => Promise<void>;
 }) {
-  const [date, setDate] = useState(initial);
-  const [multi, setMulti] = useState(false);
-  const [end, setEnd] = useState(() => addDays(initial, 1));
+  const [date, setDate] = useState(editing?.date ?? initial);
+  const [multi, setMulti] = useState(!!editing && editing.end_date !== editing.date);
+  const [end, setEnd] = useState(() =>
+    editing && editing.end_date !== editing.date ? editing.end_date : addDays(editing?.date ?? initial, 1),
+  );
   const endDate = multi ? end : date;
   const nDays = daysBetween(date, endDate) + 1;
   const rangeOk = !multi || (nDays >= 2 && nDays <= 31);
-  const [scope, setScope] = useState<Scope>("together");
-  const [title, setTitle] = useState("");
+  const [scope, setScope] = useState<Scope>(editing?.scope ?? "together");
+  const [title, setTitle] = useState(editing?.title ?? "");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
 
@@ -49,12 +57,12 @@ export default function AddSheet({
       <form
         className={styles.addSheet}
         role="dialog"
-        aria-label="일정 추가"
+        aria-label={editing ? "일정 수정" : "일정 추가"}
         onClick={(e) => e.stopPropagation()}
         onSubmit={save}
       >
         <div className={styles.sheetHead}>
-          <h2>{multi && rangeOk ? prettyRange(date, end) : prettyDate(date)} 일정 추가</h2>
+          <h2>{editing ? "일정 수정" : `${multi && rangeOk ? prettyRange(date, end) : prettyDate(date)} 일정 추가`}</h2>
           <button type="button" className={styles.closeBtn} onClick={onClose} aria-label="닫기">
             <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round">
               <path d="M6 6l12 12M18 6L6 18" />
@@ -62,6 +70,7 @@ export default function AddSheet({
           </button>
         </div>
 
+        {canChangeScope && (
         <div className={styles.kinds} role="radiogroup" aria-label="누구 일정">
           {kinds.map((k) => (
             <button
@@ -78,6 +87,7 @@ export default function AddSheet({
             </button>
           ))}
         </div>
+        )}
 
         <label className={styles.fieldLabel} htmlFor="ev-title">
           일정 이름
@@ -87,7 +97,7 @@ export default function AddSheet({
           className={styles.input}
           value={title}
           maxLength={60}
-          autoFocus
+          autoFocus={!editing}
           placeholder={scope === "together" ? "예: 영화, 저녁 데이트" : "예: 스터디, 알바"}
           onChange={(e) => setTitle(e.target.value)}
         />
@@ -150,7 +160,7 @@ export default function AddSheet({
           className={`${styles.save} ${scope === "together" ? styles.save_together : styles.save_personal}`}
           disabled={!title.trim() || busy || !rangeOk}
         >
-          {busy ? "저장하는 중…" : scope === "together" ? "같이 하는 일정으로 저장" : "내 일정으로 저장"}
+          {busy ? "저장하는 중…" : editing ? "수정하기" : scope === "together" ? "같이 하는 일정으로 저장" : "내 일정으로 저장"}
         </button>
       </form>
     </div>

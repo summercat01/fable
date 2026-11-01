@@ -43,6 +43,17 @@ export function supabaseStore(): CalendarStore {
       return data as CalEvent;
     },
 
+    async updateEvent(id, e) {
+      const { data, error } = await sb
+        .from("events")
+        .update(e)
+        .eq("id", id)
+        .select("id, date, end_date, title, scope, created_by")
+        .single();
+      if (error) throw error;
+      return data as CalEvent;
+    },
+
     async deleteEvent(id) {
       const { error } = await sb.from("events").delete().eq("id", id);
       if (error) throw error;

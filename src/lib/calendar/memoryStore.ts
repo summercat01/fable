@@ -23,6 +23,11 @@ export function memoryStore(seed: { events: CalEvent[]; shifts: Shift[] }): Cale
       events.push(ev);
       return ev;
     },
+    async updateEvent(id, e) {
+      const i = events.findIndex((x) => x.id === id);
+      events[i] = { ...events[i], ...e };
+      return events[i];
+    },
     async deleteEvent(id) {
       const i = events.findIndex((e) => e.id === id);
       if (i >= 0) events.splice(i, 1);

@@ -22,6 +22,7 @@ export interface CalendarStore {
   people(): Promise<People>;
   load(from: string, to: string): Promise<{ events: CalEvent[]; shifts: Shift[] }>;
   addEvent(e: { date: string; end_date: string; title: string; scope: Scope }): Promise<CalEvent>;
+  updateEvent(id: string, e: { date: string; end_date: string; title: string; scope: Scope }): Promise<CalEvent>;
   deleteEvent(id: string): Promise<void>;
   /** 한 사람의 근무를 날짜별로 덮어씀. code가 null이면 그날은 오프(삭제) */
   saveShifts(userId: string, changes: { date: string; code: ShiftCode | null }[]): Promise<void>;

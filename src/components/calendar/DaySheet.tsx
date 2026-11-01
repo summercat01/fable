@@ -19,6 +19,7 @@ export default function DaySheet({
   meId,
   onAdd,
   onDelete,
+  onEdit,
 }: {
   date: string;
   size: "half" | "full";
@@ -30,6 +31,7 @@ export default function DaySheet({
   meId: string;
   onAdd: () => void;
   onDelete: (id: string) => void;
+  onEdit: (e: NonNullable<Item["event"]>) => void;
 }) {
   const startY = useRef<number | null>(null);
   const [drag, setDrag] = useState(0);
@@ -91,11 +93,22 @@ export default function DaySheet({
         {items.map((it) => (
           <div key={it.key} className={styles.row}>
             <span className={`${styles.rowBar} ${styles[`dot_${it.kind}`]}`} />
-            <div className={styles.rowText}>
+            {canDelete(it) ? (
+              <button className={`${styles.rowText} ${styles.rowEdit}`} onClick={() => onEdit(it.event!)} aria-label={`${it.title} 고치기`}>
               <span className={styles.rowKind}>{LABEL[it.kind] || (it.event?.created_by === meId ? "내 일정" : "상대 일정")}</span>
               <span className={styles.rowTitle}>{it.title}</span>
               {it.span && it.event && <span className={styles.rowRange}>{prettyRange(it.event.date, it.event.end_date)}</span>}
-            </div>
+                <svg className={styles.editHint} aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 20h4L19 9l-4-4L4 16v4zM13.5 6.5l4 4" />
+                </svg>
+              </button>
+            ) : (
+              <div className={styles.rowText}>
+              <span className={styles.rowKind}>{LABEL[it.kind] || (it.event?.created_by === meId ? "내 일정" : "상대 일정")}</span>
+              <span className={styles.rowTitle}>{it.title}</span>
+              {it.span && it.event && <span className={styles.rowRange}>{prettyRange(it.event.date, it.event.end_date)}</span>}
+              </div>
+            )}
             {canDelete(it) &&
               (confirm === it.key ? (
                 <button
