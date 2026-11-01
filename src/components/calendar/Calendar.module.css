@@ -129,6 +129,31 @@
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   padding: 0 2px 2px;
+  touch-action: pan-y;
+  transition: transform 0.2s ease;
+}
+
+.slideNext {
+  animation: slideNext 0.22s ease-out;
+}
+
+.slidePrev {
+  animation: slidePrev 0.22s ease-out;
+}
+
+@keyframes slideNext {
+  from { opacity: 0.3; transform: translateX(40px); }
+}
+
+@keyframes slidePrev {
+  from { opacity: 0.3; transform: translateX(-40px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slideNext,
+  .slidePrev {
+    animation: none;
+  }
 }
 
 .cell {

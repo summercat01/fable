@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { anniversariesOn } from "@/lib/couple";
 import { monthGrid, todayIso, WEEKDAYS, fromIso } from "@/lib/calendar/dates";
 import { useCalendarStore } from "@/lib/calendar/StoreContext";
@@ -95,7 +95,40 @@ export default function CalendarView() {
     });
     setSheet("closed");
     setSelected(null);
+    setSlide(delta > 0 ? "next" : "prev");
   }
+
+  // 달력을 좌우로 밀어서 달 넘기기
+  const touch = useRef({ x: 0, y: 0, dir: "" as "" | "h" | "v", swiped: false });
+  const [dragX, setDragX] = useState(0);
+  const [slide, setSlide] = useState<"" | "next" | "prev">("");
+  const onTouchStart = (e: React.TouchEvent) => {
+    const t = e.touches[0];
+    touch.current = { x: t.clientX, y: t.clientY, dir: "", swiped: false };
+  };
+  const onTouchMove = (e: React.TouchEvent) => {
+    const t = e.touches[0];
+    const dx = t.clientX - touch.current.x;
+    const dy = t.clientY - touch.current.y;
+    if (!touch.current.dir && Math.hypot(dx, dy) > 10) touch.current.dir = Math.abs(dx) > Math.abs(dy) ? "h" : "v";
+    if (touch.current.dir === "h") setDragX(dx * 0.5);
+  };
+  const onTouchEnd = (e: React.TouchEvent) => {
+    const dx = e.changedTouches[0].clientX - touch.current.x;
+    if (touch.current.dir === "h") {
+      touch.current.swiped = true;
+      if (Math.abs(dx) > 50) move(dx < 0 ? 1 : -1);
+    }
+    setDragX(0);
+  };
+  // 민 다음에 날짜가 눌린 걸로 처리되지 않게
+  const onClickCapture = (e: React.MouseEvent) => {
+    if (touch.current.swiped) {
+      e.stopPropagation();
+      e.preventDefault();
+      touch.current.swiped = false;
+    }
+  };
 
   function pick(date: string, inMonth: boolean) {
     if (!inMonth) {
@@ -170,7 +203,19 @@ export default function CalendarView() {
 
       {data.error && <p className={styles.error}>{data.error}</p>}
 
-      <div className={styles.grid} style={{ gridTemplateRows: `repeat(${grid.length / 7}, minmax(0, 1fr))` }}>
+      <div
+        key={`${y}-${m}`}
+        className={[styles.grid, slide === "next" ? styles.slideNext : slide === "prev" ? styles.slidePrev : ""].join(" ")}
+        style={{
+          gridTemplateRows: `repeat(${grid.length / 7}, minmax(0, 1fr))`,
+          transform: dragX ? `translateX(${dragX}px)` : undefined,
+          transition: dragX ? "none" : undefined,
+        }}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        onClickCapture={onClickCapture}
+      >
         {grid.map((g) => {
           const items = g.inMonth ? itemsFor(g.date) : [];
           const shift = filter.her ? byDate.shift.get(g.date) : undefined;
