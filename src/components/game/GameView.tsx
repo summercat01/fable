@@ -5,11 +5,17 @@ import { useGameStore } from "@/lib/game/GameContext";
 import type { Question, QType, Thread } from "@/lib/game/types";
 import styles from "./Game.module.css";
 
-type View = "home" | "pick" | "answer" | "done" | "log";
+type View = "home" | "pick" | "answer" | "done" | "log" | "ask";
 type QueueItem = { q: Question; from: "new" | "inbox" };
 type Filter = "all" | "balance" | "whatif" | "same" | "diff";
 
 const PER_PAGE = 4;
+
+/** 날짜만: "11월 1일" (시간은 저장도 표시도 안 함) */
+const dayLabel = (iso: string) => {
+  const d = new Date(new Date(iso).getTime() + 9 * 3600 * 1000); // 한국 날짜
+  return `${d.getUTCMonth() + 1}월 ${d.getUTCDate()}일`;
+};
 
 export const qLine = (q: Question) => (q.type === "balance" ? `${q.a} vs ${q.b}` : q.text ?? "");
 const ansText = (q: Question, v: string | null) => (v == null ? "" : q.type === "balance" ? (v === "a" ? q.a : q.b) ?? "" : v);
@@ -36,6 +42,14 @@ export default function GameView() {
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [draft, setDraft] = useState("");
   const [result, setResult] = useState({ sent: 0, revealed: 0 });
+
+  // 직접 질문
+  const [askType, setAskType] = useState<QType>("balance");
+  const [askA, setAskA] = useState("");
+  const [askB, setAskB] = useState("");
+  const [askText, setAskText] = useState("");
+  const [askMine, setAskMine] = useState<"a" | "b" | null>(null);
+  const [askAnswer, setAskAnswer] = useState("");
 
   // 기록
   const [filter, setFilter] = useState<Filter>("all");
@@ -130,6 +144,40 @@ export default function GameView() {
         }
       }
       setResult({ sent: s, revealed: r });
+      setView("done");
+      reload();
+    } catch {
+      setError("저장이 안 됐어. 다시 해줘");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  // ── 직접 질문 ──
+  const askOk =
+    askType === "balance"
+      ? !!askA.trim() && !!askB.trim() && !!askMine
+      : !!askText.trim() && !!askAnswer.trim();
+
+  function openAsk() {
+    setAskType("balance");
+    setAskA("");
+    setAskB("");
+    setAskText("");
+    setAskMine(null);
+    setAskAnswer("");
+    setError("");
+    setView("ask");
+  }
+
+  async function sendAsk() {
+    if (!askOk || busy) return;
+    setBusy(true);
+    setError("");
+    try {
+      if (askType === "balance") await store.ask({ type: "balance", a: askA.trim(), b: askB.trim() }, askMine!);
+      else await store.ask({ type: "whatif", text: askText.trim() }, askAnswer.trim().slice(0, 500));
+      setResult({ sent: 1, revealed: 0 });
       setView("done");
       reload();
     } catch {
@@ -277,6 +325,105 @@ export default function GameView() {
     );
   }
 
+  if (view === "ask") {
+    return (
+      <div className={styles.wrap}>
+        <header className={styles.subHead}>
+          <BackBtn onClick={goHome} label="뒤로" />
+          <div>
+            <h1 className={`hand ${styles.subTitle}`}>직접 물어보기</h1>
+            <p className={styles.subNote}>내가 먼저 답하고 보내면 돼</p>
+          </div>
+        </header>
+        <div className={styles.scroll}>
+          <div className={styles.seg} role="radiogroup" aria-label="질문 종류">
+            {(["balance", "whatif"] as const).map((k) => (
+              <button
+                key={k}
+                role="radio"
+                aria-checked={askType === k}
+                className={askType === k ? `${styles.segBtn} ${k === "balance" ? styles.segBal : styles.segWhat}` : styles.segBtn}
+                onClick={() => setAskType(k)}
+              >
+                {k === "balance" ? "밸런스" : "만약에"}
+              </button>
+            ))}
+          </div>
+
+          {askType === "balance" ? (
+            <>
+              <p className={styles.askHint}>선택지 두 개를 쓰고, 내 선택을 눌러줘</p>
+              {(["a", "b"] as const).map((k, i) => (
+                <div key={k} className={styles.optWrap}>
+                  {i === 1 && <span className={styles.vsMark}>VS</span>}
+                  <div className={askMine === k ? `${styles.askOpt} ${styles.askOptOn}` : styles.askOpt}>
+                    <button
+                      className={askMine === k ? `${styles.check} ${styles.checkOn}` : styles.check}
+                      aria-label={`${k === "a" ? "첫 번째" : "두 번째"}를 내 선택으로`}
+                      aria-pressed={askMine === k}
+                      onClick={() => setAskMine(k)}
+                    >
+                      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M5 12l5 5 9-10" />
+                      </svg>
+                    </button>
+                    <input
+                      className={styles.askInput}
+                      value={k === "a" ? askA : askB}
+                      maxLength={60}
+                      placeholder={k === "a" ? "예: 바다 여행" : "예: 산 여행"}
+                      aria-label={k === "a" ? "첫 번째 선택지" : "두 번째 선택지"}
+                      onChange={(e) => (k === "a" ? setAskA : setAskB)(e.target.value)}
+                    />
+                  </div>
+                </div>
+              ))}
+            </>
+          ) : (
+            <>
+              <div className={styles.field}>
+                <label htmlFor="ask-q">질문</label>
+                <textarea
+                  id="ask-q"
+                  rows={2}
+                  maxLength={120}
+                  value={askText}
+                  placeholder="예: 우리 강아지 키우면 이름 뭐로 할래?"
+                  onChange={(e) => setAskText(e.target.value)}
+                />
+              </div>
+              <div className={styles.field}>
+                <label htmlFor="ask-ans">내 생각</label>
+                <textarea
+                  id="ask-ans"
+                  rows={4}
+                  maxLength={500}
+                  value={askAnswer}
+                  placeholder="편하게 써줘"
+                  onChange={(e) => setAskAnswer(e.target.value)}
+                />
+              </div>
+            </>
+          )}
+          <p className={styles.lockNote}>
+            <LockIcon />
+            내 답은 상대가 답할 때까지 가려져
+          </p>
+          {error && (
+            <p className={styles.error} role="alert">
+              {error}
+            </p>
+          )}
+        </div>
+        <div className={styles.bottomBar}>
+          <button className={styles.primaryBtn} onClick={sendAsk} disabled={!askOk || busy}>
+            {busy ? "보내는 중…" : "보내기"}
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   if (view === "done") {
     const onlyReveal = result.revealed > 0 && result.sent === 0;
     return (
@@ -332,9 +479,11 @@ export default function GameView() {
                   <span className={t.question.type === "balance" ? styles.tagBal : styles.tagWhat}>
                     {t.question.type === "balance" ? "밸런스" : "만약에"}
                   </span>
+                  {t.question.custom && <span className={styles.customTag}>직접</span>}
                   {t.question.type === "balance" && (
                     <span className={same ? styles.sameBadge : styles.diffBadge}>{same ? "같은 선택" : "다른 선택"}</span>
                   )}
+                  <span className={styles.day}>{dayLabel(t.createdAt)}</span>
                 </div>
                 <p className={styles.logQ}>{qLine(t.question)}</p>
                 <div className={styles.answers}>
@@ -395,6 +544,13 @@ export default function GameView() {
         </button>
       </div>
 
+      <button className={styles.askLink} onClick={openAsk}>
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M4 20h4L19 9l-4-4L4 16v4zM13.5 6.5l4 4" />
+        </svg>
+        직접 물어보기
+      </button>
+
       <button className={styles.logLink} onClick={() => setView("log")}>
         <span>
           <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--us)" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -429,6 +585,8 @@ export default function GameView() {
                 <span className={t.question.type === "balance" ? styles.tagBal : styles.tagWhat}>
                   {t.question.type === "balance" ? "밸런스" : "만약에"}
                 </span>
+                {t.question.custom && <span className={styles.customTag}>직접</span>}
+                <span className={styles.day}>{dayLabel(t.createdAt)}</span>
                 <span className={styles.answerCta}>답하기</span>
               </span>
               <span className={styles.waitQ}>{qLine(t.question)}</span>
@@ -440,6 +598,8 @@ export default function GameView() {
                 <span className={t.question.type === "balance" ? styles.tagBal : styles.tagWhat}>
                   {t.question.type === "balance" ? "밸런스" : "만약에"}
                 </span>
+                {t.question.custom && <span className={styles.customTag}>직접</span>}
+                <span className={styles.day}>{dayLabel(t.createdAt)}</span>
               </span>
               <span className={styles.waitQ}>{qLine(t.question)}</span>
               <span className={styles.myAns}>

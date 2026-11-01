@@ -253,7 +253,7 @@ begin
   select coalesce(array_agg(id), '{}') into a_ids from (
     select q.id from public.questions q
     left join public.question_seen s on s.question_id = q.id and s.user_id = auth.uid()
-    where q.type = p_type and q.adult
+    where q.type = p_type and q.adult and not q.custom
       and not exists (select 1 from public.question_threads t where t.question_id = q.id)
     order by (s.question_id is not null), q.sort_order
     limit want_adult
@@ -262,7 +262,7 @@ begin
   select coalesce(array_agg(id), '{}') into n_ids from (
     select q.id from public.questions q
     left join public.question_seen s on s.question_id = q.id and s.user_id = auth.uid()
-    where q.type = p_type and not q.adult
+    where q.type = p_type and not q.adult and not q.custom
       and not exists (select 1 from public.question_threads t where t.question_id = q.id)
     order by (s.question_id is not null), q.sort_order
     limit p_count - cardinality(a_ids)
@@ -272,7 +272,7 @@ begin
     select a_ids || coalesce(array_agg(id), '{}') into a_ids from (
       select q.id from public.questions q
       left join public.question_seen s on s.question_id = q.id and s.user_id = auth.uid()
-      where q.type = p_type and q.adult and not (q.id = any (a_ids))
+      where q.type = p_type and q.adult and not q.custom and not (q.id = any (a_ids))
         and not exists (select 1 from public.question_threads t where t.question_id = q.id)
       order by (s.question_id is not null), q.sort_order
       limit p_count - cardinality(a_ids) - cardinality(n_ids)
@@ -339,3 +339,74 @@ grant execute on function public.remaining_questions() to authenticated;
 
 -- 게임도 실시간 반영 (상대가 답하면 바로 보이게)
 alter publication supabase_realtime add table public.question_threads, public.question_answers;
+
+-- ─────────────────────────────────────────────
+-- 게임: 시간은 안 남김 (날짜만, 한국 자정으로 저장) + 같은 날 순서는 seq로
+-- ─────────────────────────────────────────────
+create or replace function public.day_only() returns trigger
+language plpgsql set search_path = public as $$
+begin
+  if tg_table_name = 'question_threads' then
+    new.created_at := date_trunc('day', now() at time zone 'Asia/Seoul') at time zone 'Asia/Seoul';
+  elsif tg_table_name = 'question_answers' then
+    new.answered_at := date_trunc('day', now() at time zone 'Asia/Seoul') at time zone 'Asia/Seoul';
+  elsif tg_table_name = 'question_seen' then
+    new.seen_at := date_trunc('day', now() at time zone 'Asia/Seoul') at time zone 'Asia/Seoul';
+  end if;
+  return new;
+end $$;
+create trigger threads_day_only before insert on public.question_threads for each row execute function public.day_only();
+create trigger answers_day_only before insert on public.question_answers for each row execute function public.day_only();
+create trigger seen_day_only before insert on public.question_seen for each row execute function public.day_only();
+alter table public.question_threads add column seq bigint generated always as identity;
+
+-- ─────────────────────────────────────────────
+-- 게임: 직접 만든 질문 (id 100001부터, 뽑기·남은 수에선 빠짐)
+-- ─────────────────────────────────────────────
+alter table public.questions add column custom boolean not null default false;
+alter table public.questions add column created_by uuid references public.profiles (id);
+create sequence public.custom_question_id start 100001;
+grant usage on sequence public.custom_question_id to authenticated;
+
+create or replace function public.custom_question_fill() returns trigger
+language plpgsql set search_path = public as $$
+begin
+  if new.custom then
+    new.id := nextval('public.custom_question_id');
+    new.sort_order := new.id;
+    new.created_by := auth.uid();
+    new.adult := false;
+  end if;
+  return new;
+end $$;
+create trigger questions_custom_fill before insert on public.questions for each row execute function public.custom_question_fill();
+
+alter table public.questions add constraint custom_len check (
+  not custom or (
+    (type = 'balance' and char_length(a) between 1 and 60 and char_length(b) between 1 and 60)
+    or (type = 'whatif' and char_length(text) between 1 and 120)
+  )
+);
+create policy "직접 질문 만들기" on public.questions for insert with check (public.is_member() and custom);
+
+-- 질문 + 시작 + 내 답을 한 번에
+create or replace function public.ask_question(p_type text, p_text text, p_a text, p_b text, p_answer text)
+returns int language plpgsql security invoker set search_path = public as $$
+declare
+  qid int;
+begin
+  insert into public.questions (id, type, text, a, b, custom, sort_order)
+  values (0, p_type,
+          case when p_type = 'whatif' then nullif(trim(p_text), '') end,
+          case when p_type = 'balance' then nullif(trim(p_a), '') end,
+          case when p_type = 'balance' then nullif(trim(p_b), '') end,
+          true, 0)
+  returning id into qid;
+  insert into public.question_threads (question_id) values (qid);
+  insert into public.question_answers (question_id, answer) values (qid, p_answer);
+  return qid;
+end;
+$$;
+revoke execute on function public.ask_question(text, text, text, text, text) from anon, public;
+grant execute on function public.ask_question(text, text, text, text, text) to authenticated;
+-- (draw_mix, remaining_questions는 위 정의에 `not q.custom` 조건이 들어간 버전이 실제 DB에 있음)

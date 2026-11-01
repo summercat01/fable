@@ -36,8 +36,8 @@ export function supabaseGameStore(): GameStore {
       const uid = await meId();
       const { data, error } = await sb
         .from("question_threads")
-        .select("question_id, started_by, created_at, questions(id, type, text, a, b, adult), question_answers(user_id, answer)")
-        .order("created_at", { ascending: false });
+        .select("question_id, started_by, created_at, questions(id, type, text, a, b, adult, custom), question_answers(user_id, answer)")
+        .order("seq", { ascending: false });
       if (error) throw error;
       return ((data ?? []) as unknown as Row[]).map(
         (r): Thread => ({
@@ -60,6 +60,17 @@ export function supabaseGameStore(): GameStore {
 
     async answer(questionId, answer) {
       const { error } = await sb.from("question_answers").insert({ question_id: questionId, answer });
+      if (error) throw error;
+    },
+
+    async ask(q, answer) {
+      const { error } = await sb.rpc("ask_question", {
+        p_type: q.type,
+        p_text: q.type === "whatif" ? q.text : null,
+        p_a: q.type === "balance" ? q.a : null,
+        p_b: q.type === "balance" ? q.b : null,
+        p_answer: answer,
+      });
       if (error) throw error;
     },
 

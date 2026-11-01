@@ -36,8 +36,21 @@ export function memoryGameStore(questions: Question[], seed: { me: string; partn
       if (t) t.mine = answer;
       emit();
     },
+    async ask(nq, answer) {
+      const q: Question = {
+        id: 100000 + threads.length,
+        type: nq.type,
+        text: nq.type === "whatif" ? nq.text : null,
+        a: nq.type === "balance" ? nq.a : null,
+        b: nq.type === "balance" ? nq.b : null,
+        adult: false,
+        custom: true,
+      };
+      threads.unshift({ question: q, startedBy: seed.me, createdAt: new Date().toISOString(), mine: answer, theirs: null });
+      emit();
+    },
     async remaining() {
-      return questions.length - threads.length;
+      return questions.length - threads.filter((t) => !t.question.custom).length;
     },
     subscribe(f) {
       listeners.add(f);
