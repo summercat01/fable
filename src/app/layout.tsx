@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Fable",
   description: "우리 둘만 쓰는 앱",
   appleWebApp: { capable: true, title: "Fable" },
+  icons: { icon: "/icons/icon-192.png", apple: "/icons/apple-touch-icon.png" },
 };
 
 export const viewport: Viewport = {
