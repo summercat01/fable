@@ -18,7 +18,7 @@ export function memoryWishStore(seed: { me: string; wishes: Wish[] }): WishStore
       return wishes.map((w) => ({ ...w }));
     },
     async add(w) {
-      wishes.unshift({ ...w, id: `w${++n}`, created_by: seed.me, done_on: null, event: null });
+      wishes.unshift({ ...w, kind: "etc", id: `w${++n}`, created_by: seed.me, done_on: null, event: null });
       emit();
     },
     async update(id, w) {

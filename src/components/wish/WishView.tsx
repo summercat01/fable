@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useWishStore } from "@/lib/wish/WishContext";
-import { KINDS, doneDate, type Wish, type WishInput, type WishKind } from "@/lib/wish/types";
+import { doneDate, type Wish, type WishInput } from "@/lib/wish/types";
 import { prettyDate, todayIso } from "@/lib/calendar/dates";
 import styles from "./Wish.module.css";
 
@@ -31,7 +31,6 @@ export default function WishView() {
   const reload = useCallback(() => setTick((t) => t + 1), []);
 
   const [tab, setTab] = useState<Tab>("todo");
-  const [kind, setKind] = useState<WishKind | "all">("all");
   const [confirmDel, setConfirmDel] = useState<string | null>(null);
   const [editing, setEditing] = useState<Wish | "new" | null>(null);
 
@@ -61,7 +60,7 @@ export default function WishView() {
         .sort((a, b) => doneDate(b, today)!.localeCompare(doneDate(a, today)!)),
     [wishes, today],
   );
-  const list = (tab === "todo" ? todo : done).filter((w) => kind === "all" || w.kind === kind);
+  const list = tab === "todo" ? todo : done;
 
 
   async function run(f: () => Promise<void>) {
@@ -116,20 +115,6 @@ export default function WishView() {
         </div>
       )}
 
-      <div className={styles.chips}>
-        {[{ key: "all" as const, short: "전체" }, ...KINDS].map((k) => (
-          <button
-            key={k.key}
-            className={kind === k.key ? `${styles.chip} ${styles.chipOn}` : styles.chip}
-            aria-pressed={kind === k.key}
-            onClick={() => setKind(k.key)}
-          >
-            {k.key !== "all" && <KindIcon kind={k.key} size={13} />}
-            {k.short}
-          </button>
-        ))}
-      </div>
-
       {error && (
         <p className={styles.error} role="alert">
           {error}
@@ -159,9 +144,6 @@ export default function WishView() {
           if (pickDate) {
             return (
               <button key={w.id} className={styles.item} onClick={() => pick(w)} disabled={!!planned}>
-                <span className={`${styles.kindBadge} ${styles[`k_${w.kind}`]}`}>
-                  <KindIcon kind={w.kind} size={16} />
-                </span>
                 <span className={styles.itemText}>
                   <span className={styles.itemTitle}>{w.title}</span>
                   {w.memo && <span className={styles.itemMemo}>{w.memo}</span>}
@@ -186,12 +168,7 @@ export default function WishView() {
                 </svg>
               </button>
               <span className={styles.itemText}>
-                <span className={styles.itemTop}>
-                  <span className={`${styles.kindMini} ${styles[`k_${w.kind}`]}`} aria-hidden="true">
-                    <KindIcon kind={w.kind} size={11} />
-                  </span>
-                  <span className={styles.itemTitle}>{w.title}</span>
-                </span>
+                <span className={styles.itemTitle}>{w.title}</span>
                 {w.memo && <span className={styles.itemMemo}>{w.memo}</span>}
                 {d ? (
                   <span className={styles.doneTag}>{shortDate(d)}에 해봤어</span>
@@ -230,7 +207,6 @@ export default function WishView() {
       {editing && (
         <Edit
           w={editing === "new" ? null : editing}
-          defaultKind={kind === "all" ? "do" : kind}
           onClose={() => setEditing(null)}
           onSave={async (input) => {
             if (editing === "new") await store.add(input);
@@ -246,27 +222,18 @@ export default function WishView() {
 
 function Edit({
   w,
-  defaultKind,
   onClose,
   onSave,
 }: {
   w: Wish | null;
-  defaultKind: WishKind;
   onClose: () => void;
   onSave: (input: WishInput) => Promise<void>;
 }) {
-  const [kind, setKind] = useState<WishKind>(w?.kind ?? defaultKind);
   const [title, setTitle] = useState(w?.title ?? "");
   const [memo, setMemo] = useState(w?.memo ?? "");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
 
-  const ph: Record<WishKind, string> = {
-    do: "예: 같이 도자기 만들기",
-    go: "예: 제주도 한 달 살기",
-    eat: "예: 성수동 그 파스타집",
-    etc: "예: 커플 반지 맞추기",
-  };
 
   async function save(e: React.FormEvent) {
     e.preventDefault();
@@ -274,7 +241,7 @@ function Edit({
     setBusy(true);
     setError("");
     try {
-      await onSave({ kind, title: title.trim().slice(0, 60), memo: memo.trim() ? memo.trim().slice(0, 200) : null });
+      await onSave({ title: title.trim().slice(0, 60), memo: memo.trim() ? memo.trim().slice(0, 200) : null });
     } catch {
       setError("저장이 안 됐어. 다시 해줘");
       setBusy(false);
@@ -293,22 +260,6 @@ function Edit({
           </button>
         </div>
 
-        <div className={styles.kindGrid} role="radiogroup" aria-label="종류">
-          {KINDS.map((k) => (
-            <button
-              key={k.key}
-              type="button"
-              role="radio"
-              aria-checked={kind === k.key}
-              className={kind === k.key ? `${styles.kindOpt} ${styles[`k_${k.key}`]} ${styles.kindOptOn}` : styles.kindOpt}
-              onClick={() => setKind(k.key)}
-            >
-              <KindIcon kind={k.key} size={16} />
-              {k.label}
-            </button>
-          ))}
-        </div>
-
         <label className={styles.label} htmlFor="wish-title">
           뭐야?
         </label>
@@ -318,7 +269,7 @@ function Edit({
           value={title}
           maxLength={60}
           autoFocus={!w}
-          placeholder={ph[kind]}
+          placeholder="예: 제주도 한 달 살기"
           onChange={(e) => setTitle(e.target.value)}
         />
         <label className={styles.label} htmlFor="wish-memo">
@@ -343,12 +294,4 @@ function Edit({
       </form>
     </div>
   );
-}
-
-export function KindIcon({ kind, size = 16 }: { kind: WishKind; size?: number }) {
-  const p = { width: size, height: size, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2.2, strokeLinecap: "round" as const, strokeLinejoin: "round" as const, "aria-hidden": true };
-  if (kind === "do") return <svg {...p}><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" /></svg>;
-  if (kind === "go") return <svg {...p}><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z" /><circle cx="12" cy="9.5" r="2.5" /></svg>;
-  if (kind === "eat") return <svg {...p}><path d="M7 3v8a2 2 0 0 0 4 0V3M9 11v10M17 3c-2 0-3 2.5-3 6s1 4 3 4v8" /></svg>;
-  return <svg {...p}><circle cx="6" cy="12" r="1.3" /><circle cx="12" cy="12" r="1.3" /><circle cx="18" cy="12" r="1.3" /></svg>;
 }

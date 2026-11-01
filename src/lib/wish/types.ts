@@ -1,11 +1,5 @@
+/** 예전 종류 구분 (지금은 안 씀, 새로 적으면 etc) */
 export type WishKind = "do" | "go" | "eat" | "etc";
-
-export const KINDS: { key: WishKind; label: string; short: string }[] = [
-  { key: "do", label: "하고 싶은 거", short: "할 거" },
-  { key: "go", label: "가고 싶은 곳", short: "갈 곳" },
-  { key: "eat", label: "먹고 싶은 거", short: "먹을 거" },
-  { key: "etc", label: "그 외", short: "그 외" },
-];
 
 export type Wish = {
   id: string;
@@ -19,7 +13,7 @@ export type Wish = {
   event: { id: string; date: string; end_date: string } | null;
 };
 
-export type WishInput = { kind: WishKind; title: string; memo: string | null };
+export type WishInput = { title: string; memo: string | null };
 
 /** 위시리스트가 데이터를 주고받는 창구. 실제는 Supabase, 미리보기는 메모리 */
 export interface WishStore {
