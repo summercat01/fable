@@ -19,9 +19,8 @@
   - **이름은 저장하지 않음** (개인정보). 화면엔 보는 사람 기준으로 '내 일정 / 상대 일정'만
   - 카카오 로그인은 보류 (`src/app/auth/callback`은 나중에 쓸 수 있게 남겨둠)
 - **앱 잠금** (`src/components/AppLock.tsx`, `src/lib/lock.ts`): 로그인은 계속 유지되고, 앱 열 때 이 기기 전용 4자리 PIN 또는 지문(WebAuthn). 1분 넘게 벗어나면 다시 잠금, 5번 틀리면 로그아웃
-  - APK로 감싼 뒤엔 웹뷰에서 WebAuthn이 안 될 수 있어서, 지문은 Capacitor 생체인증 플러그인으로 바꿀 것
-- 배포: Vercel. 폰에는 **Capacitor로 감싼 APK** (원격 URL 로드) → 웹 배포만 하면 앱 내용 갱신
-- 홈 화면 위젯만 Kotlin으로 (5×6 달력 + D-day). 자정에 한 번 + 앱에서 일정 바꿀 때 갱신
+- 배포: Vercel (`fable-summercat.vercel.app`, main 푸시하면 자동 배포). 폰에는 **PWA로 홈 화면에 설치** (`src/app/manifest.ts`, `public/sw.js`)
+  - **위젯·APK는 안 만들기로 함** (필요 없다고 함). 다시 하게 되면 Capacitor로 감싸고 지문은 생체인증 플러그인으로
 - 지도: 네이버 클라우드 Maps (`NEXT_PUBLIC_NAVER_MAP_CLIENT_ID`)
 
 ## 사람과 색 (`globals.css`)
@@ -81,4 +80,5 @@
 - [x] 캘린더 월간 화면 + 날짜 시트 + 일정 추가·삭제 + 근무표 + 실시간 반영
 - [x] 게임 화면 (뽑기·여러 개 답하기·기다리는 목록·기록 필터, 미리보기 `/demo/game`)
 - [ ] (보류) 추억 카드 + 네이버 지도 + 사진
-- [ ] Capacitor APK + 위젯
+- [x] PWA 설치 (아이콘·서비스워커)
+- ~~Capacitor APK + 위젯~~ 안 하기로 함
