@@ -343,24 +343,6 @@
   color: var(--ink-muted);
 }
 
-.fab {
-  position: absolute;
-  right: 14px;
-  bottom: 14px;
-  width: 54px;
-  height: 54px;
-  border-radius: 999px;
-  border: 0;
-  background: var(--us);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 8px 18px rgba(200, 67, 90, 0.35);
-  cursor: pointer;
-  z-index: 5;
-}
-
 /* ── 날짜 시트 ── */
 .sheet {
   position: absolute;
