@@ -32,7 +32,7 @@ export default function WishView() {
 
   const [tab, setTab] = useState<Tab>("todo");
   const [kind, setKind] = useState<WishKind | "all">("all");
-  const [open, setOpen] = useState<Wish | null>(null);
+  const [confirmDel, setConfirmDel] = useState<string | null>(null);
   const [editing, setEditing] = useState<Wish | "new" | null>(null);
 
   useEffect(() => {
@@ -63,8 +63,6 @@ export default function WishView() {
   );
   const list = (tab === "todo" ? todo : done).filter((w) => kind === "all" || w.kind === kind);
 
-  // 상세 시트는 최신 데이터로
-  const openNow = open ? wishes.find((w) => w.id === open.id) ?? null : null;
 
   async function run(f: () => Promise<void>) {
     setError("");
@@ -77,10 +75,13 @@ export default function WishView() {
   }
 
   async function pick(w: Wish) {
-    if (!pickDate) return setOpen(w);
+    if (!pickDate) return;
     await run(() => store.schedule(w.id, pickDate));
     router.push(calendarHref);
   }
+
+  // 체크: 오늘 해본 걸로 / 다시 해볼 것으로
+  const toggle = (w: Wish) => run(() => store.setDone(w.id, doneDate(w, today) ? null : today));
 
   const mine = (w: Wish) => w.created_by === me?.id;
   const dotClass = (w: Wish) => ((mine(w) ? me?.admin : !me?.admin) ? styles.dotMe : styles.dotHer);
@@ -88,7 +89,7 @@ export default function WishView() {
   return (
     <div className={styles.wrap}>
       <header className={styles.head}>
-        <h1 className={`hand ${styles.title}`}>버킷리스트</h1>
+        <h1 className={`hand ${styles.title}`}>위시리스트</h1>
         <span className={styles.count}>해본 것 {done.length}개</span>
       </header>
 
@@ -154,45 +155,77 @@ export default function WishView() {
         {list.map((w) => {
           const d = doneDate(w, today);
           const planned = !d && w.event;
-          const disabled = !!pickDate && !!planned;
+          const label = mine(w) ? "내가 적음" : "상대가 적음";
+          if (pickDate) {
+            return (
+              <button key={w.id} className={styles.item} onClick={() => pick(w)} disabled={!!planned}>
+                <span className={`${styles.kindBadge} ${styles[`k_${w.kind}`]}`}>
+                  <KindIcon kind={w.kind} size={16} />
+                </span>
+                <span className={styles.itemText}>
+                  <span className={styles.itemTitle}>{w.title}</span>
+                  {w.memo && <span className={styles.itemMemo}>{w.memo}</span>}
+                </span>
+                <span className={styles.itemSide}>
+                  {planned && <span className={styles.planTag}>{shortDate(w.event!.date)} 예정</span>}
+                  <span className={`${styles.dot} ${dotClass(w)}`} aria-label={label} />
+                </span>
+              </button>
+            );
+          }
           return (
-            <button key={w.id} className={styles.item} onClick={() => pick(w)} disabled={disabled}>
-              <span className={`${styles.kindBadge} ${styles[`k_${w.kind}`]}`}>
-                <KindIcon kind={w.kind} size={16} />
-              </span>
+            <div key={w.id} className={d ? `${styles.item} ${styles.itemDone}` : styles.item}>
+              <button
+                className={d ? `${styles.check} ${styles.checkOn}` : styles.check}
+                aria-pressed={!!d}
+                aria-label={d ? `${w.title} 다시 해볼 것으로` : `${w.title} 해봤어`}
+                onClick={() => toggle(w)}
+              >
+                <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12l5 5 9-10" />
+                </svg>
+              </button>
               <span className={styles.itemText}>
-                <span className={styles.itemTitle}>{w.title}</span>
+                <span className={styles.itemTop}>
+                  <span className={`${styles.kindMini} ${styles[`k_${w.kind}`]}`} aria-hidden="true">
+                    <KindIcon kind={w.kind} size={11} />
+                  </span>
+                  <span className={styles.itemTitle}>{w.title}</span>
+                </span>
                 {w.memo && <span className={styles.itemMemo}>{w.memo}</span>}
-              </span>
-              <span className={styles.itemSide}>
                 {d ? (
-                  <span className={styles.doneTag}>{shortDate(d)}</span>
+                  <span className={styles.doneTag}>{shortDate(d)}에 해봤어</span>
                 ) : planned ? (
                   <span className={styles.planTag}>{shortDate(w.event!.date)} 예정</span>
                 ) : null}
-                <span className={`${styles.dot} ${dotClass(w)}`} aria-label={mine(w) ? "내가 적음" : "상대가 적음"} />
               </span>
-            </button>
+              <span className={`${styles.dot} ${dotClass(w)}`} aria-label={label} title={label} />
+              <button className={styles.iconBtn} onClick={() => setEditing(w)} aria-label={`${w.title} 고치기`}>
+                <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 20h4L19 9l-4-4L4 16v4zM13.5 6.5l4 4" />
+                </svg>
+              </button>
+              {confirmDel === w.id ? (
+                <button
+                  className={styles.delConfirm}
+                  onClick={() => {
+                    setConfirmDel(null);
+                    void run(() => store.remove(w.id));
+                  }}
+                >
+                  삭제
+                </button>
+              ) : (
+                <button className={styles.iconBtn} onClick={() => setConfirmDel(w.id)} aria-label={`${w.title} 지우기`}>
+                  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3" />
+                  </svg>
+                </button>
+              )}
+            </div>
           );
         })}
       </div>
-
-      {openNow && !editing && (
-        <Detail
-          w={openNow}
-          today={today}
-          mine={mine(openNow)}
-          onClose={() => setOpen(null)}
-          onEdit={() => setEditing(openNow)}
-          onSchedule={(date) => run(() => store.schedule(openNow.id, date))}
-          onUnschedule={() => run(() => store.unschedule(openNow.id))}
-          onDone={(on) => run(() => store.setDone(openNow.id, on))}
-          onDelete={() => {
-            setOpen(null);
-            void run(() => store.remove(openNow.id));
-          }}
-        />
-      )}
 
       {editing && (
         <Edit
@@ -207,111 +240,6 @@ export default function WishView() {
           }}
         />
       )}
-    </div>
-  );
-}
-
-function Detail({
-  w,
-  today,
-  mine,
-  onClose,
-  onEdit,
-  onSchedule,
-  onUnschedule,
-  onDone,
-  onDelete,
-}: {
-  w: Wish;
-  today: string;
-  mine: boolean;
-  onClose: () => void;
-  onEdit: () => void;
-  onSchedule: (date: string) => Promise<void>;
-  onUnschedule: () => Promise<void>;
-  onDone: (on: string | null) => Promise<void>;
-  onDelete: () => void;
-}) {
-  const [date, setDate] = useState<string | null>(null);
-  const [confirm, setConfirm] = useState(false);
-  const d = doneDate(w, today);
-  const planned = !d && w.event;
-  const kindLabel = KINDS.find((k) => k.key === w.kind)!.label;
-
-  return (
-    <div className={styles.backdrop} onClick={onClose}>
-      <div className={styles.sheet} role="dialog" aria-label={w.title} onClick={(e) => e.stopPropagation()}>
-        <div className={styles.sheetHead}>
-          <span className={`${styles.kindPill} ${styles[`k_${w.kind}`]}`}>
-            <KindIcon kind={w.kind} size={13} />
-            {kindLabel}
-          </span>
-          <button className={styles.closeBtn} onClick={onClose} aria-label="닫기">
-            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round">
-              <path d="M6 6l12 12M18 6L6 18" />
-            </svg>
-          </button>
-        </div>
-        <h2 className={styles.detailTitle}>{w.title}</h2>
-        {w.memo && <p className={styles.detailMemo}>{w.memo}</p>}
-        <p className={styles.detailWho}>{mine ? "내가 적었어" : "상대가 적었어"}</p>
-
-        {d ? (
-          <p className={styles.statusDone}>{shortDate(d)}에 해봤어</p>
-        ) : planned ? (
-          <p className={styles.statusPlan}>{prettyDate(w.event!.date)}에 하기로 했어</p>
-        ) : null}
-
-        {!d && !planned && date !== null && (
-          <div className={styles.dateRow}>
-            <input
-              className={styles.input}
-              type="date"
-              value={date}
-              min={today}
-              aria-label="할 날짜"
-              onChange={(e) => setDate(e.target.value)}
-            />
-            <button className={styles.primary} disabled={!date} onClick={() => date && onSchedule(date).then(() => setDate(null))}>
-              캘린더에 넣기
-            </button>
-          </div>
-        )}
-
-        <div className={styles.actions}>
-          {!d && !planned && date === null && (
-            <>
-              <button className={styles.primary} onClick={() => setDate(today)}>
-                날 잡기
-              </button>
-              <button className={styles.ghost} onClick={() => onDone(today)}>
-                해봤어
-              </button>
-            </>
-          )}
-          {planned && (
-            <button className={styles.ghost} onClick={onUnschedule}>
-              날 취소
-            </button>
-          )}
-          {d && w.done_on && (
-            <button className={styles.ghost} onClick={() => onDone(null)}>
-              아직 안 해봤어
-            </button>
-          )}
-        </div>
-
-        <div className={styles.subActions}>
-          <button onClick={onEdit}>고치기</button>
-          {confirm ? (
-            <button className={styles.danger} onClick={onDelete}>
-              정말 지우기
-            </button>
-          ) : (
-            <button onClick={() => setConfirm(true)}>지우기</button>
-          )}
-        </div>
-      </div>
     </div>
   );
 }

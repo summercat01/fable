@@ -21,7 +21,7 @@ export type Wish = {
 
 export type WishInput = { kind: WishKind; title: string; memo: string | null };
 
-/** 버킷리스트가 데이터를 주고받는 창구. 실제는 Supabase, 미리보기는 메모리 */
+/** 위시리스트가 데이터를 주고받는 창구. 실제는 Supabase, 미리보기는 메모리 */
 export interface WishStore {
   /** 나 (색: 관리자=파랑, 상대=주황) */
   me(): Promise<{ id: string; admin: boolean }>;
@@ -33,7 +33,7 @@ export interface WishStore {
   schedule(id: string, date: string): Promise<void>;
   /** 잡은 날 취소 (캘린더 일정도 지움) */
   unschedule(id: string): Promise<void>;
-  /** 했어 / 안 한 걸로 */
+  /** 했어 / 안 한 걸로 (안 한 걸로 하면 지난 일정 연결도 풀림) */
   setDone(id: string, on: string | null): Promise<void>;
   subscribe(onChange: () => void): () => void;
 }

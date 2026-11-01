@@ -156,8 +156,8 @@
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px;
+  gap: 10px;
+  padding: 10px 6px 10px 12px;
   border: 0;
   border-radius: 16px;
   background: var(--surface);
@@ -521,4 +521,81 @@
 .save:disabled {
   background: #eadbe0;
   color: var(--ink-muted);
+}
+
+/* 체크 목록 */
+.itemDone .itemTitle {
+  color: var(--ink-muted);
+  text-decoration: line-through;
+  text-decoration-color: rgba(0, 0, 0, 0.25);
+}
+
+.check {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  padding: 0;
+  border-radius: 999px;
+  border: 2px solid #dcc4cb;
+  background: var(--surface);
+  color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.checkOn {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fff;
+}
+
+.itemTop {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.kindMini {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemText .planTag,
+.itemText .doneTag {
+  align-self: flex-start;
+  margin-top: 2px;
+}
+
+.iconBtn {
+  width: 32px;
+  height: 36px;
+  flex-shrink: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.delConfirm {
+  height: 30px;
+  padding: 0 10px;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 999px;
+  background: #b8364a;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
 }

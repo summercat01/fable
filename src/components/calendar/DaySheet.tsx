@@ -94,7 +94,7 @@ export default function DaySheet({
         {free && (
           <Link href={`${base.replace("/calendar", "/wish")}?date=${date}`} className={styles.freeNote}>
             <span>둘 다 비는 날이야. 데이트 잡아볼까?</span>
-            <span className={styles.freeLink}>버킷리스트에서 고르기 ›</span>
+            <span className={styles.freeLink}>위시리스트에서 고르기 ›</span>
           </Link>
         )}
         {!items.length && !shift && !free && <p className={styles.empty}>아직 일정이 없어</p>}

@@ -57,7 +57,8 @@ export function supabaseWishStore(): WishStore {
       if (data.event_id) check(await sb.from("events").delete().eq("id", data.event_id));
     },
     async setDone(id, on) {
-      check(await sb.from("wishes").update({ done_on: on }).eq("id", id));
+      // 체크 풀면 지난 일정과의 연결도 풀어서 다시 '해볼 것'으로 (캘린더 일정은 그대로)
+      check(await sb.from("wishes").update(on ? { done_on: on } : { done_on: null, event_id: null }).eq("id", id));
     },
     subscribe(onChange) {
       const ch = sb

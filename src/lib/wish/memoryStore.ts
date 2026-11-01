@@ -1,6 +1,6 @@
 import type { Wish, WishStore } from "./types";
 
-// 개발·테스트용: Supabase 없이 버킷리스트 화면을 띄워볼 때만 씀
+// 개발·테스트용: Supabase 없이 위시리스트 화면을 띄워볼 때만 씀
 export function memoryWishStore(seed: { me: string; wishes: Wish[] }): WishStore {
   let wishes = [...seed.wishes];
   let n = 0;
@@ -35,7 +35,7 @@ export function memoryWishStore(seed: { me: string; wishes: Wish[] }): WishStore
       patch(id, { event: null });
     },
     async setDone(id, on) {
-      patch(id, { done_on: on });
+      patch(id, on ? { done_on: on } : { done_on: null, event: null });
     },
     subscribe(f) {
       listeners.add(f);
