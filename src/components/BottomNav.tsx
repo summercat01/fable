@@ -16,16 +16,6 @@ const TABS = [
     ),
   },
   {
-    href: "/cards",
-    label: "추억 카드",
-    icon: (
-      <>
-        <rect x="3" y="5" width="13" height="16" rx="2" />
-        <path d="M8 3h11a2 2 0 0 1 2 2v13" />
-      </>
-    ),
-  },
-  {
     href: "/game",
     label: "게임",
     icon: (
