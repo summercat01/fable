@@ -10,7 +10,7 @@ function short(name: string): string {
   if (name.startsWith("대체공휴일")) return "대체공휴일";
   if (name.includes("설날")) return "설날";
   if (name.includes("추석")) return "추석";
-  if (name === "1월 1일") return "신정";
+  if (name === "1월 1일") return "새해 첫날";
   if (name === "기독탄신일") return "크리스마스";
   if (name === "부처님 오신 날") return "부처님오신날";
   if (name === "전국동시지방선거") return "지방선거";
@@ -19,12 +19,36 @@ function short(name: string): string {
 
 /** 시트에 보여줄 이름 (어색한 공식 명칭만 바꿈) */
 function full(name: string): string {
-  return name.replace("기독탄신일", "크리스마스");
+  return name.replace("기독탄신일", "크리스마스").replace(/^1월 1일$/, "새해 첫날");
 }
 
-/** 그날 공휴일 [{짧은 이름, 긴 이름}] — 날짜 숫자 빨강 */
-export function holidaysOn(date: string): { short: string; full: string }[] {
-  return (ALL[date] ?? []).map((n) => ({ short: short(n), full: full(n) }));
+const DAY = 86400000;
+const shift = (date: string, n: number) => {
+  const [y, m, d] = date.split("-").map(Number);
+  return new Date(Date.UTC(y, m - 1, d) + n * DAY).toISOString().slice(0, 10);
+};
+const shortsOn = (date: string) => (ALL[date] ?? []).map(short);
+
+export type Holiday = {
+  short: string;
+  full: string;
+  /** 설날·추석처럼 같은 이름이 이어지면 하나의 띠로 */
+  span?: "start" | "mid" | "end";
+  /** 이어진 묶음의 첫날 (묶음 구분용) */
+  from: string;
+};
+
+/** 그날 공휴일 — 날짜 숫자 빨강 */
+export function holidaysOn(date: string): Holiday[] {
+  return (ALL[date] ?? []).map((n) => {
+    const sh = short(n);
+    const prev = shortsOn(shift(date, -1)).includes(sh);
+    const next = shortsOn(shift(date, 1)).includes(sh);
+    let from = date;
+    while (shortsOn(shift(from, -1)).includes(sh)) from = shift(from, -1);
+    const span = prev && next ? "mid" : prev ? "end" : next ? "start" : undefined;
+    return { short: sh, full: full(n), span, from };
+  });
 }
 
 /** 쉬는 날은 아니지만 달력에 띄우는 날 — 숫자 색은 그대로 */

@@ -20,6 +20,8 @@ export type Item = {
   kind: "holiday" | "special" | "anniv" | "us" | "w" | "h";
   /** 시트에 보여줄 긴 이름 (공휴일) */
   full?: string;
+  /** 이어진 공휴일 묶음의 첫날 (레인 순서용) */
+  from?: string;
   title: string;
   event?: CalEvent;
   /** 여러 날 일정에서 이 칸의 위치 */
@@ -84,7 +86,9 @@ export default function CalendarView() {
   function itemsFor(date: string): Item[] {
     const { y: yy, m: mm, d } = fromIso(date);
     const anniv: Item[] = [
-      ...holidaysOn(date).map((h): Item => ({ key: `h-${h.full}`, kind: "holiday", title: h.short, full: h.full })),
+      ...holidaysOn(date).map(
+        (h): Item => ({ key: `h-${h.short}-${h.from}`, kind: "holiday", title: h.short, full: h.full, span: h.span, from: h.from }),
+      ),
       ...specialOn(date).map((t): Item => ({ key: `sp-${t}`, kind: "special", title: t })),
       ...anniversariesOn(yy, mm, d).map((t): Item => ({ key: `a-${t}`, kind: "anniv", title: t })),
     ];
@@ -207,7 +211,8 @@ export default function CalendarView() {
     // 먼저 시작한 일정이 위, 같으면 긴 게 위 (지난주에서 이어진 띠가 같은 줄을 지키도록)
     const spans = [...seen.entries()].sort(
       ([, x], [, y]) =>
-        (x.it.event?.date ?? "").localeCompare(y.it.event?.date ?? "") ||
+        (x.it.kind === "holiday" ? 0 : 1) - (y.it.kind === "holiday" ? 0 : 1) ||
+        (x.it.event?.date ?? x.it.from ?? "").localeCompare(y.it.event?.date ?? y.it.from ?? "") ||
         (y.it.event?.end_date ?? "").localeCompare(x.it.event?.end_date ?? ""),
     );
     for (const [key, { s: a, e: b }] of spans) {
