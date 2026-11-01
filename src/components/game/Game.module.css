@@ -596,12 +596,3 @@
 .pager button:disabled {
   opacity: 0.35;
 }
-
-.filter svg {
-  vertical-align: -2px;
-  color: var(--us);
-}
-
-.filterOn svg {
-  color: #fff;
-}

@@ -7,7 +7,7 @@ import styles from "./Game.module.css";
 
 type View = "home" | "pick" | "answer" | "done" | "log";
 type QueueItem = { q: Question; from: "new" | "inbox" };
-type Filter = "all" | "balance" | "whatif" | "same" | "diff" | "hot";
+type Filter = "all" | "balance" | "whatif" | "same" | "diff";
 
 const PER_PAGE = 4;
 
@@ -140,15 +140,11 @@ export default function GameView() {
   }
 
   // ── 기록 ──
-  // 19금은 하트 필터에서만 보이고 나머지 목록에선 숨김
   const match = (t: Thread, f: Filter) =>
-    f === "hot"
-      ? t.question.adult
-      : !t.question.adult &&
-    (f === "all" ||
+    f === "all" ||
     t.question.type === f ||
     (f === "same" && t.question.type === "balance" && t.mine === t.theirs) ||
-    (f === "diff" && t.question.type === "balance" && t.mine !== t.theirs));
+    (f === "diff" && t.question.type === "balance" && t.mine !== t.theirs);
   const filtered = done.filter((t) => match(t, filter));
   const pages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
   const pg = Math.min(page, pages - 1);
@@ -304,7 +300,6 @@ export default function GameView() {
       { key: "whatif", label: "만약에" },
       { key: "same", label: "같은 답" },
       { key: "diff", label: "다른 답" },
-      { key: "hot", label: "" },
     ];
     return (
       <div className={styles.wrap}>
@@ -323,7 +318,7 @@ export default function GameView() {
                 setPage(0);
               }}
             >
-              {f.key === "hot" ? <HeartIcon aria-label="19금" /> : f.label} <span>{done.filter((t) => match(t, f.key)).length}</span>
+              {f.label} <span>{done.filter((t) => match(t, f.key)).length}</span>
             </button>
           ))}
         </div>
@@ -500,14 +495,6 @@ function Logo() {
         d="M50 58 C45 54 42.5 51.2 42.5 48.4 C42.5 46.1 44.3 44.4 46.5 44.4 C48 44.4 49.2 45.2 50 46.4 C50.8 45.2 52 44.4 53.5 44.4 C55.7 44.4 57.5 46.1 57.5 48.4 C57.5 51.2 55 54 50 58 Z"
         fill="#fff"
       />
-    </svg>
-  );
-}
-
-function HeartIcon(props: { "aria-label"?: string }) {
-  return (
-    <svg role={props["aria-label"] ? "img" : undefined} aria-hidden={props["aria-label"] ? undefined : true} {...props} width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 21C5 15.5 2 12 2 8.2 2 5.3 4.3 3 7.1 3c2 0 3.8 1.1 4.9 2.8C13.1 4.1 14.9 3 16.9 3 19.7 3 22 5.3 22 8.2 22 12 19 15.5 12 21z" />
     </svg>
   );
 }
