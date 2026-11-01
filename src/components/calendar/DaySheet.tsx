@@ -6,7 +6,7 @@ import type { ShiftCode } from "@/lib/calendar/types";
 import { SHIFT_LABEL, type Item } from "./CalendarView";
 import styles from "./Calendar.module.css";
 
-const LABEL: Record<Item["kind"], string> = { holiday: "공휴일", anniv: "기념일", us: "함께", w: "", h: "" };
+const LABEL: Record<Item["kind"], string> = { holiday: "공휴일", special: "특별한 날", anniv: "기념일", us: "함께", w: "", h: "" };
 
 export default function DaySheet({
   date,

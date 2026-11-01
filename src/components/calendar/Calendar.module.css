@@ -119,12 +119,13 @@
   color: var(--ink-muted);
 }
 
+/* 날짜 숫자: 일요일·공휴일 빨강, 토요일 파랑 */
 .sun {
-  color: #b8364a;
+  color: var(--day-red);
 }
 
 .sat {
-  color: var(--me);
+  color: var(--day-blue);
 }
 
 .error {
@@ -214,6 +215,14 @@
   padding: 3px 0;
 }
 
+.num.sun {
+  color: var(--day-red);
+}
+
+.num.sat {
+  color: var(--day-blue);
+}
+
 .today {
   min-width: 18px;
   height: 18px;
@@ -299,11 +308,11 @@
   border-radius: 0;
 }
 
-/* 공휴일은 일정과 헷갈리지 않게 배경 없이 빨간 글씨만 */
-.bar_holiday {
-  background: transparent;
-  color: #b8364a;
-  padding-left: 1px;
+/* 공휴일·특별한 날은 일정(분홍·파랑·주황)과 안 겹치게 초록 */
+.bar_holiday,
+.bar_special {
+  background: var(--holiday-bg);
+  color: var(--holiday-ink);
 }
 
 .bar_anniv {
@@ -482,8 +491,9 @@
   border-radius: 999px;
 }
 
-.dot_holiday {
-  background: #b8364a;
+.dot_holiday,
+.dot_special {
+  background: var(--holiday-ink);
 }
 
 .dot_anniv {

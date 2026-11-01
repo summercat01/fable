@@ -11,13 +11,28 @@ function short(name: string): string {
   if (name.includes("설날")) return "설날";
   if (name.includes("추석")) return "추석";
   if (name === "1월 1일") return "신정";
-  if (name === "기독탄신일") return "성탄절";
+  if (name === "기독탄신일") return "크리스마스";
   if (name === "부처님 오신 날") return "부처님오신날";
   if (name === "전국동시지방선거") return "지방선거";
   return name;
 }
 
-/** 그날 공휴일 [{짧은 이름, 원래 이름}] */
+/** 시트에 보여줄 이름 (어색한 공식 명칭만 바꿈) */
+function full(name: string): string {
+  return name.replace("기독탄신일", "크리스마스");
+}
+
+/** 그날 공휴일 [{짧은 이름, 긴 이름}] — 날짜 숫자 빨강 */
 export function holidaysOn(date: string): { short: string; full: string }[] {
-  return (ALL[date] ?? []).map((full) => ({ short: short(full), full }));
+  return (ALL[date] ?? []).map((n) => ({ short: short(n), full: full(n) }));
+}
+
+/** 쉬는 날은 아니지만 달력에 띄우는 날 — 숫자 색은 그대로 */
+const SPECIAL: Record<string, string> = {
+  "12-24": "크리스마스 이브",
+};
+
+export function specialOn(date: string): string[] {
+  const s = SPECIAL[date.slice(5)];
+  return s ? [s] : [];
 }

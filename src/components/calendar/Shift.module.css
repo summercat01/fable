@@ -181,12 +181,12 @@
 
 .sun.empty span,
 .wd.sun {
-  color: #b8364a;
+  color: var(--day-red);
 }
 
 .sat.empty span,
 .wd.sat {
-  color: var(--me);
+  color: var(--day-blue);
 }
 
 .footer {

@@ -9,6 +9,7 @@ import { useRange } from "@/lib/calendar/useRange";
 import { useCalendarBase } from "@/lib/calendar/useBase";
 import type { ShiftCode } from "@/lib/calendar/types";
 import { Chevron } from "./CalendarView";
+import { holidaysOn } from "@/lib/holidays";
 import styles from "./Shift.module.css";
 
 const BRUSHES: { code: ShiftCode; label: string }[] = [
@@ -144,7 +145,7 @@ export default function ShiftEditor() {
             return (
               <button
                 key={g.date}
-                className={`${styles.day} ${c ? styles[`b${c}`] : styles.empty} ${g.weekday === 0 ? styles.sun : g.weekday === 6 ? styles.sat : ""}`}
+                className={`${styles.day} ${c ? styles[`b${c}`] : styles.empty} ${g.weekday === 0 || holidaysOn(g.date).length ? styles.sun : g.weekday === 6 ? styles.sat : ""}`}
                 onClick={() => tap(g.date)}
                 aria-label={`${g.d}일 ${c ? BRUSHES.find((b) => b.code === c)!.label : "오프"}`}
               >

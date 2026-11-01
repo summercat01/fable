@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { anniversariesOn } from "@/lib/couple";
-import { holidaysOn } from "@/lib/holidays";
+import { holidaysOn, specialOn } from "@/lib/holidays";
 import { monthGrid, todayIso, WEEKDAYS, fromIso, addDays } from "@/lib/calendar/dates";
 import { useCalendarStore } from "@/lib/calendar/StoreContext";
 import { useRange } from "@/lib/calendar/useRange";
@@ -17,7 +17,7 @@ import styles from "./Calendar.module.css";
 type Filter = { her: boolean; me: boolean; us: boolean };
 export type Item = {
   key: string;
-  kind: "holiday" | "anniv" | "us" | "w" | "h";
+  kind: "holiday" | "special" | "anniv" | "us" | "w" | "h";
   /** 시트에 보여줄 긴 이름 (공휴일) */
   full?: string;
   title: string;
@@ -85,13 +85,14 @@ export default function CalendarView() {
     const { y: yy, m: mm, d } = fromIso(date);
     const anniv: Item[] = [
       ...holidaysOn(date).map((h): Item => ({ key: `h-${h.full}`, kind: "holiday", title: h.short, full: h.full })),
+      ...specialOn(date).map((t): Item => ({ key: `sp-${t}`, kind: "special", title: t })),
       ...anniversariesOn(yy, mm, d).map((t): Item => ({ key: `a-${t}`, kind: "anniv", title: t })),
     ];
     const ev = (byDate.items.get(date) ?? []).filter(
       (i) => (i.kind === "us" && filter.us) || (i.kind === "w" && filter.me) || (i.kind === "h" && filter.her),
     );
     // 여러 날 일정은 위쪽에 고정해서 칸끼리 이어져 보이게
-    const order = { holiday: -1, anniv: 0, us: 1, w: 2, h: 3 };
+    const order = { holiday: -1, special: -1, anniv: 0, us: 1, w: 2, h: 3 };
     const multi = (i: Item) => (i.span ? 0 : 1);
     return [...anniv, ...ev].sort(
       (a, b) =>
@@ -321,7 +322,7 @@ export default function CalendarView() {
                     styles.num,
                     isToday && styles.today,
                     !isToday && (g.weekday === 0 || (g.inMonth && holidaysOn(g.date).length > 0)) && styles.sun,
-                    !isToday && g.weekday === 6 && styles.sat,
+                    !isToday && g.weekday === 6 && !(g.inMonth && holidaysOn(g.date).length > 0) && styles.sat,
                   ]
                     .filter(Boolean)
                     .join(" ")}
