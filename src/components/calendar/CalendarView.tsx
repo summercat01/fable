@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { anniversariesOn } from "@/lib/couple";
 import { holidaysOn } from "@/lib/holidays";
 import { monthGrid, todayIso, WEEKDAYS, fromIso, addDays } from "@/lib/calendar/dates";
@@ -49,6 +49,7 @@ export default function CalendarView() {
   const [sheet, setSheet] = useState<"closed" | "half" | "full">("closed");
   const [adding, setAdding] = useState<string | null>(null);
   const [editing, setEditing] = useState<CalEvent | null>(null);
+  const [slide, setSlide] = useState<"" | "next" | "prev">("");
 
   const grid = useMemo(() => monthGrid(y, m), [y, m]);
   const from = grid[0].date;
@@ -118,10 +119,30 @@ export default function CalendarView() {
     setSlide(delta > 0 ? "next" : "prev");
   }
 
+  // 오늘 있는 달로 돌아가기 (제목 옆 '오늘' 버튼, 또는 아래 캘린더 탭 한 번 더 누르기)
+  const now = fromIso(today);
+  const isThisMonth = y === now.y && m === now.m;
+  const goToday = () => {
+    if (y === now.y && m === now.m) return;
+    const back = y * 12 + m > now.y * 12 + now.m;
+    setYM({ y: now.y, m: now.m });
+    setSheet("closed");
+    setSelected(null);
+    setSlide(back ? "prev" : "next");
+  };
+  const goTodayRef = useRef(goToday);
+  useEffect(() => {
+    goTodayRef.current = goToday;
+  });
+  useEffect(() => {
+    const f = () => goTodayRef.current();
+    window.addEventListener("fable:today", f);
+    return () => window.removeEventListener("fable:today", f);
+  }, []);
+
   // 달력을 좌우로 밀어서 달 넘기기
   const touch = useRef({ x: 0, y: 0, dir: "" as "" | "h" | "v", swiped: false });
   const [dragX, setDragX] = useState(0);
-  const [slide, setSlide] = useState<"" | "next" | "prev">("");
   const onTouchStart = (e: React.TouchEvent) => {
     const t = e.touches[0];
     touch.current = { x: t.clientX, y: t.clientY, dir: "", swiped: false };
@@ -212,6 +233,11 @@ export default function CalendarView() {
           <button className={styles.navBtn} onClick={() => move(1)} aria-label="다음 달">
             <Chevron dir="right" />
           </button>
+          {!isThisMonth && (
+            <button className={styles.todayBtn} onClick={goToday}>
+              오늘
+            </button>
+          )}
         </div>
         <DdayBadge />
       </header>

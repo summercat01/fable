@@ -30,6 +30,18 @@
   cursor: pointer;
 }
 
+.todayBtn {
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line-strong);
+  background: var(--surface);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
 .month {
   margin: 0;
   min-width: 124px;

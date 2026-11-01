@@ -36,6 +36,10 @@ export default function BottomNav() {
             href={t.href}
             className={active ? `${styles.tab} ${styles.active}` : styles.tab}
             aria-current={active ? "page" : undefined}
+            onClick={() => {
+              // 캘린더에서 캘린더 탭을 또 누르면 오늘 있는 달로
+              if (active && t.href === "/calendar") window.dispatchEvent(new Event("fable:today"));
+            }}
           >
             <svg
               aria-hidden="true"
