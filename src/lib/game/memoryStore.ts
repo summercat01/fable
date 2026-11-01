@@ -12,10 +12,14 @@ export function memoryGameStore(questions: Question[], seed: { me: string; partn
     async meId() {
       return seed.me;
     },
-    async draw(type: QType, n: number) {
+    async draw(type: QType, n: number, adult: number) {
       const used = taken();
+      const order = (list: Question[]) => [...list.filter((q) => !seen.has(q.id)), ...list.filter((q) => seen.has(q.id))];
       const pool = questions.filter((q) => q.type === type && !used.has(q.id));
-      const picked = [...pool.filter((q) => !seen.has(q.id)), ...pool.filter((q) => seen.has(q.id))].slice(0, n);
+      const a = order(pool.filter((q) => q.adult)).slice(0, adult);
+      const rest = order(pool.filter((q) => !q.adult && !a.includes(q))).slice(0, n - a.length);
+      const picked = [...rest, ...a];
+      picked.sort(() => Math.random() - 0.5);
       picked.forEach((q) => seen.add(q.id));
       return picked;
     },

@@ -1,5 +1,5 @@
 {
- "count": 1000,
+ "count": 1250,
  "items": [
   {
    "type": "whatif",
@@ -7500,6 +7500,1882 @@
    "adult": false,
    "id": 1000,
    "sort_order": 1000
+  },
+  {
+   "type": "balance",
+   "a": "같이 자고 일어난 아침 꼭 안기",
+   "b": "같이 자고 일어난 아침 커피 타주기",
+   "adult": true,
+   "id": 1001,
+   "sort_order": 1001
+  },
+  {
+   "type": "balance",
+   "a": "문 닫히자마자 키스",
+   "b": "씻고 나서 천천히",
+   "adult": true,
+   "id": 1002,
+   "sort_order": 1002
+  },
+  {
+   "type": "balance",
+   "a": "상대 몸에서 제일 좋은 곳 공개",
+   "b": "끝까지 비밀",
+   "adult": true,
+   "id": 1003,
+   "sort_order": 1003
+  },
+  {
+   "type": "balance",
+   "a": "비 오는 날 집에서 뒹굴기",
+   "b": "눈 오는 날 호텔에서 뒹굴기",
+   "adult": true,
+   "id": 1004,
+   "sort_order": 1004
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 받고 싶은 선물이 속옷이라면 어떤 스타일?",
+   "adult": true,
+   "id": 1005,
+   "sort_order": 1005
+  },
+  {
+   "type": "whatif",
+   "text": "네가 제일 좋아하는 내 냄새는?",
+   "adult": true,
+   "id": 1006,
+   "sort_order": 1006
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 몸으로 하는 칭찬을 해준다면?",
+   "adult": true,
+   "id": 1007,
+   "sort_order": 1007
+  },
+  {
+   "type": "whatif",
+   "text": "내가 제일 귀여운 순간이랑 제일 섹시한 순간은?",
+   "adult": true,
+   "id": 1008,
+   "sort_order": 1008
+  },
+  {
+   "type": "whatif",
+   "text": "나를 꼬시려고 준비한 필살기가 있다면?",
+   "adult": true,
+   "id": 1009,
+   "sort_order": 1009
+  },
+  {
+   "type": "balance",
+   "a": "첫 키스 떨림 다시 느끼기",
+   "b": "익숙해서 편한 키스",
+   "adult": true,
+   "id": 1010,
+   "sort_order": 1010
+  },
+  {
+   "type": "whatif",
+   "text": "네가 생각하는 우리 궁합 점수는?",
+   "adult": true,
+   "id": 1011,
+   "sort_order": 1011
+  },
+  {
+   "type": "balance",
+   "a": "손깍지",
+   "b": "팔짱",
+   "adult": true,
+   "id": 1012,
+   "sort_order": 1012
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘만 아는 야한 별명 하나 지어본다면?",
+   "adult": true,
+   "id": 1013,
+   "sort_order": 1013
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 여행 가서 숙소 들어가자마자 하고 싶은 건?",
+   "adult": true,
+   "id": 1014,
+   "sort_order": 1014
+  },
+  {
+   "type": "balance",
+   "a": "스킨십 중에 칭찬 듣기",
+   "b": "스킨십 중에 아무 말 없이",
+   "adult": true,
+   "id": 1015,
+   "sort_order": 1015
+  },
+  {
+   "type": "whatif",
+   "text": "둘이 호캉스 가면 꼭 하고 싶은 거 세 가지는?",
+   "adult": true,
+   "id": 1016,
+   "sort_order": 1016
+  },
+  {
+   "type": "balance",
+   "a": "키스는 부드럽고 길게",
+   "b": "키스는 짧고 자주",
+   "adult": true,
+   "id": 1017,
+   "sort_order": 1017
+  },
+  {
+   "type": "whatif",
+   "text": "너는 키스할 때 무슨 생각 해?",
+   "adult": true,
+   "id": 1018,
+   "sort_order": 1018
+  },
+  {
+   "type": "whatif",
+   "text": "내가 제일 섹시해 보였던 순간은 언제야?",
+   "adult": true,
+   "id": 1019,
+   "sort_order": 1019
+  },
+  {
+   "type": "balance",
+   "a": "오늘 밤 우리 집",
+   "b": "오늘 밤 너희 집",
+   "adult": true,
+   "id": 1020,
+   "sort_order": 1020
+  },
+  {
+   "type": "whatif",
+   "text": "첫 키스 점수를 매긴다면 몇 점? 이유는?",
+   "adult": true,
+   "id": 1021,
+   "sort_order": 1021
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 같이 보고 싶은 야한 영화 장르는?",
+   "adult": true,
+   "id": 1022,
+   "sort_order": 1022
+  },
+  {
+   "type": "whatif",
+   "text": "한 번쯤 둘이 해보고 싶은 일탈은?",
+   "adult": true,
+   "id": 1023,
+   "sort_order": 1023
+  },
+  {
+   "type": "whatif",
+   "text": "내가 졸릴 때 너는 뭘 하고 싶어져?",
+   "adult": true,
+   "id": 1024,
+   "sort_order": 1024
+  },
+  {
+   "type": "whatif",
+   "text": "나를 한 손으로 표현해본다면 어디에 둘래?",
+   "adult": true,
+   "id": 1025,
+   "sort_order": 1025
+  },
+  {
+   "type": "balance",
+   "a": "스킨십 하고 싶을 때 바로 말하기",
+   "b": "티 내면서 눈치 주기",
+   "adult": true,
+   "id": 1026,
+   "sort_order": 1026
+  },
+  {
+   "type": "whatif",
+   "text": "지금 당장 내가 옆에 있다면 제일 먼저 뭐 할래?",
+   "adult": true,
+   "id": 1027,
+   "sort_order": 1027
+  },
+  {
+   "type": "whatif",
+   "text": "목소리만으로 나를 설레게 해본다면 뭐라고 할래?",
+   "adult": true,
+   "id": 1028,
+   "sort_order": 1028
+  },
+  {
+   "type": "balance",
+   "a": "무릎베개 해주기",
+   "b": "무릎베개 받기",
+   "adult": true,
+   "id": 1029,
+   "sort_order": 1029
+  },
+  {
+   "type": "balance",
+   "a": "스킨십 많은 하루",
+   "b": "눈빛만 오가는 하루",
+   "adult": true,
+   "id": 1030,
+   "sort_order": 1030
+  },
+  {
+   "type": "whatif",
+   "text": "우리 사이 가장 대담했던 순간은?",
+   "adult": true,
+   "id": 1031,
+   "sort_order": 1031
+  },
+  {
+   "type": "balance",
+   "a": "상대가 부끄러워하는 모습",
+   "b": "상대가 적극적인 모습",
+   "adult": true,
+   "id": 1032,
+   "sort_order": 1032
+  },
+  {
+   "type": "balance",
+   "a": "키스 마크 남기기",
+   "b": "키스 마크 받기",
+   "adult": true,
+   "id": 1033,
+   "sort_order": 1033
+  },
+  {
+   "type": "balance",
+   "a": "씻겨주기",
+   "b": "씻김 받기",
+   "adult": true,
+   "id": 1034,
+   "sort_order": 1034
+  },
+  {
+   "type": "balance",
+   "a": "신음 대신 웃음",
+   "b": "웃음 대신 신음",
+   "adult": true,
+   "id": 1035,
+   "sort_order": 1035
+  },
+  {
+   "type": "whatif",
+   "text": "내가 가장 매력적인 각도는?",
+   "adult": true,
+   "id": 1036,
+   "sort_order": 1036
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 같이 입고 싶은 커플 잠옷은 어떤 거?",
+   "adult": true,
+   "id": 1037,
+   "sort_order": 1037
+  },
+  {
+   "type": "balance",
+   "a": "옷 벗겨주기",
+   "b": "옷 입혀주기",
+   "adult": true,
+   "id": 1038,
+   "sort_order": 1038
+  },
+  {
+   "type": "whatif",
+   "text": "같이 하고 싶은 밤 산책 코스가 있다면?",
+   "adult": true,
+   "id": 1039,
+   "sort_order": 1039
+  },
+  {
+   "type": "balance",
+   "a": "내가 리드하기",
+   "b": "상대가 리드하기",
+   "adult": true,
+   "id": 1040,
+   "sort_order": 1040
+  },
+  {
+   "type": "balance",
+   "a": "야한 농담 문자 낮에",
+   "b": "야한 농담 문자 밤에",
+   "adult": true,
+   "id": 1041,
+   "sort_order": 1041
+  },
+  {
+   "type": "balance",
+   "a": "천천히 분위기 잡기",
+   "b": "갑자기 훅 들어오기",
+   "adult": true,
+   "id": 1042,
+   "sort_order": 1042
+  },
+  {
+   "type": "whatif",
+   "text": "너를 녹이는 내 표정은 어떤 표정이야?",
+   "adult": true,
+   "id": 1043,
+   "sort_order": 1043
+  },
+  {
+   "type": "whatif",
+   "text": "오늘 밤 하나만 정할 수 있다면 조명, 음악, 향 중 뭐?",
+   "adult": true,
+   "id": 1044,
+   "sort_order": 1044
+  },
+  {
+   "type": "balance",
+   "a": "상대 숨소리",
+   "b": "상대 심장 소리",
+   "adult": true,
+   "id": 1045,
+   "sort_order": 1045
+  },
+  {
+   "type": "balance",
+   "a": "늦잠 자며 침대에서 꽁냥",
+   "b": "일찍 일어나서 같이 브런치",
+   "adult": true,
+   "id": 1046,
+   "sort_order": 1046
+  },
+  {
+   "type": "balance",
+   "a": "섹시하다는 말",
+   "b": "예쁘다(잘생겼다)는 말",
+   "adult": true,
+   "id": 1047,
+   "sort_order": 1047
+  },
+  {
+   "type": "whatif",
+   "text": "키스하기 제일 좋은 장소를 하나 고른다면?",
+   "adult": true,
+   "id": 1048,
+   "sort_order": 1048
+  },
+  {
+   "type": "balance",
+   "a": "옷 입은 채로 꽁냥",
+   "b": "이불 속에서 꽁냥",
+   "adult": true,
+   "id": 1049,
+   "sort_order": 1049
+  },
+  {
+   "type": "whatif",
+   "text": "야한 꿈에 내가 나온 적 있어?",
+   "adult": true,
+   "id": 1050,
+   "sort_order": 1050
+  },
+  {
+   "type": "balance",
+   "a": "상대가 리드하다 내가 뺏기",
+   "b": "처음부터 끝까지 맡기기",
+   "adult": true,
+   "id": 1051,
+   "sort_order": 1051
+  },
+  {
+   "type": "balance",
+   "a": "사랑해 말하며 안기",
+   "b": "아무 말 없이 안기",
+   "adult": true,
+   "id": 1052,
+   "sort_order": 1052
+  },
+  {
+   "type": "whatif",
+   "text": "분위기 좋은 날 틀고 싶은 노래 한 곡은?",
+   "adult": true,
+   "id": 1053,
+   "sort_order": 1053
+  },
+  {
+   "type": "balance",
+   "a": "상대 목덜미 향",
+   "b": "상대 머리카락 향",
+   "adult": true,
+   "id": 1054,
+   "sort_order": 1054
+  },
+  {
+   "type": "whatif",
+   "text": "우리 둘만 있는 무인도에 하루 갇히면 제일 먼저 뭐 할래?",
+   "adult": true,
+   "id": 1055,
+   "sort_order": 1055
+  },
+  {
+   "type": "whatif",
+   "text": "하루만 부끄러움이 사라진다면 나한테 뭐 할래?",
+   "adult": true,
+   "id": 1056,
+   "sort_order": 1056
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 해보고 싶은 역할극이 있다면 어떤 설정?",
+   "adult": true,
+   "id": 1057,
+   "sort_order": 1057
+  },
+  {
+   "type": "balance",
+   "a": "설레는 긴장감",
+   "b": "편안한 안정감",
+   "adult": true,
+   "id": 1058,
+   "sort_order": 1058
+  },
+  {
+   "type": "whatif",
+   "text": "오늘 밤 소원 하나 들어준다면 뭐 빌래?",
+   "adult": true,
+   "id": 1059,
+   "sort_order": 1059
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 같이 샤워한다면 제일 먼저 뭐 할래?",
+   "adult": true,
+   "id": 1060,
+   "sort_order": 1060
+  },
+  {
+   "type": "whatif",
+   "text": "너는 분위기 잡을 때 어떤 향이 좋아?",
+   "adult": true,
+   "id": 1061,
+   "sort_order": 1061
+  },
+  {
+   "type": "balance",
+   "a": "몸에 오일 발라주기",
+   "b": "몸에 로션 발라주기",
+   "adult": true,
+   "id": 1062,
+   "sort_order": 1062
+  },
+  {
+   "type": "balance",
+   "a": "상대가 날 꼭 붙잡는 것",
+   "b": "상대가 날 살살 놓아주는 것",
+   "adult": true,
+   "id": 1063,
+   "sort_order": 1063
+  },
+  {
+   "type": "whatif",
+   "text": "내가 갑자기 키스하면 어떻게 반응할 것 같아?",
+   "adult": true,
+   "id": 1064,
+   "sort_order": 1064
+  },
+  {
+   "type": "whatif",
+   "text": "나를 처음 침대에서 봤을 때 첫인상은?",
+   "adult": true,
+   "id": 1065,
+   "sort_order": 1065
+  },
+  {
+   "type": "balance",
+   "a": "키스할 때 웃음 참기",
+   "b": "키스할 때 웃음 터뜨리기",
+   "adult": true,
+   "id": 1066,
+   "sort_order": 1066
+  },
+  {
+   "type": "balance",
+   "a": "이불 하나 같이",
+   "b": "이불 각자",
+   "adult": true,
+   "id": 1067,
+   "sort_order": 1067
+  },
+  {
+   "type": "balance",
+   "a": "처음 손잡던 떨림",
+   "b": "처음 키스하던 떨림",
+   "adult": true,
+   "id": 1068,
+   "sort_order": 1068
+  },
+  {
+   "type": "balance",
+   "a": "밤새 놀기",
+   "b": "짧고 굵게",
+   "adult": true,
+   "id": 1069,
+   "sort_order": 1069
+  },
+  {
+   "type": "balance",
+   "a": "스킨십 장소 매번 새롭게",
+   "b": "익숙한 우리 공간",
+   "adult": true,
+   "id": 1070,
+   "sort_order": 1070
+  },
+  {
+   "type": "whatif",
+   "text": "너의 숨은 스킨십 취향 하나 공개해줘",
+   "adult": true,
+   "id": 1071,
+   "sort_order": 1071
+  },
+  {
+   "type": "whatif",
+   "text": "같이 땀 흘리는 데이트 하나 고르라면?",
+   "adult": true,
+   "id": 1072,
+   "sort_order": 1072
+  },
+  {
+   "type": "balance",
+   "a": "야한 질문 게임 더 자주",
+   "b": "가끔 해야 설렘",
+   "adult": true,
+   "id": 1073,
+   "sort_order": 1073
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 같이 가보고 싶은 분위기 좋은 숙소는 어떤 곳이야?",
+   "adult": true,
+   "id": 1074,
+   "sort_order": 1074
+  },
+  {
+   "type": "balance",
+   "a": "여행 첫날 밤",
+   "b": "여행 마지막 날 밤",
+   "adult": true,
+   "id": 1075,
+   "sort_order": 1075
+  },
+  {
+   "type": "balance",
+   "a": "드라이브하다가 잠깐 세우고 키스",
+   "b": "엘리베이터에서 몰래 키스",
+   "adult": true,
+   "id": 1076,
+   "sort_order": 1076
+  },
+  {
+   "type": "whatif",
+   "text": "내 향수 냄새 맡으면 무슨 생각 들어?",
+   "adult": true,
+   "id": 1077,
+   "sort_order": 1077
+  },
+  {
+   "type": "whatif",
+   "text": "나를 칭찬할 때 몸 쪽으로만 칭찬한다면?",
+   "adult": true,
+   "id": 1078,
+   "sort_order": 1078
+  },
+  {
+   "type": "balance",
+   "a": "스킨십 신호는 눈빛",
+   "b": "스킨십 신호는 말로",
+   "adult": true,
+   "id": 1079,
+   "sort_order": 1079
+  },
+  {
+   "type": "balance",
+   "a": "키스 30초",
+   "b": "안기 30분",
+   "adult": true,
+   "id": 1080,
+   "sort_order": 1080
+  },
+  {
+   "type": "whatif",
+   "text": "오늘 밤 데이트 드레스 코드를 정한다면?",
+   "adult": true,
+   "id": 1081,
+   "sort_order": 1081
+  },
+  {
+   "type": "balance",
+   "a": "목에 키스",
+   "b": "귀에 속삭이기",
+   "adult": true,
+   "id": 1082,
+   "sort_order": 1082
+  },
+  {
+   "type": "balance",
+   "a": "꽉 끌어안기",
+   "b": "살살 쓰다듬기",
+   "adult": true,
+   "id": 1083,
+   "sort_order": 1083
+  },
+  {
+   "type": "balance",
+   "a": "분위기 깨는 웃음 OK",
+   "b": "분위기 끝까지 유지",
+   "adult": true,
+   "id": 1084,
+   "sort_order": 1084
+  },
+  {
+   "type": "balance",
+   "a": "땀 흘린 운동 후 껴안기",
+   "b": "샤워 후 보송할 때 껴안기",
+   "adult": true,
+   "id": 1085,
+   "sort_order": 1085
+  },
+  {
+   "type": "balance",
+   "a": "키스할 때 눈 감기",
+   "b": "키스할 때 살짝 눈 뜨기",
+   "adult": true,
+   "id": 1086,
+   "sort_order": 1086
+  },
+  {
+   "type": "balance",
+   "a": "같이 누워 있다가 잠들기",
+   "b": "같이 누워 있다가 다시 시작",
+   "adult": true,
+   "id": 1087,
+   "sort_order": 1087
+  },
+  {
+   "type": "balance",
+   "a": "나만 아는 상대 표정",
+   "b": "나만 아는 상대 목소리",
+   "adult": true,
+   "id": 1088,
+   "sort_order": 1088
+  },
+  {
+   "type": "whatif",
+   "text": "우리 사이 스킨십 온도를 1부터 10으로 하면 지금 몇이야?",
+   "adult": true,
+   "id": 1089,
+   "sort_order": 1089
+  },
+  {
+   "type": "balance",
+   "a": "첫 스킨십 장소 소파",
+   "b": "첫 스킨십 장소 침대",
+   "adult": true,
+   "id": 1090,
+   "sort_order": 1090
+  },
+  {
+   "type": "whatif",
+   "text": "하루 종일 침대에서만 지내야 한다면 뭐 하면서 보낼래?",
+   "adult": true,
+   "id": 1091,
+   "sort_order": 1091
+  },
+  {
+   "type": "balance",
+   "a": "겨울밤 껴안고 자기",
+   "b": "여름밤 손만 잡고 자기",
+   "adult": true,
+   "id": 1092,
+   "sort_order": 1092
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 제일 해주고 싶은 마사지 부위는?",
+   "adult": true,
+   "id": 1093,
+   "sort_order": 1093
+  },
+  {
+   "type": "balance",
+   "a": "목욕 후 머리 말려주기",
+   "b": "목욕 후 바디로션 발라주기",
+   "adult": true,
+   "id": 1094,
+   "sort_order": 1094
+  },
+  {
+   "type": "balance",
+   "a": "잘 자 키스 매일",
+   "b": "잘 자 키스 가끔 특별하게",
+   "adult": true,
+   "id": 1095,
+   "sort_order": 1095
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 같이 있을 때 제일 참기 힘든 순간은?",
+   "adult": true,
+   "id": 1096,
+   "sort_order": 1096
+  },
+  {
+   "type": "whatif",
+   "text": "내가 잠든 모습 보면 무슨 생각 들어?",
+   "adult": true,
+   "id": 1097,
+   "sort_order": 1097
+  },
+  {
+   "type": "balance",
+   "a": "야한 말 들으면 웃음 터짐",
+   "b": "야한 말 들으면 얼굴 빨개짐",
+   "adult": true,
+   "id": 1098,
+   "sort_order": 1098
+  },
+  {
+   "type": "whatif",
+   "text": "나를 한 단어로 표현한다면? 단, 야한 쪽으로",
+   "adult": true,
+   "id": 1099,
+   "sort_order": 1099
+  },
+  {
+   "type": "balance",
+   "a": "에어컨 빵빵 이불 속",
+   "b": "따뜻한 전기장판 위",
+   "adult": true,
+   "id": 1100,
+   "sort_order": 1100
+  },
+  {
+   "type": "balance",
+   "a": "상대 셔츠 냄새 맡기",
+   "b": "상대 머리 냄새 맡기",
+   "adult": true,
+   "id": 1101,
+   "sort_order": 1101
+  },
+  {
+   "type": "balance",
+   "a": "분위기 메이커 음악 리스트 내가",
+   "b": "분위기 메이커 음악 리스트 상대가",
+   "adult": true,
+   "id": 1102,
+   "sort_order": 1102
+  },
+  {
+   "type": "whatif",
+   "text": "나를 생각하다 혼자 얼굴 빨개진 적 있어?",
+   "adult": true,
+   "id": 1103,
+   "sort_order": 1103
+  },
+  {
+   "type": "whatif",
+   "text": "내가 먼저 리드했으면 좋겠어, 네가 리드하고 싶어?",
+   "adult": true,
+   "id": 1104,
+   "sort_order": 1104
+  },
+  {
+   "type": "whatif",
+   "text": "나를 보고 침 삼켰던 적 있어? 언제?",
+   "adult": true,
+   "id": 1105,
+   "sort_order": 1105
+  },
+  {
+   "type": "balance",
+   "a": "야한 문자 받기",
+   "b": "야한 목소리 메시지 받기",
+   "adult": true,
+   "id": 1106,
+   "sort_order": 1106
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 해본 스킨십 중에 다시 해보고 싶은 건?",
+   "adult": true,
+   "id": 1107,
+   "sort_order": 1107
+  },
+  {
+   "type": "balance",
+   "a": "스킨십 많은 데이트",
+   "b": "대화 많은 데이트 후 스킨십 폭발",
+   "adult": true,
+   "id": 1108,
+   "sort_order": 1108
+  },
+  {
+   "type": "whatif",
+   "text": "같이 욕조에 들어간다면 뭘 준비할래?",
+   "adult": true,
+   "id": 1109,
+   "sort_order": 1109
+  },
+  {
+   "type": "whatif",
+   "text": "나를 녹이는 방법을 세 단계로 설명해줘",
+   "adult": true,
+   "id": 1110,
+   "sort_order": 1110
+  },
+  {
+   "type": "balance",
+   "a": "야한 상상 털어놓기",
+   "b": "야한 상상 몰래 실행하기",
+   "adult": true,
+   "id": 1111,
+   "sort_order": 1111
+  },
+  {
+   "type": "balance",
+   "a": "샤워 같이 하기",
+   "b": "샤워하고 나온 모습 보기",
+   "adult": true,
+   "id": 1112,
+   "sort_order": 1112
+  },
+  {
+   "type": "balance",
+   "a": "아침에 눈뜨자마자 스킨십",
+   "b": "자기 전에 스킨십",
+   "adult": true,
+   "id": 1113,
+   "sort_order": 1113
+  },
+  {
+   "type": "balance",
+   "a": "스킨십 후 같이 라면",
+   "b": "스킨십 후 바로 잠들기",
+   "adult": true,
+   "id": 1114,
+   "sort_order": 1114
+  },
+  {
+   "type": "balance",
+   "a": "간지러운 말 듣기",
+   "b": "간지러운 말 하기",
+   "adult": true,
+   "id": 1115,
+   "sort_order": 1115
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 들은 말 중에 제일 심장 쿵 했던 말은?",
+   "adult": true,
+   "id": 1116,
+   "sort_order": 1116
+  },
+  {
+   "type": "balance",
+   "a": "속삭이며 이름 부르기",
+   "b": "애칭으로 부르기",
+   "adult": true,
+   "id": 1117,
+   "sort_order": 1117
+  },
+  {
+   "type": "balance",
+   "a": "허벅지 베고 눕기",
+   "b": "가슴에 머리 대고 눕기",
+   "adult": true,
+   "id": 1118,
+   "sort_order": 1118
+  },
+  {
+   "type": "whatif",
+   "text": "나를 껴안을 때 손이 어디로 가는 것 같아?",
+   "adult": true,
+   "id": 1119,
+   "sort_order": 1119
+  },
+  {
+   "type": "balance",
+   "a": "긴 하루 끝 꼭 안아주기",
+   "b": "긴 하루 끝 마사지",
+   "adult": true,
+   "id": 1120,
+   "sort_order": 1120
+  },
+  {
+   "type": "whatif",
+   "text": "내 몸에서 제일 좋아하는 곳 하나만 고른다면?",
+   "adult": true,
+   "id": 1121,
+   "sort_order": 1121
+  },
+  {
+   "type": "whatif",
+   "text": "처음 나를 보고 '아 설렌다' 했던 순간은?",
+   "adult": true,
+   "id": 1122,
+   "sort_order": 1122
+  },
+  {
+   "type": "whatif",
+   "text": "우리 사이 최고의 스킨십 기록을 갱신한다면 어떻게?",
+   "adult": true,
+   "id": 1123,
+   "sort_order": 1123
+  },
+  {
+   "type": "whatif",
+   "text": "너의 최애 키스 스타일을 설명해줘",
+   "adult": true,
+   "id": 1124,
+   "sort_order": 1124
+  },
+  {
+   "type": "balance",
+   "a": "상대 손",
+   "b": "상대 목소리",
+   "adult": true,
+   "id": 1125,
+   "sort_order": 1125
+  },
+  {
+   "type": "balance",
+   "a": "침대 왼쪽",
+   "b": "침대 오른쪽",
+   "adult": true,
+   "id": 1126,
+   "sort_order": 1126
+  },
+  {
+   "type": "balance",
+   "a": "상대 냄새 나는 옷 입고 자기",
+   "b": "상대가 내 옷 입고 자는 거 보기",
+   "adult": true,
+   "id": 1127,
+   "sort_order": 1127
+  },
+  {
+   "type": "whatif",
+   "text": "내가 너한테 이건 꼭 해줬으면 좋겠다 하는 거 하나는?",
+   "adult": true,
+   "id": 1128,
+   "sort_order": 1128
+  },
+  {
+   "type": "whatif",
+   "text": "내가 제일 잘하는 스킨십은 뭐라고 생각해?",
+   "adult": true,
+   "id": 1129,
+   "sort_order": 1129
+  },
+  {
+   "type": "whatif",
+   "text": "아침에 눈 떴는데 내가 옆에 없다면 제일 먼저 뭐 할래?",
+   "adult": true,
+   "id": 1130,
+   "sort_order": 1130
+  },
+  {
+   "type": "balance",
+   "a": "상대 무릎 위에 앉기",
+   "b": "상대가 내 무릎 위에 앉기",
+   "adult": true,
+   "id": 1131,
+   "sort_order": 1131
+  },
+  {
+   "type": "balance",
+   "a": "몰래 하는 손장난",
+   "b": "대놓고 하는 스킨십",
+   "adult": true,
+   "id": 1132,
+   "sort_order": 1132
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 듣고 싶은 야한 말 한마디는?",
+   "adult": true,
+   "id": 1133,
+   "sort_order": 1133
+  },
+  {
+   "type": "balance",
+   "a": "스킨십 먼저 하는 쪽",
+   "b": "스킨십 기다리는 쪽",
+   "adult": true,
+   "id": 1134,
+   "sort_order": 1134
+  },
+  {
+   "type": "whatif",
+   "text": "나를 보고 참는 게 제일 힘들 때는 언제야?",
+   "adult": true,
+   "id": 1135,
+   "sort_order": 1135
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 자고 일어난 아침에 제일 하고 싶은 건?",
+   "adult": true,
+   "id": 1136,
+   "sort_order": 1136
+  },
+  {
+   "type": "balance",
+   "a": "목소리로 설레기",
+   "b": "향기로 설레기",
+   "adult": true,
+   "id": 1137,
+   "sort_order": 1137
+  },
+  {
+   "type": "balance",
+   "a": "한 번 길게 안기",
+   "b": "열 번 짧게 안기",
+   "adult": true,
+   "id": 1138,
+   "sort_order": 1138
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 연인 말고 처음 만나는 남남이라면 어떻게 꼬실래?",
+   "adult": true,
+   "id": 1139,
+   "sort_order": 1139
+  },
+  {
+   "type": "whatif",
+   "text": "내 목소리가 제일 좋을 때는 언제야?",
+   "adult": true,
+   "id": 1140,
+   "sort_order": 1140
+  },
+  {
+   "type": "balance",
+   "a": "분위기 잡으려다 실패",
+   "b": "아무 계획 없이 자연스럽게",
+   "adult": true,
+   "id": 1141,
+   "sort_order": 1141
+  },
+  {
+   "type": "whatif",
+   "text": "내 손이 닿으면 제일 좋은 곳은?",
+   "adult": true,
+   "id": 1142,
+   "sort_order": 1142
+  },
+  {
+   "type": "balance",
+   "a": "마사지 해주기",
+   "b": "마사지 받기",
+   "adult": true,
+   "id": 1143,
+   "sort_order": 1143
+  },
+  {
+   "type": "balance",
+   "a": "야한 사진 같이 찍기",
+   "b": "그런 건 절대 안 찍기",
+   "adult": true,
+   "id": 1144,
+   "sort_order": 1144
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 꼭 다시 가고 싶은 숙소가 있다면 이유는?",
+   "adult": true,
+   "id": 1145,
+   "sort_order": 1145
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 처음 키스했던 순간으로 돌아가면 뭘 다르게 할래?",
+   "adult": true,
+   "id": 1146,
+   "sort_order": 1146
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 차 안에서 있었던 일 중 기억에 남는 거?",
+   "adult": true,
+   "id": 1147,
+   "sort_order": 1147
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 첫눈에 반했던 부분이 몸이라면 어디?",
+   "adult": true,
+   "id": 1148,
+   "sort_order": 1148
+  },
+  {
+   "type": "whatif",
+   "text": "둘이 같이 정하는 '우리만의 밤 규칙' 하나는?",
+   "adult": true,
+   "id": 1149,
+   "sort_order": 1149
+  },
+  {
+   "type": "balance",
+   "a": "호캉스 1박",
+   "b": "우리 집 주말 내내 안 나가기",
+   "adult": true,
+   "id": 1150,
+   "sort_order": 1150
+  },
+  {
+   "type": "whatif",
+   "text": "우리가 비밀 암호로 '오늘 밤 어때?'를 말한다면 뭐라고 할까?",
+   "adult": true,
+   "id": 1151,
+   "sort_order": 1151
+  },
+  {
+   "type": "balance",
+   "a": "목 뒤에 키스",
+   "b": "쇄골에 키스",
+   "adult": true,
+   "id": 1152,
+   "sort_order": 1152
+  },
+  {
+   "type": "balance",
+   "a": "야한 영화 같이 보기",
+   "b": "야한 소설 같이 읽기",
+   "adult": true,
+   "id": 1153,
+   "sort_order": 1153
+  },
+  {
+   "type": "balance",
+   "a": "잠옷은 커플 잠옷",
+   "b": "잠옷은 상대 티셔츠",
+   "adult": true,
+   "id": 1154,
+   "sort_order": 1154
+  },
+  {
+   "type": "balance",
+   "a": "입술에 뽀뽀",
+   "b": "이마에 뽀뽀",
+   "adult": true,
+   "id": 1155,
+   "sort_order": 1155
+  },
+  {
+   "type": "whatif",
+   "text": "나를 안으면 제일 먼저 느껴지는 건 뭐야?",
+   "adult": true,
+   "id": 1156,
+   "sort_order": 1156
+  },
+  {
+   "type": "whatif",
+   "text": "나를 처음 안았을 때 무슨 생각 했어?",
+   "adult": true,
+   "id": 1157,
+   "sort_order": 1157
+  },
+  {
+   "type": "whatif",
+   "text": "내가 너한테 입혀보고 싶은 옷이 있다면 뭘 것 같아?",
+   "adult": true,
+   "id": 1158,
+   "sort_order": 1158
+  },
+  {
+   "type": "whatif",
+   "text": "가장 짜릿했던 우리 순간을 하나 꼽는다면?",
+   "adult": true,
+   "id": 1159,
+   "sort_order": 1159
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 '오늘은 안 놔줄 거야'라고 말한다면 어떤 상황일까?",
+   "adult": true,
+   "id": 1160,
+   "sort_order": 1160
+  },
+  {
+   "type": "balance",
+   "a": "안대 쓰고 감각 놀이",
+   "b": "조명 하나만 켜고 눈 맞추기",
+   "adult": true,
+   "id": 1161,
+   "sort_order": 1161
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 같이 있을 때 시간이 제일 빨리 가는 순간은?",
+   "adult": true,
+   "id": 1162,
+   "sort_order": 1162
+  },
+  {
+   "type": "whatif",
+   "text": "같이 누워서 서로 등 긁어주기 말고 해주고 싶은 건?",
+   "adult": true,
+   "id": 1163,
+   "sort_order": 1163
+  },
+  {
+   "type": "whatif",
+   "text": "나를 유혹하는 데 30초 준다면 뭐 할래?",
+   "adult": true,
+   "id": 1164,
+   "sort_order": 1164
+  },
+  {
+   "type": "balance",
+   "a": "낮에 호텔 대실",
+   "b": "밤에 호텔 1박",
+   "adult": true,
+   "id": 1165,
+   "sort_order": 1165
+  },
+  {
+   "type": "balance",
+   "a": "바닷가 숙소",
+   "b": "산속 숙소",
+   "adult": true,
+   "id": 1166,
+   "sort_order": 1166
+  },
+  {
+   "type": "balance",
+   "a": "상대 셔츠 단추 풀기",
+   "b": "상대가 내 단추 풀어주기",
+   "adult": true,
+   "id": 1167,
+   "sort_order": 1167
+  },
+  {
+   "type": "balance",
+   "a": "간지럼 잘 타는 연인",
+   "b": "간지럼 하나도 안 타는 연인",
+   "adult": true,
+   "id": 1168,
+   "sort_order": 1168
+  },
+  {
+   "type": "balance",
+   "a": "상대가 입은 정장",
+   "b": "상대가 입은 잠옷",
+   "adult": true,
+   "id": 1169,
+   "sort_order": 1169
+  },
+  {
+   "type": "whatif",
+   "text": "우리 사이에 금지어를 하나 정한다면? 단 말하면 벌칙은 키스",
+   "adult": true,
+   "id": 1170,
+   "sort_order": 1170
+  },
+  {
+   "type": "balance",
+   "a": "은은한 조명",
+   "b": "촛불",
+   "adult": true,
+   "id": 1171,
+   "sort_order": 1171
+  },
+  {
+   "type": "balance",
+   "a": "분위기 있는 호텔",
+   "b": "우리 집 내 방",
+   "adult": true,
+   "id": 1172,
+   "sort_order": 1172
+  },
+  {
+   "type": "balance",
+   "a": "향초 켜기",
+   "b": "음악 틀기",
+   "adult": true,
+   "id": 1173,
+   "sort_order": 1173
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 제일 설렜던 스킨십은 뭐였어?",
+   "adult": true,
+   "id": 1174,
+   "sort_order": 1174
+  },
+  {
+   "type": "whatif",
+   "text": "나를 끌어당기고 싶을 때 쓰는 핑계는?",
+   "adult": true,
+   "id": 1175,
+   "sort_order": 1175
+  },
+  {
+   "type": "whatif",
+   "text": "내 몸에 있는 점이나 흉터 중에 기억나는 거 있어?",
+   "adult": true,
+   "id": 1176,
+   "sort_order": 1176
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 받고 싶은 손편지에 야한 문장 하나를 넣는다면?",
+   "adult": true,
+   "id": 1177,
+   "sort_order": 1177
+  },
+  {
+   "type": "balance",
+   "a": "안긴 채로 영화 보기",
+   "b": "팔베개 하고 영화 보기",
+   "adult": true,
+   "id": 1178,
+   "sort_order": 1178
+  },
+  {
+   "type": "balance",
+   "a": "잘 때 꼭 껴안고 자기",
+   "b": "손만 잡고 편하게 자기",
+   "adult": true,
+   "id": 1179,
+   "sort_order": 1179
+  },
+  {
+   "type": "whatif",
+   "text": "비 오는 밤 둘이 집에 있으면 뭐 할래?",
+   "adult": true,
+   "id": 1180,
+   "sort_order": 1180
+  },
+  {
+   "type": "whatif",
+   "text": "가장 오래 안고 있었던 날 기억나? 그날 무슨 생각 했어?",
+   "adult": true,
+   "id": 1181,
+   "sort_order": 1181
+  },
+  {
+   "type": "balance",
+   "a": "백허그",
+   "b": "앞에서 꼭 안기",
+   "adult": true,
+   "id": 1182,
+   "sort_order": 1182
+  },
+  {
+   "type": "whatif",
+   "text": "스킨십 하기 전 제일 떨렸던 순간은?",
+   "adult": true,
+   "id": 1183,
+   "sort_order": 1183
+  },
+  {
+   "type": "whatif",
+   "text": "내가 너한테 반한 포인트 맞혀본다면?",
+   "adult": true,
+   "id": 1184,
+   "sort_order": 1184
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 하룻밤 데이트 코스를 짠다면 마지막 장소는?",
+   "adult": true,
+   "id": 1185,
+   "sort_order": 1185
+  },
+  {
+   "type": "balance",
+   "a": "욕조에 같이 들어가기",
+   "b": "족욕 같이 하기",
+   "adult": true,
+   "id": 1186,
+   "sort_order": 1186
+  },
+  {
+   "type": "balance",
+   "a": "뽀뽀로 깨우기",
+   "b": "간지럼으로 깨우기",
+   "adult": true,
+   "id": 1187,
+   "sort_order": 1187
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 한 번쯤 해보고 싶었던 스킨십이 있다면?",
+   "adult": true,
+   "id": 1188,
+   "sort_order": 1188
+  },
+  {
+   "type": "balance",
+   "a": "불 끄고",
+   "b": "불 켜고",
+   "adult": true,
+   "id": 1189,
+   "sort_order": 1189
+  },
+  {
+   "type": "balance",
+   "a": "상대 입술",
+   "b": "상대 눈",
+   "adult": true,
+   "id": 1190,
+   "sort_order": 1190
+  },
+  {
+   "type": "whatif",
+   "text": "우리 첫날밤 영화로 만든다면 제목은?",
+   "adult": true,
+   "id": 1191,
+   "sort_order": 1191
+  },
+  {
+   "type": "balance",
+   "a": "허리 꽉 안기",
+   "b": "목 꽉 안기",
+   "adult": true,
+   "id": 1192,
+   "sort_order": 1192
+  },
+  {
+   "type": "balance",
+   "a": "야하게 눈 맞추기",
+   "b": "수줍게 눈 피하기",
+   "adult": true,
+   "id": 1193,
+   "sort_order": 1193
+  },
+  {
+   "type": "whatif",
+   "text": "내가 갑자기 뒤에서 안으면 어떤 기분일 것 같아?",
+   "adult": true,
+   "id": 1194,
+   "sort_order": 1194
+  },
+  {
+   "type": "balance",
+   "a": "뒤에서 안고 귓속말",
+   "b": "마주 보고 이마 맞대기",
+   "adult": true,
+   "id": 1195,
+   "sort_order": 1195
+  },
+  {
+   "type": "balance",
+   "a": "처음 같이 잔 날 기억 선명",
+   "b": "그날 너무 떨려서 기억 흐림",
+   "adult": true,
+   "id": 1196,
+   "sort_order": 1196
+  },
+  {
+   "type": "whatif",
+   "text": "분위기 잡고 싶을 때 나한테 보내는 신호를 정한다면?",
+   "adult": true,
+   "id": 1197,
+   "sort_order": 1197
+  },
+  {
+   "type": "whatif",
+   "text": "내 옷 중에 몰래 입어보고 싶은 거 있어?",
+   "adult": true,
+   "id": 1198,
+   "sort_order": 1198
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 하고 싶은 고백 중에 야한 버전은?",
+   "adult": true,
+   "id": 1199,
+   "sort_order": 1199
+  },
+  {
+   "type": "balance",
+   "a": "스킨십 후 수다 길게",
+   "b": "스킨십 후 바로 꿀잠",
+   "adult": true,
+   "id": 1200,
+   "sort_order": 1200
+  },
+  {
+   "type": "whatif",
+   "text": "스킨십 중에 내가 해주면 녹아버리는 거 하나는?",
+   "adult": true,
+   "id": 1201,
+   "sort_order": 1201
+  },
+  {
+   "type": "balance",
+   "a": "샤워기 물 뜨겁게",
+   "b": "샤워기 물 미지근하게",
+   "adult": true,
+   "id": 1202,
+   "sort_order": 1202
+  },
+  {
+   "type": "whatif",
+   "text": "나를 침대에서 한 단어로 표현하면?",
+   "adult": true,
+   "id": 1203,
+   "sort_order": 1203
+  },
+  {
+   "type": "balance",
+   "a": "속옷 선물 받기",
+   "b": "속옷 선물 하기",
+   "adult": true,
+   "id": 1204,
+   "sort_order": 1204
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 몰래 사진 찍히고 싶은 순간이 있다면?",
+   "adult": true,
+   "id": 1205,
+   "sort_order": 1205
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 같이 해보고 싶은 커플 마사지는 어떤 거야?",
+   "adult": true,
+   "id": 1206,
+   "sort_order": 1206
+  },
+  {
+   "type": "balance",
+   "a": "슬로우 댄스",
+   "b": "침대 위에서 레슬링",
+   "adult": true,
+   "id": 1207,
+   "sort_order": 1207
+  },
+  {
+   "type": "balance",
+   "a": "야한 꿈 얘기하기",
+   "b": "야한 꿈 비밀로",
+   "adult": true,
+   "id": 1208,
+   "sort_order": 1208
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 '자기야' 말고 밤에만 부르는 이름을 만든다면?",
+   "adult": true,
+   "id": 1209,
+   "sort_order": 1209
+  },
+  {
+   "type": "balance",
+   "a": "팔베개 해주기",
+   "b": "팔베개 받기",
+   "adult": true,
+   "id": 1210,
+   "sort_order": 1210
+  },
+  {
+   "type": "whatif",
+   "text": "너의 은밀한 버킷리스트 하나 공개해줘",
+   "adult": true,
+   "id": 1211,
+   "sort_order": 1211
+  },
+  {
+   "type": "balance",
+   "a": "아침 키스 양치 전에도 OK",
+   "b": "무조건 양치하고",
+   "adult": true,
+   "id": 1212,
+   "sort_order": 1212
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 몰래 해보고 싶었던 장난 같은 스킨십은?",
+   "adult": true,
+   "id": 1213,
+   "sort_order": 1213
+  },
+  {
+   "type": "balance",
+   "a": "흰 셔츠 하나만 입은 모습",
+   "b": "후드티 하나만 입은 모습",
+   "adult": true,
+   "id": 1214,
+   "sort_order": 1214
+  },
+  {
+   "type": "balance",
+   "a": "첫 키스 장소 차 안",
+   "b": "첫 키스 장소 집 앞 골목",
+   "adult": true,
+   "id": 1215,
+   "sort_order": 1215
+  },
+  {
+   "type": "whatif",
+   "text": "같이 침대에서 영화 보다가 영화 안 보게 되는 이유는?",
+   "adult": true,
+   "id": 1216,
+   "sort_order": 1216
+  },
+  {
+   "type": "whatif",
+   "text": "키스 말고 나한테 제일 받고 싶은 스킨십은?",
+   "adult": true,
+   "id": 1217,
+   "sort_order": 1217
+  },
+  {
+   "type": "whatif",
+   "text": "내가 너를 꼭 안고 놓아주지 않으면 몇 분 버틸 수 있어?",
+   "adult": true,
+   "id": 1218,
+   "sort_order": 1218
+  },
+  {
+   "type": "balance",
+   "a": "간식은 침대 위에서",
+   "b": "간식은 무조건 식탁에서",
+   "adult": true,
+   "id": 1219,
+   "sort_order": 1219
+  },
+  {
+   "type": "balance",
+   "a": "조용한 분위기",
+   "b": "웃음 많은 분위기",
+   "adult": true,
+   "id": 1220,
+   "sort_order": 1220
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 해보고 싶은 첫 경험 같은 거 있어?",
+   "adult": true,
+   "id": 1221,
+   "sort_order": 1221
+  },
+  {
+   "type": "balance",
+   "a": "영화 보다가 스킨십",
+   "b": "요리하다가 스킨십",
+   "adult": true,
+   "id": 1222,
+   "sort_order": 1222
+  },
+  {
+   "type": "balance",
+   "a": "불타는 하룻밤",
+   "b": "매일 조금씩 꽁냥",
+   "adult": true,
+   "id": 1223,
+   "sort_order": 1223
+  },
+  {
+   "type": "balance",
+   "a": "같이 씻기",
+   "b": "따로 씻고 기다리기",
+   "adult": true,
+   "id": 1224,
+   "sort_order": 1224
+  },
+  {
+   "type": "whatif",
+   "text": "너의 스킨십 버튼은 어디야?",
+   "adult": true,
+   "id": 1225,
+   "sort_order": 1225
+  },
+  {
+   "type": "balance",
+   "a": "스킨십 전 양치는 예의",
+   "b": "그런 거 신경 안 써",
+   "adult": true,
+   "id": 1226,
+   "sort_order": 1226
+  },
+  {
+   "type": "whatif",
+   "text": "스킨십할 때 듣고 싶은 내 말버릇은?",
+   "adult": true,
+   "id": 1227,
+   "sort_order": 1227
+  },
+  {
+   "type": "whatif",
+   "text": "내가 입었을 때 제일 설레는 옷은?",
+   "adult": true,
+   "id": 1228,
+   "sort_order": 1228
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 매달리고 싶을 때는 언제야?",
+   "adult": true,
+   "id": 1229,
+   "sort_order": 1229
+  },
+  {
+   "type": "balance",
+   "a": "안아줄 때 머리 쓰다듬기",
+   "b": "안아줄 때 등 토닥이기",
+   "adult": true,
+   "id": 1230,
+   "sort_order": 1230
+  },
+  {
+   "type": "balance",
+   "a": "아침형 스킨십",
+   "b": "밤형 스킨십",
+   "adult": true,
+   "id": 1231,
+   "sort_order": 1231
+  },
+  {
+   "type": "balance",
+   "a": "침대에서 수다",
+   "b": "침대에서 조용히 껴안기",
+   "adult": true,
+   "id": 1232,
+   "sort_order": 1232
+  },
+  {
+   "type": "balance",
+   "a": "속옷은 귀여운 스타일",
+   "b": "속옷은 섹시한 스타일",
+   "adult": true,
+   "id": 1233,
+   "sort_order": 1233
+  },
+  {
+   "type": "balance",
+   "a": "허리 감싸기",
+   "b": "어깨 감싸기",
+   "adult": true,
+   "id": 1234,
+   "sort_order": 1234
+  },
+  {
+   "type": "balance",
+   "a": "야한 농담 많이 하는 연인",
+   "b": "부끄러워하는 연인",
+   "adult": true,
+   "id": 1235,
+   "sort_order": 1235
+  },
+  {
+   "type": "balance",
+   "a": "키스할 때 볼 잡기",
+   "b": "키스할 때 허리 잡기",
+   "adult": true,
+   "id": 1236,
+   "sort_order": 1236
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 들킨 적 없는 야한 생각 하나 고백한다면?",
+   "adult": true,
+   "id": 1237,
+   "sort_order": 1237
+  },
+  {
+   "type": "whatif",
+   "text": "너의 몸이 나를 제일 기억하는 곳은?",
+   "adult": true,
+   "id": 1238,
+   "sort_order": 1238
+  },
+  {
+   "type": "balance",
+   "a": "상대 손이 내 허리에",
+   "b": "상대 손이 내 볼에",
+   "adult": true,
+   "id": 1239,
+   "sort_order": 1239
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 가장 설렜던 문자 한 줄은?",
+   "adult": true,
+   "id": 1240,
+   "sort_order": 1240
+  },
+  {
+   "type": "whatif",
+   "text": "나랑 한 이불 덮고 있으면 제일 먼저 뭘 할 것 같아?",
+   "adult": true,
+   "id": 1241,
+   "sort_order": 1241
+  },
+  {
+   "type": "balance",
+   "a": "상대 귀가 빨개지는 모습",
+   "b": "상대 목소리가 낮아지는 순간",
+   "adult": true,
+   "id": 1242,
+   "sort_order": 1242
+  },
+  {
+   "type": "whatif",
+   "text": "내가 귓속말로 뭐라고 하면 제일 설렐 것 같아?",
+   "adult": true,
+   "id": 1243,
+   "sort_order": 1243
+  },
+  {
+   "type": "whatif",
+   "text": "내 셔츠를 입은 네 모습을 상상한다면 어때?",
+   "adult": true,
+   "id": 1244,
+   "sort_order": 1244
+  },
+  {
+   "type": "balance",
+   "a": "샤워 가운",
+   "b": "큰 수건 하나",
+   "adult": true,
+   "id": 1245,
+   "sort_order": 1245
+  },
+  {
+   "type": "whatif",
+   "text": "내 입술 맛을 음식에 비유하면?",
+   "adult": true,
+   "id": 1246,
+   "sort_order": 1246
+  },
+  {
+   "type": "whatif",
+   "text": "나한테 몰래 바라는 게 있다면 지금 말해줘",
+   "adult": true,
+   "id": 1247,
+   "sort_order": 1247
+  },
+  {
+   "type": "whatif",
+   "text": "같이 있으면 제일 숨기기 어려운 감정은?",
+   "adult": true,
+   "id": 1248,
+   "sort_order": 1248
+  },
+  {
+   "type": "whatif",
+   "text": "같이 누워 있을 때 제일 좋아하는 자세는?",
+   "adult": true,
+   "id": 1249,
+   "sort_order": 1249
+  },
+  {
+   "type": "whatif",
+   "text": "키스할 때 내 버릇 하나 말해본다면?",
+   "adult": true,
+   "id": 1250,
+   "sort_order": 1250
   }
  ]
 }

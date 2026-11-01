@@ -26,8 +26,8 @@ export function supabaseGameStore(): GameStore {
   return {
     meId,
 
-    async draw(type, n) {
-      const { data, error } = await sb.rpc("draw_questions", { p_type: type, p_count: n });
+    async draw(type, n, adult) {
+      const { data, error } = await sb.rpc("draw_mix", { p_type: type, p_count: n, p_adult: adult });
       if (error) throw error;
       return (data ?? []) as Question[];
     },
@@ -36,7 +36,7 @@ export function supabaseGameStore(): GameStore {
       const uid = await meId();
       const { data, error } = await sb
         .from("question_threads")
-        .select("question_id, started_by, created_at, questions(id, type, text, a, b), question_answers(user_id, answer)")
+        .select("question_id, started_by, created_at, questions(id, type, text, a, b, adult), question_answers(user_id, answer)")
         .order("created_at", { ascending: false });
       if (error) throw error;
       return ((data ?? []) as unknown as Row[]).map(

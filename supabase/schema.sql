@@ -8,7 +8,7 @@
 create table public.profiles (
   id uuid primary key references auth.users (id) on delete cascade,
   role text not null check (role in ('admin', 'member')), -- admin = 개발자(파랑), member = 상대(주황). 이름은 저장 안 함
-  adult_enabled boolean not null default false,           -- 19금 질문 스위치 (기본 꺼짐)
+  adult_enabled boolean not null default false,           -- 19금 질문 보이기 (지금은 두 계정 모두 true로 켜둠)
   created_at timestamptz not null default now()
 );
 
@@ -237,6 +237,62 @@ begin
 end;
 $$;
 
+-- 뽑기 (실제로 쓰는 것): 5개 중 p_adult개는 19금(있으면), 모자라면 다른 쪽으로 채움. 섞인 순서
+create or replace function public.draw_mix(p_type text, p_count int default 5, p_adult int default 1)
+returns setof public.questions
+language plpgsql
+security invoker
+set search_path = public
+as $$
+declare
+  want_adult int := least(greatest(p_adult, 0), p_count);
+  a_ids int[];
+  n_ids int[];
+  picked int[];
+begin
+  select coalesce(array_agg(id), '{}') into a_ids from (
+    select q.id from public.questions q
+    left join public.question_seen s on s.question_id = q.id and s.user_id = auth.uid()
+    where q.type = p_type and q.adult
+      and not exists (select 1 from public.question_threads t where t.question_id = q.id)
+    order by (s.question_id is not null), q.sort_order
+    limit want_adult
+  ) x;
+
+  select coalesce(array_agg(id), '{}') into n_ids from (
+    select q.id from public.questions q
+    left join public.question_seen s on s.question_id = q.id and s.user_id = auth.uid()
+    where q.type = p_type and not q.adult
+      and not exists (select 1 from public.question_threads t where t.question_id = q.id)
+    order by (s.question_id is not null), q.sort_order
+    limit p_count - cardinality(a_ids)
+  ) x;
+
+  if cardinality(a_ids) + cardinality(n_ids) < p_count then
+    select a_ids || coalesce(array_agg(id), '{}') into a_ids from (
+      select q.id from public.questions q
+      left join public.question_seen s on s.question_id = q.id and s.user_id = auth.uid()
+      where q.type = p_type and q.adult and not (q.id = any (a_ids))
+        and not exists (select 1 from public.question_threads t where t.question_id = q.id)
+      order by (s.question_id is not null), q.sort_order
+      limit p_count - cardinality(a_ids) - cardinality(n_ids)
+    ) x;
+  end if;
+
+  picked := a_ids || n_ids;
+  if cardinality(picked) = 0 then
+    return;
+  end if;
+
+  insert into public.question_seen (question_id)
+  select unnest(picked)
+  on conflict do nothing;
+
+  return query
+  select * from public.questions where id = any (picked) order by md5(id::text || clock_timestamp()::text);
+end;
+$$;
+
 -- 남은 질문 수 (아무도 고르지 않은 질문). admin 갱신 알림에 씀
 create or replace function public.remaining_questions()
 returns int
@@ -277,6 +333,8 @@ revoke execute on function public.remaining_questions() from public, anon;
 grant execute on function public.is_member() to authenticated;
 grant execute on function public.i_answered(int) to authenticated;
 grant execute on function public.draw_questions(text, int) to authenticated;
+revoke execute on function public.draw_mix(text, int, int) from anon, public;
+grant execute on function public.draw_mix(text, int, int) to authenticated;
 grant execute on function public.remaining_questions() to authenticated;
 
 -- 게임도 실시간 반영 (상대가 답하면 바로 보이게)

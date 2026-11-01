@@ -7,7 +7,7 @@ import styles from "./Game.module.css";
 
 type View = "home" | "pick" | "answer" | "done" | "log";
 type QueueItem = { q: Question; from: "new" | "inbox" };
-type Filter = "all" | "balance" | "whatif" | "same" | "diff";
+type Filter = "all" | "balance" | "whatif" | "same" | "diff" | "hot";
 
 const PER_PAGE = 4;
 
@@ -68,7 +68,7 @@ export default function GameView() {
     setBusy(true);
     setError("");
     try {
-      const qs = await store.draw(type, 5);
+      const qs = await store.draw(type, 5, 1); // 5개 중 하나는 19금
       setMode(type);
       setDrawn(qs);
       setSel([]);
@@ -84,7 +84,8 @@ export default function GameView() {
     setBusy(true);
     try {
       const keep = drawn.filter((q) => sel.includes(q.id));
-      const fresh = await store.draw(mode, 5 - keep.length);
+      // 19금을 이미 남겨뒀으면 새로 뽑을 땐 19금 없이
+      const fresh = await store.draw(mode, 5 - keep.length, keep.some((q) => q.adult) ? 0 : 1);
       setDrawn([...keep, ...fresh.filter((q) => !keep.some((k) => k.id === q.id))]);
     } finally {
       setBusy(false);
@@ -139,11 +140,15 @@ export default function GameView() {
   }
 
   // ── 기록 ──
+  // 19금은 하트 필터에서만 보이고 나머지 목록에선 숨김
   const match = (t: Thread, f: Filter) =>
-    f === "all" ||
+    f === "hot"
+      ? t.question.adult
+      : !t.question.adult &&
+    (f === "all" ||
     t.question.type === f ||
     (f === "same" && t.question.type === "balance" && t.mine === t.theirs) ||
-    (f === "diff" && t.question.type === "balance" && t.mine !== t.theirs);
+    (f === "diff" && t.question.type === "balance" && t.mine !== t.theirs));
   const filtered = done.filter((t) => match(t, filter));
   const pages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
   const pg = Math.min(page, pages - 1);
@@ -191,6 +196,7 @@ export default function GameView() {
                 ) : (
                   <strong className={styles.whatText}>{q.text}</strong>
                 )}
+                {q.adult && <HotMark />}
               </button>
             );
           })}
@@ -225,8 +231,11 @@ export default function GameView() {
           </span>
         </header>
         <div className={styles.scroll}>
-          <span className={cur.q.type === "balance" ? styles.tagBal : styles.tagWhat}>
-            {cur.q.type === "balance" ? "밸런스" : "만약에"}
+          <span className={styles.tagRow}>
+            <span className={cur.q.type === "balance" ? styles.tagBal : styles.tagWhat}>
+              {cur.q.type === "balance" ? "밸런스" : "만약에"}
+            </span>
+            {cur.q.adult && <HotMark />}
           </span>
           <h1 className={`hand ${styles.qTitle}`}>{cur.q.type === "balance" ? "둘 중 하나만 고른다면?" : cur.q.text}</h1>
           {cur.q.type === "balance" ? (
@@ -299,6 +308,7 @@ export default function GameView() {
       { key: "whatif", label: "만약에" },
       { key: "same", label: "같은 답" },
       { key: "diff", label: "다른 답" },
+      { key: "hot", label: "" },
     ];
     return (
       <div className={styles.wrap}>
@@ -317,7 +327,7 @@ export default function GameView() {
                 setPage(0);
               }}
             >
-              {f.label} <span>{done.filter((t) => match(t, f.key)).length}</span>
+              {f.key === "hot" ? <HeartIcon aria-label="19금" /> : f.label} <span>{done.filter((t) => match(t, f.key)).length}</span>
             </button>
           ))}
         </div>
@@ -334,6 +344,7 @@ export default function GameView() {
                   {t.question.type === "balance" && (
                     <span className={same ? styles.sameBadge : styles.diffBadge}>{same ? "같은 선택" : "다른 선택"}</span>
                   )}
+                  {t.question.adult && <HotMark />}
                 </div>
                 <p className={styles.logQ}>{qLine(t.question)}</p>
                 <div className={styles.answers}>
@@ -428,6 +439,7 @@ export default function GameView() {
                 <span className={t.question.type === "balance" ? styles.tagBal : styles.tagWhat}>
                   {t.question.type === "balance" ? "밸런스" : "만약에"}
                 </span>
+                {t.question.adult && <HotMark />}
                 <span className={styles.answerCta}>답하기</span>
               </span>
               <span className={styles.waitQ}>{qLine(t.question)}</span>
@@ -439,6 +451,7 @@ export default function GameView() {
                 <span className={t.question.type === "balance" ? styles.tagBal : styles.tagWhat}>
                   {t.question.type === "balance" ? "밸런스" : "만약에"}
                 </span>
+                {t.question.adult && <HotMark />}
               </span>
               <span className={styles.waitQ}>{qLine(t.question)}</span>
               <span className={styles.myAns}>
@@ -495,5 +508,22 @@ function Logo() {
         fill="#fff"
       />
     </svg>
+  );
+}
+
+function HeartIcon(props: { "aria-label"?: string }) {
+  return (
+    <svg role={props["aria-label"] ? "img" : undefined} aria-hidden={props["aria-label"] ? undefined : true} {...props} width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 21C5 15.5 2 12 2 8.2 2 5.3 4.3 3 7.1 3c2 0 3.8 1.1 4.9 2.8C13.1 4.1 14.9 3 16.9 3 19.7 3 22 5.3 22 8.2 22 12 19 15.5 12 21z" />
+    </svg>
+  );
+}
+
+/** 19금 질문 표시 (작은 하트) */
+function HotMark() {
+  return (
+    <span className={styles.hot} title="19금">
+      <HeartIcon aria-label="19금" />
+    </span>
   );
 }

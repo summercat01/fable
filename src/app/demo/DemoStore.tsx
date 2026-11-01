@@ -73,13 +73,14 @@ function Inner({ children }: { children: React.ReactNode }) {
 }
 
 function gameSeed(): [Question[], { me: string; partner: string; threads: Thread[] }] {
-  type Raw = { id: number; type: string; text?: string; a?: string; b?: string; sort_order: number };
+  type Raw = { id: number; type: string; text?: string; a?: string; b?: string; adult?: boolean; sort_order: number };
   const qs: Question[] = (questionData.items as Raw[])
     .slice()
     .sort((x, y) => x.sort_order - y.sort_order)
-    .map((r) => ({ id: r.id, type: r.type as Question["type"], text: r.text ?? null, a: r.a ?? null, b: r.b ?? null }));
-  const bal = qs.filter((q) => q.type === "balance");
-  const wif = qs.filter((q) => q.type === "whatif");
+    .map((r) => ({ id: r.id, type: r.type as Question["type"], text: r.text ?? null, a: r.a ?? null, b: r.b ?? null, adult: !!r.adult }));
+  const bal = qs.filter((q) => q.type === "balance" && !q.adult);
+  const wif = qs.filter((q) => q.type === "whatif" && !q.adult);
+  const hot = qs.filter((q) => q.adult);
   const t = (q: Question, startedBy: string, mine: string | null, theirs: string | null): Thread => ({
     question: q,
     startedBy,
@@ -104,6 +105,8 @@ function gameSeed(): [Question[], { me: string; partner: string; threads: Thread
         t(bal[44], her, "b", "b"),
         t(wif[42], me, "수달", "골든 리트리버"),
         t(bal[45], me, "a", "a"),
+        t(hot.find((q) => q.type === "balance")!, her, "a", "b"),
+        t(hot.find((q) => q.type === "whatif")!, me, "목소리 들으면 바로 녹아", "눈 마주칠 때"),
       ],
     },
   ];
