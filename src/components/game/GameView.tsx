@@ -285,7 +285,7 @@ export default function GameView() {
           {onlyReveal ? "답이 공개됐어!" : `${result.sent}개 보냈어`}
         </h1>
         <p className={styles.subNote}>{onlyReveal ? "기록에서 서로 답을 확인해봐" : "상대가 편할 때 답하면 보여줄게"}</p>
-        <button className={styles.primaryBtn} style={{ maxWidth: 220 }} onClick={() => (onlyReveal ? setView("log") : goHome())}>
+        <button className={`${styles.primaryBtn} ${styles.doneBtn}`} onClick={() => (onlyReveal ? setView("log") : goHome())}>
           {onlyReveal ? "기록 보기" : "확인"}
         </button>
       </div>

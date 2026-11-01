@@ -452,6 +452,14 @@
   padding: 24px;
 }
 
+/* 세로 배치라 flex:1이면 위아래로 늘어남 → 크기 고정 */
+.doneBtn {
+  flex: none;
+  width: 160px;
+  height: 48px;
+  margin-top: 8px;
+}
+
 .doneTitle {
   margin: 0;
   font-size: 30px;
