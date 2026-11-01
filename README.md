@@ -19,9 +19,9 @@
 ```sql
 select id, email from auth.users;  -- 두 사람 id 확인
 
-insert into public.profiles (id, role, display_name) values
-  ('<재우 id>', 'admin', '재우'),
-  ('<여친 id>', 'member', '<여친 이름>');
+insert into public.profiles (id, role) values
+  ('<관리자 id>', 'admin'),
+  ('<상대 id>', 'member');
 ```
 4. Authentication > Sign In / Providers에서 **Allow new users to sign up 끄기**
 

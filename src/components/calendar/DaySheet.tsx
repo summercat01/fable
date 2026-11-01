@@ -14,8 +14,7 @@ export default function DaySheet({
   onSize,
   items,
   shift,
-  shiftOwner,
-  meName,
+  meIsMember,
   free,
   meId,
   onAdd,
@@ -26,8 +25,7 @@ export default function DaySheet({
   onSize: (s: "closed" | "half" | "full") => void;
   items: Item[];
   shift?: ShiftCode;
-  shiftOwner: string;
-  meName: string;
+  meIsMember: boolean;
   free: boolean;
   meId: string;
   onAdd: () => void;
@@ -94,7 +92,7 @@ export default function DaySheet({
           <div key={it.key} className={styles.row}>
             <span className={`${styles.rowBar} ${styles[`dot_${it.kind}`]}`} />
             <div className={styles.rowText}>
-              <span className={styles.rowKind}>{LABEL[it.kind] || (it.kind === "w" ? meName : shiftOwner)}</span>
+              <span className={styles.rowKind}>{LABEL[it.kind] || (it.event?.created_by === meId ? "내 일정" : "상대 일정")}</span>
               <span className={styles.rowTitle}>{it.title}</span>
             </div>
             {canDelete(it) &&
@@ -121,7 +119,7 @@ export default function DaySheet({
           <div className={styles.row}>
             <span className={`${styles.rowBar} ${styles[`dotShift${shift}`]}`} />
             <div className={styles.rowText}>
-              <span className={styles.rowKind}>{shiftOwner} 근무</span>
+              <span className={styles.rowKind}>{meIsMember ? "내 근무" : "근무"}</span>
               <span className={styles.rowTitle}>{SHIFT_LABEL[shift]}</span>
             </div>
           </div>

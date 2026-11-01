@@ -15,7 +15,8 @@
 - Next.js 16 (App Router, `src/`), TypeScript, CSS Modules + `globals.css` 변수. Tailwind 안 씀
   - Next 16: `middleware` → `src/proxy.ts`, `cookies()`는 async. 바뀐 API는 `node_modules/next/dist/docs/` 확인
 - Supabase: **아이디·비밀번호 로그인** (아이디 → `<아이디>@fable.test`, `src/lib/accounts.ts`), Postgres(RLS), Storage(`photos` 버킷)
-  - 계정은 대시보드에서 직접 생성, 새 가입은 막아둠. 아이디: 재우 `fablew`, 여친 `fableh`. 비밀번호는 절대 코드에 넣지 않음
+  - 계정은 대시보드에서 직접 생성, 새 가입은 막아둠. 아이디: 관리자 `fablew`, 상대 `fableh`. 비밀번호는 절대 코드에 넣지 않음
+  - **이름은 저장하지 않음** (개인정보). 화면엔 보는 사람 기준으로 '내 일정 / 상대 일정'만
   - 카카오 로그인은 보류 (`src/app/auth/callback`은 나중에 쓸 수 있게 남겨둠)
 - **앱 잠금** (`src/components/AppLock.tsx`, `src/lib/lock.ts`): 로그인은 계속 유지되고, 앱 열 때 이 기기 전용 4자리 PIN 또는 지문(WebAuthn). 1분 넘게 벗어나면 다시 잠금, 5번 틀리면 로그아웃
   - APK로 감싼 뒤엔 웹뷰에서 WebAuthn이 안 될 수 있어서, 지문은 Capacitor 생체인증 플러그인으로 바꿀 것

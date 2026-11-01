@@ -2,7 +2,7 @@ export type Role = "admin" | "member";
 export type Scope = "personal" | "together";
 export type ShiftCode = "D" | "E" | "N";
 
-export type Profile = { id: string; role: Role; display_name: string };
+export type Profile = { id: string; role: Role };
 
 export type CalEvent = {
   id: string;

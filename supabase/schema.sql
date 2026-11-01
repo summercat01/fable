@@ -7,8 +7,7 @@
 -- ─────────────────────────────────────────────
 create table public.profiles (
   id uuid primary key references auth.users (id) on delete cascade,
-  role text not null check (role in ('admin', 'member')), -- admin = 재우(개발자), member = 여친
-  display_name text not null,
+  role text not null check (role in ('admin', 'member')), -- admin = 개발자(파랑), member = 상대(주황). 이름은 저장 안 함
   adult_enabled boolean not null default false,           -- 19금 질문 스위치 (기본 꺼짐)
   created_at timestamptz not null default now()
 );

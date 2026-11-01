@@ -1,8 +1,8 @@
 // 우리 날짜. 나중에 설정 화면이 생기면 DB(couple_settings)에서 읽어오게 바꿀 예정
 export const COUPLE = {
   startDate: "2026-10-27", // 사귄 날
-  myBirthday: "11-09",
-  herBirthday: "04-22",
+  myBirthday: "11-09", // 관리자(파랑)
+  herBirthday: "04-22", // 상대(주황)
 } as const;
 
 const DAY = 86_400_000;
@@ -37,8 +37,8 @@ export function anniversariesOn(y: number, m: number, d: number): string[] {
   if (m === sm - 1 && d === sd && y > sy) out.push(`${y - sy}주년`);
   const [mbm, mbd] = COUPLE.myBirthday.split("-").map(Number);
   const [hbm, hbd] = COUPLE.herBirthday.split("-").map(Number);
-  if (m === mbm - 1 && d === mbd) out.push("재우 생일");
-  if (m === hbm - 1 && d === hbd) out.push("여친 생일");
+  if (m === mbm - 1 && d === mbd) out.push("생일");
+  if (m === hbm - 1 && d === hbd) out.push("생일");
   return out;
 }
 

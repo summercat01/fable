@@ -1,8 +1,8 @@
 import type { CalEvent, CalendarStore, Shift } from "./types";
 
 // 개발·테스트용: Supabase 없이 화면을 띄워볼 때만 씀
-export const DEMO_ME = { id: "w", role: "admin" as const, display_name: "재우" };
-export const DEMO_HER = { id: "h", role: "member" as const, display_name: "화" };
+export const DEMO_ME = { id: "w", role: "admin" as const };
+export const DEMO_HER = { id: "h", role: "member" as const };
 
 export function memoryStore(seed: { events: CalEvent[]; shifts: Shift[] }): CalendarStore {
   const events = [...seed.events];

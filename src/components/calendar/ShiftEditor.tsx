@@ -98,7 +98,7 @@ export default function ShiftEditor() {
           <Chevron dir="left" />
         </Link>
         <div>
-          <h1 className={`hand ${styles.title}`}>{member?.display_name ?? "여친"} 근무표</h1>
+          <h1 className={`hand ${styles.title}`}>{data.people?.me.role === "member" ? "내 근무표" : "근무표"}</h1>
           <div className={styles.monthNav}>
             <button onClick={() => move(-1)} aria-label="이전 달" disabled={!!dirty.length}>
               <Chevron dir="left" />

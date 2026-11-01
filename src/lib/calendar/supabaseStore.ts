@@ -9,7 +9,7 @@ export function supabaseStore(): CalendarStore {
       const {
         data: { user },
       } = await sb.auth.getUser();
-      const { data, error } = await sb.from("profiles").select("id, role, display_name");
+      const { data, error } = await sb.from("profiles").select("id, role");
       if (error) throw error;
       const list = (data ?? []) as Profile[];
       const me = list.find((p) => p.id === user?.id);

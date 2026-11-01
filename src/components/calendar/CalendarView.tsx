@@ -21,7 +21,7 @@ export type Item = {
   event?: CalEvent;
 };
 
-/** 사람 색: 재우(admin) 파랑, 여친(member) 주황. 보는 폰과 상관없이 같은 색 */
+/** 사람 색: 관리자(admin) 파랑, 상대(member) 주황. 보는 폰과 상관없이 같은 색 */
 export const kindOf = (e: CalEvent, people: Profile[]): Item["kind"] =>
   e.scope === "together" ? "us" : people.find((p) => p.id === e.created_by)?.role === "member" ? "h" : "w";
 
@@ -53,7 +53,7 @@ export default function CalendarView() {
     () => (data.people ? [data.people.me, data.people.partner].filter(Boolean) : []) as Profile[],
     [data.people],
   );
-  const admin = people.find((p) => p.role === "admin");
+  const meIsAdmin = data.people?.me.role !== "member";
   const member = people.find((p) => p.role === "member");
 
   // 날짜별로 묶기
@@ -108,8 +108,8 @@ export default function CalendarView() {
   }
 
   const chips: { key: keyof Filter; label: string; color: string }[] = [
-    { key: "me", label: admin?.display_name ?? "재우", color: "var(--me)" },
-    { key: "her", label: member?.display_name ?? "여친", color: "var(--her)" },
+    { key: "me", label: meIsAdmin ? "내" : "상대", color: "var(--me)" },
+    { key: "her", label: meIsAdmin ? "상대" : "내", color: "var(--her)" },
     { key: "us", label: "함께", color: "var(--us)" },
   ];
 
@@ -232,8 +232,7 @@ export default function CalendarView() {
           onSize={setSheet}
           items={itemsFor(selected)}
           shift={filter.her ? byDate.shift.get(selected) : undefined}
-          shiftOwner={member?.display_name ?? "여친"}
-          meName={admin?.display_name ?? "재우"}
+          meIsMember={!meIsAdmin}
           free={isFree(selected)}
           meId={data.people?.me.id ?? ""}
           onAdd={() => setAdding(selected)}
