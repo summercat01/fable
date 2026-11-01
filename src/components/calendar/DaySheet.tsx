@@ -1,6 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { useRef, useState } from "react";
+import { useCalendarBase } from "@/lib/calendar/useBase";
 import { prettyDate, prettyRange } from "@/lib/calendar/dates";
 import type { ShiftCode } from "@/lib/calendar/types";
 import { SHIFT_LABEL, type Item } from "./CalendarView";
@@ -36,6 +38,7 @@ export default function DaySheet({
   const startY = useRef<number | null>(null);
   const [drag, setDrag] = useState(0);
   const [confirm, setConfirm] = useState<string | null>(null);
+  const base = useCalendarBase();
 
   // 손잡이를 끌어서 크게/작게/닫기
   function down(e: React.PointerEvent) {
@@ -88,7 +91,12 @@ export default function DaySheet({
         </div>
       </div>
       <div className={styles.sheetBody}>
-        {free && <p className={styles.freeNote}>둘 다 비는 날이야. 데이트 잡아볼까?</p>}
+        {free && (
+          <Link href={`${base.replace("/calendar", "/wish")}?date=${date}`} className={styles.freeNote}>
+            <span>둘 다 비는 날이야. 데이트 잡아볼까?</span>
+            <span className={styles.freeLink}>버킷리스트에서 고르기 ›</span>
+          </Link>
+        )}
         {!items.length && !shift && !free && <p className={styles.empty}>아직 일정이 없어</p>}
         {items.map((it) => (
           <div key={it.key} className={styles.row}>

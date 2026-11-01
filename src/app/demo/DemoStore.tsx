@@ -8,6 +8,9 @@ import type { CalEvent, Shift } from "@/lib/calendar/types";
 import { GameStoreProvider } from "@/lib/game/GameContext";
 import { memoryGameStore } from "@/lib/game/memoryStore";
 import type { Question, Thread } from "@/lib/game/types";
+import { WishStoreProvider } from "@/lib/wish/WishContext";
+import { memoryWishStore } from "@/lib/wish/memoryStore";
+import type { Wish } from "@/lib/wish/types";
 import questionData from "../../../data/questions.json";
 
 // Supabase 없이 화면만 확인하는 개발용 가짜 데이터 (이번 달 기준)
@@ -65,9 +68,12 @@ export default function DemoStore({ children }: { children: React.ReactNode }) {
 function Inner({ children }: { children: React.ReactNode }) {
   const [store] = useState(() => memoryStore(seed()));
   const [game] = useState(() => memoryGameStore(...gameSeed()));
+  const [wish] = useState(() => memoryWishStore(wishSeed()));
   return (
     <StoreProvider store={store}>
-      <GameStoreProvider store={game}>{children}</GameStoreProvider>
+      <GameStoreProvider store={game}>
+        <WishStoreProvider store={wish}>{children}</WishStoreProvider>
+      </GameStoreProvider>
     </StoreProvider>
   );
 }
@@ -110,4 +116,31 @@ function gameSeed(): [Question[], { me: string; partner: string; threads: Thread
       ],
     },
   ];
+}
+
+function wishSeed(): { me: string; wishes: Wish[] } {
+  const t = fromIso(todayIso());
+  const day = (d: number) => iso(Date.UTC(t.y, t.m, d));
+  const w = (id: string, kind: Wish["kind"], title: string, by: string, more: Partial<Wish> = {}): Wish => ({
+    id,
+    kind,
+    title,
+    memo: null,
+    created_by: by,
+    done_on: null,
+    event: null,
+    ...more,
+  });
+  return {
+    me: DEMO_ME.id,
+    wishes: [
+      w("1", "go", "제주도 한 달 살기", DEMO_ME.id, { memo: "겨울 말고 봄에" }),
+      w("2", "eat", "성수동 그 파스타집", DEMO_HER.id, { memo: "웨이팅 앱으로 줄 서기" }),
+      w("3", "do", "같이 도자기 만들기", DEMO_HER.id, { event: { id: "e1", date: day(28), end_date: day(28) } }),
+      w("4", "do", "한강에서 라면", DEMO_ME.id),
+      w("5", "etc", "커플 반지 맞추기", DEMO_HER.id),
+      w("6", "go", "경주 야경", DEMO_ME.id, { done_on: day(1) }),
+      w("7", "eat", "오마카세 한 번", DEMO_HER.id),
+    ],
+  };
 }

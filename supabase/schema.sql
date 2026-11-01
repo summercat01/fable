@@ -410,3 +410,23 @@ $$;
 revoke execute on function public.ask_question(text, text, text, text, text) from anon, public;
 grant execute on function public.ask_question(text, text, text, text, text) to authenticated;
 -- (draw_mix, remaining_questions는 위 정의에 `not q.custom` 조건이 들어간 버전이 실제 DB에 있음)
+
+-- ─────────────────────────────────────────────
+-- 버킷리스트: 하고 싶은 거·가고 싶은 곳·먹고 싶은 거·그 외
+-- 날 잡으면 '같이 하는 일정'을 만들고 event_id로 연결 (일정 지우면 연결만 풀림)
+-- 해본 것 = done_on이 있거나, 연결된 일정 날짜가 지났거나 (화면에서 계산)
+-- ─────────────────────────────────────────────
+create table public.wishes (
+  id uuid primary key default gen_random_uuid(),
+  kind text not null check (kind in ('do', 'go', 'eat', 'etc')),
+  title text not null check (char_length(title) between 1 and 60),
+  memo text check (memo is null or char_length(memo) <= 200),
+  created_by uuid not null default auth.uid() references public.profiles (id),
+  created_at timestamptz not null default now(),
+  event_id uuid references public.events (id) on delete set null,
+  done_on date
+);
+create index wishes_event_idx on public.wishes (event_id);
+alter table public.wishes enable row level security;
+create policy "버킷리스트" on public.wishes for all using (public.is_member()) with check (public.is_member());
+alter publication supabase_realtime add table public.wishes;

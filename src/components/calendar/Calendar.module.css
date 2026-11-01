@@ -442,6 +442,10 @@
 
 .freeNote {
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   padding: 8px 10px;
   border-radius: 10px;
   background: #fdebee;
@@ -749,4 +753,9 @@
   right: 0;
   transform: translateY(-50%);
   color: var(--ink-muted);
+}
+
+.freeLink {
+  flex-shrink: 0;
+  font-weight: 700;
 }
