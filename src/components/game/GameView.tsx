@@ -196,7 +196,6 @@ export default function GameView() {
                 ) : (
                   <strong className={styles.whatText}>{q.text}</strong>
                 )}
-                {q.adult && <HotMark />}
               </button>
             );
           })}
@@ -231,11 +230,8 @@ export default function GameView() {
           </span>
         </header>
         <div className={styles.scroll}>
-          <span className={styles.tagRow}>
-            <span className={cur.q.type === "balance" ? styles.tagBal : styles.tagWhat}>
-              {cur.q.type === "balance" ? "밸런스" : "만약에"}
-            </span>
-            {cur.q.adult && <HotMark />}
+          <span className={cur.q.type === "balance" ? styles.tagBal : styles.tagWhat}>
+            {cur.q.type === "balance" ? "밸런스" : "만약에"}
           </span>
           <h1 className={`hand ${styles.qTitle}`}>{cur.q.type === "balance" ? "둘 중 하나만 고른다면?" : cur.q.text}</h1>
           {cur.q.type === "balance" ? (
@@ -344,7 +340,6 @@ export default function GameView() {
                   {t.question.type === "balance" && (
                     <span className={same ? styles.sameBadge : styles.diffBadge}>{same ? "같은 선택" : "다른 선택"}</span>
                   )}
-                  {t.question.adult && <HotMark />}
                 </div>
                 <p className={styles.logQ}>{qLine(t.question)}</p>
                 <div className={styles.answers}>
@@ -439,7 +434,6 @@ export default function GameView() {
                 <span className={t.question.type === "balance" ? styles.tagBal : styles.tagWhat}>
                   {t.question.type === "balance" ? "밸런스" : "만약에"}
                 </span>
-                {t.question.adult && <HotMark />}
                 <span className={styles.answerCta}>답하기</span>
               </span>
               <span className={styles.waitQ}>{qLine(t.question)}</span>
@@ -451,7 +445,6 @@ export default function GameView() {
                 <span className={t.question.type === "balance" ? styles.tagBal : styles.tagWhat}>
                   {t.question.type === "balance" ? "밸런스" : "만약에"}
                 </span>
-                {t.question.adult && <HotMark />}
               </span>
               <span className={styles.waitQ}>{qLine(t.question)}</span>
               <span className={styles.myAns}>
@@ -519,11 +512,3 @@ function HeartIcon(props: { "aria-label"?: string }) {
   );
 }
 
-/** 19금 질문 표시 (작은 하트) */
-function HotMark() {
-  return (
-    <span className={styles.hot} title="19금">
-      <HeartIcon aria-label="19금" />
-    </span>
-  );
-}
