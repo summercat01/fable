@@ -56,7 +56,7 @@
 6. **질문 갱신 알림**: 남은 질문 100개 이하면 **admin(재우)에게만** 배너
 
 ## 개발 팁
-- `npm run dev` 후 `/demo/calendar`: Supabase 없이 가짜 데이터로 캘린더 확인 (개발 모드에서만 열림, `src/app/demo`)
+- `npm run dev` 후 `/demo/calendar`, `/demo/game`: Supabase 없이 가짜 데이터로 캘린더 확인 (개발 모드에서만 열림, `src/app/demo`)
 - 캘린더 데이터는 `CalendarStore`(`src/lib/calendar/types.ts`)로만 주고받음. 실제는 `supabaseStore`, 미리보기는 `memoryStore`
 - 앱 화면은 AppLock 때문에 폰에서만 그려짐 → 각 페이지에 `export const instant = false`
 
@@ -72,6 +72,6 @@
 - [x] 아이디·비번 로그인 + 자동 로그인 + 앱 잠금(PIN/지문)
 - [x] DB 스키마 + 질문 1,000개
 - [x] 캘린더 월간 화면 + 날짜 시트 + 일정 추가·삭제 + 근무표 + 실시간 반영
-- [ ] 게임 화면
+- [x] 게임 화면 (뽑기·여러 개 답하기·기다리는 목록·기록 필터, 미리보기 `/demo/game`)
 - [ ] 추억 카드 + 네이버 지도 + 사진
 - [ ] Capacitor APK + 위젯

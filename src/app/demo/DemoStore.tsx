@@ -5,6 +5,10 @@ import { StoreProvider } from "@/lib/calendar/StoreContext";
 import { memoryStore, DEMO_HER, DEMO_ME } from "@/lib/calendar/memoryStore";
 import { fromIso, iso, todayIso } from "@/lib/calendar/dates";
 import type { CalEvent, Shift } from "@/lib/calendar/types";
+import { GameStoreProvider } from "@/lib/game/GameContext";
+import { memoryGameStore } from "@/lib/game/memoryStore";
+import type { Question, Thread } from "@/lib/game/types";
+import questionData from "../../../data/questions.json";
 
 // Supabase 없이 화면만 확인하는 개발용 가짜 데이터 (이번 달 기준)
 function seed() {
@@ -51,5 +55,47 @@ export default function DemoStore({ children }: { children: React.ReactNode }) {
 
 function Inner({ children }: { children: React.ReactNode }) {
   const [store] = useState(() => memoryStore(seed()));
-  return <StoreProvider store={store}>{children}</StoreProvider>;
+  const [game] = useState(() => memoryGameStore(...gameSeed()));
+  return (
+    <StoreProvider store={store}>
+      <GameStoreProvider store={game}>{children}</GameStoreProvider>
+    </StoreProvider>
+  );
+}
+
+function gameSeed(): [Question[], { me: string; partner: string; threads: Thread[] }] {
+  type Raw = { id: number; type: string; text?: string; a?: string; b?: string; sort_order: number };
+  const qs: Question[] = (questionData.items as Raw[])
+    .slice()
+    .sort((x, y) => x.sort_order - y.sort_order)
+    .map((r) => ({ id: r.id, type: r.type as Question["type"], text: r.text ?? null, a: r.a ?? null, b: r.b ?? null }));
+  const bal = qs.filter((q) => q.type === "balance");
+  const wif = qs.filter((q) => q.type === "whatif");
+  const t = (q: Question, startedBy: string, mine: string | null, theirs: string | null): Thread => ({
+    question: q,
+    startedBy,
+    createdAt: new Date().toISOString(),
+    mine,
+    theirs,
+  });
+  const me = DEMO_ME.id;
+  const her = DEMO_HER.id;
+  return [
+    qs,
+    {
+      me,
+      partner: her,
+      threads: [
+        t(bal[40], her, null, "a"),
+        t(wif[40], her, null, "바다 보이는 데서 한 달 살아보기"),
+        t(bal[41], me, "b", null),
+        t(bal[42], me, "a", "a"),
+        t(wif[41], her, "첫 데이트 때 더 일찍 손잡기", "긴장 덜 하고 더 많이 웃기"),
+        t(bal[43], me, "a", "b"),
+        t(bal[44], her, "b", "b"),
+        t(wif[42], me, "수달", "골든 리트리버"),
+        t(bal[45], me, "a", "a"),
+      ],
+    },
+  ];
 }

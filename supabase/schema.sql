@@ -265,3 +265,6 @@ grant execute on function public.is_member() to authenticated;
 grant execute on function public.i_answered(int) to authenticated;
 grant execute on function public.draw_questions(text, int) to authenticated;
 grant execute on function public.remaining_questions() to authenticated;
+
+-- 게임도 실시간 반영 (상대가 답하면 바로 보이게)
+alter publication supabase_realtime add table public.question_threads, public.question_answers;
