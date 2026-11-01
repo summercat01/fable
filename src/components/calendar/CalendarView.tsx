@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
 import { anniversariesOn } from "@/lib/couple";
+import { holidaysOn } from "@/lib/holidays";
 import { monthGrid, todayIso, WEEKDAYS, fromIso, addDays } from "@/lib/calendar/dates";
 import { useCalendarStore } from "@/lib/calendar/StoreContext";
 import { useRange } from "@/lib/calendar/useRange";
@@ -16,7 +17,9 @@ import styles from "./Calendar.module.css";
 type Filter = { her: boolean; me: boolean; us: boolean };
 export type Item = {
   key: string;
-  kind: "anniv" | "us" | "w" | "h";
+  kind: "holiday" | "anniv" | "us" | "w" | "h";
+  /** 시트에 보여줄 긴 이름 (공휴일) */
+  full?: string;
   title: string;
   event?: CalEvent;
   /** 여러 날 일정에서 이 칸의 위치 */
@@ -79,16 +82,19 @@ export default function CalendarView() {
 
   function itemsFor(date: string): Item[] {
     const { y: yy, m: mm, d } = fromIso(date);
-    const anniv: Item[] = anniversariesOn(yy, mm, d).map((t) => ({ key: `a-${t}`, kind: "anniv", title: t }));
+    const anniv: Item[] = [
+      ...holidaysOn(date).map((h): Item => ({ key: `h-${h.full}`, kind: "holiday", title: h.short, full: h.full })),
+      ...anniversariesOn(yy, mm, d).map((t): Item => ({ key: `a-${t}`, kind: "anniv", title: t })),
+    ];
     const ev = (byDate.items.get(date) ?? []).filter(
       (i) => (i.kind === "us" && filter.us) || (i.kind === "w" && filter.me) || (i.kind === "h" && filter.her),
     );
     // 여러 날 일정은 위쪽에 고정해서 칸끼리 이어져 보이게
-    const order = { anniv: 0, us: 1, w: 2, h: 3 };
+    const order = { holiday: -1, anniv: 0, us: 1, w: 2, h: 3 };
     const multi = (i: Item) => (i.span ? 0 : 1);
     return [...anniv, ...ev].sort(
       (a, b) =>
-        (a.kind === "anniv" ? -1 : multi(a)) - (b.kind === "anniv" ? -1 : multi(b)) ||
+        (a.span ? -2 : order[a.kind] <= 0 ? -1 : multi(a)) - (b.span ? -2 : order[b.kind] <= 0 ? -1 : multi(b)) ||
         (a.event?.date ?? "").localeCompare(b.event?.date ?? "") ||
         order[a.kind] - order[b.kind],
     );
@@ -288,7 +294,7 @@ export default function CalendarView() {
                   className={[
                     styles.num,
                     isToday && styles.today,
-                    !isToday && g.weekday === 0 && styles.sun,
+                    !isToday && (g.weekday === 0 || (g.inMonth && holidaysOn(g.date).length > 0)) && styles.sun,
                     !isToday && g.weekday === 6 && styles.sat,
                   ]
                     .filter(Boolean)

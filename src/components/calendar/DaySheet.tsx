@@ -6,7 +6,7 @@ import type { ShiftCode } from "@/lib/calendar/types";
 import { SHIFT_LABEL, type Item } from "./CalendarView";
 import styles from "./Calendar.module.css";
 
-const LABEL: Record<Item["kind"], string> = { anniv: "기념일", us: "함께", w: "", h: "" };
+const LABEL: Record<Item["kind"], string> = { holiday: "공휴일", anniv: "기념일", us: "함께", w: "", h: "" };
 
 export default function DaySheet({
   date,
@@ -96,7 +96,7 @@ export default function DaySheet({
             {canDelete(it) ? (
               <button className={`${styles.rowText} ${styles.rowEdit}`} onClick={() => onEdit(it.event!)} aria-label={`${it.title} 고치기`}>
               <span className={styles.rowKind}>{LABEL[it.kind] || (it.event?.created_by === meId ? "내 일정" : "상대 일정")}</span>
-              <span className={styles.rowTitle}>{it.title}</span>
+              <span className={styles.rowTitle}>{it.full ?? it.title}</span>
               {it.span && it.event && <span className={styles.rowRange}>{prettyRange(it.event.date, it.event.end_date)}</span>}
                 <svg className={styles.editHint} aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 20h4L19 9l-4-4L4 16v4zM13.5 6.5l4 4" />
@@ -105,7 +105,7 @@ export default function DaySheet({
             ) : (
               <div className={styles.rowText}>
               <span className={styles.rowKind}>{LABEL[it.kind] || (it.event?.created_by === meId ? "내 일정" : "상대 일정")}</span>
-              <span className={styles.rowTitle}>{it.title}</span>
+              <span className={styles.rowTitle}>{it.full ?? it.title}</span>
               {it.span && it.event && <span className={styles.rowRange}>{prettyRange(it.event.date, it.event.end_date)}</span>}
               </div>
             )}

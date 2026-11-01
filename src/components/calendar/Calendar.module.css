@@ -287,6 +287,13 @@
   border-radius: 0;
 }
 
+/* 공휴일은 일정과 헷갈리지 않게 배경 없이 빨간 글씨만 */
+.bar_holiday {
+  background: transparent;
+  color: #b8364a;
+  padding-left: 1px;
+}
+
 .bar_anniv {
   background: var(--anniv-bg);
   color: var(--anniv-ink);
@@ -461,6 +468,10 @@
   width: 4px;
   flex-shrink: 0;
   border-radius: 999px;
+}
+
+.dot_holiday {
+  background: #b8364a;
 }
 
 .dot_anniv {
