@@ -60,6 +60,7 @@
 - 앱 화면은 AppLock 때문에 폰에서만 그려짐 → 각 페이지에 `export const instant = false`
 
 ## 데이터
+- Supabase 프로젝트: `fable` (ref `fdkpdcybbiygawgwpbfy`, 서울). 스키마·질문 1,000개·두 계정 들어가 있음
 - 스키마: `supabase/schema.sql` (RLS: `profiles`에 있는 두 계정만 접근)
 - 질문: `data/raw/*.txt` → `python3 scripts/build_questions.py` → `data/questions.json`, `supabase/seed_questions.sql`
   - 1,000개씩 추가. 이미 들어간 질문의 id·순서는 바꾸지 않음. 중복은 스크립트가 걸러줌

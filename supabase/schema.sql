@@ -197,6 +197,7 @@ create or replace function public.draw_questions(p_type text, p_count int defaul
 returns setof public.questions
 language plpgsql
 security invoker
+set search_path = public
 as $$
 declare
   picked int[];
@@ -230,6 +231,7 @@ returns int
 language sql
 stable
 security invoker
+set search_path = public
 as $$
   select count(*)::int from public.questions q
   where not exists (select 1 from public.question_threads t where t.question_id = q.id);
@@ -252,3 +254,15 @@ create policy "사진 파일 삭제" on storage.objects for delete
 -- 실시간 반영: 한 폰에서 일정·근무를 바꾸면 다른 폰 캘린더도 바로 갱신
 -- ─────────────────────────────────────────────
 alter publication supabase_realtime add table public.events, public.shifts;
+
+-- ─────────────────────────────────────────────
+-- 로그인 안 한 사람은 내부 함수도 못 부르게
+-- ─────────────────────────────────────────────
+revoke execute on function public.is_member() from public, anon;
+revoke execute on function public.i_answered(int) from public, anon;
+revoke execute on function public.draw_questions(text, int) from public, anon;
+revoke execute on function public.remaining_questions() from public, anon;
+grant execute on function public.is_member() to authenticated;
+grant execute on function public.i_answered(int) to authenticated;
+grant execute on function public.draw_questions(text, int) to authenticated;
+grant execute on function public.remaining_questions() to authenticated;
