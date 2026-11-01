@@ -14,7 +14,7 @@ export function memoryStore(seed: { events: CalEvent[]; shifts: Shift[] }): Cale
     },
     async load(from, to) {
       return {
-        events: events.filter((e) => e.date >= from && e.date <= to),
+        events: events.filter((e) => e.date <= to && e.end_date >= from),
         shifts: shifts.filter((s) => s.date >= from && s.date <= to),
       };
     },

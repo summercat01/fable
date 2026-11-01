@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { prettyDate } from "@/lib/calendar/dates";
+import { prettyDate, prettyRange } from "@/lib/calendar/dates";
 import type { ShiftCode } from "@/lib/calendar/types";
 import { SHIFT_LABEL, type Item } from "./CalendarView";
 import styles from "./Calendar.module.css";
@@ -94,6 +94,7 @@ export default function DaySheet({
             <div className={styles.rowText}>
               <span className={styles.rowKind}>{LABEL[it.kind] || (it.event?.created_by === meId ? "내 일정" : "상대 일정")}</span>
               <span className={styles.rowTitle}>{it.title}</span>
+              {it.span && it.event && <span className={styles.rowRange}>{prettyRange(it.event.date, it.event.end_date)}</span>}
             </div>
             {canDelete(it) &&
               (confirm === it.key ? (

@@ -15,9 +15,10 @@ function seed() {
   const t = fromIso(todayIso());
   const day = (d: number) => iso(Date.UTC(t.y, t.m, d));
   let n = 0;
-  const ev = (d: number, title: string, scope: CalEvent["scope"], by = DEMO_ME.id): CalEvent => ({
+  const ev = (d: number, title: string, scope: CalEvent["scope"], by = DEMO_ME.id, days = 1): CalEvent => ({
     id: `s${++n}`,
     date: day(d),
+    end_date: day(d + days - 1),
     title,
     scope,
     created_by: by,
@@ -26,6 +27,8 @@ function seed() {
     ev(2, "영화", "together"),
     ev(5, "스터디", "personal"),
     ev(9, "전주 당일치기", "together"),
+    ev(6, "부산 여행", "together", DEMO_ME.id, 3),
+    ev(18, "학회", "personal", DEMO_HER.id, 2),
     ev(12, "과제 마감", "personal"),
     ev(12, "병원 예약", "personal", DEMO_HER.id),
     ev(14, "저녁", "together"),

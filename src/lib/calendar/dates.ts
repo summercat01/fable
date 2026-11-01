@@ -50,3 +50,20 @@ export function prettyDate(date: string): string {
   const { m, d } = fromIso(date);
   return `${m + 1}월 ${d}일 (${weekdayOf(date)})`;
 }
+
+/** 날짜 더하기 */
+export function addDays(date: string, n: number): string {
+  return iso(fromIso(date).t + n * 86400000);
+}
+
+/** 두 날짜 사이 일수 (b - a) */
+export function daysBetween(a: string, b: string): number {
+  return Math.round((fromIso(b).t - fromIso(a).t) / 86400000);
+}
+
+/** 기간 표시: "11월 6일 – 8일" / "11월 30일 – 12월 2일" */
+export function prettyRange(a: string, b: string): string {
+  const x = fromIso(a);
+  const y = fromIso(b);
+  return x.m === y.m ? `${x.m + 1}월 ${x.d}일 – ${y.d}일` : `${x.m + 1}월 ${x.d}일 – ${y.m + 1}월 ${y.d}일`;
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { prettyDate } from "@/lib/calendar/dates";
+import { addDays, daysBetween, prettyDate, prettyRange } from "@/lib/calendar/dates";
 import type { Scope } from "@/lib/calendar/types";
 import styles from "./Calendar.module.css";
 
@@ -12,9 +12,14 @@ export default function AddSheet({
 }: {
   date: string;
   onClose: () => void;
-  onSave: (e: { date: string; title: string; scope: Scope }) => Promise<void>;
+  onSave: (e: { date: string; end_date: string; title: string; scope: Scope }) => Promise<void>;
 }) {
   const [date, setDate] = useState(initial);
+  const [multi, setMulti] = useState(false);
+  const [end, setEnd] = useState(() => addDays(initial, 1));
+  const endDate = multi ? end : date;
+  const nDays = daysBetween(date, endDate) + 1;
+  const rangeOk = !multi || (nDays >= 2 && nDays <= 31);
   const [scope, setScope] = useState<Scope>("together");
   const [title, setTitle] = useState("");
   const [busy, setBusy] = useState(false);
@@ -23,11 +28,11 @@ export default function AddSheet({
   async function save(e: React.FormEvent) {
     e.preventDefault();
     const t = title.trim();
-    if (!t || busy) return;
+    if (!t || busy || !rangeOk) return;
     setBusy(true);
     setError("");
     try {
-      await onSave({ date, title: t.slice(0, 60), scope });
+      await onSave({ date, end_date: endDate, title: t.slice(0, 60), scope });
     } catch {
       setError("저장이 안 됐어. 다시 해줘");
       setBusy(false);
@@ -49,7 +54,7 @@ export default function AddSheet({
         onSubmit={save}
       >
         <div className={styles.sheetHead}>
-          <h2>{prettyDate(date)} 일정 추가</h2>
+          <h2>{multi && rangeOk ? prettyRange(date, end) : prettyDate(date)} 일정 추가</h2>
           <button type="button" className={styles.closeBtn} onClick={onClose} aria-label="닫기">
             <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round">
               <path d="M6 6l12 12M18 6L6 18" />
@@ -88,15 +93,52 @@ export default function AddSheet({
         />
 
         <label className={styles.fieldLabel} htmlFor="ev-date">
-          날짜
+          {multi ? "기간" : "날짜"}
         </label>
-        <input
-          id="ev-date"
-          className={styles.input}
-          type="date"
-          value={date}
-          onChange={(e) => e.target.value && setDate(e.target.value)}
-        />
+        <div className={styles.dateRow}>
+          <input
+            id="ev-date"
+            className={styles.input}
+            type="date"
+            value={date}
+            aria-label={multi ? "시작 날짜" : "날짜"}
+            onChange={(e) => {
+              const v = e.target.value;
+              if (!v) return;
+              // 시작을 옮기면 기간 길이는 그대로 유지
+              if (multi) setEnd(addDays(v, Math.max(1, daysBetween(date, end))));
+              setDate(v);
+            }}
+          />
+          {multi && (
+            <>
+              <span className={styles.tilde}>~</span>
+              <input
+                className={styles.input}
+                type="date"
+                value={end}
+                min={addDays(date, 1)}
+                max={addDays(date, 30)}
+                aria-label="끝나는 날짜"
+                onChange={(e) => e.target.value && setEnd(e.target.value)}
+              />
+            </>
+          )}
+        </div>
+        <div className={styles.dateRow}>
+          <button
+            type="button"
+            className={multi ? `${styles.multiBtn} ${styles.multiBtnOn}` : styles.multiBtn}
+            aria-pressed={multi}
+            onClick={() => {
+              if (!multi && daysBetween(date, end) < 1) setEnd(addDays(date, 1));
+              setMulti(!multi);
+            }}
+          >
+            여러 날
+          </button>
+          {multi && <span className={styles.days}>{rangeOk ? `${nDays}일` : "끝나는 날을 다시 골라줘"}</span>}
+        </div>
 
         {error && (
           <p className={styles.error} role="alert">
@@ -106,7 +148,7 @@ export default function AddSheet({
 
         <button
           className={`${styles.save} ${scope === "together" ? styles.save_together : styles.save_personal}`}
-          disabled={!title.trim() || busy}
+          disabled={!title.trim() || busy || !rangeOk}
         >
           {busy ? "저장하는 중…" : scope === "together" ? "같이 하는 일정으로 저장" : "내 일정으로 저장"}
         </button>

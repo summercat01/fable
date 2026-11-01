@@ -19,7 +19,13 @@ export function supabaseStore(): CalendarStore {
 
     async load(from, to) {
       const [ev, sh] = await Promise.all([
-        sb.from("events").select("id, date, title, scope, created_by").gte("date", from).lte("date", to).order("created_at"),
+        sb
+          .from("events")
+          .select("id, date, end_date, title, scope, created_by")
+          .lte("date", to)
+          .gte("end_date", from)
+          .order("date")
+          .order("created_at"),
         sb.from("shifts").select("user_id, date, code").gte("date", from).lte("date", to),
       ]);
       if (ev.error) throw ev.error;
@@ -31,7 +37,7 @@ export function supabaseStore(): CalendarStore {
       const { data, error } = await sb
         .from("events")
         .insert(e)
-        .select("id, date, title, scope, created_by")
+        .select("id, date, end_date, title, scope, created_by")
         .single();
       if (error) throw error;
       return data as CalEvent;

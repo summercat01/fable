@@ -32,13 +32,26 @@ create policy "내 설정만 수정" on public.profiles for update using (id = a
 -- ─────────────────────────────────────────────
 create table public.events (
   id uuid primary key default gen_random_uuid(),
-  date date not null,
+  date date not null,                -- 시작일
+  end_date date not null,            -- 끝나는 날 (하루짜리면 date와 같음, 비우면 트리거가 채움)
   title text not null check (char_length(title) between 1 and 60),
   scope text not null check (scope in ('personal', 'together')), -- 내 일정 / 같이 하는 일정
   created_by uuid not null default auth.uid() references public.profiles (id),
   created_at timestamptz not null default now()
 );
 create index events_date_idx on public.events (date);
+create index events_end_idx on public.events (end_date);
+alter table public.events add constraint events_range_chk
+  check (end_date >= date and end_date - date <= 30);
+
+create or replace function public.events_fill_end() returns trigger
+language plpgsql set search_path = public as $$
+begin
+  new.end_date := coalesce(new.end_date, new.date);
+  return new;
+end $$;
+create trigger events_fill_end before insert or update on public.events
+  for each row execute function public.events_fill_end();
 
 alter table public.events enable row level security;
 create policy "일정 조회" on public.events for select using (public.is_member());

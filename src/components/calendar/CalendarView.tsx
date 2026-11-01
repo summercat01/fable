@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
 import { anniversariesOn } from "@/lib/couple";
-import { monthGrid, todayIso, WEEKDAYS, fromIso } from "@/lib/calendar/dates";
+import { monthGrid, todayIso, WEEKDAYS, fromIso, addDays } from "@/lib/calendar/dates";
 import { useCalendarStore } from "@/lib/calendar/StoreContext";
 import { useRange } from "@/lib/calendar/useRange";
 import { useCalendarBase } from "@/lib/calendar/useBase";
@@ -19,6 +19,8 @@ export type Item = {
   kind: "anniv" | "us" | "w" | "h";
   title: string;
   event?: CalEvent;
+  /** 여러 날 일정에서 이 칸의 위치 */
+  span?: "start" | "mid" | "end";
 };
 
 /** 사람 색: 관리자(admin) 파랑, 상대(member) 주황. 보는 폰과 상관없이 같은 색 */
@@ -63,9 +65,13 @@ export default function CalendarView() {
     for (const s of data.shifts) if (s.user_id === member?.id) shift.set(s.date, s.code);
     for (const e of data.events) {
       const k = kindOf(e, people);
-      const list = items.get(e.date) ?? [];
-      list.push({ key: e.id, kind: k, title: e.title, event: e });
-      items.set(e.date, list);
+      const last = e.end_date ?? e.date;
+      for (let d = e.date; d <= last; d = addDays(d, 1)) {
+        const span = e.date === last ? undefined : d === e.date ? "start" : d === last ? "end" : "mid";
+        const list = items.get(d) ?? [];
+        list.push({ key: e.id, kind: k, title: e.title, event: e, span });
+        items.set(d, list);
+      }
     }
     return { items, shift };
   }, [data.events, data.shifts, people, member]);
@@ -76,8 +82,15 @@ export default function CalendarView() {
     const ev = (byDate.items.get(date) ?? []).filter(
       (i) => (i.kind === "us" && filter.us) || (i.kind === "w" && filter.me) || (i.kind === "h" && filter.her),
     );
+    // 여러 날 일정은 위쪽에 고정해서 칸끼리 이어져 보이게
     const order = { anniv: 0, us: 1, w: 2, h: 3 };
-    return [...anniv, ...ev].sort((a, b) => order[a.kind] - order[b.kind]);
+    const multi = (i: Item) => (i.span ? 0 : 1);
+    return [...anniv, ...ev].sort(
+      (a, b) =>
+        (a.kind === "anniv" ? -1 : multi(a)) - (b.kind === "anniv" ? -1 : multi(b)) ||
+        (a.event?.date ?? "").localeCompare(b.event?.date ?? "") ||
+        order[a.kind] - order[b.kind],
+    );
   }
 
   const isFree = (date: string) =>
@@ -148,6 +161,36 @@ export default function CalendarView() {
 
   const cap = grid.length > 35 ? 3 : 4;
 
+  // 여러 날 일정은 주마다 같은 줄(레인)에 놓아서 칸끼리 이어지게
+  const cells = grid.map((g) => (g.inMonth ? itemsFor(g.date) : []));
+  const lanes: (Item | null)[][] = grid.map(() => []);
+  for (let w = 0; w < grid.length; w += 7) {
+    const seen = new Map<string, { s: number; e: number; it: Item }>();
+    for (let i = w; i < w + 7; i++)
+      for (const it of cells[i])
+        if (it.span) {
+          const r = seen.get(it.key);
+          if (r) r.e = i;
+          else seen.set(it.key, { s: i, e: i, it });
+        }
+    const rows: boolean[][] = [];
+    // 먼저 시작한 일정이 위, 같으면 긴 게 위 (지난주에서 이어진 띠가 같은 줄을 지키도록)
+    const spans = [...seen.entries()].sort(
+      ([, x], [, y]) =>
+        (x.it.event?.date ?? "").localeCompare(y.it.event?.date ?? "") ||
+        (y.it.event?.end_date ?? "").localeCompare(x.it.event?.end_date ?? ""),
+    );
+    for (const [key, { s: a, e: b }] of spans) {
+      let lane = 0;
+      while (rows[lane]?.slice(a - w, b - w + 1).some(Boolean)) lane++;
+      rows[lane] ??= Array(7).fill(false);
+      for (let i = a; i <= b; i++) {
+        rows[lane][i - w] = true;
+        lanes[i][lane] = cells[i].find((x) => x.key === key) ?? null;
+      }
+    }
+  }
+
   return (
     <div className={styles.wrap}>
       <header className={styles.header}>
@@ -216,8 +259,10 @@ export default function CalendarView() {
         onTouchEnd={onTouchEnd}
         onClickCapture={onClickCapture}
       >
-        {grid.map((g) => {
-          const items = g.inMonth ? itemsFor(g.date) : [];
+        {grid.map((g, gi) => {
+          const items = cells[gi];
+          // 위쪽은 여러 날 레인(빈 줄은 자리만), 그 아래 하루짜리
+          const rows: (Item | null)[] = [...Array.from(lanes[gi], (x) => x ?? null), ...items.filter((x) => !x.span)];
           const shift = filter.her ? byDate.shift.get(g.date) : undefined;
           const isToday = g.date === today;
           const isSel = g.date === selected && sheet !== "closed";
@@ -251,12 +296,24 @@ export default function CalendarView() {
                 </span>
                 {shift && <span className={`${styles.shift} ${styles[`shift${shift}`]}`}>{shift}</span>}
               </span>
-              {items.slice(0, cap).map((it) => (
-                <span key={it.key} className={`${styles.bar} ${styles[`bar_${it.kind}`]}`}>
-                  {it.title}
-                </span>
-              ))}
-              {items.length > cap && <span className={styles.more}>+{items.length - cap}</span>}
+              {rows.slice(0, cap).map((it, ri) => {
+                if (!it) return <span key={`gap${ri}`} className={`${styles.bar} ${styles.gap}`} aria-hidden="true">{"\u00a0"}</span>;
+                // 이어지는 칸은 제목 대신 색 띠만 (주가 바뀌거나 달 첫날엔 제목 다시)
+                const showTitle = !it.span || it.span === "start" || g.weekday === 0 || g.d === 1;
+                return (
+                  <span
+                    key={it.key}
+                    className={[styles.bar, styles[`bar_${it.kind}`], it.span && styles[`span_${it.span}`]]
+                      .filter(Boolean)
+                      .join(" ")}
+                  >
+                    {showTitle ? it.title : "\u00a0"}
+                  </span>
+                );
+              })}
+              {rows.filter(Boolean).length > rows.slice(0, cap).filter(Boolean).length && (
+                <span className={styles.more}>+{rows.filter(Boolean).length - rows.slice(0, cap).filter(Boolean).length}</span>
+              )}
             </button>
           );
         })}

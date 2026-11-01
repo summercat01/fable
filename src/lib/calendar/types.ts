@@ -6,7 +6,8 @@ export type Profile = { id: string; role: Role };
 
 export type CalEvent = {
   id: string;
-  date: string; // YYYY-MM-DD
+  date: string; // YYYY-MM-DD, 시작일
+  end_date: string; // 끝나는 날 (하루짜리면 date와 같음)
   title: string;
   scope: Scope;
   created_by: string;
@@ -20,7 +21,7 @@ export type People = { me: Profile; partner: Profile | null };
 export interface CalendarStore {
   people(): Promise<People>;
   load(from: string, to: string): Promise<{ events: CalEvent[]; shifts: Shift[] }>;
-  addEvent(e: { date: string; title: string; scope: Scope }): Promise<CalEvent>;
+  addEvent(e: { date: string; end_date: string; title: string; scope: Scope }): Promise<CalEvent>;
   deleteEvent(id: string): Promise<void>;
   /** 한 사람의 근무를 날짜별로 덮어씀. code가 null이면 그날은 오프(삭제) */
   saveShifts(userId: string, changes: { date: string; code: ShiftCode | null }[]): Promise<void>;
