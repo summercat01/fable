@@ -28,7 +28,7 @@ export default function AddSheet({
   const endDate = multi ? end : date;
   const nDays = daysBetween(date, endDate) + 1;
   const rangeOk = !multi || (nDays >= 2 && nDays <= 31);
-  const [scope, setScope] = useState<Scope>(editing?.scope ?? "together");
+  const [scope, setScope] = useState<Scope>(editing?.scope ?? "personal");
   const [title, setTitle] = useState(editing?.title ?? "");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
