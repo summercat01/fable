@@ -38,6 +38,12 @@ function seed() {
     ev(25, "저녁 데이트", "together"),
     ev(25, "알바", "personal"),
     ev(25, "택배 받기", "personal", DEMO_HER.id),
+    ev(26, "리눅스 2급 2차", "personal"),
+    ev(26, "저녁 약속", "together"),
+    ev(26, "회의", "personal"),
+    ev(26, "헬스", "personal"),
+    ev(26, "택배", "personal", DEMO_HER.id),
+    ev(26, "엄마 생신 선물", "personal", DEMO_HER.id),
   ];
   const pattern = ["D", "D", "E", "E", "N", "N", null, null] as const;
   const shifts: Shift[] = [];

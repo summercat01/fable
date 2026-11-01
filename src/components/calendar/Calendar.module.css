@@ -251,6 +251,10 @@
   line-height: 1.2;
 }
 
+.oneLine {
+  -webkit-line-clamp: 1;
+}
+
 .gap {
   -webkit-line-clamp: 1;
   visibility: hidden;

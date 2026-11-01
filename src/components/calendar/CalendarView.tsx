@@ -160,7 +160,8 @@ export default function CalendarView() {
     { key: "us", label: "함께", color: "var(--us)" },
   ];
 
-  const cap = grid.length > 35 ? 3 : 4;
+  // 칸에 들어가는 줄 수 (5주 달은 칸이 더 큼). 일정이 2개 이하면 두 줄까지, 많으면 한 줄씩
+  const lines = grid.length > 35 ? 4 : 5;
 
   // 여러 날 일정은 주마다 같은 줄(레인)에 놓아서 칸끼리 이어지게
   const cells = grid.map((g) => (g.inMonth ? itemsFor(g.date) : []));
@@ -297,14 +298,22 @@ export default function CalendarView() {
                 </span>
                 {shift && <span className={`${styles.shift} ${styles[`shift${shift}`]}`}>{shift}</span>}
               </span>
-              {rows.slice(0, cap).map((it, ri) => {
+              {(() => {
+                const total = rows.filter(Boolean).length;
+                const fits = rows.length <= lines;
+                const shown = rows.slice(0, fits ? lines : lines - 1);
+                const hidden = total - shown.filter(Boolean).length;
+                const oneLine = rows.length > 2;
+                return (
+                  <>
+              {shown.map((it, ri) => {
                 if (!it) return <span key={`gap${ri}`} className={`${styles.bar} ${styles.gap}`} aria-hidden="true">{"\u00a0"}</span>;
                 // 이어지는 칸은 제목 대신 색 띠만 (주가 바뀌거나 달 첫날엔 제목 다시)
                 const showTitle = !it.span || it.span === "start" || g.weekday === 0 || g.d === 1;
                 return (
                   <span
                     key={it.key}
-                    className={[styles.bar, styles[`bar_${it.kind}`], it.span && styles[`span_${it.span}`]]
+                    className={[styles.bar, styles[`bar_${it.kind}`], it.span && styles[`span_${it.span}`], oneLine && styles.oneLine]
                       .filter(Boolean)
                       .join(" ")}
                   >
@@ -312,9 +321,10 @@ export default function CalendarView() {
                   </span>
                 );
               })}
-              {rows.filter(Boolean).length > rows.slice(0, cap).filter(Boolean).length && (
-                <span className={styles.more}>+{rows.filter(Boolean).length - rows.slice(0, cap).filter(Boolean).length}</span>
-              )}
+              {hidden > 0 && <span className={styles.more}>+{hidden}</span>}
+                  </>
+                );
+              })()}
             </button>
           );
         })}
