@@ -20,6 +20,10 @@
   overflow: visible;
 }
 
+.disc {
+  display: none;
+}
+
 /* 1) 두 원이 양쪽에서 모임 */
 .left {
   animation: fromLeft 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -86,12 +90,80 @@
   }
 }
 
+/*
+ * 설치한 앱(홈 화면 아이콘)으로 켰을 때: 폰이 먼저 '흰 원 안의 아이콘'을 보여줌.
+ * 같은 크기·같은 자리에서 시작 → 흰 원이 스르륵 사라지고 로고가 작아지며 이름이 올라옴 (한 화면처럼)
+ */
+@media (display-mode: standalone) {
+  .splash {
+    gap: 0;
+  }
+
+  .disc {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 160px;
+    height: 160px;
+    margin: -80px 0 0 -80px;
+    border-radius: 999px;
+    background: #fff;
+    animation: discOut 0.45s ease 0.1s both;
+  }
+
+  .logo {
+    position: relative;
+    animation: settle 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+  }
+
+  .left,
+  .right,
+  .overlap {
+    animation: none;
+  }
+
+  .heart {
+    animation: beat 0.5s ease 0.45s both;
+  }
+
+  .word {
+    animation: rise 0.4s ease 0.4s both;
+  }
+}
+
+@keyframes discOut {
+  to {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+}
+
+/* 폰 아이콘 크기(약 1.4배)에서 원래 크기로 */
+@keyframes settle {
+  from {
+    transform: translateY(20px) scale(1.42);
+  }
+}
+
+@keyframes beat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .left,
   .right,
   .overlap,
   .heart,
-  .word {
+  .word,
+  .disc,
+  .logo {
     animation: none;
   }
 }

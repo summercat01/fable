@@ -12,8 +12,11 @@ export default function Splash() {
 
   useEffect(() => {
     const quick = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const t1 = setTimeout(() => setPhase("out"), quick ? 400 : 1500);
-    const t2 = setTimeout(() => setPhase("gone"), quick ? 600 : 1850);
+    // 설치한 앱은 폰 시작 화면을 이미 봤으니 짧게 이어서 끝냄
+    const app = window.matchMedia("(display-mode: standalone)").matches;
+    const show = quick ? 400 : app ? 1100 : 1500;
+    const t1 = setTimeout(() => setPhase("out"), show);
+    const t2 = setTimeout(() => setPhase("gone"), show + 350);
     return () => {
       clearTimeout(t1);
       clearTimeout(t2);
@@ -23,6 +26,8 @@ export default function Splash() {
   if (phase === "gone") return null;
   return (
     <div className={phase === "out" ? `${styles.splash} ${styles.out}` : styles.splash} aria-hidden="true">
+      {/* 설치한 앱으로 켜면 폰이 먼저 아이콘(흰 원)을 보여줌 → 그 모습에서 그대로 이어지게 */}
+      <span className={styles.disc} />
       <svg className={styles.logo} width="132" height="132" viewBox="0 0 100 100">
         <defs>
           <clipPath id="splash-l">

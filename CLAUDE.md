@@ -41,6 +41,7 @@
 ## 화면 (하단 탭 4개: 홈 · 캘린더 · 위시 · 게임, 앱 켜면 홈)
 - 시작 주소 `/home` (manifest). 예전에 설치해서 /calendar로 열리는 앱도 첫 진입만 홈으로 보냄 (`LaunchHome`, sessionStorage)
 1. **시작 화면** (`src/components/Splash.tsx`, 루트 레이아웃): 두 원이 양쪽에서 모임 → 겹친 곳 분홍 → 하트 톡 → "Fable". 약 1.5초, 앱 새로 켤 때만. 서버 HTML에 들어 있어서 첫 화면부터 보임
+   - **설치한 앱(standalone)**: 안드로이드가 먼저 "흰 원 속 아이콘" 시작 화면을 띄움(끌 수 없음) → 그 모습(흰 원 160px·로고 1.4배)에서 시작해 흰 원 사라지고 로고 작아지며 "Fable"이 올라옴 (한 화면처럼, 1.1초). CSS `@media (display-mode: standalone)`
    - 그동안 뒤에서 데이터 불러옴. **잠금 화면 뒤에서도 캘린더를 미리 그려둠**(`inert`) → 비번 푸는 동안 로딩 끝
    - 속도: Vercel 서버 서울(`vercel.json` icn1), proxy는 `getClaims()`(서명만 확인, Supabase 왕복 없음)
    - **로딩은 시작 화면에서만**: `Preload`가 앱 켜자마자 홈·캘린더(이번 달±1)·게임·위시 데이터를 한 번에 불러둠. 저장소는 앱 전체에 하나(싱글톤), 불러온 건 기억(`useRange` 캐시, `src/lib/snapshot.ts`) → 탭 옮기면 바로 그리고 뒤에서 조용히 새로고침
