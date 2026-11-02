@@ -16,6 +16,7 @@ import { useCalendarStore } from "@/lib/calendar/StoreContext";
 import { useRange } from "@/lib/calendar/useRange";
 import { useGameStore } from "@/lib/game/GameContext";
 import { useWishStore } from "@/lib/wish/WishContext";
+import { snap } from "@/lib/snapshot";
 import { doneDate, type Wish } from "@/lib/wish/types";
 import type { CalEvent, ShiftCode } from "@/lib/calendar/types";
 import styles from "./Home.module.css";
@@ -43,17 +44,24 @@ export default function HomeView() {
   const today = todayIso();
   const to = addDays(today, FREE_AHEAD);
   const data = useRange(store, today, to);
-  const [inbox, setInbox] = useState(0);
-  const [sent, setSent] = useState(0);
+  const countOf = (g: typeof snap.game) => ({
+    inbox: g ? g.threads.filter((t) => t.startedBy !== g.meId && !t.mine).length : 0,
+    sent: g ? g.threads.filter((t) => t.startedBy === g.meId && t.mine && !t.theirs).length : 0,
+  });
+  const [inbox, setInbox] = useState(() => countOf(snap.game).inbox);
+  const [sent, setSent] = useState(() => countOf(snap.game).sent);
   const wishStore = useWishStore();
-  const [wishes, setWishes] = useState<Wish[] | null>(null);
+  const [wishes, setWishes] = useState<Wish[] | null>(() => snap.wish?.wishes ?? null);
 
   useEffect(() => {
     let alive = true;
     const load = () =>
       wishStore
         .list()
-        .then((l) => alive && setWishes(l))
+        .then((l) => {
+          if (snap.wish) snap.wish = { ...snap.wish, wishes: l };
+          if (alive) setWishes(l);
+        })
         .catch(() => {});
     void load();
     const off = wishStore.subscribe(load);
@@ -69,6 +77,7 @@ export default function HomeView() {
     const load = () =>
       Promise.all([game.meId(), game.threads()])
         .then(([id, ts]) => {
+          snap.game = { meId: id, threads: ts, remaining: snap.game?.remaining ?? 0 };
           if (!alive) return;
           setInbox(ts.filter((t) => t.startedBy !== id && !t.mine).length);
           setSent(

@@ -62,7 +62,7 @@ export function supabaseWishStore(): WishStore {
     },
     subscribe(onChange) {
       const ch = sb
-        .channel("wishes")
+        .channel(`wishes-${crypto.randomUUID()}`)
         .on("postgres_changes", { event: "*", schema: "public", table: "wishes" }, onChange)
         .on("postgres_changes", { event: "*", schema: "public", table: "events" }, onChange)
         .subscribe();

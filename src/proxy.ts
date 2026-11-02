@@ -24,9 +24,9 @@ export async function proxy(request: NextRequest) {
     },
   );
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  // 로그인 확인: 서명 검증을 이 서버에서 바로 (Supabase까지 매번 왕복 안 함)
+  const { data } = await supabase.auth.getClaims();
+  const user = data?.claims?.sub ?? null;
 
   const path = request.nextUrl.pathname;
   const isPublic =

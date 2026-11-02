@@ -21,6 +21,13 @@ const storeId = (s: CalendarStore) => {
   return ids.get(s)!;
 };
 
+/** 앱 켤 때 미리 불러두기 (시작 화면·잠금 화면 동안) */
+export async function preloadRange(store: CalendarStore, from: string, to: string) {
+  if (cache.has(key(store, from, to))) return;
+  const [people, data] = await Promise.all([store.people(), store.load(from, to)]);
+  cache.set(key(store, from, to), { people, ...data });
+}
+
 /** 보이는 범위(from~to)의 일정·근무를 불러오고, 다른 폰에서 바뀌면 다시 불러옴 */
 export function useRange(store: CalendarStore, from: string, to: string, prefetch?: [string, string][]) {
   const [s, setS] = useState<State>(() => {

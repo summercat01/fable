@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useWishStore } from "@/lib/wish/WishContext";
+import { snap } from "@/lib/snapshot";
 import { doneDate, type Wish, type WishInput } from "@/lib/wish/types";
 import { prettyDate, todayIso } from "@/lib/calendar/dates";
 import styles from "./Wish.module.css";
@@ -23,9 +24,9 @@ export default function WishView() {
   const calendarHref = path.startsWith("/demo") ? "/demo/calendar" : "/calendar";
   const today = todayIso();
 
-  const [me, setMe] = useState<{ id: string; admin: boolean } | null>(null);
-  const [wishes, setWishes] = useState<Wish[]>([]);
-  const [loaded, setLoaded] = useState(false);
+  const [me, setMe] = useState<{ id: string; admin: boolean } | null>(() => snap.wish?.me ?? null);
+  const [wishes, setWishes] = useState<Wish[]>(() => snap.wish?.wishes ?? []);
+  const [loaded, setLoaded] = useState(() => !!snap.wish);
   const [error, setError] = useState("");
   const [tick, setTick] = useState(0);
   const reload = useCallback(() => setTick((t) => t + 1), []);
@@ -39,6 +40,7 @@ export default function WishView() {
     Promise.all([store.me(), store.list()])
       .then(([m, list]) => {
         if (!alive) return;
+        snap.wish = { me: m, wishes: list };
         setMe(m);
         setWishes(list);
         setLoaded(true);

@@ -1,10 +1,12 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext } from "react";
 import { supabaseGameStore } from "./supabaseStore";
 import type { GameStore } from "./types";
 
 const Ctx = createContext<GameStore | null>(null);
+// 앱 전체에서 하나만 (탭 옮겨도 같은 연결·같은 기억)
+let shared: GameStore | null = null;
 
 export function GameStoreProvider({ store, children }: { store: GameStore; children: React.ReactNode }) {
   return <Ctx.Provider value={store}>{children}</Ctx.Provider>;
@@ -12,6 +14,5 @@ export function GameStoreProvider({ store, children }: { store: GameStore; child
 
 export function useGameStore(): GameStore {
   const given = useContext(Ctx);
-  const [real] = useState(() => (given ? null : supabaseGameStore()));
-  return given ?? real!;
+  return given ?? (shared ??= supabaseGameStore());
 }

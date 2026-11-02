@@ -82,7 +82,7 @@ export function supabaseGameStore(): GameStore {
 
     subscribe(onChange) {
       const ch = sb
-        .channel("game")
+        .channel(`game-${crypto.randomUUID()}`)
         .on("postgres_changes", { event: "*", schema: "public", table: "question_threads" }, onChange)
         .on("postgres_changes", { event: "*", schema: "public", table: "question_answers" }, onChange)
         .subscribe();

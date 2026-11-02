@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useGameStore } from "@/lib/game/GameContext";
+import { snap } from "@/lib/snapshot";
 import type { Question, QType, Thread } from "@/lib/game/types";
 import styles from "./Game.module.css";
 
@@ -23,9 +24,9 @@ const ansText = (q: Question, v: string | null) => (v == null ? "" : q.type === 
 export default function GameView() {
   const store = useGameStore();
   const [view, setView] = useState<View>("home");
-  const [meId, setMeId] = useState("");
-  const [threads, setThreads] = useState<Thread[]>([]);
-  const [remaining, setRemaining] = useState<number | null>(null);
+  const [meId, setMeId] = useState(() => snap.game?.meId ?? "");
+  const [threads, setThreads] = useState<Thread[]>(() => snap.game?.threads ?? []);
+  const [remaining, setRemaining] = useState<number | null>(() => snap.game?.remaining ?? null);
   const [error, setError] = useState("");
   const [tick, setTick] = useState(0);
   const reload = useCallback(() => setTick((t) => t + 1), []);
@@ -60,6 +61,7 @@ export default function GameView() {
     Promise.all([store.meId(), store.threads(), store.remaining()])
       .then(([id, ts, rem]) => {
         if (!alive) return;
+        snap.game = { meId: id, threads: ts, remaining: rem };
         setMeId(id);
         setThreads(ts);
         setRemaining(rem);

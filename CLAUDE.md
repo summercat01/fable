@@ -42,7 +42,8 @@
 - 시작 주소 `/home` (manifest). 예전에 설치해서 /calendar로 열리는 앱도 첫 진입만 홈으로 보냄 (`LaunchHome`, sessionStorage)
 1. **시작 화면** (`src/components/Splash.tsx`, 루트 레이아웃): 두 원이 양쪽에서 모임 → 겹친 곳 분홍 → 하트 톡 → "Fable". 약 1.5초, 앱 새로 켤 때만. 서버 HTML에 들어 있어서 첫 화면부터 보임
    - 그동안 뒤에서 데이터 불러옴. **잠금 화면 뒤에서도 캘린더를 미리 그려둠**(`inert`) → 비번 푸는 동안 로딩 끝
-   - 속도: Vercel 서버 서울(`vercel.json` icn1), 캘린더 사람 정보는 한 번만·세션은 폰에 저장된 걸로, 달별 데이터 기억 + 앞뒤 달 미리 불러오기 (`useRange`)
+   - 속도: Vercel 서버 서울(`vercel.json` icn1), proxy는 `getClaims()`(서명만 확인, Supabase 왕복 없음)
+   - **로딩은 시작 화면에서만**: `Preload`가 앱 켜자마자 홈·캘린더(이번 달±1)·게임·위시 데이터를 한 번에 불러둠. 저장소는 앱 전체에 하나(싱글톤), 불러온 건 기억(`useRange` 캐시, `src/lib/snapshot.ts`) → 탭 옮기면 바로 그리고 뒤에서 조용히 새로고침
 2. **홈** (`src/components/home/HomeView.tsx`, 미리보기 `/demo/home`): 한눈에 보는 요약, 복잡하지 않게
    - 큰 D+N / "100일까지 n일 · 날짜"
    - 오늘 카드: 공휴일·기념일·오늘 일정·여친 근무 (누르면 캘린더)

@@ -83,7 +83,7 @@ export function supabaseStore(): CalendarStore {
 
     subscribe(onChange) {
       const ch = sb
-        .channel("calendar")
+        .channel(`calendar-${crypto.randomUUID()}`)
         .on("postgres_changes", { event: "*", schema: "public", table: "events" }, onChange)
         .on("postgres_changes", { event: "*", schema: "public", table: "shifts" }, onChange)
         .subscribe();
