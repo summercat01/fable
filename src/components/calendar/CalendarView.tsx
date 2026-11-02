@@ -56,7 +56,16 @@ export default function CalendarView() {
   const grid = useMemo(() => monthGrid(y, m), [y, m]);
   const from = grid[0].date;
   const to = grid[grid.length - 1].date;
-  const data = useRange(store, from, to);
+  const neighbors = useMemo(
+    () =>
+      [-1, 1].map((d): [string, string] => {
+        const t = new Date(Date.UTC(y, m + d, 1));
+        const g = monthGrid(t.getUTCFullYear(), t.getUTCMonth());
+        return [g[0].date, g[g.length - 1].date];
+      }),
+    [y, m],
+  );
+  const data = useRange(store, from, to, neighbors);
 
   const people = useMemo(
     () => (data.people ? [data.people.me, data.people.partner].filter(Boolean) : []) as Profile[],

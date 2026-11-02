@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import RegisterSW from "@/components/RegisterSW";
+import Splash from "@/components/Splash";
 
 export const metadata: Metadata = {
   title: "Fable",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
       <body>
         {children}
+        <Splash />
         <RegisterSW />
       </body>
     </html>

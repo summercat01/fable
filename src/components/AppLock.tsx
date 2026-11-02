@@ -62,7 +62,13 @@ function Lock({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
-  if (mode === "open") return <>{children}</>;
+  // 잠겨 있어도 화면은 뒤에서 미리 그려둠 → 비밀번호 푸는 동안 일정이 다 불러와짐
+  const behind = (
+    <div inert={mode !== "open"} aria-hidden={mode !== "open"}>
+      {children}
+    </div>
+  );
+  if (mode === "open") return behind;
 
   async function logout() {
     clearLock();
@@ -132,6 +138,8 @@ function Lock({ children }: { children: React.ReactNode }) {
 
   if (mode === "finger") {
     return (
+      <>
+      {behind}
       <div className={styles.screen}>
         <FingerIcon />
         <h1 className={`hand ${styles.title}`}>지문으로도 열까?</h1>
@@ -145,6 +153,7 @@ function Lock({ children }: { children: React.ReactNode }) {
           </button>
         </div>
       </div>
+      </>
     );
   }
 
@@ -159,6 +168,8 @@ function Lock({ children }: { children: React.ReactNode }) {
   const showFinger = mode === "locked" && hasFingerprint();
 
   return (
+    <>
+    {behind}
     <div className={styles.screen}>
       <h1 className={`hand ${styles.title}`}>{title}</h1>
       <p className={styles.sub}>{sub}</p>
@@ -203,6 +214,7 @@ function Lock({ children }: { children: React.ReactNode }) {
         </button>
       )}
     </div>
+    </>
   );
 }
 

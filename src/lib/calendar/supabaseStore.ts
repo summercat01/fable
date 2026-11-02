@@ -3,18 +3,27 @@ import type { CalEvent, CalendarStore, People, Profile, Shift } from "./types";
 
 export function supabaseStore(): CalendarStore {
   const sb = createClient();
+  let peopleP: Promise<People> | null = null;
 
   return {
     async people(): Promise<People> {
-      const {
-        data: { user },
-      } = await sb.auth.getUser();
-      const { data, error } = await sb.from("profiles").select("id, role");
-      if (error) throw error;
-      const list = (data ?? []) as Profile[];
-      const me = list.find((p) => p.id === user?.id);
-      if (!me) throw new Error("이 계정이 profiles에 등록돼 있지 않아");
-      return { me, partner: list.find((p) => p.id !== me.id) ?? null };
+      // 두 사람 정보는 안 바뀌니까 한 번만 불러옴
+      peopleP ??= (async () => {
+        // 이 폰에 저장된 로그인 정보로 바로 (서버 왕복 한 번 줄임). 세션 검증은 proxy가 이미 함
+        const {
+          data: { session },
+        } = await sb.auth.getSession();
+        const { data, error } = await sb.from("profiles").select("id, role");
+        if (error) throw error;
+        const list = (data ?? []) as Profile[];
+        const me = list.find((p) => p.id === session?.user.id);
+        if (!me) throw new Error("이 계정이 profiles에 등록돼 있지 않아");
+        return { me, partner: list.find((p) => p.id !== me.id) ?? null };
+      })().catch((e) => {
+        peopleP = null;
+        throw e;
+      });
+      return peopleP;
     },
 
     async load(from, to) {
