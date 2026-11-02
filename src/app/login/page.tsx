@@ -29,7 +29,7 @@ export default function LoginPage() {
       return;
     }
     clearLock(); // 새로 로그인하면 이 기기 잠금 번호도 새로 정함
-    router.replace("/calendar");
+    router.replace("/home");
     router.refresh();
   }
 

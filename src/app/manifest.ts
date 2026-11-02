@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     id: "/",
     name: "Fable",
     short_name: "Fable",
-    start_url: "/calendar",
+    start_url: "/home",
     display: "standalone",
     orientation: "portrait",
     background_color: "#fdf6f7",
