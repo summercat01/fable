@@ -167,3 +167,16 @@
   font-weight: 700;
   color: var(--us);
 }
+
+.soft {
+  color: var(--ink-muted);
+}
+
+.wishLine {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--ink-soft);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
