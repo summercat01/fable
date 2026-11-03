@@ -92,10 +92,18 @@ export default function DaySheet({
       </div>
       <div className={styles.sheetBody}>
         {free && (
-          <Link href={`${base.replace("/calendar", "/wish")}?date=${date}`} className={styles.freeNote}>
-            <span>둘 다 비는 날이야. 데이트 잡아볼까?</span>
-            <span className={styles.freeLink}>위시리스트에서 고르기 ›</span>
-          </Link>
+          <div className={styles.freeNote}>
+            <svg className={styles.freeHeart} aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 21C5 15.5 2 12 2 8.2 2 5.3 4.3 3 7.1 3c2 0 3.8 1.1 4.9 2.8C13.1 4.1 14.9 3 16.9 3 19.7 3 22 5.3 22 8.2 22 12 19 15.5 12 21z" />
+            </svg>
+            <span className={styles.freeText}>
+              <strong>둘 다 비는 날</strong>
+              <span>데이트 잡아볼까?</span>
+            </span>
+            <Link href={`${base.replace("/calendar", "/wish")}?date=${date}`} className={styles.freeLink}>
+              위시에서 고르기
+            </Link>
+          </div>
         )}
         {!items.length && !shift && !free && <p className={styles.empty}>아직 일정이 없어</p>}
         {items.map((it) => (
