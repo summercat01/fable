@@ -120,7 +120,6 @@ export default function CalendarView() {
     filter.me &&
     !byDate.shift.get(date) &&
     !(byDate.items.get(date) ?? []).length &&
-    date >= today &&
     !!member;
 
   function move(delta: number) {
@@ -386,7 +385,7 @@ export default function CalendarView() {
           items={itemsFor(selected)}
           shift={filter.her ? byDate.shift.get(selected) : undefined}
           meIsMember={!meIsAdmin}
-          free={isFree(selected)}
+          free={isFree(selected) && selected >= today}
           meId={data.people?.me.id ?? ""}
           onAdd={() => setAdding(selected)}
           onEdit={setEditing}
